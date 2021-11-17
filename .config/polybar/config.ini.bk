@@ -1,0 +1,56 @@
+[global/wm]
+margin-bottom = 0
+margin-top = 0
+
+include-file = ~/.config/polybar/colors.ini
+include-file = ~/.config/polybar/modules.ini
+include-file = ~/.config/polybar/user_modules.ini
+
+[bar/base]
+override-redirect = true
+height = 24
+offset-y = 0
+background = ${color.bg0}
+wm-restack = bspwm
+enable-ipc = true
+
+font-0 = "Inter:size=11;2"
+font-1 = "Material Design Icons:size=14;4"
+font-2 = "Weather Icons:size=12;3"
+font-3 = "Source Han Sans:size=12;2"
+font-4 = "Noto Color Emoji:scale=9;2"
+font-5 = "Iosevka Nerd Font:size=16;3"
+
+scroll-down = bspwm-wsprev
+
+[bar/top]
+inherit = bar/base
+border-size = 4
+border-color = ${color.bg0}
+
+modules-left = launcher left bspwm right
+modules-center = cal
+modules-right = left backlight pulseaudio right powermenu
+
+[bar/down]
+inherit = bar/base
+border-size = 4
+border-color = ${color.bg0}
+offset-y = 97%
+
+tray-position = right
+tray-background = ${color.bg1}
+tray-detached = true
+tray-offset-x = -1%
+
+modules-left = sep left cpu memory temp battery right
+modules-center = left previous playpause next spotify right
+modules-right = left updates weather weather2 wifi wired right sep left longsep right sep
+
+[settings]
+screenchange-reload = true
+compositing-background = over
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over

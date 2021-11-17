@@ -1,0 +1,5 @@
+#!/bin/bash
+
+[[ $(playerctl -p spotify status) == "Paused" ]] && echo "󰐊"
+[[ $(playerctl -p spotify status) == "Playing" ]] && echo "󰏤"
+[[ $(playerctl -p spotify status) == "Stopped" ]] && echo "No music is playing"
