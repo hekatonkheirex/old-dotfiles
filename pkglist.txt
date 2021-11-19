@@ -12,7 +12,6 @@ anydesk-bin
 arandr
 autoconf
 automake
-avahi
 base
 bash-completion
 bdf-unifont
@@ -36,6 +35,7 @@ dosfstools
 dunst
 dupeguru
 efibootmgr
+ethtool
 exa
 fakeroot
 fcitx5
@@ -79,7 +79,6 @@ jq
 khal
 kitty
 kitty-terminfo
-laptop-mode-tools
 leafpad
 libraw
 libreoffice-fresh
@@ -160,6 +159,7 @@ rofi
 rsync
 scrot
 shell-color-scripts
+smartmontools
 sof-firmware
 spicetify-cli-git
 spotify
@@ -180,6 +180,7 @@ thunar-media-tags-plugin
 thunar-shares-plugin
 thunar-volman
 tint2-git
+tlp
 ttf-anonymous-pro
 ttf-bitstream-vera
 ttf-cascadia-code
@@ -218,6 +219,7 @@ webp-pixbuf-loader
 wget
 which
 wpa_supplicant
+x86_energy_perf_policy
 xarchiver
 xdg-user-dirs
 xdg-utils
