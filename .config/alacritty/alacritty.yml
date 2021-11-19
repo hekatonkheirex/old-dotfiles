@@ -459,7 +459,7 @@ schemes:
 # *solarized-dark
 # *onedark
 
-colors: *sonokai
+colors: *tokyo-night
 
 # Bell
 #
