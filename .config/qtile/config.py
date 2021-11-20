@@ -231,14 +231,14 @@ for i in groups:
 layout_theme = {
     "border_width": 2,
     "margin": 15,
-    "border_focus": "bb97ee",
-    "border_normal": "2b2d3a"
+    "border_focus": "7c7be0",
+    "border_normal": "1a1b26"
 }
 
 layouts = [
     layout.MonadTall(
-        border_focus = 'bb97ee',
-        border_normal = '2b2d3a',
+        border_focus = '7c7be0',
+        border_normal = '1a1b26',
         border_width = 2,
         margin = 15,
         ratio = 0.52,
@@ -250,8 +250,8 @@ layouts = [
         **layout_theme
     ),
     layout.Floating(
-        border_focus = '828bc4',
-        border_normal = '2b2d3a',
+        border_focus = '9a7ecc',
+        border_normal = '1a1b26',
         border_width = 2,
         fullscreen_border_width = 0,
     ),
@@ -267,18 +267,18 @@ layouts = [
 ]
 
 ## Colors definitions ##
-colors = [["#2b2d3a", "#2b2d3a"], # 0 Background 0
-          ["#40424d", "#40424d"], # 1 Background 1
-          ["#e1e3e4", "#e1e3e4"], # 2 Foreground 0
-          ["#e4e5e6", "#e4e5e6"], # 3 Foreground 1
-          ["#fb617e", "#fb617e"], # 4 Red
-          ["#9ed06c", "#9ed06c"], # 5 Green
-          ["#edc763", "#edc763"], # 6 Yellow
-          ["#6dcae8", "#6dcae8"], # 7 Blue
-          ["#bb97ee", "#bb97ee"], # 8 Magenta
-          ["#c9f0ff", "#c9f0ff"], # 9 Cyan
-          ["#f89860", "#f89860"], # 10 Orange
-          ["#828bc4", "#828bc4"], # 11 Violet
+colors = [["#1a1b26", "#1a1b26"], # 0 Background 0
+          ["#30313b", "#30313b"], # 1 Background 1
+          ["#a9b1d6", "#a9b1d6"], # 2 Foreground 0
+          ["#b1b8da", "#b1b8da"], # 3 Foreground 1
+          ["#F7768E", "#F7768E"], # 4 Red
+          ["#9ECE6A", "#9ECE6A"], # 5 Green
+          ["#E0AF68", "#E0AF68"], # 6 Yellow
+          ["#7AA2F7", "#7AA2F7"], # 7 Blue
+          ["#9a7ecc", "#9a7ecc"], # 8 Magenta
+          ["#4abaaf", "#4abaaf"], # 9 Cyan
+          ["#FEA520", "#FEA520"], # 10 Orange
+          ["#7C7BE0", "#7C7BE0"], # 11 Violet
         ]
 
 
@@ -289,8 +289,8 @@ widget_defaults = dict(
     font = 'Iosevka Extended',
     fontsize = 12,
     padding = 0,
-    background = '#2b2d3a',
-    foreground = '#e1e3e4',
+    background = '#1a1b26',
+    foreground = '#a9b1d6',
 )
 
 extension_defaults = widget_defaults.copy()
@@ -535,8 +535,8 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
-    border_focus = '828bc4',
-    border_normal = '2b2d3a',
+    border_focus = '9a7ecc',
+    border_normal = '1a1b26',
     border_width = 2,
     fullscreen_border_width = 0,
     float_rules=[
