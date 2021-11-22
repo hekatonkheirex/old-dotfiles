@@ -27,6 +27,7 @@ bspwm
 cava
 cnrdrvcups-lb
 cups
+czkawka-gui-bin
 darktable
 dialog
 dina-font
@@ -79,6 +80,7 @@ jq
 khal
 kitty
 kitty-terminfo
+laptop-mode-tools
 leafpad
 libraw
 libreoffice-fresh
@@ -180,7 +182,6 @@ thunar-media-tags-plugin
 thunar-shares-plugin
 thunar-volman
 tint2-git
-tlp
 ttf-anonymous-pro
 ttf-bitstream-vera
 ttf-cascadia-code
