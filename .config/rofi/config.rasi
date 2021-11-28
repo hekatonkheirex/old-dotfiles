@@ -19,12 +19,12 @@ configuration {
 * {
     font:                        "Inter 10";
 		spacing:                     0;
-    background:                  #1a1b26;
-    foreground:                  #a9b1d6;
-		lightbg:                     #30313b;
-    lightfg:                     #b1b8da;
-    red:                         #f7768e;
-    blue:                        #7c7be0;
+    background:                  #282828;
+    foreground:                  #fbf1c7;
+		lightbg:                     #3c3836;
+    lightfg:                     #ebdbb2;
+    red:                         #cc241d;
+    blue:                        #458588;
 		text-color:                  var(foreground);
     selected-active-foreground:  var(blue);
     separatorcolor:              var(blackground);

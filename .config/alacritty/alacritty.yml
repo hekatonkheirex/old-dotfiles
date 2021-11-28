@@ -459,7 +459,7 @@ schemes:
 # *solarized-dark
 # *onedark
 
-colors: *tokyo-night
+colors: *gruvbox-dark
 
 # Bell
 #

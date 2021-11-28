@@ -77,13 +77,13 @@ Plug 'altercation/vim-colors-solarized'
 " Initialize plugin system
 call plug#end()
 
-"let g:gruvbox_contrast_dark = 'medium'
+let g:gruvbox_contrast_dark = 'medium'
 let g:airline_powerline_fonts = 1
 "let g:airline_theme = 'everforest'
 "let g:everforest_background = 'medium'
 "let g:everforest_enable_italic = 1
 "let g:colors_name = "monokai"
-"let g:gruvbox_italic=1
+let g:gruvbox_italic=1
 "let g:nord_italic = 1
 "let g:nord_italic_comments = 1
 "let g:colors_name = "dracula"
@@ -93,20 +93,20 @@ let g:airline_powerline_fonts = 1
 "let g:sonokai_style = 'andromeda'
 "let g:sonokai_enable_italic = 1
 "let g:sonokai_disable_italic_comment = 1
-let g:tokyonight_style = 'night' " available: night, storm
-let g:tokyonight_enable_italic = 1
+"let g:tokyonight_style = 'night' " available: night, storm
+"let g:tokyonight_enable_italic = 1
 "let g:tokyonight_disable_italic_comment = 0
-let g:airline_theme = "tokyonight"
+"let g:airline_theme = "tokyonight"
 au ColorScheme * hi Normal ctermbg=None
 "colorscheme nord
 "colorscheme dracula
 "colorscheme wal
 "colorscheme monokai
-"colorscheme gruvbox
+colorscheme gruvbox
 "colorscheme onedark
 "colorscheme everforest
 "colorscheme sonokai
-colorscheme tokyonight
+"colorscheme tokyonight
 "colorscheme base16-outrun-dark
 "colorscheme solarized
 let g:node_host_prog = '/usr/local/bin/neovim-node-host'
