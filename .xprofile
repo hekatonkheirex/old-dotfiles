@@ -5,3 +5,5 @@ export XMODIFIERS=@im='ibus'
 
 #Toolbar for anthy
 ibus-daemon -drx
+
+export QT_QPA_PLATFORMTHEME="qt5ct"

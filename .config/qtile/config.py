@@ -20,6 +20,43 @@ mod = "mod4"
 #myTerm = "kitty"
 myTerm = "alacritty"
 
+def focus_previous_group(qtile):
+    group = qtile.current_screen.group
+    group_index = qtile.groups.index(group)
+    previous_group = group.get_previous_group(skip_empty=True)
+    previous_group_index = qtile.groups.index(previous_group)
+    if previous_group_index < group_index:
+        qtile.current_screen.set_group(previous_group)
+
+
+def focus_next_group(qtile):
+    group = qtile.current_screen.group
+    group_index = qtile.groups.index(group)
+    next_group = group.get_next_group(skip_empty=True)
+    next_group_index = qtile.groups.index(next_group)
+    if next_group_index > group_index:
+        qtile.current_screen.set_group(next_group)
+
+
+def window_to_prev_group(qtile):
+    i = qtile.groups.index(qtile.current_group)
+    if qtile.current_window is not None and i != 0:
+        qtile.current_window.togroup(qtile.groups[i - 1].name)
+
+
+def window_to_next_group(qtile):
+    i = qtile.groups.index(qtile.current_group)
+    if qtile.current_window is not None and i != 6:
+        qtile.current_window.togroup(qtile.groups[i + 1].name)
+
+
+def toggle_minimize_all(qtile):
+    group = qtile.current_screen.group
+    for win in group.windows:
+        win.minimized = not win.minimized
+        if win.minimized is False:
+            group.layout_all()
+
 keys = [
     ## The essentials ##
     Key(
@@ -187,58 +224,82 @@ keys = [
     ),
 ]
 
-__groups = {
-    1: Group("web", matches=[Match(wm_class=["firefox"])], layout='monadtall'),
-    2: Group("term", matches=[Match(wm_class=["kitty", "Alacritty"])], layout='tile'),
-    3: Group("file", matches=[Match(wm_class=["Thunar"])], layout='max'),
-    4: Group("doc", matches=[Match(wm_class=["Soffice"])], layout= 'max'),
-    5: Group("bit", matches=[Match(wm_class=["qBittorrent"])], layout='max'),
-    6: Group("chat", matches=[Match(wm_class=["discord"])], layout='max'),
-    7: Group("share", matches=[Match(wm_class=["TeamViewer", "Anydesk"])], layout='floating'),
-    8: Group("vid", matches=[Match(wm_class=["mpv"])], layout='floating'),
-    9: Group("mus", matches=[Match(wm_class=["Spotify"])], layout='max'),
-}
+groups = []
 
-groups = [__groups[i] for i in __groups]
+group_names = 'www term file doc bit chat share vid mus'.split()
+group_labels = ["web", "term", "file", "doc", "bit", "chat", "share", "vid", "mus"]
+group_layouts = ["monadtall", "tile", "max", "max", "max", "max", "floating", "floating", "max"]
 
-def get_group_key(name):
-    return [k for k, g in __groups.items() if g.name == name][0]
+for i in range(len(group_names)):
+    groups.append(
+        Group(
+            name=group_names[i],
+            layout=group_layouts[i].lower(),
+            label=group_labels[i]
+        ))
 
-for i in groups:
+@hook.subscribe.client_new
+def assign_app_group(client):
+    d = {}
+    d[group_names[0]] = [
+        "firefox",
+        "Firefox",
+        "Navigator",
+        ]
+    d[group_names[1]] = [
+        "Alacritty",
+        "kitty",
+        ]
+    d[group_names[2]] = [
+        "Thunar",
+        ]
+    d[group_names[3]] = [
+        "Soffice",
+        "libreoffice",
+        ]
+    d[group_names[4]] = [
+        "qBittorrent",
+        ]
+    d[group_names[5]] = [
+        "discord",
+        ]
+    d[group_names[6]] = [
+        "TeamViewer",
+        "Anydesk",
+        ]
+    d[group_names[7]] = [
+        "mpv",
+        ]
+    d[group_names[8]] = [
+        "Spotify",
+        ]
+
+    wm_class = client.window.get_wm_class()[0]
+
+    for i in range(len(d)):
+        if wm_class in list(d.values())[i]:
+            group = list(d.keys())[i]
+            client.togroup(group)
+            client.group.cmd_toscreen(toggle=False)
+
+for i, name in enumerate(group_names, 1):
     keys.extend([
-        # mod1 + letter of group = switch to group
-        Key([mod], str(get_group_key(i.name)),
-            lazy.group[i.name].toscreen(),
-            desc="Switch to group {}".format(i.name)
-        ),
-
-        # mod1+shift+letter of group = switch to & move focused window to group
-        #Key([mod, "shift"], str(get_group_key(i.name)),
-        #    lazy.window.togroup(i.name, switch_group=True),
-        #    desc="Switch to & move focused window to group {}".format(i.name)
-        #),
-        # Or, use below if you prefer not to switch to that group.
-        # # mod1 + shift + letter of group = move focused window to group
-        Key(
-            [mod, "shift"], str(get_group_key(i.name)), 
-            lazy.window.togroup(i.name),
-            desc="move focused window to group {}".format(i.name)
-        ),
-    ])
+        Key([mod], str(i), lazy.group[name].toscreen()),
+        Key([mod, 'shift'], str(i), lazy.window.togroup(name))])
 
 ## Layouts ##
 
 layout_theme = {
     "border_width": 2,
     "margin": 15,
-    "border_focus": "7c7be0",
-    "border_normal": "1a1b26"
+    "border_focus": "d65d0e",
+    "border_normal": "282828"
 }
 
 layouts = [
     layout.MonadTall(
-        border_focus = '7c7be0',
-        border_normal = '1a1b26',
+        border_focus = 'd65d0e',
+        border_normal = '282828',
         border_width = 2,
         margin = 15,
         ratio = 0.52,
@@ -250,8 +311,8 @@ layouts = [
         **layout_theme
     ),
     layout.Floating(
-        border_focus = '9a7ecc',
-        border_normal = '1a1b26',
+        border_focus = 'd79921',
+        border_normal = '282828',
         border_width = 2,
         fullscreen_border_width = 0,
     ),
@@ -267,18 +328,18 @@ layouts = [
 ]
 
 ## Colors definitions ##
-colors = [["#1a1b26", "#1a1b26"], # 0 Background 0
-          ["#30313b", "#30313b"], # 1 Background 1
-          ["#a9b1d6", "#a9b1d6"], # 2 Foreground 0
-          ["#b1b8da", "#b1b8da"], # 3 Foreground 1
-          ["#F7768E", "#F7768E"], # 4 Red
-          ["#9ECE6A", "#9ECE6A"], # 5 Green
-          ["#E0AF68", "#E0AF68"], # 6 Yellow
-          ["#7AA2F7", "#7AA2F7"], # 7 Blue
-          ["#9a7ecc", "#9a7ecc"], # 8 Magenta
-          ["#4abaaf", "#4abaaf"], # 9 Cyan
-          ["#FEA520", "#FEA520"], # 10 Orange
-          ["#7C7BE0", "#7C7BE0"], # 11 Violet
+colors = [["#282828", "#282828"], # 0 Background 0
+          ["#3c3836", "#3c3836"], # 1 Background 1
+          ["#fbf1c7", "#fbf1c7"], # 2 Foreground 0
+          ["#ebdbb2", "#ebdbb2"], # 3 Foreground 1
+          ["#cc241d", "#cc241d"], # 4 Red
+          ["#98971a", "#98971a"], # 5 Green
+          ["#d79921", "#d79921"], # 6 Yellow
+          ["#458588", "#458588"], # 7 Blue
+          ["#b16286", "#b16286"], # 8 Magenta
+          ["#689d6a", "#689d6a"], # 9 Cyan
+          ["#d65d0e", "#d65d0e"], # 10 Orange
+          ["#8f3f71", "#8f3f71"], # 11 Violet
         ]
 
 
@@ -289,8 +350,8 @@ widget_defaults = dict(
     font = 'Iosevka Extended',
     fontsize = 12,
     padding = 0,
-    background = '#1a1b26',
-    foreground = '#a9b1d6',
+    background = '#282828',
+    foreground = '#fbf1c7',
 )
 
 extension_defaults = widget_defaults.copy()
@@ -535,8 +596,8 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
-    border_focus = '9a7ecc',
-    border_normal = '1a1b26',
+    border_focus = 'd79921',
+    border_normal = '282828',
     border_width = 2,
     fullscreen_border_width = 0,
     float_rules=[

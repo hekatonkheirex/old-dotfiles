@@ -1,7 +1,7 @@
 configuration {
 	modi: "window,run,drun";
-	font: "Inter 10";
-	show-icons: false;
+	font: "Material Design Icons 16";
+	show-icons: true;
 	drun-display-format: "{icon}{name}";
 	display-window: "";
 	display-run: "";
@@ -190,7 +190,7 @@ entry {
     expand:            false;
     spacing:           2;
     placeholder-color: var(foreground);
-    placeholder:       "Search application";
+    placeholder:       "󰍉";
 		padding:           4px 4px;
 }
 prompt {
