@@ -77,16 +77,16 @@ Plug 'altercation/vim-colors-solarized'
 " Initialize plugin system
 call plug#end()
 
-let g:gruvbox_contrast_dark = 'medium'
+"let g:gruvbox_contrast_dark = 'medium'
 let g:airline_powerline_fonts = 1
 "let g:airline_theme = 'everforest'
 "let g:everforest_background = 'medium'
 "let g:everforest_enable_italic = 1
 "let g:colors_name = "monokai"
-let g:gruvbox_italic=1
+"let g:gruvbox_italic=1
 "let g:nord_italic = 1
 "let g:nord_italic_comments = 1
-"let g:colors_name = "dracula"
+let g:colors_name = "dracula"
 "let g:onedark_hide_endofbuffer = 1
 "let g:onedark_terminal_italics = 1
 "let g:airline_theme = 'sonokai'
@@ -99,10 +99,10 @@ let g:gruvbox_italic=1
 "let g:airline_theme = "tokyonight"
 au ColorScheme * hi Normal ctermbg=None
 "colorscheme nord
-"colorscheme dracula
+colorscheme dracula
 "colorscheme wal
 "colorscheme monokai
-colorscheme gruvbox
+"colorscheme gruvbox
 "colorscheme onedark
 "colorscheme everforest
 "colorscheme sonokai
@@ -114,6 +114,8 @@ let g:node_host_prog = '/usr/local/bin/neovim-node-host'
 :set background=dark
 :set t_Co=254
 :set number
+:set relativenumber
+:set mouse=a
 ":set cursorline
 ":set cursorcolumn
 :syntax enable

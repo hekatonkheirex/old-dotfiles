@@ -9,7 +9,7 @@ fcitx5 &
 xinput --set-prop "ELAN1300:00 04F3:3087 Touchpad" "libinput Natural Scrolling Enabled" 1 &
 #setxkbmap -option grp:alt_shift_toggle us,es &
 xsetroot -cursor_name left_ptr &
-feh --bg-fill /mnt/windows/Walls/1.jpg
+feh --bg-fill /mnt/windows/Walls/wallhaven-1kqllw.jpg
 picom -f -b --config /home/mura/.config/picom/picom_not_rounded.conf
 #light -S 50 &
 $HOME/.config/scripts/thunar.sh &

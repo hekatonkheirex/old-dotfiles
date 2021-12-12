@@ -1,7 +1,7 @@
 configuration {
 	modi: "window,run,drun";
 	font: "Material Design Icons 16";
-	show-icons: true;
+	show-icons: false;
 	drun-display-format: "{icon}{name}";
 	display-window: "";
 	display-run: "";
@@ -19,12 +19,12 @@ configuration {
 * {
     font:                        "Inter 10";
 		spacing:                     0;
-    background:                  #282828;
-    foreground:                  #fbf1c7;
-		lightbg:                     #3c3836;
-    lightfg:                     #ebdbb2;
-    red:                         #cc241d;
-    blue:                        #458588;
+    background:                  #282a36;
+    foreground:                  #f8f8f2;
+		lightbg:                     #44475a;
+    lightfg:                     #bfbfbf;
+    red:                         #ff5555;
+    blue:                        #8be9fd;
 		text-color:                  var(foreground);
     selected-active-foreground:  var(blue);
     separatorcolor:              var(blackground);

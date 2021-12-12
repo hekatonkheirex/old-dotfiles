@@ -459,7 +459,7 @@ schemes:
 # *solarized-dark
 # *onedark
 
-colors: *gruvbox-dark
+colors: *dracula
 
 # Bell
 #

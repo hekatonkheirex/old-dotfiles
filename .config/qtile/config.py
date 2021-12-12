@@ -188,6 +188,11 @@ keys = [
         lazy.spawn('rofi -show drun'),
         desc="Spawn rofi"
     ),
+    Key(
+        [mod], "p",
+        lazy.spawn('sh /home/mura/.config/rofi/scripts/powermenu.sh'),
+        desc="Spawn powermenu"
+    ),
 
     ## Audio keybindings ##
     Key(
@@ -227,7 +232,7 @@ keys = [
 groups = []
 
 group_names = 'www term file doc bit chat share vid mus'.split()
-group_labels = ["web", "term", "file", "doc", "bit", "chat", "share", "vid", "mus"]
+group_labels = ["󰄯", "󰄯", "󰄯", "󰄯", "󰄯", "󰄯", "󰄯", "󰄯", "󰄯"]
 group_layouts = ["monadtall", "tile", "max", "max", "max", "max", "floating", "floating", "max"]
 
 for i in range(len(group_names)):
@@ -245,6 +250,8 @@ def assign_app_group(client):
         "firefox",
         "Firefox",
         "Navigator",
+        "google-chrome",
+        "Google-chrome",
         ]
     d[group_names[1]] = [
         "Alacritty",
@@ -288,18 +295,35 @@ for i, name in enumerate(group_names, 1):
         Key([mod, 'shift'], str(i), lazy.window.togroup(name))])
 
 ## Layouts ##
+## Gruvbox dark
+#layout_theme = {
+#    "border_width": 2,
+#    "margin": 15,
+#    "border_focus": "d65d0e",
+#    "border_normal": "282828"
+#}
 
+## Outrun Dark
+#layout_theme = {
+#    "border_width": 2,
+#    "margin": 15,
+#    "border_focus": "f10596",
+#    "border_normal": "00002a"
+#}
+
+## Dracula
 layout_theme = {
     "border_width": 2,
     "margin": 15,
-    "border_focus": "d65d0e",
-    "border_normal": "282828"
+    "border_focus": "bd93f9",
+    "border_normal": "282a36"
 }
+
 
 layouts = [
     layout.MonadTall(
-        border_focus = 'd65d0e',
-        border_normal = '282828',
+        border_focus = 'bd93f9',
+        border_normal = '282a36',
         border_width = 2,
         margin = 15,
         ratio = 0.52,
@@ -311,8 +335,8 @@ layouts = [
         **layout_theme
     ),
     layout.Floating(
-        border_focus = 'd79921',
-        border_normal = '282828',
+        border_focus = 'ff79c6',
+        border_normal = '282a36',
         border_width = 2,
         fullscreen_border_width = 0,
     ),
@@ -328,30 +352,60 @@ layouts = [
 ]
 
 ## Colors definitions ##
-colors = [["#282828", "#282828"], # 0 Background 0
-          ["#3c3836", "#3c3836"], # 1 Background 1
-          ["#fbf1c7", "#fbf1c7"], # 2 Foreground 0
-          ["#ebdbb2", "#ebdbb2"], # 3 Foreground 1
-          ["#cc241d", "#cc241d"], # 4 Red
-          ["#98971a", "#98971a"], # 5 Green
-          ["#d79921", "#d79921"], # 6 Yellow
-          ["#458588", "#458588"], # 7 Blue
-          ["#b16286", "#b16286"], # 8 Magenta
-          ["#689d6a", "#689d6a"], # 9 Cyan
-          ["#d65d0e", "#d65d0e"], # 10 Orange
-          ["#8f3f71", "#8f3f71"], # 11 Violet
-        ]
+## Gruvbox
+#colors = [["#282828", "#282828"], # 0 Background 0
+#          ["#3c3836", "#3c3836"], # 1 Background 1
+#          ["#fbf1c7", "#fbf1c7"], # 2 Foreground 0
+#          ["#ebdbb2", "#ebdbb2"], # 3 Foreground 1
+#          ["#cc241d", "#cc241d"], # 4 Red
+#          ["#98971a", "#98971a"], # 5 Green
+#          ["#d79921", "#d79921"], # 6 Yellow
+#          ["#458588", "#458588"], # 7 Blue
+#          ["#b16286", "#b16286"], # 8 Magenta
+#          ["#689d6a", "#689d6a"], # 9 Cyan
+#          ["#d65d0e", "#d65d0e"], # 10 Orange
+#          ["#8f3f71", "#8f3f71"], # 11 Violet
+#        ]
 
+## Outrun Dark
+#colors = [["#00002a", "#00002a"], # 0 Background 0
+#          ["#19193f", "#19193f"], # 1 Background 1
+#          ["#d0d0fa", "#d0d0fa"], # 2 Foreground 0
+#          ["#bbbbe1", "#bbbbe1"], # 3 Foreground 1
+#          ["#ff4242", "#ff4242"], # 4 Red
+#          ["#59f176", "#59f176"], # 5 Green
+#          ["#f3e877", "#f3e877"], # 6 Yellow
+#          ["#66b0ff", "#66b0ff"], # 7 Blue
+#          ["#f10596", "#f10596"], # 8 Magenta
+#          ["#0ef0f0", "#0ef0f0"], # 9 Cyan
+#          ["#faa613", "#faa613"], # 10 Orange
+#          ["#aa7dce", "#aa7dce"], # 11 Violet
+#        ]
+
+## Dracula
+colors = [["#282a36", "#282a36"], # 0 Background 0
+          ["#44475a", "#44475a"], # 1 Background 1
+          ["#f8f8f2", "#f8f8f2"], # 2 Foreground 0
+          ["#bfbfbf", "#bfbfbf"], # 3 Foreground 1
+          ["#ff5555", "#ff5555"], # 4 Red
+          ["#50fa7b", "#50fa7b"], # 5 Green
+          ["#f1fa8c", "#f1fa8c"], # 6 Yellow
+          ["#1098f7", "#1098f7"], # 7 Blue
+          ["#ff79c6", "#ff79c6"], # 8 Magenta
+          ["#8be9fd", "#8be9fd"], # 9 Cyan
+          ["#ffb86c", "#ffb86c"], # 10 Orange
+          ["#bd93f9", "#bd93f9"], # 11 Violet
+        ]
 
 prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
 
 ## Widgets definitions ##
 widget_defaults = dict(
-    font = 'Iosevka Extended',
-    fontsize = 12,
-    padding = 0,
-    background = '#282828',
-    foreground = '#fbf1c7',
+    font = 'scientifica',
+    fontsize = 14,
+    padding = 1,
+    background = '#282a36',
+    foreground = '#f8f8f2',
 )
 
 extension_defaults = widget_defaults.copy()
@@ -360,205 +414,235 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.Image(
-                    filename = "~/.config/qtile/icons/python.png",
-                    margin = 5
-                ),
-                widget.TextBox(
-                    text = '',
-                    fontsize = 26,
-                    foreground = colors[1],
+                #widget.Image(
+                #    filename = "~/.config/qtile/icons/python.png",
+                #    margin = 5
+                #),
+                #widget.TextBox(
+                #    text = '',
+                #    fontsize = 26,
+                #    foreground = colors[1],
+                #),
+                widget.CurrentLayoutIcon(
+                    custom_icon_paths = [os.path.expanduser("~/.config/qtile/icons")],
+                    padding = 1,
+                    scale = 0.4,
                 ),
                 widget.GroupBox(
                     active = colors[6],
                     block_highlight_text_color = colors[0],
                     borderwidth = 2,
                     disable_drag = True,
-                    #fontsize = 18,
+                    fontsize = 14,
                     hide_unused = False,
                     highlight_color = '00000000',
                     highlight_method = 'text',
-                    inactive = colors[0],
+                    inactive = colors[1],
                     padding = 1,
                     rounded = True,
-                    spacing = 1,
+                    spacing = 4,
                     this_current_screen_border = colors[5],
                     urgent_alert_method = 'block',
                     urgent_border = colors[4],
                     urgent_text = colors[0],
-                    background = colors[1],
+                    #background = colors[1],
                 ),
-                widget.TextBox(
-                    text = '',
-                    fontsize = 26,
-                    foreground = colors[1],
-                ),
+                #widget.TextBox(
+                #    text = '',
+                #    fontsize = 26,
+                #    foreground = colors[1],
+                #),
                 widget.WindowName(
                     max_chars = 60,
                     padding = 4,
                 ),
                 widget.Spacer(
                 ),
-                widget.CurrentLayoutIcon(
-                    custom_icon_paths = [os.path.expanduser("~/.config/qtile/icons")],
-                    foreground = colors[2],
-                    padding = 1,
-                    scale = 0.4,
-                ),
-                widget.CurrentLayout(
-                    padding = 1,
-                    foreground = colors[2],
-                ),
+                #widget.CurrentLayout(
+                #    padding = 1,
+                #    foreground = colors[2],
+                #),
                 widget.Sep(
                     padding = 4,
                     foreground = colors[0],
                 ),
+                #widget.TextBox(
+                #    text = '',
+                #    fontsize = 26,
+                #    foreground = colors[1],
+                #),
                 widget.TextBox(
-                    text = '',
-                    fontsize = 26,
-                    foreground = colors[1],
+                    text = '󰻠',
+                    fontsize = 14,
+                    padding = 4,
+                    foreground = colors[8],
                 ),
                 widget.CPU(
-                    format = 'CPU:{load_percent}%',
-                    foreground = colors[4],
-                    background = colors[1],
+                    format = '{load_percent}%',
+                    foreground = colors[2],
+                    #background = colors[1],
                 ),
-                widget.TextBox(
-                    text = '',
-                    fontsize = 26,
-                    foreground = colors[1],
-                ),
+                #widget.TextBox(
+                #    text = '',
+                #    fontsize = 26,
+                #    foreground = colors[1],
+                #),
                 widget.Sep(
                     padding = 4,
                     foreground = colors[0],
                 ),
+                #widget.TextBox(
+                #    text = '',
+                #    fontsize = 26,
+                #    foreground = colors[1],
+                #),
                 widget.TextBox(
-                    text = '',
-                    fontsize = 26,
-                    foreground = colors[1],
+                    text = '󰍛',
+                    fontsize = 14,
+                    padding = 1,
+                    foreground = colors[8],
                 ),
                 widget.Memory(
-                    format = 'Mem:{MemUsed: .0f}M',
+                    format = '{MemUsed: .0f}M',
                     measure_mem = 'M',
                     update_interval = 1.0,
-                    foreground = colors[5],
-                    background = colors[1],
+                    foreground = colors[2],
+                    #background = colors[1],
                 ),
-                widget.TextBox(
-                    text = '',
-                    fontsize = 26,
-                    foreground = colors[1],
-                ),
+                #widget.TextBox(
+                #    text = '',
+                #    fontsize = 26,
+                #    foreground = colors[1],
+                #),
                 widget.Sep(
                     padding = 4,
                     foreground = colors[0],
                 ),
+                #widget.TextBox(
+                #    text = '',
+                #    fontsize = 26,
+                #    foreground = colors[1],
+                #),
                 widget.TextBox(
-                    text = '',
-                    fontsize = 26,
-                    foreground = colors[1],
-                ),
-                widget.TextBox(
-                    text = 'Temp:',
+                    text = '󰔏',
+                    fontsize = 14,
                     padding = 1,
-                    foreground = colors[6],
-                    background = colors[1],
+                    foreground = colors[8],
+                    #background = colors[1],
                 ),
                 widget.ThermalSensor(
-                    foreground = colors[6],
-                    background = colors[1],
+                    foreground = colors[2],
+                    #background = colors[1],
                 ),
-                widget.TextBox(
-                    text = '',
-                    fontsize = 26,
-                    foreground = colors[1],
-                ),
+                #widget.TextBox(
+                #    text = '',
+                #    fontsize = 26,
+                #    foreground = colors[1],
+                #),
                 widget.Sep(
                     padding = 4,
                     foreground = colors[0],
                 ),
+                #widget.TextBox(
+                #    text = '',
+                #    fontsize = 26,
+                #    foreground = colors[1],
+                #),
                 widget.TextBox(
-                    text = '',
-                    fontsize = 26,
-                    foreground = colors[1],
-                ),
-                widget.TextBox(
-                    text = 'Vol:',
+                    text = '󰕾',
+                    fontsize = 14,
                     padding = 1,
-                    foreground = colors[7],
-                    background = colors[1],
+                    foreground = colors[8],
+                    #background = colors[1],
                 ),
                 widget.PulseVolume(
                     padding = 1,
-                    foreground = colors[7],
-                    background = colors[1],
+                    foreground = colors[2],
+                    #background = colors[1],
                 ),
-                widget.TextBox(
-                    text = '',
-                    fontsize = 26,
-                    foreground = colors[1],
-                ),
+                #widget.TextBox(
+                #    text = '',
+                #    fontsize = 26,
+                #    foreground = colors[1],
+                #),
                 widget.Sep(
                     padding = 4,
                     foreground = colors[0],
                 ),
+                #widget.TextBox(
+                #    text = '',
+                #    fontsize = 26,
+                #    foreground = colors[1],
+                #),
                 widget.TextBox(
-                    text = '',
-                    fontsize = 26,
-                    foreground = colors[1],
+                    text = '󰖐',
+                    fontsize = 14,
+                    padding = 1,
+                    foreground = colors[8],
                 ),
                 widget.OpenWeather(
                     app_key = '29c7c3f06ff45f58f6a2e409c2fb2d22',
                     cityid = '3439389',
                     format = '{weather} {main_temp}°{units_temperature}',
                     metric = True,
-                    padding = 1,
+                    padding = 4,
                     update_interval = 600,
                     url = 'https://openweathermap.org/city/3439389',
-                    foreground = colors[8],
-                    background = colors[1],
+                    foreground = colors[2],
+                    #background = colors[1],
                 ),
-                widget.TextBox(
-                    text = '',
-                    fontsize = 26,
-                    foreground = colors[1],
-                ),
+                #widget.TextBox(
+                #    text = '',
+                #    fontsize = 26,
+                #    foreground = colors[1],
+                #),
                 widget.Sep(
                     padding = 4,
                     foreground = colors[0],
                 ),
+                #widget.TextBox(
+                #    text = '',
+                #    fontsize = 26,
+                #    foreground = colors[1],
+                #),
                 widget.TextBox(
-                    text = '',
-                    fontsize = 26,
-                    foreground = colors[1],
+                    text = '󰃭',
+                    fontsize = 14,
+                    padding = 1,
+                    foreground = colors[8],
                 ),
                 widget.Clock(
-                    format='%A, %b %d, %H:%M',
-                    padding = 0,
+                    format='%a %d %b %H:%M',
+                    padding = 4,
                     foreground = colors[2],
-                    background = colors[1],
+                    #background = colors[1],
                 ),
-                widget.TextBox(
-                    text = '',
-                    fontsize = 26,
-                    foreground = colors[1],
-                ),
-                widget.WidgetBox(
-                    text_closed = '󰅁',
-                    text_open = '󰅂',
-                    widgets=[
-                        widget.Systray(
-                            padding = 1,
-                        ),
-                    ],
-                ),
-                widget.QuickExit(
-                    countdown_format = '[{}]',
-                    foreground = colors[4],
-                    default_text = '󰐥',
-                    fontsize = 20,
+                #widget.TextBox(
+                #    text = '',
+                #    fontsize = 26,
+                #    foreground = colors[1],
+                #),
+                #widget.WidgetBox(
+                #    text_closed = '󰅁',
+                #    text_open = '󰅂',
+                #    fontsize = 14,
+                #    foreground = colors[8],
+                #    widgets=[
+                #        widget.Systray(
+                #            padding = 1,
+                #        ),
+                #    ],
+                #),
+                widget.Systray(
                     padding = 4,
                 ),
+                #widget.QuickExit(
+                #    countdown_format = '[{}]',
+                #    foreground = colors[4],
+                #    default_text = '󰐥',
+                #    fontsize = 14,
+                #    padding = 4,
+                #),
                 widget.Sep(
                     padding = 8,
                     foreground = colors[0],
@@ -596,8 +680,8 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
-    border_focus = 'd79921',
-    border_normal = '282828',
+    border_focus = 'ff79c6',
+    border_normal = '282a36',
     border_width = 2,
     fullscreen_border_width = 0,
     float_rules=[
