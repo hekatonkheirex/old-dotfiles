@@ -312,18 +312,33 @@ for i, name in enumerate(group_names, 1):
 #}
 
 ## Dracula
+#layout_theme = {
+#    "border_width": 2,
+#    "margin": 15,
+#    "border_focus": "bd93f9",
+#    "border_normal": "282a36"
+#}
+
+## Everforest
+#layout_theme = {
+#    "border_width": 2,
+#    "margin": 15,
+#    "border_focus": "a7c080",
+#    "border_normal": "2b3339"
+#}
+
+## Tokyo Night
 layout_theme = {
     "border_width": 2,
     "margin": 15,
-    "border_focus": "bd93f9",
-    "border_normal": "282a36"
+    "border_focus": "7c7be0",
+    "border_normal": "1a1b26"
 }
-
 
 layouts = [
     layout.MonadTall(
-        border_focus = 'bd93f9',
-        border_normal = '282a36',
+        border_focus = '7c7be0',
+        border_normal = '1a1b26',
         border_width = 2,
         margin = 15,
         ratio = 0.52,
@@ -335,8 +350,8 @@ layouts = [
         **layout_theme
     ),
     layout.Floating(
-        border_focus = 'ff79c6',
-        border_normal = '282a36',
+        border_focus = '9a7ecc',
+        border_normal = '1a1b26',
         border_width = 2,
         fullscreen_border_width = 0,
     ),
@@ -383,18 +398,48 @@ layouts = [
 #        ]
 
 ## Dracula
-colors = [["#282a36", "#282a36"], # 0 Background 0
-          ["#44475a", "#44475a"], # 1 Background 1
-          ["#f8f8f2", "#f8f8f2"], # 2 Foreground 0
-          ["#bfbfbf", "#bfbfbf"], # 3 Foreground 1
-          ["#ff5555", "#ff5555"], # 4 Red
-          ["#50fa7b", "#50fa7b"], # 5 Green
-          ["#f1fa8c", "#f1fa8c"], # 6 Yellow
-          ["#1098f7", "#1098f7"], # 7 Blue
-          ["#ff79c6", "#ff79c6"], # 8 Magenta
-          ["#8be9fd", "#8be9fd"], # 9 Cyan
-          ["#ffb86c", "#ffb86c"], # 10 Orange
-          ["#bd93f9", "#bd93f9"], # 11 Violet
+#colors = [["#282a36", "#282a36"], # 0 Background 0
+#          ["#44475a", "#44475a"], # 1 Background 1
+#          ["#f8f8f2", "#f8f8f2"], # 2 Foreground 0
+#          ["#bfbfbf", "#bfbfbf"], # 3 Foreground 1
+#          ["#ff5555", "#ff5555"], # 4 Red
+#          ["#50fa7b", "#50fa7b"], # 5 Green
+#          ["#f1fa8c", "#f1fa8c"], # 6 Yellow
+#          ["#1098f7", "#1098f7"], # 7 Blue
+#          ["#ff79c6", "#ff79c6"], # 8 Magenta
+#          ["#8be9fd", "#8be9fd"], # 9 Cyan
+#          ["#ffb86c", "#ffb86c"], # 10 Orange
+#          ["#bd93f9", "#bd93f9"], # 11 Violet
+#        ]
+
+## Everforest
+#colors = [["#2b3339", "#2b3339"], # 0 Background 0
+#          ["#40474c", "#40474c"], # 1 Background 1
+#          ["#d3c6aa", "#d3c6aa"], # 2 Foreground 0
+#          ["#d7cbb2", "#d7cbb2"], # 3 Foreground 1
+#          ["#e67e80", "#e67e80"], # 4 Red
+#          ["#a7c080", "#a7c080"], # 5 Green
+#          ["#dbbc7f", "#dbbc7f"], # 6 Yellow
+#          ["#7fbbb3", "#7fbbb3"], # 7 Blue
+#          ["#d699b6", "#d699b6"], # 8 Magenta
+#          ["#83c092", "#83c092"], # 9 Cyan
+#          ["#ff9f1c", "#ff9f1c"], # 10 Orange
+#          ["#e3dfff", "#e3dfff"], # 11 Violet
+#        ]
+
+## Tokyo Night
+colors = [["#1a1b26", "#1a1b26"], # 0 Background 0
+          ["#30313b", "#30313b"], # 1 Background 1
+          ["#a9b1d6", "#a9b1d6"], # 2 Foreground 0
+          ["#b1b8da", "#b1b8da"], # 3 Foreground 1
+          ["#f7768e", "#f7768e"], # 4 Red
+          ["#9ece6a", "#9ece6a"], # 5 Green
+          ["#e0af68", "#e0af68"], # 6 Yellow
+          ["#7aa2f7", "#7aa2f7"], # 7 Blue
+          ["#9a7ecc", "#9a7ecc"], # 8 Magenta
+          ["#4abaaf", "#4abaaf"], # 9 Cyan
+          ["#fea520", "#fea520"], # 10 Orange
+          ["#7c7be0", "#7c7be0"], # 11 Violet
         ]
 
 prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
@@ -404,8 +449,8 @@ widget_defaults = dict(
     font = 'scientifica',
     fontsize = 14,
     padding = 1,
-    background = '#282a36',
-    foreground = '#f8f8f2',
+    background = '#1a1b26',
+    foreground = '#a9b1d6',
 )
 
 extension_defaults = widget_defaults.copy()
@@ -462,6 +507,23 @@ screens = [
                 #    padding = 1,
                 #    foreground = colors[2],
                 #),
+                widget.TextBox(
+                    text = '󰏗',
+                    fontsize = 14,
+                    padding = 1,
+                    foreground = colors[8]
+                ),
+                widget.CheckUpdates(
+                    colour_have_updates = colors[2],
+                    colour_no_updates = colors[1],
+                    display_format = '{updates:>2}',
+                    distro = 'Arch',
+                    execute = None,
+                    foreground = colors[2],
+                    no_update_string = '0',
+                    padding = 4,
+                    update_interval = 600,
+                ),
                 widget.Sep(
                     padding = 4,
                     foreground = colors[0],
@@ -680,8 +742,8 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
-    border_focus = 'ff79c6',
-    border_normal = '282a36',
+    border_focus = '9a7ecc',
+    border_normal = '1a1b26',
     border_width = 2,
     fullscreen_border_width = 0,
     float_rules=[

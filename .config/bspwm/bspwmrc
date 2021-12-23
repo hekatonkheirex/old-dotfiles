@@ -42,17 +42,16 @@ bspc monitor -d I II III IV V VI VII
 #bspc config presel_feedback_color '#ebdbb2'
 
 # Dracula theme
-bspc config normal_border_color   '#282a36'
-bspc config active_border_color   '#282a36'
-bspc config focused_border_color  '#bd93f9'
-bspc config presel_feedback_color '#f8f8f2'
-
+#bspc config normal_border_color   '#282a36'
+#bspc config active_border_color   '#282a36'
+#bspc config focused_border_color  '#bd93f9'
+#bspc config presel_feedback_color '#f8f8f2'
 
 # Tokyo-night Theme
-#bspc config normal_border_color   '#1a1b26'
-#bspc config active_border_color   '#E0AF68'
-#bspc config focused_border_color  '#1a1b26'
-#bspc config presel_feedback_color '#E0AF68'
+bspc config normal_border_color   '#1a1b26'
+bspc config active_border_color   '#E0AF68'
+bspc config focused_border_color  '#1a1b26'
+bspc config presel_feedback_color '#E0AF68'
 
 # Outrun Dark Theme
 #bspc config normal_border_color   '#00002a'
@@ -77,6 +76,12 @@ bspc config presel_feedback_color '#f8f8f2'
 #bspc config active_border_color   '#40424d'
 #bspc config focused_border_color  '#2B2D3A'
 #bspc config presel_feedback_color '#E1E3E4'
+
+# Everforest Theme
+#bspc config normal_border_color   '#2b3339'
+#bspc config active_border_color   '#40474c'
+#bspc config focused_border_color  '#2b3339'
+#bspc config presel_feedback_color '#d3c6aa'
 
 bspc config border_width          4
 bspc config window_gap            15

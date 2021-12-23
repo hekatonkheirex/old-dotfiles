@@ -111,7 +111,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Iosevka Extended
+    family: Iosevka
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -122,7 +122,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Iosevka Extended
+    family: Iosevka
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -133,7 +133,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Iosevka Extended
+    family: Iosevka
 
     # The `style` can be specified to pick a specific face.
     style: Italic
@@ -144,20 +144,20 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Iosevka Extended
+    family: Iosevka
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
 
   # Point size
-  size: 12.0
+  size: 15.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
   offset:
-    x: -1
-    y: -1
+    x: 0
+    y: 0
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the
@@ -446,6 +446,37 @@ schemes:
       cyan:    '#66bdc8'
       white:   '#b3b9c5'
 
+  ## One Dark
+  everforest: &everforest
+    # Default colors
+    primary:
+      background: '#2b3339'
+      foreground: '#d3c6aa'
+    # Cursor colors
+    cursor:
+      text:   '#2b3339'
+      cursor: '#d3c6aa'
+    # Normal colors
+    normal:
+      black:   '#2b3339'
+      red:     '#e67e80'
+      green:   '#a7c080'
+      yellow:  '#dbbc7f'
+      blue:    '#7fbbb3'
+      magenta: '#d699b6'
+      cyan:    '#83c092'
+      white:   '#d3c6aa'
+    # Bright colors
+    bright:
+      black:   '#40474c'
+      red:     '#e88a8c'
+      green:   '#afc68c'
+      yellow:  '#dec28b'
+      blue:    '#8bc1ba'
+      magenta: '#daa3bd'
+      cyan:    '#8fc69c'
+      white:   '#d7cbb2'
+
 ######################################################################
 ## SET THEME: Choose ONE color scheme from those in the above list. ##
 ## ###################################################################
@@ -458,8 +489,8 @@ schemes:
 # *outrun-dark
 # *solarized-dark
 # *onedark
-
-colors: *dracula
+# *everforest
+colors: *tokyo-night
 
 # Bell
 #
