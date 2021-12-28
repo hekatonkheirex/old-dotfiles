@@ -75,7 +75,6 @@ plugins=(
 	zsh-autosuggestions
 	zsh-completions
 	zsh-syntax-highlighting
-	archlinux
 	cargo
 	colorize
 	command-not-found
@@ -122,6 +121,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias ls="exa --icons"
+alias upgrade="paru"
 
 autoload -U compinit && compinit
 

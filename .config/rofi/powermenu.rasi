@@ -32,8 +32,8 @@
 }
 
 window {
-    padding:          2px ;
-    width:            19% ;
+    padding:          0px ;
+    width:            18% ;
     children:         [ horibox ];
     location:         north east;
     anchor:           north east;

@@ -17,8 +17,8 @@ def autostart():
 
 ## Defaults ##
 mod = "mod4"
-#myTerm = "kitty"
-myTerm = "alacritty"
+myTerm = "kitty"
+#myTerm = "alacritty"
 
 def focus_previous_group(qtile):
     group = qtile.current_screen.group
@@ -232,7 +232,7 @@ keys = [
 groups = []
 
 group_names = 'www term file doc bit chat share vid mus'.split()
-group_labels = ["󰄯", "󰄯", "󰄯", "󰄯", "󰄯", "󰄯", "󰄯", "󰄯", "󰄯"]
+group_labels = ["一", "二", "三", "四", "五", "六", "七", "八", "九"]
 group_layouts = ["monadtall", "tile", "max", "max", "max", "max", "floating", "floating", "max"]
 
 for i in range(len(group_names)):
@@ -474,19 +474,21 @@ screens = [
                     scale = 0.4,
                 ),
                 widget.GroupBox(
-                    active = colors[6],
-                    block_highlight_text_color = colors[0],
+                    active = colors[2],
+                    block_highlight_text_color = colors[2],
                     borderwidth = 2,
                     disable_drag = True,
                     fontsize = 14,
                     hide_unused = False,
-                    highlight_color = '00000000',
-                    highlight_method = 'text',
+                    #highlight_color = '00000000',
+                    highlight_color = colors[1],
+                    #highlight_method = 'text',
+                    highlight_method = 'line',
                     inactive = colors[1],
                     padding = 1,
                     rounded = True,
                     spacing = 4,
-                    this_current_screen_border = colors[5],
+                    this_current_screen_border = colors[2],
                     urgent_alert_method = 'block',
                     urgent_border = colors[4],
                     urgent_text = colors[0],
