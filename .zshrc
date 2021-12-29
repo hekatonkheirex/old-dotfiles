@@ -75,7 +75,7 @@ plugins=(
 	zsh-autosuggestions
 	zsh-completions
 	zsh-syntax-highlighting
-	cargo
+	rust
 	colorize
 	command-not-found
 	firewalld
