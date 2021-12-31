@@ -29,6 +29,7 @@ cups
 devtools
 dialog
 dina-font
+discord
 dmenu
 dosfstools
 dunst
@@ -37,6 +38,7 @@ exa
 fakeroot
 fcitx5
 fcitx5-configtool
+fcitx5-gtk
 fcitx5-mozc
 feh
 ffmpegthumbnailer
@@ -53,7 +55,6 @@ gvfs
 gvfs-smb
 hplip
 htop
-i3-gaps
 inetutils
 inter-font
 khal
@@ -92,6 +93,7 @@ patch
 pavucontrol
 pfetch-git
 picom-ibhagwan-git
+piper
 pipewire
 pipewire-alsa
 pipewire-jack
