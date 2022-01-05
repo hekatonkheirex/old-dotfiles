@@ -12,6 +12,7 @@ arandr
 asp
 autoconf
 automake
+autotiling
 base
 bash-completion
 bat
@@ -30,7 +31,6 @@ devtools
 dialog
 dina-font
 discord
-dmenu
 dosfstools
 dunst
 efibootmgr
@@ -55,16 +55,19 @@ gvfs
 gvfs-smb
 hplip
 htop
+i3-gaps
 inetutils
 inter-font
 khal
 kitty
 kitty-terminfo
+laptop-mode-tools
 leafpad
 libtool
 lightdm
 lightdm-webkit-theme-aether-git
 lightdm-webkit2-greeter
+lightdm-webkit2-theme-reactive
 linux
 linux-firmware
 linux-headers
@@ -73,6 +76,7 @@ m4
 make
 mpv
 mtools
+mugshot
 neovim
 network-manager-applet
 networkmanager
@@ -86,6 +90,7 @@ ntfs-3g
 obs-studio
 openssh
 os-prober
+otf-font-awesome
 p7zip
 pacman-contrib
 paru
@@ -93,7 +98,6 @@ patch
 pavucontrol
 pfetch-git
 picom-ibhagwan-git
-piper
 pipewire
 pipewire-alsa
 pipewire-jack
@@ -104,6 +108,7 @@ polybar-git
 python-dbus-next
 python-iwlib
 python-keyring
+python-libinput
 python-mpd2
 python-psutil
 python-pywlroots
@@ -135,7 +140,6 @@ thunar-secure-delete
 thunar-shares-plugin
 thunar-vcs-plugin
 thunar-volman
-tlp
 ttf-anonymous-pro
 ttf-bitstream-vera
 ttf-cascadia-code
