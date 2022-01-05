@@ -121,7 +121,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias ls="exa --icons"
-alias upgrade="paru"
+alias update="paru"
 
 autoload -U compinit && compinit
 

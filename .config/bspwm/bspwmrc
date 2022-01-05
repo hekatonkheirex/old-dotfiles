@@ -49,16 +49,16 @@ bspc monitor -d I II III IV V VI VII
 #bspc config presel_feedback_color '#f8f8f2'
 
 # Tokyo-night Theme
-bspc config normal_border_color   '#1a1b26'
-bspc config active_border_color   '#E0AF68'
-bspc config focused_border_color  '#1a1b26'
+#bspc config normal_border_color   '#1a1b26'
+#bspc config active_border_color   '#E0AF68'
+#bspc config focused_border_color  '#1a1b26'
 #bspc config presel_feedback_color '#E0AF68'
 
 # Outrun Dark Theme
-#bspc config normal_border_color   '#00002a'
-#bspc config active_border_color   '#19193f'
-#bspc config focused_border_color  '#00002a'
-#bspc config presel_feedback_color '#f3r877'
+bspc config normal_border_color   '#00002a'
+bspc config active_border_color   '#19193f'
+bspc config focused_border_color  '#00002a'
+bspc config presel_feedback_color '#f3r877'
 
 # Solarized Dark Theme
 #bspc config normal_border_color   '#002b36'

@@ -93,10 +93,10 @@ let g:airline_powerline_fonts = 1
 "let g:sonokai_style = 'andromeda'
 "let g:sonokai_enable_italic = 1
 "let g:sonokai_disable_italic_comment = 1
-let g:tokyonight_style = 'night' " available: night, storm
-let g:tokyonight_enable_italic = 1
+"let g:tokyonight_style = 'night' " available: night, storm
+"let g:tokyonight_enable_italic = 1
 "let g:tokyonight_disable_italic_comment = 0
-let g:airline_theme = "tokyonight"
+"let g:airline_theme = "tokyonight"
 au ColorScheme * hi Normal ctermbg=None
 "colorscheme nord
 "colorscheme dracula
@@ -106,8 +106,8 @@ au ColorScheme * hi Normal ctermbg=None
 "colorscheme onedark
 "colorscheme everforest
 "colorscheme sonokai
-colorscheme tokyonight
-"colorscheme base16-outrun-dark
+"colorscheme tokyonight
+colorscheme base16-outrun-dark
 "colorscheme solarized
 let g:node_host_prog = '/usr/local/bin/neovim-node-host'
 :set termguicolors
