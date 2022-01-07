@@ -1,12 +1,12 @@
 * {
     font:                        "Fira Sans 10";
     spacing:                     0;
-    background:                  #00002a;
-    foreground:                  #d0d0fa;
-    lightbg:                     #19193f;
-    lightfg:                     #bbbbe1;
-    red:                         #ff4242;
-    blue:                        #66b0ff;
+    background:                  #282a36;
+    foreground:                  #f8f8f2;
+    lightbg:                     #44475a;
+    lightfg:                     #bfbfbf;
+    red:                         #ff5555;
+    blue:                        #bd93f9;
     text-color:                  var(foreground);
     selected-active-foreground:  var(blue);
     separatorcolor:              var(blackground);

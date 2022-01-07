@@ -312,12 +312,12 @@ for i, name in enumerate(group_names, 1):
 #}
 
 ## Dracula
-#layout_theme = {
-#    "border_width": 2,
-#    "margin": 15,
-#    "border_focus": "bd93f9",
-#    "border_normal": "282a36"
-#}
+layout_theme = {
+    "border_width": 2,
+    "margin": 15,
+    "border_focus": "bd93f9",
+    "border_normal": "282a36"
+}
 
 ## Everforest
 #layout_theme = {
@@ -328,17 +328,17 @@ for i, name in enumerate(group_names, 1):
 #}
 
 ## Tokyo Night
-layout_theme = {
-    "border_width": 2,
-    "margin": 15,
-    "border_focus": "7c7be0",
-    "border_normal": "1a1b26"
-}
+#layout_theme = {
+#    "border_width": 2,
+#    "margin": 15,
+#    "border_focus": "7c7be0",
+#    "border_normal": "1a1b26"
+#}
 
 layouts = [
     layout.MonadTall(
-        border_focus = '7c7be0',
-        border_normal = '1a1b26',
+        border_focus = 'fbd93f9',
+        border_normal = '282a36',
         border_width = 2,
         margin = 15,
         ratio = 0.52,
@@ -350,8 +350,8 @@ layouts = [
         **layout_theme
     ),
     layout.Floating(
-        border_focus = '9a7ecc',
-        border_normal = '1a1b26',
+        border_focus = 'ff79c6',
+        border_normal = '282a36',
         border_width = 2,
         fullscreen_border_width = 0,
     ),
@@ -398,19 +398,19 @@ layouts = [
 #        ]
 
 ## Dracula
-#colors = [["#282a36", "#282a36"], # 0 Background 0
-#          ["#44475a", "#44475a"], # 1 Background 1
-#          ["#f8f8f2", "#f8f8f2"], # 2 Foreground 0
-#          ["#bfbfbf", "#bfbfbf"], # 3 Foreground 1
-#          ["#ff5555", "#ff5555"], # 4 Red
-#          ["#50fa7b", "#50fa7b"], # 5 Green
-#          ["#f1fa8c", "#f1fa8c"], # 6 Yellow
-#          ["#1098f7", "#1098f7"], # 7 Blue
-#          ["#ff79c6", "#ff79c6"], # 8 Magenta
-#          ["#8be9fd", "#8be9fd"], # 9 Cyan
-#          ["#ffb86c", "#ffb86c"], # 10 Orange
-#          ["#bd93f9", "#bd93f9"], # 11 Violet
-#        ]
+colors = [["#282a36", "#282a36"], # 0 Background 0
+          ["#44475a", "#44475a"], # 1 Background 1
+          ["#f8f8f2", "#f8f8f2"], # 2 Foreground 0
+          ["#bfbfbf", "#bfbfbf"], # 3 Foreground 1
+          ["#ff5555", "#ff5555"], # 4 Red
+          ["#50fa7b", "#50fa7b"], # 5 Green
+          ["#f1fa8c", "#f1fa8c"], # 6 Yellow
+          ["#1098f7", "#1098f7"], # 7 Blue
+          ["#ff79c6", "#ff79c6"], # 8 Magenta
+          ["#8be9fd", "#8be9fd"], # 9 Cyan
+          ["#ffb86c", "#ffb86c"], # 10 Orange
+          ["#bd93f9", "#bd93f9"], # 11 Violet
+        ]
 
 ## Everforest
 #colors = [["#2b3339", "#2b3339"], # 0 Background 0
@@ -428,19 +428,19 @@ layouts = [
 #        ]
 
 ## Tokyo Night
-colors = [["#1a1b26", "#1a1b26"], # 0 Background 0
-          ["#30313b", "#30313b"], # 1 Background 1
-          ["#a9b1d6", "#a9b1d6"], # 2 Foreground 0
-          ["#b1b8da", "#b1b8da"], # 3 Foreground 1
-          ["#f7768e", "#f7768e"], # 4 Red
-          ["#9ece6a", "#9ece6a"], # 5 Green
-          ["#e0af68", "#e0af68"], # 6 Yellow
-          ["#7aa2f7", "#7aa2f7"], # 7 Blue
-          ["#9a7ecc", "#9a7ecc"], # 8 Magenta
-          ["#4abaaf", "#4abaaf"], # 9 Cyan
-          ["#fea520", "#fea520"], # 10 Orange
-          ["#7c7be0", "#7c7be0"], # 11 Violet
-        ]
+#colors = [["#1a1b26", "#1a1b26"], # 0 Background 0
+#          ["#30313b", "#30313b"], # 1 Background 1
+#          ["#a9b1d6", "#a9b1d6"], # 2 Foreground 0
+#          ["#b1b8da", "#b1b8da"], # 3 Foreground 1
+#          ["#f7768e", "#f7768e"], # 4 Red
+#          ["#9ece6a", "#9ece6a"], # 5 Green
+#          ["#e0af68", "#e0af68"], # 6 Yellow
+#          ["#7aa2f7", "#7aa2f7"], # 7 Blue
+#          ["#9a7ecc", "#9a7ecc"], # 8 Magenta
+#          ["#4abaaf", "#4abaaf"], # 9 Cyan
+#          ["#fea520", "#fea520"], # 10 Orange
+#          ["#7c7be0", "#7c7be0"], # 11 Violet
+#        ]
 
 prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
 
@@ -449,8 +449,8 @@ widget_defaults = dict(
     font = 'scientifica',
     fontsize = 14,
     padding = 1,
-    background = '#1a1b26',
-    foreground = '#a9b1d6',
+    background = '#282a36',
+    foreground = '#f8f8f2',
 )
 
 extension_defaults = widget_defaults.copy()
@@ -744,8 +744,8 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
-    border_focus = '9a7ecc',
-    border_normal = '1a1b26',
+    border_focus = 'ff79c6',
+    border_normal = '282a36',
     border_width = 2,
     fullscreen_border_width = 0,
     float_rules=[

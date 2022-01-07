@@ -86,7 +86,7 @@ let g:airline_powerline_fonts = 1
 "let g:gruvbox_italic=1
 "let g:nord_italic = 1
 "let g:nord_italic_comments = 1
-"let g:colors_name = "dracula"
+let g:colors_name = "dracula"
 "let g:onedark_hide_endofbuffer = 1
 "let g:onedark_terminal_italics = 1
 "let g:airline_theme = 'sonokai'
@@ -99,7 +99,7 @@ let g:airline_powerline_fonts = 1
 "let g:airline_theme = "tokyonight"
 au ColorScheme * hi Normal ctermbg=None
 "colorscheme nord
-"colorscheme dracula
+colorscheme dracula
 "colorscheme wal
 "colorscheme monokai
 "colorscheme gruvbox
@@ -107,7 +107,7 @@ au ColorScheme * hi Normal ctermbg=None
 "colorscheme everforest
 "colorscheme sonokai
 "colorscheme tokyonight
-colorscheme base16-outrun-dark
+"colorscheme base16-outrun-dark
 "colorscheme solarized
 let g:node_host_prog = '/usr/local/bin/neovim-node-host'
 :set termguicolors
