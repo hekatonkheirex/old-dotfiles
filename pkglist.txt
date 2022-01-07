@@ -10,6 +10,7 @@ amd-ucode
 anydesk-bin
 arandr
 asp
+atomicparsley
 autoconf
 automake
 autotiling
@@ -76,7 +77,6 @@ m4
 make
 mpv
 mtools
-mugshot
 neovim
 network-manager-applet
 networkmanager
@@ -111,14 +111,17 @@ python-keyring
 python-libinput
 python-mpd2
 python-psutil
+python-pycryptodome
 python-pywlroots
 python-pyxdg
+qbittorrent
 qt5ct
 qtile
 raw-thumbnailer
 reflector
 rofi
 rsync
+rtmpdump
 rust
 scrot
 sof-firmware
@@ -227,6 +230,7 @@ xorg-xwud
 xss-lock
 yad
 yadm
+youtube-dl
 zathura
 zathura-pdf-poppler
 zip
