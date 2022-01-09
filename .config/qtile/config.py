@@ -337,7 +337,7 @@ layout_theme = {
 
 layouts = [
     layout.MonadTall(
-        border_focus = 'fbd93f9',
+        border_focus = 'bd93f9',
         border_normal = '282a36',
         border_width = 2,
         margin = 15,
@@ -459,19 +459,9 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                #widget.Image(
-                #    filename = "~/.config/qtile/icons/python.png",
-                #    margin = 5
-                #),
-                #widget.TextBox(
-                #    text = '',
-                #    fontsize = 26,
-                #    foreground = colors[1],
-                #),
-                widget.CurrentLayoutIcon(
-                    custom_icon_paths = [os.path.expanduser("~/.config/qtile/icons")],
-                    padding = 1,
-                    scale = 0.4,
+                widget.Image(
+                    filename = "~/.config/qtile/icons/python.png",
+                    margin = 5
                 ),
                 widget.GroupBox(
                     active = colors[2],
@@ -492,23 +482,13 @@ screens = [
                     urgent_alert_method = 'block',
                     urgent_border = colors[4],
                     urgent_text = colors[0],
-                    #background = colors[1],
                 ),
-                #widget.TextBox(
-                #    text = '',
-                #    fontsize = 26,
-                #    foreground = colors[1],
-                #),
                 widget.WindowName(
-                    max_chars = 60,
+                    max_chars = 200,
                     padding = 4,
                 ),
                 widget.Spacer(
                 ),
-                #widget.CurrentLayout(
-                #    padding = 1,
-                #    foreground = colors[2],
-                #),
                 widget.TextBox(
                     text = '󰏗',
                     fontsize = 14,
@@ -530,11 +510,6 @@ screens = [
                     padding = 4,
                     foreground = colors[0],
                 ),
-                #widget.TextBox(
-                #    text = '',
-                #    fontsize = 26,
-                #    foreground = colors[1],
-                #),
                 widget.TextBox(
                     text = '󰻠',
                     fontsize = 14,
@@ -544,22 +519,11 @@ screens = [
                 widget.CPU(
                     format = '{load_percent}%',
                     foreground = colors[2],
-                    #background = colors[1],
                 ),
-                #widget.TextBox(
-                #    text = '',
-                #    fontsize = 26,
-                #    foreground = colors[1],
-                #),
                 widget.Sep(
                     padding = 4,
                     foreground = colors[0],
                 ),
-                #widget.TextBox(
-                #    text = '',
-                #    fontsize = 26,
-                #    foreground = colors[1],
-                #),
                 widget.TextBox(
                     text = '󰍛',
                     fontsize = 14,
@@ -571,64 +535,49 @@ screens = [
                     measure_mem = 'M',
                     update_interval = 1.0,
                     foreground = colors[2],
-                    #background = colors[1],
                 ),
-                #widget.TextBox(
-                #    text = '',
-                #    fontsize = 26,
-                #    foreground = colors[1],
-                #),
                 widget.Sep(
                     padding = 4,
                     foreground = colors[0],
                 ),
-                #widget.TextBox(
-                #    text = '',
-                #    fontsize = 26,
-                #    foreground = colors[1],
-                #),
                 widget.TextBox(
                     text = '󰔏',
                     fontsize = 14,
                     padding = 1,
                     foreground = colors[8],
-                    #background = colors[1],
                 ),
                 widget.ThermalSensor(
                     foreground = colors[2],
-                    #background = colors[1],
                 ),
-                #widget.TextBox(
-                #    text = '',
-                #    fontsize = 26,
-                #    foreground = colors[1],
-                #),
                 widget.Sep(
                     padding = 4,
                     foreground = colors[0],
                 ),
-                #widget.TextBox(
-                #    text = '',
-                #    fontsize = 26,
-                #    foreground = colors[1],
-                #),
+                widget.TextBox(
+                    text = '󰛩',
+                    fontsize = 14,
+                    padding = 1,
+                    foreground = colors[8],
+                ),
+                widget.Backlight(
+                    backlight_name = 'amdgpu_bl0',
+                    padding = 1,
+                    foreground = colors[2],
+                ),
+                widget.Sep(
+                    padding = 4,
+                    foreground = colors[0],
+                ),
                 widget.TextBox(
                     text = '󰕾',
                     fontsize = 14,
                     padding = 1,
                     foreground = colors[8],
-                    #background = colors[1],
                 ),
                 widget.PulseVolume(
                     padding = 1,
                     foreground = colors[2],
-                    #background = colors[1],
                 ),
-                #widget.TextBox(
-                #    text = '',
-                #    fontsize = 26,
-                #    foreground = colors[1],
-                #),
                 widget.Sep(
                     padding = 4,
                     foreground = colors[0],
@@ -638,23 +587,6 @@ screens = [
                 #    fontsize = 26,
                 #    foreground = colors[1],
                 #),
-                widget.TextBox(
-                    text = '󰖐',
-                    fontsize = 14,
-                    padding = 1,
-                    foreground = colors[8],
-                ),
-                widget.OpenWeather(
-                    app_key = '29c7c3f06ff45f58f6a2e409c2fb2d22',
-                    cityid = '3439389',
-                    format = '{weather} {main_temp}°{units_temperature}',
-                    metric = True,
-                    padding = 4,
-                    update_interval = 600,
-                    url = 'https://openweathermap.org/city/3439389',
-                    foreground = colors[2],
-                    #background = colors[1],
-                ),
                 #widget.TextBox(
                 #    text = '',
                 #    fontsize = 26,
@@ -664,28 +596,6 @@ screens = [
                     padding = 4,
                     foreground = colors[0],
                 ),
-                #widget.TextBox(
-                #    text = '',
-                #    fontsize = 26,
-                #    foreground = colors[1],
-                #),
-                widget.TextBox(
-                    text = '󰃭',
-                    fontsize = 14,
-                    padding = 1,
-                    foreground = colors[8],
-                ),
-                widget.Clock(
-                    format='%a %d %b %H:%M',
-                    padding = 4,
-                    foreground = colors[2],
-                    #background = colors[1],
-                ),
-                #widget.TextBox(
-                #    text = '',
-                #    fontsize = 26,
-                #    foreground = colors[1],
-                #),
                 #widget.WidgetBox(
                 #    text_closed = '󰅁',
                 #    text_open = '󰅂',
@@ -714,6 +624,74 @@ screens = [
             ],
             28,
             #margin=[15, 15, 0, 15],
+        ),
+        bottom=bar.Bar(
+            [
+                widget.CurrentLayoutIcon(
+                    custom_icon_paths = [os.path.expanduser("~/.config/qtile/icons")],
+                    padding = 1,
+                    scale = 0.4,
+                ),
+                widget.CurrentLayout(
+                    padding = 1,
+                    foreground = colors[2],
+                ),
+                widget.Spacer(
+                ),
+                widget.TextBox(
+                    text = '󰓇',
+                    fontsize = 14,
+                    padding = 1,
+                    foreground = colors[8],
+                ),
+                widget.Mpris2(
+                    name = 'spotify',
+                    objname = "org.mpris.MediaPlayer2.spotify",
+                    display_metadata = ['xesam:title', 'xesam:artist'],
+                    scroll_chars = None,
+                    stop_pause_text = '',
+                    padding = 1,
+                    foreground = colors[2],
+                ),
+                widget.Spacer(
+                ),
+                widget.Wttr(
+                    location = { 'Asuncion': 'Asuncion'},
+                ),
+                widget.TextBox(
+                    text = '󰖐',
+                    fontsize = 14,
+                    padding = 1,
+                    foreground = colors[8],
+                ),
+                widget.OpenWeather(
+                    app_key = '29c7c3f06ff45f58f6a2e409c2fb2d22',
+                    cityid = '3439389',
+                    format = '{weather} {main_temp}°{units_temperature}',
+                    metric = True,
+                    padding = 4,
+                    update_interval = 600,
+                    url = 'https://openweathermap.org/city/3439389',
+                    foreground = colors[2],
+                    #background = colors[1],
+                ),
+                widget.Sep(
+                    padding = 4,
+                    foreground = colors[0],
+                ),
+                widget.TextBox(
+                    text = '󰃭',
+                    fontsize = 14,
+                    padding = 1,
+                    foreground = colors[8],
+                ),
+                widget.Clock(
+                    format='%a %d %b %H:%M',
+                    padding = 4,
+                    foreground = colors[2],
+                ),
+        ],
+        28,
         ),
     ),
 ]
