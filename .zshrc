@@ -127,6 +127,7 @@ autoload -U compinit && compinit
 
 pfetch
 .config/scripts/blks
+export TERM=xterm-256color
 #pokemon-colorscripts -r
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

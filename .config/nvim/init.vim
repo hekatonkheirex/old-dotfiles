@@ -41,6 +41,9 @@ Plug 'vim-airline/vim-airline-themes'
 " Powerline
 Plug 'powerline/powerline'
 
+" Airline
+Plug 'itchyny/lightline.vim'
+
 " Gruvbox Theme
 Plug 'gruvbox-community/gruvbox'
 
@@ -74,6 +77,9 @@ Plug 'chriskempson/base16-vim'
 " Solarized
 Plug 'altercation/vim-colors-solarized'
 
+" Horizon
+Plug 'ntk148v/vim-horizon'
+
 " Initialize plugin system
 call plug#end()
 
@@ -86,7 +92,7 @@ let g:airline_powerline_fonts = 1
 "let g:gruvbox_italic=1
 "let g:nord_italic = 1
 "let g:nord_italic_comments = 1
-let g:colors_name = "dracula"
+"let g:colors_name = "dracula"
 "let g:onedark_hide_endofbuffer = 1
 "let g:onedark_terminal_italics = 1
 "let g:airline_theme = 'sonokai'
@@ -97,9 +103,13 @@ let g:colors_name = "dracula"
 "let g:tokyonight_enable_italic = 1
 "let g:tokyonight_disable_italic_comment = 0
 "let g:airline_theme = "tokyonight"
+let g:lightline = {}
+let g:lightline.colorscheme = 'horizon'
+let g:lightline = {'colorscheme' : 'horizon'}
+let g:airline_theme='tomorrow'
 au ColorScheme * hi Normal ctermbg=None
 "colorscheme nord
-colorscheme dracula
+"colorscheme dracula
 "colorscheme wal
 "colorscheme monokai
 "colorscheme gruvbox
@@ -109,7 +119,9 @@ colorscheme dracula
 "colorscheme tokyonight
 "colorscheme base16-outrun-dark
 "colorscheme solarized
+colorscheme horizon
 let g:node_host_prog = '/usr/local/bin/neovim-node-host'
+:set laststatus=2
 :set termguicolors
 :set background=dark
 :set t_Co=254
@@ -123,3 +135,7 @@ let g:python3_host_prog = '/usr/bin/python3'
 let g:python_host_prog = '/usr/bin/python2'
 let g:ruby_host_prog = '/home/mura/.gem/ruby/2.7.0/bin/neovim-ruby-host'
 let g:node_host_prog = '/usr/bin/neovim-node-host'
+
+if !has('gui_running')
+  set t_Co=256
+endif

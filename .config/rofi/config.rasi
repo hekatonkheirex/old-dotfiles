@@ -19,12 +19,12 @@ configuration {
 * {
     font:                        "Fira Sans 10";
 		spacing:                     0;
-    background:                  #282a36;
-    foreground:                  #f8f8f2;
-		lightbg:                     #44475a;
-    lightfg:                     #bfbfbf;
-    red:                         #ff5555;
-    blue:                        #bd93f9;
+    background:                  #1c1e26;
+    foreground:                  #d2d4de;
+		lightbg:                     #32343b;
+    lightfg:                     #d6d8e1;
+    red:                         #e95678;
+    blue:                        #25b0bc;
 		text-color:                  var(foreground);
     selected-active-foreground:  var(blue);
     separatorcolor:              var(blackground);

@@ -64,6 +64,7 @@ kitty
 kitty-terminfo
 laptop-mode-tools
 leafpad
+libreoffice-fresh
 libtool
 lightdm
 lightdm-webkit-theme-aether-git
@@ -77,6 +78,7 @@ m4
 make
 mpv
 mtools
+neofetch
 neovim
 network-manager-applet
 networkmanager
@@ -133,6 +135,7 @@ sudo
 sxhkd
 tamsyn-font
 teamviewer
+terminus-font
 tex-gyre-fonts
 texinfo
 themix-full-git
@@ -172,6 +175,7 @@ tumbler-extra-thumbnailers
 unarchiver
 unrar
 unzip
+w3m
 which
 wmutils-git
 wpa_supplicant

@@ -312,12 +312,12 @@ for i, name in enumerate(group_names, 1):
 #}
 
 ## Dracula
-layout_theme = {
-    "border_width": 2,
-    "margin": 15,
-    "border_focus": "bd93f9",
-    "border_normal": "282a36"
-}
+#layout_theme = {
+#    "border_width": 4,
+#    "margin": 15,
+#    "border_focus": "bd93f9",
+#    "border_normal": "282a36"
+#}
 
 ## Everforest
 #layout_theme = {
@@ -335,11 +335,19 @@ layout_theme = {
 #    "border_normal": "1a1b26"
 #}
 
+## Horizon
+layout_theme = {
+    "border_width": 4,
+    "margin": 15,
+    "border_focus": "f09483",
+    "border_normal": "1c1e26"
+}
+
 layouts = [
     layout.MonadTall(
-        border_focus = 'bd93f9',
-        border_normal = '282a36',
-        border_width = 2,
+        border_focus = 'f09483',
+        border_normal = '1c1e26',
+        border_width = 4,
         margin = 15,
         ratio = 0.52,
     ),
@@ -350,9 +358,9 @@ layouts = [
         **layout_theme
     ),
     layout.Floating(
-        border_focus = 'ff79c6',
-        border_normal = '282a36',
-        border_width = 2,
+        border_focus = '09f7a0',
+        border_normal = '1c1e26',
+        border_width = 4,
         fullscreen_border_width = 0,
     ),
     #layout.Columns(**layout_theme),
@@ -398,19 +406,19 @@ layouts = [
 #        ]
 
 ## Dracula
-colors = [["#282a36", "#282a36"], # 0 Background 0
-          ["#44475a", "#44475a"], # 1 Background 1
-          ["#f8f8f2", "#f8f8f2"], # 2 Foreground 0
-          ["#bfbfbf", "#bfbfbf"], # 3 Foreground 1
-          ["#ff5555", "#ff5555"], # 4 Red
-          ["#50fa7b", "#50fa7b"], # 5 Green
-          ["#f1fa8c", "#f1fa8c"], # 6 Yellow
-          ["#1098f7", "#1098f7"], # 7 Blue
-          ["#ff79c6", "#ff79c6"], # 8 Magenta
-          ["#8be9fd", "#8be9fd"], # 9 Cyan
-          ["#ffb86c", "#ffb86c"], # 10 Orange
-          ["#bd93f9", "#bd93f9"], # 11 Violet
-        ]
+#colors = [["#282a36", "#282a36"], # 0 Background 0
+#          ["#44475a", "#44475a"], # 1 Background 1
+#          ["#f8f8f2", "#f8f8f2"], # 2 Foreground 0
+#          ["#bfbfbf", "#bfbfbf"], # 3 Foreground 1
+#          ["#ff5555", "#ff5555"], # 4 Red
+#          ["#50fa7b", "#50fa7b"], # 5 Green
+#          ["#f1fa8c", "#f1fa8c"], # 6 Yellow
+#          ["#1098f7", "#1098f7"], # 7 Blue
+#          ["#ff79c6", "#ff79c6"], # 8 Magenta
+#          ["#8be9fd", "#8be9fd"], # 9 Cyan
+#          ["#ffb86c", "#ffb86c"], # 10 Orange
+#          ["#bd93f9", "#bd93f9"], # 11 Violet
+#        ]
 
 ## Everforest
 #colors = [["#2b3339", "#2b3339"], # 0 Background 0
@@ -442,6 +450,21 @@ colors = [["#282a36", "#282a36"], # 0 Background 0
 #          ["#7c7be0", "#7c7be0"], # 11 Violet
 #        ]
 
+## Horizon
+colors = [["#1c1e26", "#1c1e26"], # 0 Background 0
+          ["#32343b", "#32343b"], # 1 Background 1
+          ["#d2d4de", "#d2d4de"], # 2 Foreground 0
+          ["#d6d8e1", "#d6d8e1"], # 3 Foreground 1
+          ["#e95678", "#e95678"], # 4 Red
+          ["#09f7a0", "#09f7a0"], # 5 Green
+          ["#fab795", "#fab795"], # 6 Yellow
+          ["#25b0bc", "#25b0bc"], # 7 Blue
+          ["#ee64ac", "#ee64ac"], # 8 Magenta
+          ["#6bdfe6", "#6bdfe6"], # 9 Cyan
+          ["#f09483", "#f09483"], # 10 Orange
+          ["#b877db", "#b877db"], # 11 Violet
+        ]
+
 prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
 
 ## Widgets definitions ##
@@ -449,8 +472,8 @@ widget_defaults = dict(
     font = 'scientifica',
     fontsize = 14,
     padding = 1,
-    background = '#282a36',
-    foreground = '#f8f8f2',
+    background = '#1c1e26',
+    foreground = '#d2d4de',
 )
 
 extension_defaults = widget_defaults.copy()
@@ -468,43 +491,119 @@ screens = [
                     block_highlight_text_color = colors[2],
                     borderwidth = 2,
                     disable_drag = True,
+                    font = 'Stick',
                     fontsize = 14,
                     hide_unused = False,
                     #highlight_color = '00000000',
-                    highlight_color = colors[1],
+                    highlight_color = colors[0],
                     #highlight_method = 'text',
                     highlight_method = 'line',
                     inactive = colors[1],
                     padding = 1,
                     rounded = True,
                     spacing = 4,
-                    this_current_screen_border = colors[2],
+                    this_current_screen_border = colors[10],
                     urgent_alert_method = 'block',
                     urgent_border = colors[4],
                     urgent_text = colors[0],
                 ),
                 widget.WindowName(
                     max_chars = 200,
-                    padding = 4,
+                    padding = 8,
+                    foreground = colors[5],
                 ),
                 widget.Spacer(
                 ),
+                widget.Wttr(
+                    location = { 'Asuncion': 'Asuncion'},
+                    padding = 4,
+                ),
+                #widget.TextBox(
+                #    text = '󰖐',
+                #    fontsize = 14,
+                #    padding = 1,
+                #    foreground = colors[8],
+                #),
+                #widget.OpenWeather(
+                #    app_key = '29c7c3f06ff45f58f6a2e409c2fb2d22',
+                #    cityid = '3439389',
+                #    format = '{weather} {main_temp}°{units_temperature}',
+                #    metric = True,
+                #    padding = 4,
+                #    update_interval = 600,
+                #    url = 'https://openweathermap.org/city/3439389',
+                #    foreground = colors[2],
+                #),
+                widget.Sep(
+                    padding = 4,
+                    foreground = colors[0],
+                ),
                 widget.TextBox(
-                    text = '󰏗',
+                    text = '󰃭',
+                    fontsize = 14,
+                    padding = 1,
+                    foreground = colors[8],
+                ),
+                widget.Clock(
+                    format='%a %d %b %H:%M',
+                    padding = 4,
+                    foreground = colors[2],
+                ),
+                #widget.TextBox(
+                #    text = '',
+                #    fontsize = 26,
+                #    foreground = colors[1],
+                #),
+                #widget.TextBox(
+                #    text = '',
+                #    fontsize = 26,
+                #    foreground = colors[1],
+                #),
+                widget.Sep(
+                    padding = 4,
+                    foreground = colors[0],
+                ),
+                #widget.WidgetBox(
+                #    text_closed = '󰅁',
+                #    text_open = '󰅂',
+                #    fontsize = 14,
+                #    foreground = colors[8],
+                #    widgets=[
+                #        widget.Systray(
+                #            padding = 1,
+                #        ),
+                #    ],
+                #),
+                widget.Systray(
+                    padding = 4,
+                ),
+                #widget.QuickExit(
+                #    countdown_format = '[{}]',
+                #    foreground = colors[4],
+                #    default_text = '󰐥',
+                #    fontsize = 14,
+                #    padding = 4,
+                #),
+            ],
+            28,
+            #margin=[15, 15, 0, 15],
+        ),
+        bottom=bar.Bar(
+            [
+                widget.TextBox(
+                    text = '󰀂',
                     fontsize = 14,
                     padding = 1,
                     foreground = colors[8]
                 ),
-                widget.CheckUpdates(
-                    colour_have_updates = colors[2],
-                    colour_no_updates = colors[1],
-                    display_format = '{updates:>2}',
-                    distro = 'Arch',
-                    execute = None,
-                    foreground = colors[2],
-                    no_update_string = '0',
+                widget.Wlan(
+                    format = '{essid}',
+                    interface = 'wlp1s0',
                     padding = 4,
-                    update_interval = 600,
+                ),
+                widget.Net(
+                    format = '󰁅 {down} 󰁝 {up}',
+                    padding = 4,
                 ),
                 widget.Sep(
                     padding = 4,
@@ -549,6 +648,42 @@ screens = [
                 widget.ThermalSensor(
                     foreground = colors[2],
                 ),
+                widget.Spacer(
+                ),
+                widget.TextBox(
+                    text = '󰓇',
+                    fontsize = 14,
+                    padding = 1,
+                    foreground = colors[5],
+                ),
+                widget.Mpris2(
+                    name = 'spotify',
+                    objname = "org.mpris.MediaPlayer2.spotify",
+                    display_metadata = ['xesam:title', 'xesam:artist'],
+                    scroll_chars = None,
+                    stop_pause_text = '',
+                    padding = 4,
+                    foreground = colors[2],
+                ),
+                widget.Spacer(
+                ),
+                widget.TextBox(
+                    text = '󰏗',
+                    fontsize = 14,
+                    padding = 1,
+                    foreground = colors[8]
+                ),
+                widget.CheckUpdates(
+                    colour_have_updates = colors[2],
+                    colour_no_updates = colors[1],
+                    display_format = '{updates:>2}',
+                    distro = 'Arch',
+                    execute = None,
+                    foreground = colors[2],
+                    no_update_string = '0',
+                    padding = 4,
+                    update_interval = 60,
+                ),
                 widget.Sep(
                     padding = 4,
                     foreground = colors[0],
@@ -575,58 +710,9 @@ screens = [
                     foreground = colors[8],
                 ),
                 widget.PulseVolume(
-                    padding = 1,
+                    padding = 4,
                     foreground = colors[2],
                 ),
-                widget.Sep(
-                    padding = 4,
-                    foreground = colors[0],
-                ),
-                #widget.TextBox(
-                #    text = '',
-                #    fontsize = 26,
-                #    foreground = colors[1],
-                #),
-                #widget.TextBox(
-                #    text = '',
-                #    fontsize = 26,
-                #    foreground = colors[1],
-                #),
-                widget.Sep(
-                    padding = 4,
-                    foreground = colors[0],
-                ),
-                #widget.WidgetBox(
-                #    text_closed = '󰅁',
-                #    text_open = '󰅂',
-                #    fontsize = 14,
-                #    foreground = colors[8],
-                #    widgets=[
-                #        widget.Systray(
-                #            padding = 1,
-                #        ),
-                #    ],
-                #),
-                widget.Systray(
-                    padding = 4,
-                ),
-                #widget.QuickExit(
-                #    countdown_format = '[{}]',
-                #    foreground = colors[4],
-                #    default_text = '󰐥',
-                #    fontsize = 14,
-                #    padding = 4,
-                #),
-                widget.Sep(
-                    padding = 8,
-                    foreground = colors[0],
-                ),
-            ],
-            28,
-            #margin=[15, 15, 0, 15],
-        ),
-        bottom=bar.Bar(
-            [
                 widget.CurrentLayoutIcon(
                     custom_icon_paths = [os.path.expanduser("~/.config/qtile/icons")],
                     padding = 1,
@@ -634,60 +720,6 @@ screens = [
                 ),
                 widget.CurrentLayout(
                     padding = 1,
-                    foreground = colors[2],
-                ),
-                widget.Spacer(
-                ),
-                widget.TextBox(
-                    text = '󰓇',
-                    fontsize = 14,
-                    padding = 1,
-                    foreground = colors[8],
-                ),
-                widget.Mpris2(
-                    name = 'spotify',
-                    objname = "org.mpris.MediaPlayer2.spotify",
-                    display_metadata = ['xesam:title', 'xesam:artist'],
-                    scroll_chars = None,
-                    stop_pause_text = '',
-                    padding = 1,
-                    foreground = colors[2],
-                ),
-                widget.Spacer(
-                ),
-                widget.Wttr(
-                    location = { 'Asuncion': 'Asuncion'},
-                ),
-                widget.TextBox(
-                    text = '󰖐',
-                    fontsize = 14,
-                    padding = 1,
-                    foreground = colors[8],
-                ),
-                widget.OpenWeather(
-                    app_key = '29c7c3f06ff45f58f6a2e409c2fb2d22',
-                    cityid = '3439389',
-                    format = '{weather} {main_temp}°{units_temperature}',
-                    metric = True,
-                    padding = 4,
-                    update_interval = 600,
-                    url = 'https://openweathermap.org/city/3439389',
-                    foreground = colors[2],
-                    #background = colors[1],
-                ),
-                widget.Sep(
-                    padding = 4,
-                    foreground = colors[0],
-                ),
-                widget.TextBox(
-                    text = '󰃭',
-                    fontsize = 14,
-                    padding = 1,
-                    foreground = colors[8],
-                ),
-                widget.Clock(
-                    format='%a %d %b %H:%M',
-                    padding = 4,
                     foreground = colors[2],
                 ),
         ],
@@ -722,9 +754,9 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
-    border_focus = 'ff79c6',
-    border_normal = '282a36',
-    border_width = 2,
+    border_focus = '09f7a0',
+    border_normal = '1c1e26',
+    border_width = 4,
     fullscreen_border_width = 0,
     float_rules=[
         # Run the utility of `xprop` to see the wm class and name of an X client.
