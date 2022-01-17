@@ -10,6 +10,10 @@ super + Return
 super + d
 	rofi -show drun -no-default-config
 
+# powermenu
+super + p
+  $HOME/.config/rofi/scripts/powermenu.sh
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd;dunstify -i ~/.config/dunst/reload.png 'SXHKDRC reloaded'

@@ -347,13 +347,13 @@ for i, name in enumerate(group_names, 1):
 layout_theme = {
     "border_width": 4,
     "margin": 15,
-    "border_focus": "fae3b0",
+    "border_focus": "f8bd96",
     "border_normal": "1E1D2F"
 }
 
 layouts = [
     layout.MonadTall(
-        border_focus = 'fae3b0',
+        border_focus = 'f8bd96',
         border_normal = '1E1D2F',
         border_width = 4,
         margin = 15,

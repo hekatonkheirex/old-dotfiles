@@ -44,6 +44,9 @@ Plug 'powerline/powerline'
 " Airline
 Plug 'itchyny/lightline.vim'
 
+" Lualine
+Plug 'nvim-lualine/lualine.nvim'
+
 " Gruvbox Theme
 Plug 'gruvbox-community/gruvbox'
 
@@ -82,6 +85,9 @@ Plug 'ntk148v/vim-horizon'
 
 " Catpuccin
 Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+
+" Rose Pine
+Plug 'rose-pine/neovim'
 
 " Initialize plugin system
 call plug#end()
@@ -124,11 +130,12 @@ au ColorScheme * hi Normal ctermbg=None
 "colorscheme base16-outrun-dark
 "colorscheme solarized
 "colorscheme horizon
-colorscheme catppuccin
+"colorscheme catppuccin
+colorscheme rose-pine
 let g:node_host_prog = '/usr/local/bin/neovim-node-host'
 :set laststatus=2
 :set termguicolors
-:set background=dark
+:set background=light
 :set t_Co=254
 :set number
 :set relativenumber
