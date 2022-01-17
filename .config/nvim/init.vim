@@ -80,6 +80,9 @@ Plug 'altercation/vim-colors-solarized'
 " Horizon
 Plug 'ntk148v/vim-horizon'
 
+" Catpuccin
+Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+
 " Initialize plugin system
 call plug#end()
 
@@ -103,10 +106,11 @@ let g:airline_powerline_fonts = 1
 "let g:tokyonight_enable_italic = 1
 "let g:tokyonight_disable_italic_comment = 0
 "let g:airline_theme = "tokyonight"
-let g:lightline = {}
-let g:lightline.colorscheme = 'horizon'
-let g:lightline = {'colorscheme' : 'horizon'}
+"let g:lightline = {}
+"let g:lightline.colorscheme = 'horizon'
+"let g:lightline = {'colorscheme' : 'horizon'}
 let g:airline_theme='tomorrow'
+let g:lightline = {'colorscheme': 'catppuccin'}
 au ColorScheme * hi Normal ctermbg=None
 "colorscheme nord
 "colorscheme dracula
@@ -119,7 +123,8 @@ au ColorScheme * hi Normal ctermbg=None
 "colorscheme tokyonight
 "colorscheme base16-outrun-dark
 "colorscheme solarized
-colorscheme horizon
+"colorscheme horizon
+colorscheme catppuccin
 let g:node_host_prog = '/usr/local/bin/neovim-node-host'
 :set laststatus=2
 :set termguicolors

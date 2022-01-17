@@ -85,10 +85,16 @@ bspc monitor -d I II III IV V VI VII
 #bspc config presel_feedback_color '#d3c6aa'
 
 # Horizon Theme
-bspc config normal_border_color   '#1C1E26'
-bspc config active_border_color   '#32343b'
-bspc config focused_border_color  '#1C1E26'
-bspc config presel_feedback_color '#D2D4DE'
+#bspc config normal_border_color   '#1C1E26'
+#bspc config active_border_color   '#32343b'
+#bspc config focused_border_color  '#f09483'
+#bspc config presel_feedback_color '#D2D4DE'
+
+# Catppuccin Theme
+bspc config normal_border_color   '#131020'
+bspc config active_border_color   '#1a1823'
+bspc config focused_border_color  '#fae3b0'
+bspc config presel_feedback_color '#d9e0ee'
 
 bspc config border_width          4
 bspc config window_gap            15

@@ -336,17 +336,25 @@ for i, name in enumerate(group_names, 1):
 #}
 
 ## Horizon
+#layout_theme = {
+#    "border_width": 4,
+#    "margin": 15,
+#    "border_focus": "f09483",
+#    "border_normal": "1c1e26"
+#}
+
+## Catppuccin
 layout_theme = {
     "border_width": 4,
     "margin": 15,
-    "border_focus": "f09483",
-    "border_normal": "1c1e26"
+    "border_focus": "fae3b0",
+    "border_normal": "1E1D2F"
 }
 
 layouts = [
     layout.MonadTall(
-        border_focus = 'f09483',
-        border_normal = '1c1e26',
+        border_focus = 'fae3b0',
+        border_normal = '1E1D2F',
         border_width = 4,
         margin = 15,
         ratio = 0.52,
@@ -358,8 +366,8 @@ layouts = [
         **layout_theme
     ),
     layout.Floating(
-        border_focus = '09f7a0',
-        border_normal = '1c1e26',
+        border_focus = 'b5e8e0',
+        border_normal = '1E1D2F',
         border_width = 4,
         fullscreen_border_width = 0,
     ),
@@ -451,29 +459,44 @@ layouts = [
 #        ]
 
 ## Horizon
-colors = [["#1c1e26", "#1c1e26"], # 0 Background 0
-          ["#32343b", "#32343b"], # 1 Background 1
-          ["#d2d4de", "#d2d4de"], # 2 Foreground 0
-          ["#d6d8e1", "#d6d8e1"], # 3 Foreground 1
-          ["#e95678", "#e95678"], # 4 Red
-          ["#09f7a0", "#09f7a0"], # 5 Green
-          ["#fab795", "#fab795"], # 6 Yellow
-          ["#25b0bc", "#25b0bc"], # 7 Blue
-          ["#ee64ac", "#ee64ac"], # 8 Magenta
-          ["#6bdfe6", "#6bdfe6"], # 9 Cyan
-          ["#f09483", "#f09483"], # 10 Orange
-          ["#b877db", "#b877db"], # 11 Violet
+#colors = [["#1c1e26", "#1c1e26"], # 0 Background 0
+#          ["#32343b", "#32343b"], # 1 Background 1
+#          ["#d2d4de", "#d2d4de"], # 2 Foreground 0
+#          ["#d6d8e1", "#d6d8e1"], # 3 Foreground 1
+#          ["#e95678", "#e95678"], # 4 Red
+#          ["#09f7a0", "#09f7a0"], # 5 Green
+#          ["#fab795", "#fab795"], # 6 Yellow
+#          ["#25b0bc", "#25b0bc"], # 7 Blue
+#          ["#ee64ac", "#ee64ac"], # 8 Magenta
+#          ["#6bdfe6", "#6bdfe6"], # 9 Cyan
+#          ["#f09483", "#f09483"], # 10 Orange
+#          ["#b877db", "#b877db"], # 11 Violet
+#        ]
+
+## Catppuccin
+colors = [["#1E1D2F", "#1E1D2F"], # 0 Background 0
+          ["#302D41", "#302D41"], # 1 Background 1
+          ["#d9e0ee", "#d9e0ee"], # 2 Foreground 0
+          ["#c3bac6", "#c3bac6"], # 3 Foreground 1
+          ["#f28fad", "#f28fad"], # 4 Red
+          ["#abe9b3", "#abe9b3"], # 5 Green
+          ["#fae3b0", "#fae3b0"], # 6 Yellow
+          ["#96cdfb", "#96cdfb"], # 7 Blue
+          ["#f5c2e7", "#f5c2e7"], # 8 Magenta
+          ["#b5e8e0", "#b5e8e0"], # 9 Cyan
+          ["#f8bd96", "#f8db96"], # 10 Orange
+          ["#c9cbff", "#c9cbff"], # 11 Violet
         ]
 
 prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
 
 ## Widgets definitions ##
 widget_defaults = dict(
-    font = 'scientifica',
-    fontsize = 14,
-    padding = 1,
-    background = '#1c1e26',
-    foreground = '#d2d4de',
+    font = 'Terminus',
+    fontsize = 13,
+    padding = 4,
+    background = '#1E1D2F',
+    foreground = '#d9e0ee',
 )
 
 extension_defaults = widget_defaults.copy()
@@ -492,7 +515,7 @@ screens = [
                     borderwidth = 2,
                     disable_drag = True,
                     font = 'Stick',
-                    fontsize = 14,
+                    fontsize = 16,
                     hide_unused = False,
                     #highlight_color = '00000000',
                     highlight_color = colors[0],
@@ -754,8 +777,8 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
-    border_focus = '09f7a0',
-    border_normal = '1c1e26',
+    border_focus = 'b5e8e0',
+    border_normal = '1E1D2F',
     border_width = 4,
     fullscreen_border_width = 0,
     float_rules=[
