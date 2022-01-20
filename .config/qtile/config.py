@@ -344,17 +344,25 @@ for i, name in enumerate(group_names, 1):
 #}
 
 ## Catppuccin
+#layout_theme = {
+#    "border_width": 4,
+#    "margin": 15,
+#    "border_focus": "f8bd96",
+#    "border_normal": "1E1D2F"
+#}
+
+## Rose Pine Dawn
 layout_theme = {
     "border_width": 4,
     "margin": 15,
-    "border_focus": "f8bd96",
-    "border_normal": "1E1D2F"
+    "border_focus": "907aa9",
+    "border_normal": "faf4ed"
 }
 
 layouts = [
     layout.MonadTall(
-        border_focus = 'f8bd96',
-        border_normal = '1E1D2F',
+        border_focus = '907aa9',
+        border_normal = 'faf4ed',
         border_width = 4,
         margin = 15,
         ratio = 0.52,
@@ -366,8 +374,8 @@ layouts = [
         **layout_theme
     ),
     layout.Floating(
-        border_focus = 'b5e8e0',
-        border_normal = '1E1D2F',
+        border_focus = 'd7827e',
+        border_normal = 'faf4ed',
         border_width = 4,
         fullscreen_border_width = 0,
     ),
@@ -474,29 +482,44 @@ layouts = [
 #        ]
 
 ## Catppuccin
-colors = [["#1E1D2F", "#1E1D2F"], # 0 Background 0
-          ["#302D41", "#302D41"], # 1 Background 1
-          ["#d9e0ee", "#d9e0ee"], # 2 Foreground 0
-          ["#c3bac6", "#c3bac6"], # 3 Foreground 1
-          ["#f28fad", "#f28fad"], # 4 Red
-          ["#abe9b3", "#abe9b3"], # 5 Green
-          ["#fae3b0", "#fae3b0"], # 6 Yellow
-          ["#96cdfb", "#96cdfb"], # 7 Blue
-          ["#f5c2e7", "#f5c2e7"], # 8 Magenta
-          ["#b5e8e0", "#b5e8e0"], # 9 Cyan
-          ["#f8bd96", "#f8db96"], # 10 Orange
-          ["#c9cbff", "#c9cbff"], # 11 Violet
+#colors = [["#1E1D2F", "#1E1D2F"], # 0 Background 0
+#          ["#302D41", "#302D41"], # 1 Background 1
+#          ["#d9e0ee", "#d9e0ee"], # 2 Foreground 0
+#          ["#c3bac6", "#c3bac6"], # 3 Foreground 1
+#          ["#f28fad", "#f28fad"], # 4 Red
+#          ["#abe9b3", "#abe9b3"], # 5 Green
+#          ["#fae3b0", "#fae3b0"], # 6 Yellow
+#          ["#96cdfb", "#96cdfb"], # 7 Blue
+#          ["#f5c2e7", "#f5c2e7"], # 8 Magenta
+#          ["#b5e8e0", "#b5e8e0"], # 9 Cyan
+#          ["#f8bd96", "#f8db96"], # 10 Orange
+#          ["#c9cbff", "#c9cbff"], # 11 Violet
+#        ]
+
+## Rose Pine Dawn
+colors = [["#faf4ed", "#faf4ed"], # 0 Background 0
+          ["#e4dfde", "#e4dfde"], # 1 Background 1
+          ["#575279", "#575279"], # 2 Foreground 0
+          ["#6e6a86", "#6e6a86"], # 3 Foreground 1
+          ["#b4637a", "#b4637a"], # 4 Red
+          ["#56949f", "#56949f"], # 5 Green
+          ["#f6c177", "#f6c177"], # 6 Yellow
+          ["#286983", "#286983"], # 7 Blue
+          ["#d7827e", "#d7827e"], # 8 Magenta
+          ["#9ccfd8", "#9ccfd8"], # 9 Cyan
+          ["#ea9d34", "#ea9d34"], # 10 Orange
+          ["#907aa9", "#907aa9"], # 11 Violet
         ]
 
 prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
 
 ## Widgets definitions ##
 widget_defaults = dict(
-    font = 'Terminus',
-    fontsize = 13,
+    font = 'Cartograph CF',
+    fontsize = 14,
     padding = 4,
-    background = '#1E1D2F',
-    foreground = '#d9e0ee',
+    background = '#faf4ed',
+    foreground = '#575279',
 )
 
 extension_defaults = widget_defaults.copy()
@@ -505,10 +528,11 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.Image(
-                    filename = "~/.config/qtile/icons/python.png",
-                    margin = 5
-                ),
+                #widget.Image(
+                #    background = colors[0],
+                #    filename = "~/.config/qtile/icons/python.png",
+                #    margin = 5
+                #),
                 widget.GroupBox(
                     active = colors[2],
                     block_highlight_text_color = colors[2],
@@ -777,8 +801,8 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
-    border_focus = 'b5e8e0',
-    border_normal = '1E1D2F',
+    border_focus = 'd7827e',
+    border_normal = 'faf4ed',
     border_width = 4,
     fullscreen_border_width = 0,
     float_rules=[

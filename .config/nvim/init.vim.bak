@@ -44,9 +44,6 @@ Plug 'powerline/powerline'
 " Airline
 Plug 'itchyny/lightline.vim'
 
-" Lualine
-Plug 'nvim-lualine/lualine.nvim'
-
 " Gruvbox Theme
 Plug 'gruvbox-community/gruvbox'
 
