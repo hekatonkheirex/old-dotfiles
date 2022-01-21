@@ -16,8 +16,8 @@ return require('packer').startup(function()
 
   -- Themes
   use({ 'dracula/vim', as = 'dracula' })
-  use 'gruvbox-community/gruvbox'
-  use 'arcticicestudio/nord-vim'
+  use { "ellisonleao/gruvbox.nvim" }
+  use 'shaunsingh/nord.nvim'
   use 'navarasu/onedark.nvim'
   use 'sainnhe/everforest'
   use 'sainnhe/sonokai'

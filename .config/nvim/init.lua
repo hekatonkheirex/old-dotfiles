@@ -8,12 +8,17 @@ require('nvimtree-config')
 
 -- Themes options
 --vim.g.gruvbox_contrast_dark = 'medium'
+--vim.g.gruvbox_italic = true
+--vim.g.gruvbox_termcolors = '256'
 --vim.g.everforest_background = 'hard'
 --vim.g.everforest_enable_italic = true
 --vim.g.gruvbox_italic = true
---vim.g.nord_italic = true
---vim.g.nord_italic_comments = true
+--vim.g.nord_contrast = true
+--vim.g.nord_borders = false
+--vim.g.nord_disable_background = false
+--vim.g.nord_italic = false
 --vim.g.colors_name = "dracula"
+--vim.g.onedark_style = 'darker'
 --vim.g.onedark_hide_endofbuffer = true
 --vim.g.onedark_terminal_italics = true
 --vim.g.sonokai_style = 'andromeda'
