@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/mura/.oh-my-zsh"
@@ -122,6 +122,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias ls="exa --icons"
 alias update="paru"
+alias n="nvim"
 
 autoload -U compinit && compinit
 
@@ -133,3 +134,5 @@ export TERM=xterm-256color
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval "$(starship init zsh)"
+
+alias luamake=/home/mura/lua-language-server/3rd/luamake/luamake
