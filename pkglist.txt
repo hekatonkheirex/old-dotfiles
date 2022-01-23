@@ -25,7 +25,9 @@ blueberry
 bluez
 bluez-utils
 brave-bin
+brightnessctl
 bspwm
+catppuccin-gtk-theme
 cava
 cups
 devtools
@@ -34,6 +36,7 @@ dina-font
 discord
 dosfstools
 dunst
+dupeguru
 efibootmgr
 exa
 fakeroot
@@ -45,6 +48,8 @@ feh
 ffmpegthumbnailer
 firefox
 flex
+font-victor-mono
+fzf
 gcc
 gentium-plus-font
 git
@@ -76,6 +81,7 @@ linux-headers
 lxappearance-gtk3
 m4
 make
+menumaker
 mpv
 mtools
 neofetch
@@ -84,12 +90,16 @@ network-manager-applet
 networkmanager
 nfs-utils
 nitrogen
+notion-app-enhanced
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
+npm
 nss-mdns
 ntfs-3g
+obconf
 obs-studio
+openbox
 openssh
 os-prober
 otf-font-awesome
@@ -117,10 +127,13 @@ python-pycryptodome
 python-pywlroots
 python-pyxdg
 qbittorrent
+qt5-styleplugins
 qt5ct
+qt6ct
 qtile
 raw-thumbnailer
 reflector
+ripgrep
 rofi
 rsync
 rtmpdump
@@ -146,6 +159,7 @@ thunar-secure-delete
 thunar-shares-plugin
 thunar-vcs-plugin
 thunar-volman
+toilet
 ttf-anonymous-pro
 ttf-bitstream-vera
 ttf-cascadia-code
@@ -161,11 +175,13 @@ ttf-ibm-plex
 ttf-inconsolata
 ttf-iosevka
 ttf-jetbrains-mono
-ttf-junicode
 ttf-liberation
 ttf-linux-libertine
+ttf-meslo
 ttf-monofur
+ttf-monoid
 ttf-opensans
+ttf-recursive
 ttf-roboto
 ttf-roboto-mono
 ttf-ubuntu-font-family
@@ -175,6 +191,8 @@ tumbler-extra-thumbnailers
 unarchiver
 unrar
 unzip
+vivaldi
+vivaldi-ffmpeg-codecs
 w3m
 which
 wmutils-git
