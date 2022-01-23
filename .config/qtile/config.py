@@ -1,24 +1,24 @@
 import os
-import re
 import socket
 import subprocess
-from libqtile import qtile
-from libqtile.config import Click, Drag, Group, KeyChord, Key, Match, Screen
+from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
-from libqtile.lazy import lazy
 from typing import List  # noqa: F401
 
-## Autostart programs ##
+
+# Autostart programs
 @hook.subscribe.startup_once
 def autostart():
     home = os.path.expanduser('~/.config/qtile/autostart.sh')
     subprocess.call([home])
 
-## Defaults ##
+
+# Defaults
 mod = "mod4"
 myTerm = "kitty"
-#myTerm = "alacritty"
+# myTerm = "alacritty"
+
 
 def focus_previous_group(qtile):
     group = qtile.current_screen.group
@@ -57,8 +57,9 @@ def toggle_minimize_all(qtile):
         if win.minimized is False:
             group.layout_all()
 
+
 keys = [
-    ## The essentials ##
+    # The essentials
     Key(
         [mod], "Return",
         lazy.spawn(myTerm),
@@ -84,8 +85,8 @@ keys = [
         lazy.next_layout(),
         desc="Toggle between layouts"
     ),
-    ## Windows management ##
 
+    # Windows management
     Key(
         [mod], "h",
         lazy.layout.left(),
@@ -158,7 +159,7 @@ keys = [
     ),
     Key(
         [mod, "shift"], "Return",
-        lazy.layout.toggle_split(),                             # Split = all windows displayed; Unsplit = 1 window displayed, like Max layout, but still with multiple stack panes
+        lazy.layout.toggle_split(),
         desc="Toggle between split and unsplit sides of stack"
     ),
     Key(
@@ -167,7 +168,7 @@ keys = [
         desc="Toggle fullscreen"
     ),
 
-    ## Custom keybinds ##
+    # Custom keybinds
     Key(
         ["control", "mod1"], "l",
         lazy.spawn('betterlockscreen -l dimblur'),
@@ -194,7 +195,7 @@ keys = [
         desc="Spawn powermenu"
     ),
 
-    ## Audio keybindings ##
+    # Audio keybindings
     Key(
         [], "XF86AudioMute",
         lazy.spawn("pactl set-sink-mute 0 toggle"),
@@ -214,14 +215,19 @@ keys = [
         desc="Raise audio"
     ),
 
-    ## Screenshots ##
+    # Screenshots
     Key(
         [], "Print",
-        lazy.spawn("scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/Screenshots && mv $f ~/Pictures/Screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/Screenshots/`ls     -1 -t ~/Pictures/Screenshots | head -1`'"),
-        lazy.spawn("dunstify -i ~/.config/dunst/screenshot.png 'Screenshot captured'"),
+        lazy.spawn("scrot 'screenshot_%Y%m%d_%H%M%S.png' -e \
+                'mkdir -p ~/Pictures/Screenshots && mv $f \
+                ~/Pictures/Screenshots && xclip -selection clipboard \
+                -t image/png -i ~/Pictures/Screenshots/`ls \
+                -1 -t ~/Pictures/Screenshots | head -1`'"),
+        lazy.spawn("dunstify -i ~/.config/dunst/screenshot.png \
+                'Screenshot captured'"),
     ),
 
-    ## Touchpad ##
+    # Touchpad
     Key(
         [], "XF86TouchpadToggle",
         lazy.spawn("/home/mura/.config/scripts/touchpad.sh toggle"),
@@ -233,7 +239,10 @@ groups = []
 
 group_names = 'www term file doc bit chat share vid mus'.split()
 group_labels = ["一", "二", "三", "四", "五", "六", "七", "八", "九"]
-group_layouts = ["monadtall", "tile", "max", "max", "max", "max", "floating", "floating", "max"]
+group_layouts = [
+        "monadtall", "tile", "max", "max", "max", "max", "floating",
+        "floating", "max"
+    ]
 
 for i in range(len(group_names)):
     groups.append(
@@ -242,6 +251,7 @@ for i in range(len(group_names)):
             layout=group_layouts[i].lower(),
             label=group_labels[i]
         ))
+
 
 @hook.subscribe.client_new
 def assign_app_group(client):
@@ -289,69 +299,70 @@ def assign_app_group(client):
             client.togroup(group)
             client.group.cmd_toscreen(toggle=False)
 
+
 for i, name in enumerate(group_names, 1):
     keys.extend([
         Key([mod], str(i), lazy.group[name].toscreen()),
         Key([mod, 'shift'], str(i), lazy.window.togroup(name))])
 
-## Layouts ##
-## Gruvbox dark
-#layout_theme = {
+# layouts
+# Gruvbox dark
+# layout_theme = {
 #    "border_width": 2,
 #    "margin": 15,
 #    "border_focus": "d65d0e",
 #    "border_normal": "282828"
-#}
+# }
 
-## Outrun Dark
-#layout_theme = {
+# Outrun Dark
+# layout_theme = {
 #    "border_width": 2,
 #    "margin": 15,
 #    "border_focus": "f10596",
 #    "border_normal": "00002a"
-#}
+# }
 
-## Dracula
-#layout_theme = {
+# Dracula
+# layout_theme = {
 #    "border_width": 4,
 #    "margin": 15,
 #    "border_focus": "bd93f9",
 #    "border_normal": "282a36"
-#}
+# }
 
-## Everforest
-#layout_theme = {
+# Everforest
+# layout_theme = {
 #    "border_width": 2,
 #    "margin": 15,
 #    "border_focus": "a7c080",
 #    "border_normal": "2b3339"
-#}
+# }
 
-## Tokyo Night
-#layout_theme = {
+# Tokyo Night
+# layout_theme = {
 #    "border_width": 2,
 #    "margin": 15,
 #    "border_focus": "7c7be0",
 #    "border_normal": "1a1b26"
-#}
+# }
 
-## Horizon
-#layout_theme = {
+# Horizon
+# layout_theme = {
 #    "border_width": 4,
 #    "margin": 15,
 #    "border_focus": "f09483",
 #    "border_normal": "1c1e26"
-#}
+# }
 
-## Catppuccin
-#layout_theme = {
+# Catppuccin
+# layout_theme = {
 #    "border_width": 4,
 #    "margin": 15,
 #    "border_focus": "f8bd96",
 #    "border_normal": "1E1D2F"
-#}
+# }
 
-## Rose Pine Dawn
+# Rose Pine Dawn
 layout_theme = {
     "border_width": 4,
     "margin": 15,
@@ -361,11 +372,11 @@ layout_theme = {
 
 layouts = [
     layout.MonadTall(
-        border_focus = '907aa9',
-        border_normal = 'faf4ed',
-        border_width = 4,
-        margin = 15,
-        ratio = 0.52,
+        border_focus='907aa9',
+        border_normal='faf4ed',
+        border_width=4,
+        margin=15,
+        ratio=0.52,
     ),
     layout.Tile(
         **layout_theme
@@ -374,152 +385,153 @@ layouts = [
         **layout_theme
     ),
     layout.Floating(
-        border_focus = 'd7827e',
-        border_normal = 'faf4ed',
-        border_width = 4,
-        fullscreen_border_width = 0,
+        border_focus='d7827e',
+        border_normal='faf4ed',
+        border_width=4,
+        fullscreen_border_width=0,
     ),
-    #layout.Columns(**layout_theme),
-    #layout.Stack(num_stacks=2),
-    #layout.Bsp(**layout_theme),
-    #layout.Matrix(**layout_theme),
-    #layout.MonadWide(**layout_theme),
-    #layout.RatioTile(**layout_theme),
-    #layout.TreeTab(**layout_theme),
-    #layout.VerticalTile(**layout_theme),
-    #layout.Zoomy(**layout_theme)
+    # layout.Columns(**layout_theme),
+    # layout.Stack(num_stacks=2),
+    # layout.Bsp(**layout_theme),
+    # layout.Matrix(**layout_theme),
+    # layout.MonadWide(**layout_theme),
+    # layout.RatioTile(**layout_theme),
+    # layout.TreeTab(**layout_theme),
+    # layout.VerticalTile(**layout_theme),
+    # layout.Zoomy(**layout_theme)
 ]
 
-## Colors definitions ##
-## Gruvbox
-#colors = [["#282828", "#282828"], # 0 Background 0
-#          ["#3c3836", "#3c3836"], # 1 Background 1
-#          ["#fbf1c7", "#fbf1c7"], # 2 Foreground 0
-#          ["#ebdbb2", "#ebdbb2"], # 3 Foreground 1
-#          ["#cc241d", "#cc241d"], # 4 Red
-#          ["#98971a", "#98971a"], # 5 Green
-#          ["#d79921", "#d79921"], # 6 Yellow
-#          ["#458588", "#458588"], # 7 Blue
-#          ["#b16286", "#b16286"], # 8 Magenta
-#          ["#689d6a", "#689d6a"], # 9 Cyan
-#          ["#d65d0e", "#d65d0e"], # 10 Orange
-#          ["#8f3f71", "#8f3f71"], # 11 Violet
-#        ]
+# Colors definitions
+# Gruvbox
+# colors = [["#282828", "#282828"],  # 0 Background 0
+#           ["#3c3836", "#3c3836"],  # 1 Background 1
+#           ["#fbf1c7", "#fbf1c7"],  # 2 Foreground 0
+#           ["#ebdbb2", "#ebdbb2"],  # 3 Foreground 1
+#           ["#cc241d", "#cc241d"],  # 4 Red
+#           ["#98971a", "#98971a"],  # 5 Green
+#           ["#d79921", "#d79921"],  # 6 Yellow
+#           ["#458588", "#458588"],  # 7 Blue
+#           ["#b16286", "#b16286"],  # 8 Magenta
+#           ["#689d6a", "#689d6a"],  # 9 Cyan
+#           ["#d65d0e", "#d65d0e"],  # 10 Orange
+#           ["#8f3f71", "#8f3f71"],  # 11 Violet
+#         ]
 
-## Outrun Dark
-#colors = [["#00002a", "#00002a"], # 0 Background 0
-#          ["#19193f", "#19193f"], # 1 Background 1
-#          ["#d0d0fa", "#d0d0fa"], # 2 Foreground 0
-#          ["#bbbbe1", "#bbbbe1"], # 3 Foreground 1
-#          ["#ff4242", "#ff4242"], # 4 Red
-#          ["#59f176", "#59f176"], # 5 Green
-#          ["#f3e877", "#f3e877"], # 6 Yellow
-#          ["#66b0ff", "#66b0ff"], # 7 Blue
-#          ["#f10596", "#f10596"], # 8 Magenta
-#          ["#0ef0f0", "#0ef0f0"], # 9 Cyan
-#          ["#faa613", "#faa613"], # 10 Orange
-#          ["#aa7dce", "#aa7dce"], # 11 Violet
-#        ]
+# Outrun Dark
+# colors = [["#00002a", "#00002a"],  # 0 Background 0
+#           ["#19193f", "#19193f"],  # 1 Background 1
+#           ["#d0d0fa", "#d0d0fa"],  # 2 Foreground 0
+#           ["#bbbbe1", "#bbbbe1"],  # 3 Foreground 1
+#           ["#ff4242", "#ff4242"],  # 4 Red
+#           ["#59f176", "#59f176"],  # 5 Green
+#           ["#f3e877", "#f3e877"],  # 6 Yellow
+#           ["#66b0ff", "#66b0ff"],  # 7 Blue
+#           ["#f10596", "#f10596"],  # 8 Magenta
+#           ["#0ef0f0", "#0ef0f0"],  # 9 Cyan
+#           ["#faa613", "#faa613"],  # 10 Orange
+#           ["#aa7dce", "#aa7dce"],  # 11 Violet
+#         ]
 
-## Dracula
-#colors = [["#282a36", "#282a36"], # 0 Background 0
-#          ["#44475a", "#44475a"], # 1 Background 1
-#          ["#f8f8f2", "#f8f8f2"], # 2 Foreground 0
-#          ["#bfbfbf", "#bfbfbf"], # 3 Foreground 1
-#          ["#ff5555", "#ff5555"], # 4 Red
-#          ["#50fa7b", "#50fa7b"], # 5 Green
-#          ["#f1fa8c", "#f1fa8c"], # 6 Yellow
-#          ["#1098f7", "#1098f7"], # 7 Blue
-#          ["#ff79c6", "#ff79c6"], # 8 Magenta
-#          ["#8be9fd", "#8be9fd"], # 9 Cyan
-#          ["#ffb86c", "#ffb86c"], # 10 Orange
-#          ["#bd93f9", "#bd93f9"], # 11 Violet
-#        ]
+# Dracula
+# colors = [["#282a36", "#282a36"],  # 0 Background 0
+#           ["#44475a", "#44475a"],  # 1 Background 1
+#           ["#f8f8f2", "#f8f8f2"],  # 2 Foreground 0
+#           ["#bfbfbf", "#bfbfbf"],  # 3 Foreground 1
+#           ["#ff5555", "#ff5555"],  # 4 Red
+#           ["#50fa7b", "#50fa7b"],  # 5 Green
+#           ["#f1fa8c", "#f1fa8c"],  # 6 Yellow
+#           ["#1098f7", "#1098f7"],  # 7 Blue
+#           ["#ff79c6", "#ff79c6"],  # 8 Magenta
+#           ["#8be9fd", "#8be9fd"],  # 9 Cyan
+#           ["#ffb86c", "#ffb86c"],  # 10 Orange
+#           ["#bd93f9", "#bd93f9"],  # 11 Violet
+#         ]
 
-## Everforest
-#colors = [["#2b3339", "#2b3339"], # 0 Background 0
-#          ["#40474c", "#40474c"], # 1 Background 1
-#          ["#d3c6aa", "#d3c6aa"], # 2 Foreground 0
-#          ["#d7cbb2", "#d7cbb2"], # 3 Foreground 1
-#          ["#e67e80", "#e67e80"], # 4 Red
-#          ["#a7c080", "#a7c080"], # 5 Green
-#          ["#dbbc7f", "#dbbc7f"], # 6 Yellow
-#          ["#7fbbb3", "#7fbbb3"], # 7 Blue
-#          ["#d699b6", "#d699b6"], # 8 Magenta
-#          ["#83c092", "#83c092"], # 9 Cyan
-#          ["#ff9f1c", "#ff9f1c"], # 10 Orange
-#          ["#e3dfff", "#e3dfff"], # 11 Violet
-#        ]
+# Everforest
+# colors = [["#2b3339", "#2b3339"],  # 0 Background 0
+#           ["#40474c", "#40474c"],  # 1 Background 1
+#           ["#d3c6aa", "#d3c6aa"],  # 2 Foreground 0
+#           ["#d7cbb2", "#d7cbb2"],  # 3 Foreground 1
+#           ["#e67e80", "#e67e80"],  # 4 Red
+#           ["#a7c080", "#a7c080"],  # 5 Green
+#           ["#dbbc7f", "#dbbc7f"],  # 6 Yellow
+#           ["#7fbbb3", "#7fbbb3"],  # 7 Blue
+#           ["#d699b6", "#d699b6"],  # 8 Magenta
+#           ["#83c092", "#83c092"],  # 9 Cyan
+#           ["#ff9f1c", "#ff9f1c"],  # 10 Orange
+#           ["#e3dfff", "#e3dfff"],  # 11 Violet
+#         ]
 
-## Tokyo Night
-#colors = [["#1a1b26", "#1a1b26"], # 0 Background 0
-#          ["#30313b", "#30313b"], # 1 Background 1
-#          ["#a9b1d6", "#a9b1d6"], # 2 Foreground 0
-#          ["#b1b8da", "#b1b8da"], # 3 Foreground 1
-#          ["#f7768e", "#f7768e"], # 4 Red
-#          ["#9ece6a", "#9ece6a"], # 5 Green
-#          ["#e0af68", "#e0af68"], # 6 Yellow
-#          ["#7aa2f7", "#7aa2f7"], # 7 Blue
-#          ["#9a7ecc", "#9a7ecc"], # 8 Magenta
-#          ["#4abaaf", "#4abaaf"], # 9 Cyan
-#          ["#fea520", "#fea520"], # 10 Orange
-#          ["#7c7be0", "#7c7be0"], # 11 Violet
-#        ]
+# Tokyo Night
+# colors = [["#1a1b26", "#1a1b26"],  # 0 Background 0
+#           ["#30313b", "#30313b"],  # 1 Background 1
+#           ["#a9b1d6", "#a9b1d6"],  # 2 Foreground 0
+#           ["#b1b8da", "#b1b8da"],  # 3 Foreground 1
+#           ["#f7768e", "#f7768e"],  # 4 Red
+#           ["#9ece6a", "#9ece6a"],  # 5 Green
+#           ["#e0af68", "#e0af68"],  # 6 Yellow
+#           ["#7aa2f7", "#7aa2f7"],  # 7 Blue
+#           ["#9a7ecc", "#9a7ecc"],  # 8 Magenta
+#           ["#4abaaf", "#4abaaf"],  # 9 Cyan
+#           ["#fea520", "#fea520"],  # 10 Orange
+#           ["#7c7be0", "#7c7be0"],  # 11 Violet
+#         ]
 
-## Horizon
-#colors = [["#1c1e26", "#1c1e26"], # 0 Background 0
-#          ["#32343b", "#32343b"], # 1 Background 1
-#          ["#d2d4de", "#d2d4de"], # 2 Foreground 0
-#          ["#d6d8e1", "#d6d8e1"], # 3 Foreground 1
-#          ["#e95678", "#e95678"], # 4 Red
-#          ["#09f7a0", "#09f7a0"], # 5 Green
-#          ["#fab795", "#fab795"], # 6 Yellow
-#          ["#25b0bc", "#25b0bc"], # 7 Blue
-#          ["#ee64ac", "#ee64ac"], # 8 Magenta
-#          ["#6bdfe6", "#6bdfe6"], # 9 Cyan
-#          ["#f09483", "#f09483"], # 10 Orange
-#          ["#b877db", "#b877db"], # 11 Violet
-#        ]
+# Horizon
+# colors = [["#1c1e26", "#1c1e26"],  # 0 Background 0
+#           ["#32343b", "#32343b"],  # 1 Background 1
+#           ["#d2d4de", "#d2d4de"],  # 2 Foreground 0
+#           ["#d6d8e1", "#d6d8e1"],  # 3 Foreground 1
+#           ["#e95678", "#e95678"],  # 4 Red
+#           ["#09f7a0", "#09f7a0"],  # 5 Green
+#           ["#fab795", "#fab795"],  # 6 Yellow
+#           ["#25b0bc", "#25b0bc"],  # 7 Blue
+#           ["#ee64ac", "#ee64ac"],  # 8 Magenta
+#           ["#6bdfe6", "#6bdfe6"],  # 9 Cyan
+#           ["#f09483", "#f09483"],  # 10 Orange
+#           ["#b877db", "#b877db"],  # 11 Violet
+#         ]
 
-## Catppuccin
-#colors = [["#1E1D2F", "#1E1D2F"], # 0 Background 0
-#          ["#302D41", "#302D41"], # 1 Background 1
-#          ["#d9e0ee", "#d9e0ee"], # 2 Foreground 0
-#          ["#c3bac6", "#c3bac6"], # 3 Foreground 1
-#          ["#f28fad", "#f28fad"], # 4 Red
-#          ["#abe9b3", "#abe9b3"], # 5 Green
-#          ["#fae3b0", "#fae3b0"], # 6 Yellow
-#          ["#96cdfb", "#96cdfb"], # 7 Blue
-#          ["#f5c2e7", "#f5c2e7"], # 8 Magenta
-#          ["#b5e8e0", "#b5e8e0"], # 9 Cyan
-#          ["#f8bd96", "#f8db96"], # 10 Orange
-#          ["#c9cbff", "#c9cbff"], # 11 Violet
-#        ]
+# Catppuccin
+# colors = [["#1E1D2F", "#1E1D2F"],  # 0 Background 0
+#           ["#302D41", "#302D41"],  # 1 Background 1
+#           ["#d9e0ee", "#d9e0ee"],  # 2 Foreground 0
+#           ["#c3bac6", "#c3bac6"],  # 3 Foreground 1
+#           ["#f28fad", "#f28fad"],  # 4 Red
+#           ["#abe9b3", "#abe9b3"],  # 5 Green
+#           ["#fae3b0", "#fae3b0"],  # 6 Yellow
+#           ["#96cdfb", "#96cdfb"],  # 7 Blue
+#           ["#f5c2e7", "#f5c2e7"],  # 8 Magenta
+#           ["#b5e8e0", "#b5e8e0"],  # 9 Cyan
+#           ["#f8bd96", "#f8db96"],  # 10 Orange
+#           ["#c9cbff", "#c9cbff"],  # 11 Violet
+#         ]
 
-## Rose Pine Dawn
-colors = [["#faf4ed", "#faf4ed"], # 0 Background 0
-          ["#e4dfde", "#e4dfde"], # 1 Background 1
-          ["#575279", "#575279"], # 2 Foreground 0
-          ["#6e6a86", "#6e6a86"], # 3 Foreground 1
-          ["#b4637a", "#b4637a"], # 4 Red
-          ["#56949f", "#56949f"], # 5 Green
-          ["#f6c177", "#f6c177"], # 6 Yellow
-          ["#286983", "#286983"], # 7 Blue
-          ["#d7827e", "#d7827e"], # 8 Magenta
-          ["#9ccfd8", "#9ccfd8"], # 9 Cyan
-          ["#ea9d34", "#ea9d34"], # 10 Orange
-          ["#907aa9", "#907aa9"], # 11 Violet
-        ]
+# Rose Pine Dawn
+colors = [
+        ["#faf4ed", "#faf4ed"],  # 0 Background 0
+        ["#e4dfde", "#e4dfde"],  # 1 Background 1
+        ["#575279", "#575279"],  # 2 Foreground 0
+        ["#6e6a86", "#6e6a86"],  # 3 Foreground 1
+        ["#b4637a", "#b4637a"],  # 4 Red
+        ["#56949f", "#56949f"],  # 5 Green
+        ["#f6c177", "#f6c177"],  # 6 Yellow
+        ["#286983", "#286983"],  # 7 Blue
+        ["#d7827e", "#d7827e"],  # 8 Magenta
+        ["#9ccfd8", "#9ccfd8"],  # 9 Cyan
+        ["#ea9d34", "#ea9d34"],  # 10 Orange
+        ["#907aa9", "#907aa9"],  # 11 Violet
+    ]
 
 prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
 
-## Widgets definitions ##
+# Widgets definitions
 widget_defaults = dict(
-    font = 'Cartograph CF',
-    fontsize = 14,
-    padding = 4,
-    background = '#faf4ed',
-    foreground = '#575279',
+    font='Cartograph CF',
+    fontsize=14,
+    padding=4,
+    background='#faf4ed',
+    foreground='#575279',
 )
 
 extension_defaults = widget_defaults.copy()
@@ -528,254 +540,256 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                #widget.Image(
-                #    background = colors[0],
-                #    filename = "~/.config/qtile/icons/python.png",
-                #    margin = 5
-                #),
+                # widget.Image(
+                #     background=colors[0],
+                #     filename="~/.config/qtile/icons/python.png",
+                #     margin=5
+                # ),
                 widget.GroupBox(
-                    active = colors[2],
-                    block_highlight_text_color = colors[2],
-                    borderwidth = 2,
-                    disable_drag = True,
-                    font = 'Stick',
-                    fontsize = 16,
-                    hide_unused = False,
-                    #highlight_color = '00000000',
-                    highlight_color = colors[0],
-                    #highlight_method = 'text',
-                    highlight_method = 'line',
-                    inactive = colors[1],
-                    padding = 1,
-                    rounded = True,
-                    spacing = 4,
-                    this_current_screen_border = colors[10],
-                    urgent_alert_method = 'block',
-                    urgent_border = colors[4],
-                    urgent_text = colors[0],
+                    active=colors[2],
+                    block_highlight_text_color=colors[2],
+                    borderwidth=2,
+                    disable_drag=True,
+                    font='Stick',
+                    fontsize=16,
+                    hide_unused=False,
+                    # highlight_color='00000000',
+                    highlight_color=colors[0],
+                    # highlight_method='text',
+                    highlight_method='line',
+                    inactive=colors[1],
+                    padding=1,
+                    rounded=True,
+                    spacing=4,
+                    this_current_screen_border=colors[10],
+                    urgent_alert_method='block',
+                    urgent_border=colors[4],
+                    urgent_text=colors[0],
                 ),
                 widget.WindowName(
-                    max_chars = 200,
-                    padding = 8,
-                    foreground = colors[5],
+                    max_chars=200,
+                    padding=8,
+                    foreground=colors[5],
                 ),
                 widget.Spacer(
                 ),
                 widget.Wttr(
-                    location = { 'Asuncion': 'Asuncion'},
-                    padding = 4,
+                    location={'Asuncion': 'Asuncion'},
+                    padding=4,
                 ),
-                #widget.TextBox(
-                #    text = '󰖐',
-                #    fontsize = 14,
-                #    padding = 1,
-                #    foreground = colors[8],
-                #),
-                #widget.OpenWeather(
-                #    app_key = '29c7c3f06ff45f58f6a2e409c2fb2d22',
-                #    cityid = '3439389',
-                #    format = '{weather} {main_temp}°{units_temperature}',
-                #    metric = True,
-                #    padding = 4,
-                #    update_interval = 600,
-                #    url = 'https://openweathermap.org/city/3439389',
-                #    foreground = colors[2],
-                #),
+                # widget.TextBox(
+                #     text='󰖐',
+                #     fontsize=14,
+                #     padding=1,
+                #     foreground=colors[8],
+                # ),
+                # widget.OpenWeather(
+                #     app_key='29c7c3f06ff45f58f6a2e409c2fb2d22',
+                #     cityid='3439389',
+                #     format='{weather} {main_temp}°{units_temperature}',
+                #     metric=True,
+                #     padding=4,
+                #     update_interval=600,
+                #     url='https://openweathermap.org/city/3439389',
+                #     foreground=colors[2],
+                # ),
                 widget.Sep(
-                    padding = 4,
-                    foreground = colors[0],
+                    padding=4,
+                    foreground=colors[0],
                 ),
                 widget.TextBox(
-                    text = '󰃭',
-                    fontsize = 14,
-                    padding = 1,
-                    foreground = colors[8],
+                    text='󰃭',
+                    fontsize=14,
+                    padding=1,
+                    foreground=colors[8],
                 ),
                 widget.Clock(
                     format='%a %d %b %H:%M',
-                    padding = 4,
-                    foreground = colors[2],
+                    padding=4,
+                    foreground=colors[2],
                 ),
-                #widget.TextBox(
-                #    text = '',
-                #    fontsize = 26,
-                #    foreground = colors[1],
-                #),
-                #widget.TextBox(
-                #    text = '',
-                #    fontsize = 26,
-                #    foreground = colors[1],
-                #),
+                # widget.TextBox(
+                #     text='',
+                #     fontsize=26,
+                #     foreground=colors[1],
+                # ),
+                # widget.TextBox(
+                #     text='',
+                #     fontsize=26,
+                #     foreground=colors[1],
+                # ),
                 widget.Sep(
-                    padding = 4,
-                    foreground = colors[0],
+                    padding=4,
+                    foreground=colors[0],
                 ),
-                #widget.WidgetBox(
-                #    text_closed = '󰅁',
-                #    text_open = '󰅂',
-                #    fontsize = 14,
-                #    foreground = colors[8],
-                #    widgets=[
-                #        widget.Systray(
-                #            padding = 1,
-                #        ),
-                #    ],
-                #),
+                # widget.WidgetBox(
+                #     text_closed='󰅁',
+                #     text_open='󰅂',
+                #     fontsize=14,
+                #     foreground=colors[8],
+                #     widgets=[
+                #         widget.Systray(
+                #             padding = 1,
+                #         ),
+                #     ],
+                # ),
                 widget.Systray(
-                    padding = 4,
+                    padding=4,
                 ),
-                #widget.QuickExit(
-                #    countdown_format = '[{}]',
-                #    foreground = colors[4],
-                #    default_text = '󰐥',
-                #    fontsize = 14,
-                #    padding = 4,
-                #),
+                # widget.QuickExit(
+                #     countdown_format='[{}]',
+                #     foreground=colors[4],
+                #     default_text='󰐥',
+                #     fontsize=14,
+                #     padding=4,
+                # ),
             ],
             28,
-            #margin=[15, 15, 0, 15],
+            # margin=[15, 15, 0, 15],
         ),
         bottom=bar.Bar(
             [
                 widget.TextBox(
-                    text = '󰀂',
-                    fontsize = 14,
-                    padding = 1,
-                    foreground = colors[8]
+                    text='󰀂',
+                    fontsize=14,
+                    padding=1,
+                    foreground=colors[8]
                 ),
                 widget.Wlan(
-                    format = '{essid}',
-                    interface = 'wlp1s0',
-                    padding = 4,
+                    format='{essid}',
+                    interface='wlp1s0',
+                    padding=4,
                 ),
                 widget.Net(
-                    format = '󰁅 {down} 󰁝 {up}',
-                    padding = 4,
+                    format='󰁅 {down} 󰁝 {up}',
+                    padding=4,
                 ),
                 widget.Sep(
-                    padding = 4,
-                    foreground = colors[0],
+                    padding=4,
+                    foreground=colors[0],
                 ),
                 widget.TextBox(
-                    text = '󰻠',
-                    fontsize = 14,
-                    padding = 4,
-                    foreground = colors[8],
+                    text='󰻠',
+                    fontsize=14,
+                    padding=4,
+                    foreground=colors[8],
                 ),
                 widget.CPU(
-                    format = '{load_percent}%',
-                    foreground = colors[2],
+                    format='{load_percent}%',
+                    foreground=colors[2],
                 ),
                 widget.Sep(
-                    padding = 4,
-                    foreground = colors[0],
+                    padding=4,
+                    foreground=colors[0],
                 ),
                 widget.TextBox(
-                    text = '󰍛',
-                    fontsize = 14,
-                    padding = 1,
-                    foreground = colors[8],
+                    text='󰍛',
+                    fontsize=14,
+                    padding=1,
+                    foreground=colors[8],
                 ),
                 widget.Memory(
-                    format = '{MemUsed: .0f}M',
-                    measure_mem = 'M',
-                    update_interval = 1.0,
-                    foreground = colors[2],
+                    format='{MemUsed: .0f}M',
+                    measure_mem='M',
+                    update_interval=1.0,
+                    foreground=colors[2],
                 ),
                 widget.Sep(
-                    padding = 4,
-                    foreground = colors[0],
+                    padding=4,
+                    foreground=colors[0],
                 ),
                 widget.TextBox(
-                    text = '󰔏',
-                    fontsize = 14,
-                    padding = 1,
-                    foreground = colors[8],
+                    text='󰔏',
+                    fontsize=14,
+                    padding=1,
+                    foreground=colors[8],
                 ),
                 widget.ThermalSensor(
-                    foreground = colors[2],
+                    foreground=colors[2],
                 ),
                 widget.Spacer(
                 ),
                 widget.TextBox(
-                    text = '󰓇',
-                    fontsize = 14,
-                    padding = 1,
-                    foreground = colors[5],
+                    text='󰓇',
+                    fontsize=14,
+                    padding=1,
+                    foreground=colors[5],
                 ),
                 widget.Mpris2(
-                    name = 'spotify',
-                    objname = "org.mpris.MediaPlayer2.spotify",
-                    display_metadata = ['xesam:title', 'xesam:artist'],
-                    scroll_chars = None,
-                    stop_pause_text = '',
-                    padding = 4,
-                    foreground = colors[2],
+                    name='spotify',
+                    objname="org.mpris.MediaPlayer2.spotify",
+                    display_metadata=['xesam:title', 'xesam:artist'],
+                    scroll_chars=None,
+                    stop_pause_text='',
+                    padding=4,
+                    foreground=colors[2],
                 ),
                 widget.Spacer(
                 ),
                 widget.TextBox(
-                    text = '󰏗',
-                    fontsize = 14,
-                    padding = 1,
-                    foreground = colors[8]
+                    text='󰏗',
+                    fontsize=14,
+                    padding=1,
+                    foreground=colors[8]
                 ),
                 widget.CheckUpdates(
-                    colour_have_updates = colors[2],
-                    colour_no_updates = colors[1],
-                    display_format = '{updates:>2}',
-                    distro = 'Arch',
-                    execute = None,
-                    foreground = colors[2],
-                    no_update_string = '0',
-                    padding = 4,
-                    update_interval = 60,
+                    colour_have_updates=colors[2],
+                    colour_no_updates=colors[1],
+                    display_format='{updates:>2}',
+                    distro='Arch',
+                    execute=None,
+                    foreground=colors[2],
+                    no_update_string='Up to date!',
+                    padding=4,
+                    update_interval=60,
                 ),
                 widget.Sep(
-                    padding = 4,
-                    foreground = colors[0],
+                    padding=4,
+                    foreground=colors[0],
                 ),
                 widget.TextBox(
-                    text = '󰛩',
-                    fontsize = 14,
-                    padding = 1,
-                    foreground = colors[8],
+                    text='󰛩',
+                    fontsize=14,
+                    padding=1,
+                    foreground=colors[8],
                 ),
                 widget.Backlight(
-                    backlight_name = 'amdgpu_bl0',
-                    padding = 1,
-                    foreground = colors[2],
+                    backlight_name='amdgpu_bl0',
+                    padding=1,
+                    foreground=colors[2],
                 ),
                 widget.Sep(
-                    padding = 4,
-                    foreground = colors[0],
+                    padding=4,
+                    foreground=colors[0],
                 ),
                 widget.TextBox(
-                    text = '󰕾',
-                    fontsize = 14,
-                    padding = 1,
-                    foreground = colors[8],
+                    text='󰕾',
+                    fontsize=14,
+                    padding=1,
+                    foreground=colors[8],
                 ),
                 widget.PulseVolume(
-                    padding = 4,
-                    foreground = colors[2],
+                    padding=4,
+                    foreground=colors[2],
                 ),
                 widget.CurrentLayoutIcon(
-                    custom_icon_paths = [os.path.expanduser("~/.config/qtile/icons")],
-                    padding = 1,
-                    scale = 0.4,
+                    custom_icon_paths=[
+                        os.path.expanduser("~/.config/qtile/icons")
+                    ],
+                    padding=1,
+                    scale=0.4,
                 ),
                 widget.CurrentLayout(
-                    padding = 1,
-                    foreground = colors[2],
+                    padding=1,
+                    foreground=colors[2],
                 ),
-        ],
-        28,
+            ],
+            28,
         ),
     ),
 ]
 
-## Drag floating layouts ##
+# Drag floating layouts
 mouse = [
         Drag(
             [mod], "Button1",
@@ -793,7 +807,7 @@ mouse = [
             )
 ]
 
-## General configurations ##
+# General configurations
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: List
 main = None  # WARNING: this is deprecated and will be removed soon
@@ -801,12 +815,12 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
-    border_focus = 'd7827e',
-    border_normal = 'faf4ed',
-    border_width = 4,
-    fullscreen_border_width = 0,
+    border_focus='d7827e',
+    border_normal='faf4ed',
+    border_width=4,
+    fullscreen_border_width=0,
     float_rules=[
-        # Run the utility of `xprop` to see the wm class and name of an X client.
+        # Run the utility `xprop` to see the wm class and name of an X client
         *layout.Floating.default_float_rules,
         Match(wm_class='confirmreset'),  # gitk
         Match(wm_class='makebranch'),  # gitk
@@ -820,12 +834,4 @@ floating_layout = layout.Floating(
 auto_fullscreen = True
 focus_on_window_activation = "smart"
 
-# XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
-# string besides java UI toolkits; you can see several discussions on the
-# mailing lists, GitHub issues, and other WM documentation that suggest setting
-# this string if your java app doesn't work correctly. We may as well just lie
-# and say that we're a working one by default.
-#
-# We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
-# java that happens to be on java's whitelist.
 wmname = "LG3D"
