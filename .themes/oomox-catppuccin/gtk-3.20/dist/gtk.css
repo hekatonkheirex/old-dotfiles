@@ -11,7 +11,7 @@
 /*$button_border_strength: if(lightness($bg) > 50, 0, .1);*/
 /*$button_shadow_strength: if(lightness($bg) > 50, 0, .1);*/
 /* dark color scheme */
-@define-color dark_bg_color #F8BD96;
+@define-color dark_bg_color #C9CBFF;
 @define-color dark_fg_color #1E1D2F;
 /* colormap actually used by the theme, to be overridden in other css files */
 @define-color theme_bg_color #1E1D2F;
@@ -62,14 +62,14 @@
 @define-color insensitive_bg_color mix(#1E1D2F,#131020,0.6);
 @define-color insensitive_fg_color mix(#d2d4de,#1E1D2F,0.5);
 /* osd */
-@define-color osd_base #F8BD96;
-@define-color osd_bg rgba(248, 189, 150, 0.8);
+@define-color osd_base #C9CBFF;
+@define-color osd_bg rgba(201, 203, 255, 0.8);
 @define-color osd_fg #1E1D2F;
-@define-color osd_insensitive_bg_color mix(#1E1D2F,rgba(248, 189, 150, 0.8),0.5);
-@define-color osd_insensitive_fg_color mix(#1E1D2F,#F8BD96,0.6);
-@define-color osd_borders_color rgba(244, 154, 94, 0.8);
+@define-color osd_insensitive_bg_color mix(#1E1D2F,rgba(201, 203, 255, 0.8),0.5);
+@define-color osd_insensitive_fg_color mix(#1E1D2F,#C9CBFF,0.6);
+@define-color osd_borders_color rgba(133, 137, 255, 0.8);
 /* lightdm greeter colors */
-@define-color lightdm_bg_color #F8BD96;
+@define-color lightdm_bg_color #C9CBFF;
 @define-color lightdm_fg_color #1E1D2F;
 /* widget text/foreground color on backdrop windows */
 @define-color theme_unfocused_fg_color mix(#d2d4de,#1E1D2F,0.5);
@@ -86,9 +86,9 @@
 /* insensitive color on backdrop windows*/
 @define-color unfocused_insensitive_color black;
 /* window manager colors */
-@define-color wm_bg_focused #F8BD96;
+@define-color wm_bg_focused #C9CBFF;
 @define-color wm_bg_unfocused #1E1D2F;
-@define-color wm_border_focused #F8BD96;
+@define-color wm_border_focused #C9CBFF;
 @define-color wm_border_unfocused #1E1D2F;
 @define-color wm_title_focused #1E1D2F;
 @define-color wm_title_unfocused mix(#d2d4de,#1E1D2F,0.4);
@@ -857,31 +857,31 @@ headerbar {
     border-top-right-radius: 2px; }
 
 .titlebar:not(headerbar), headerbar {
-  background-color: #F8BD96;
+  background-color: #C9CBFF;
   background-image: none;
-  border-color: mix(#1E1D2F,#F8BD96,0.64);
+  border-color: mix(#1E1D2F,#C9CBFF,0.64);
   color: #1E1D2F;
-  background-color: #F8BD96;
+  background-color: #C9CBFF;
   background-image: none;
   border-radius: 2px 2px 0 0;
   color: #1E1D2F;
   padding: 0 6px;
   min-height: 42px; }
   .titlebar:focus:not(headerbar), headerbar:focus, .titlebar:hover:not(headerbar), headerbar:hover {
-    border-color: mix(#ABE9B3,mix(#1E1D2F,#F8BD96,0.8),0.3); }
+    border-color: mix(#ABE9B3,mix(#1E1D2F,#C9CBFF,0.8),0.3); }
   .titlebar:active:not(headerbar), headerbar:active, .titlebar:checked:not(headerbar), headerbar:checked {
-    border-color: mix(#1E1D2F,#F8BD96,0.56); }
+    border-color: mix(#1E1D2F,#C9CBFF,0.56); }
   .titlebar:disabled:not(headerbar), headerbar:disabled {
-    border-color: mix(#1E1D2F,#F8BD96,0.72); }
+    border-color: mix(#1E1D2F,#C9CBFF,0.72); }
   .titlebar:active:disabled:not(headerbar), headerbar:active:disabled, .titlebar:checked:disabled:not(headerbar), headerbar:checked:disabled {
-    border-color: mix(#1E1D2F,#F8BD96,0.64); }
+    border-color: mix(#1E1D2F,#C9CBFF,0.64); }
   .titlebar:disabled:not(headerbar), headerbar:disabled {
-    background-color: #f6a671;
+    background-color: #9b9fff;
     background-image: none;
-    color: mix(#1E1D2F,#F8BD96,0.5); }
+    color: mix(#1E1D2F,#C9CBFF,0.5); }
   .titlebar:not(headerbar) .background, headerbar .background {
-    background-color: #F8BD96;
-    border-color: mix(#F8BD96,#1E1D2F,0.3); }
+    background-color: #C9CBFF;
+    border-color: mix(#C9CBFF,#1E1D2F,0.3); }
   .titlebar:not(headerbar) .title, headerbar .title {
     font-weight: bold;
     padding: 0 6px; }
@@ -889,7 +889,7 @@ headerbar {
     font-size: smaller;
     padding: 0 6px; }
   .titlebar:not(headerbar) button, headerbar button, headerbar button.nautilus-circular-button.image-button {
-    background-color: #F8BD96;
+    background-color: #C9CBFF;
     background-image: none;
     border-color: rgba(24, 23, 38, 0.32);
     color: #1E1D2F;
@@ -928,12 +928,12 @@ headerbar {
         box-shadow: inset 0 -1px mix(#ABE9B3,rgba(171, 233, 179, 0.36),0.3); }
     .titlebar:not(headerbar) button.flat, headerbar button.flat, headerbar button.flat.nautilus-circular-button.image-button {
       color: #1E1D2F;
-      border-color: rgba(248, 189, 150, 0);
-      background-color: rgba(248, 189, 150, 0);
+      border-color: rgba(201, 203, 255, 0);
+      background-color: rgba(201, 203, 255, 0);
       background-image: none;
       box-shadow: none; }
     .titlebar:not(headerbar) button:hover, headerbar button:hover, headerbar button.nautilus-circular-button.image-button:hover {
-      background-color: #f9c9a9;
+      background-color: #e0e1ff;
       background-image: none;
       border-color: rgba(24, 23, 38, 0.4);
       color: #1E1D2F;
@@ -947,7 +947,7 @@ headerbar {
       .titlebar:not(headerbar) button:hover:active:disabled, headerbar button:hover:active:disabled, .titlebar:not(headerbar) button:hover:checked:disabled, headerbar button:hover:checked:disabled {
         border-color: rgba(24, 23, 38, 0.4); }
     .titlebar:not(headerbar) button:focus, headerbar button:focus, headerbar button.nautilus-circular-button.image-button:focus {
-      background-color: #f9c9a9;
+      background-color: #e0e1ff;
       background-image: none;
       border-color: rgba(30, 29, 47, 0.32);
       outline-color: rgba(171, 233, 179, 0.5);
@@ -957,7 +957,7 @@ headerbar {
       color: #1E1D2F;
       box-shadow: 0 1px 2px -1px rgba(37, 39, 50, 0.32); }
       .titlebar:not(headerbar) button:focus:hover, headerbar button:focus:hover {
-        background-color: #fad4bb;
+        background-color: #f7f7ff;
         background-image: none;
         border-color: rgba(24, 23, 38, 0.4);
         box-shadow: 0 1px 2px -1px rgba(37, 39, 50, 0.38); }
@@ -992,14 +992,14 @@ headerbar {
     .titlebar:not(headerbar) button:focus, headerbar button:focus, headerbar button.nautilus-circular-button.image-button:focus, .titlebar:not(headerbar) button:hover, headerbar button:hover, headerbar button.nautilus-circular-button.image-button:hover {
       color: #1E1D2F; }
     .titlebar:not(headerbar) button:disabled:disabled, headerbar button:disabled:disabled {
-      background-color: alpha(mix(#F8BD96,#1E1D2F,0.2),0.4);
+      background-color: alpha(mix(#C9CBFF,#1E1D2F,0.2),0.4);
       background-image: none;
       /*border: 1px solid alpha($bg, .2);*/
       opacity: .6;
-      color: mix(#F8BD96,#1E1D2F,0.6);
+      color: mix(#C9CBFF,#1E1D2F,0.6);
       box-shadow: none; }
       .titlebar:not(headerbar) button:disabled:disabled :disabled, headerbar button:disabled:disabled :disabled {
-        color: mix(#F8BD96,#1E1D2F,0.6); }
+        color: mix(#C9CBFF,#1E1D2F,0.6); }
     .titlebar:not(headerbar) button:active:disabled, headerbar button:active:disabled, .titlebar:not(headerbar) button:checked:disabled, headerbar button:checked:disabled {
       background-color: rgba(171, 233, 179, 0.6);
       background-image: none;
@@ -1011,11 +1011,11 @@ headerbar {
       color: mix(#d2d4de,mix(#d2d4de,#1E1D2F,0.5),0.8); }
     .titlebar:not(headerbar) button.separator, headerbar button.separator, headerbar button.separator.nautilus-circular-button.image-button, .titlebar:not(headerbar) button .separator, headerbar button .separator, headerbar button.nautilus-circular-button.image-button .separator {
       border: 1px solid currentColor;
-      color: rgba(248, 189, 150, 0.9); }
+      color: rgba(201, 203, 255, 0.9); }
       .titlebar:not(headerbar) button.separator:disabled, headerbar button.separator:disabled, .titlebar:not(headerbar) button .separator:disabled, headerbar button .separator:disabled {
-        color: rgba(248, 189, 150, 0.85); }
+        color: rgba(201, 203, 255, 0.85); }
     .titlebar:not(headerbar) button separator, headerbar button separator, headerbar button.nautilus-circular-button.image-button separator {
-      background-image: image(mix(#1E1D2F,#F8BD96,0.9)); }
+      background-image: image(mix(#1E1D2F,#C9CBFF,0.9)); }
     .titlebar:not(headerbar) button.image-button, headerbar button.image-button, headerbar button.image-button.nautilus-circular-button {
       padding: 3px; }
   .titlebar:not(headerbar) viewswitcher button, headerbar viewswitcher button, headerbar viewswitcher button.nautilus-circular-button.image-button,
@@ -1038,7 +1038,7 @@ headerbar {
     .titlebar:not(headerbar) viewswitcher button:disabled, headerbar viewswitcher button:disabled, headerbar viewswitcher button.nautilus-circular-button.image-button:disabled,
     .titlebar:not(headerbar) .linked > button:disabled,
     headerbar .linked > button:disabled {
-      box-shadow: inset -1px 0 #f38e4b; }
+      box-shadow: inset -1px 0 #6e73ff; }
     .titlebar:not(headerbar) viewswitcher button:last-child, headerbar viewswitcher button:last-child, headerbar viewswitcher button.nautilus-circular-button.image-button:last-child, .titlebar:not(headerbar) viewswitcher button:only-child, headerbar viewswitcher button:only-child, headerbar viewswitcher button.nautilus-circular-button.image-button:only-child,
     .titlebar:not(headerbar) .linked > button:last-child,
     headerbar .linked > button:last-child,
@@ -1072,11 +1072,11 @@ headerbar {
   .titlebar:not(headerbar) box button.image-button, headerbar box button.image-button, headerbar box button.image-button.nautilus-circular-button {
     padding: 3px 7px; }
   .titlebar:not(headerbar) separator, headerbar separator {
-    color: #e0620f;
+    color: #131bff;
     border-color: currentColor;
     -GtkWidget-window-dragging: true; }
   .titlebar:not(headerbar) separator, headerbar separator {
-    background-image: image(mix(#1E1D2F,#F8BD96,0.9)); }
+    background-image: image(mix(#1E1D2F,#C9CBFF,0.9)); }
   .titlebar:backdrop:not(headerbar), headerbar:backdrop {
     background-color: #1E1D2F;
     background-image: none;
@@ -1638,7 +1638,7 @@ window.csd > .titlebar:not(headerbar) {
   box-shadow: none; }
 
 .titlebar:not(headerbar) > separator {
-  background-color: #f5a169; }
+  background-color: #9296ff; }
 
 .background .titlebar:backdrop, .background .titlebar {
   border-top-left-radius: 2px;
@@ -3723,7 +3723,7 @@ menubar, .menubar {
   -GtkWidget-window-dragging: true;
   padding: 0;
   border: 0;
-  background-color: #F8BD96;
+  background-color: #C9CBFF;
   background-image: none;
   color: #1E1D2F; }
   menubar > menuitem, .menubar > menuitem {
@@ -3734,8 +3734,8 @@ menubar, .menubar {
     background-image: none;
     color: #1E1D2F; }
     menubar > menuitem:hover, .menubar > menuitem:hover {
-      border-color: mix(#F8BD96,#1E1D2F,0.21);
-      background-color: mix(#F8BD96,#1E1D2F,0.21);
+      border-color: mix(#C9CBFF,#1E1D2F,0.21);
+      background-color: mix(#C9CBFF,#1E1D2F,0.21);
       background-image: none;
       color: #201f33; }
     menubar > menuitem *:hover, .menubar > menuitem *:hover {
@@ -3749,9 +3749,9 @@ menu,
 .context-menu {
   border-radius: 0;
   padding: 3px;
-  background-color: #F8BD96;
+  background-color: #C9CBFF;
   color: #1E1D2F;
-  border: 1px solid mix(#F8BD96,#1E1D2F,0.21); }
+  border: 1px solid mix(#C9CBFF,#1E1D2F,0.21); }
   .csd menu, .csd .menu, .csd .context-menu {
     border: 0; }
   menu:selected,
@@ -3762,12 +3762,12 @@ menu,
   menu separator, .csd menu separator,
   .menu separator, .csd .menu separator,
   .context-menu separator, .csd .context-menu separator {
-    background-image: image(mix(#F8BD96,#1E1D2F,0.1));
+    background-image: image(mix(#C9CBFF,#1E1D2F,0.1));
     margin: 1px 0; }
   menu .separator, .csd menu .separator,
   .menu .separator, .csd .menu .separator,
   .context-menu .separator, .csd .context-menu .separator {
-    color: mix(#F8BD96,#1E1D2F,0.1); }
+    color: mix(#C9CBFF,#1E1D2F,0.1); }
   menu menuitem,
   .menu menuitem,
   .context-menu menuitem {
@@ -3801,7 +3801,7 @@ menu,
     .menu menuitem *:disabled,
     .context-menu menuitem:disabled,
     .context-menu menuitem *:disabled {
-      color: mix(#1E1D2F,#F8BD96,0.5); }
+      color: mix(#1E1D2F,#C9CBFF,0.5); }
     menu menuitem arrow,
     .menu menuitem arrow,
     .context-menu menuitem arrow {
@@ -3870,12 +3870,12 @@ menu,
       menu menuitem calendar.header,
       .menu menuitem calendar.header,
       .context-menu menuitem calendar.header {
-        border-bottom: 1px solid #f6a671;
+        border-bottom: 1px solid #9b9fff;
         border-radius: 0; }
         menu menuitem calendar.header:backdrop,
         .menu menuitem calendar.header:backdrop,
         .context-menu menuitem calendar.header:backdrop {
-          border-color: #f6a671; }
+          border-color: #9b9fff; }
       menu menuitem calendar.button,
       .menu menuitem calendar.button,
       .context-menu menuitem calendar.button {
@@ -3889,7 +3889,7 @@ menu,
       .menu menuitem calendar:indeterminate:backdrop,
       .context-menu menuitem calendar:indeterminate,
       .context-menu menuitem calendar:indeterminate:backdrop {
-        color: mix(#1E1D2F,#F8BD96,0.5); }
+        color: mix(#1E1D2F,#C9CBFF,0.5); }
     menu menuitem label:dir(rtl), menu menuitem label:dir(ltr),
     .menu menuitem label:dir(rtl),
     .menu menuitem label:dir(ltr),
@@ -3902,24 +3902,24 @@ menu,
     min-height: 16px;
     min-width: 16px;
     padding: 3px;
-    background-color: #F8BD96;
+    background-color: #C9CBFF;
     border-radius: 0; }
     menu > arrow.top,
     .menu > arrow.top,
     .context-menu > arrow.top {
       margin-top: -6px;
-      border-bottom: 1px solid mix(#F8BD96,#1E1D2F,0.1);
+      border-bottom: 1px solid mix(#C9CBFF,#1E1D2F,0.1);
       -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
     menu > arrow.bottom,
     .menu > arrow.bottom,
     .context-menu > arrow.bottom {
       margin-bottom: -6px;
-      border-top: 1px solid mix(#F8BD96,#1E1D2F,0.1);
+      border-top: 1px solid mix(#C9CBFF,#1E1D2F,0.1);
       -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
     menu > arrow:hover,
     .menu > arrow:hover,
     .context-menu > arrow:hover {
-      background-color: mix(#F8BD96,#1E1D2F,0.1); }
+      background-color: mix(#C9CBFF,#1E1D2F,0.1); }
     menu > arrow:backdrop,
     .menu > arrow:backdrop,
     .context-menu > arrow:backdrop {
@@ -3942,7 +3942,7 @@ menuitem accelerator {
   menuitem accelerator:hover {
     color: rgba(30, 29, 47, 0.8); }
   menuitem accelerator:disabled {
-    color: alpha(mix(#1E1D2F,#F8BD96,0.5),0.4); }
+    color: alpha(mix(#1E1D2F,#C9CBFF,0.5),0.4); }
 
 menuitem check, menuitem radio {
   min-height: 16px;
@@ -3956,28 +3956,28 @@ menuitem window decoration {
   box-shadow: 0 2px 3px rgba(73, 78, 100, 0.2); }
 
 menuitem entry {
-  background-color: #F8BD96;
+  background-color: #C9CBFF;
   background-image: none;
-  border-color: mix(#1E1D2F,#F8BD96,0.56);
+  border-color: mix(#1E1D2F,#C9CBFF,0.56);
   padding: 5px 3.4285714286px;
   color: #1E1D2F;
   caret-color: #d2d4de;
   -gtk-secondary-caret-color: #d2d4de; }
   menuitem entry:focus, menuitem entry:hover {
-    border-color: mix(#ABE9B3,mix(#1E1D2F,#F8BD96,0.7),0.3); }
+    border-color: mix(#ABE9B3,mix(#1E1D2F,#C9CBFF,0.7),0.3); }
   menuitem entry:active, menuitem entry:active:hover, menuitem entry:active:focus, menuitem entry:active:hover:focus, menuitem entry:checked, menuitem entry:checked:hover, menuitem entry:checked:focus, menuitem entry:checked:hover:focus {
-    border-color: mix(#1E1D2F,#F8BD96,0.48); }
+    border-color: mix(#1E1D2F,#C9CBFF,0.48); }
   menuitem entry:disabled {
-    border-color: mix(#1E1D2F,#F8BD96,0.64); }
+    border-color: mix(#1E1D2F,#C9CBFF,0.64); }
   menuitem entry:active:disabled, menuitem entry:checked:disabled {
-    border-color: mix(#1E1D2F,#F8BD96,0.56); }
+    border-color: mix(#1E1D2F,#C9CBFF,0.56); }
   menuitem entry:focus, menuitem entry:active {
     border-color: mix(#ABE9B3,mix(#1E1D2F,#d2d4de,0.18),0.3); }
   menuitem entry:disabled {
-    background-color: mix(#F8BD96,#1E1D2F,0.07);
+    background-color: mix(#C9CBFF,#1E1D2F,0.07);
     background-image: none;
     opacity: .9;
-    color: mix(#F8BD96,#1E1D2F,0.9); }
+    color: mix(#C9CBFF,#1E1D2F,0.9); }
 
 /*********
  ! Popover
@@ -3986,37 +3986,37 @@ popover.background {
   padding: 0px;
   border-radius: 2px;
   background-clip: border-box;
-  background-color: #F8BD96;
+  background-color: #C9CBFF;
   background-image: none;
   color: #1E1D2F;
   box-shadow: 0 3px 6px rgba(73, 78, 100, 0.16); }
   .csd popover.background, popover.background {
-    border-color: mix(#1E1D2F,#F8BD96,0.4);
+    border-color: mix(#1E1D2F,#C9CBFF,0.4);
     border-width: 1px;
     border-style: solid; }
     .csd popover.background:focus, .csd popover.background:hover, popover.background:focus, popover.background:hover {
-      border-color: mix(#ABE9B3,mix(#1E1D2F,#F8BD96,0.5),0.3); }
+      border-color: mix(#ABE9B3,mix(#1E1D2F,#C9CBFF,0.5),0.3); }
     .csd popover.background:active, .csd popover.background:active:hover, .csd popover.background:active:focus, .csd popover.background:active:hover:focus, .csd popover.background:checked, .csd popover.background:checked:hover, .csd popover.background:checked:focus, .csd popover.background:checked:hover:focus, popover.background:active, popover.background:active:hover, popover.background:active:focus, popover.background:active:hover:focus, popover.background:checked, popover.background:checked:hover, popover.background:checked:focus, popover.background:checked:hover:focus {
-      border-color: mix(#1E1D2F,#F8BD96,0.32); }
+      border-color: mix(#1E1D2F,#C9CBFF,0.32); }
     .csd popover.background:disabled, popover.background:disabled {
-      border-color: mix(#1E1D2F,#F8BD96,0.48); }
+      border-color: mix(#1E1D2F,#C9CBFF,0.48); }
     .csd popover.background:active:disabled, .csd popover.background:checked:disabled, popover.background:active:disabled, popover.background:checked:disabled {
-      border-color: mix(#1E1D2F,#F8BD96,0.4); }
+      border-color: mix(#1E1D2F,#C9CBFF,0.4); }
   popover.background:backdrop {
     box-shadow: none; }
   popover.background treeview.view:hover, popover.background treeview.view:selected, popover.background treeview.view:selected:focus, popover.background treeview.view:backdrop:selected, popover.background treeview.view:backdrop:selected:focus {
     border-top-color: #ABE9B3; }
   popover.background treeview.view, popover.background treeview.view:backdrop {
-    border-top-color: #fdece1; }
+    border-top-color: white; }
   popover.background view:hover, popover.background .view:hover, popover.background iconview:hover, popover.background list:hover {
     background-image: none;
     background-color: #ABE9B3;
     color: #1E1D2F; }
   popover.background view, popover.background view:backdrop, popover.background .view, popover.background iconview, popover.background .view:backdrop, popover.background list, popover.background list:backdrop {
-    background-color: mix(#F8BD96,#1E1D2F,1.3);
+    background-color: mix(#C9CBFF,#1E1D2F,1.3);
     background-image: none;
     color: #1E1D2F;
-    border-color: mix(#1E1D2F,#F8BD96,0.56); }
+    border-color: mix(#1E1D2F,#C9CBFF,0.56); }
   popover.background list row, popover.background list row .button {
     background-color: transparent;
     background-image: none;
@@ -4026,7 +4026,7 @@ popover.background {
       background-color: #ABE9B3;
       color: #1E1D2F; }
   popover.background .frame {
-    border-color: mix(#1E1D2F,#F8BD96,0.56);
+    border-color: mix(#1E1D2F,#C9CBFF,0.56);
     border-radius: 2px; }
   popover.background entry {
     background-color: #131020;
@@ -4286,15 +4286,15 @@ printdialog .dialog-action-box {
 **********************/
 frame.app-notification {
   border-style: solid;
-  border-color: rgba(243, 142, 75, 0.8);
+  border-color: rgba(110, 115, 255, 0.8);
   border-width: 0 1px 1px;
   border-radius: 0 0 2px 2px;
   padding: 6px;
-  background-color: rgba(248, 189, 150, 0.8);
+  background-color: rgba(201, 203, 255, 0.8);
   background-image: none;
   color: #1E1D2F; }
   frame.app-notification button, frame.app-notification button.nautilus-circular-button.image-button {
-    background-color: rgba(248, 189, 150, 0.8);
+    background-color: rgba(201, 203, 255, 0.8);
     background-image: none;
     border-color: rgba(24, 23, 38, 0.32);
     color: #1E1D2F;
@@ -4333,12 +4333,12 @@ frame.app-notification {
         box-shadow: inset 0 -1px mix(#ABE9B3,rgba(171, 233, 179, 0.36),0.3); }
     frame.app-notification button.flat {
       color: #1E1D2F;
-      border-color: rgba(248, 189, 150, 0);
-      background-color: rgba(248, 189, 150, 0);
+      border-color: rgba(201, 203, 255, 0);
+      background-color: rgba(201, 203, 255, 0);
       background-image: none;
       box-shadow: none; }
     frame.app-notification button:hover, frame.app-notification button.flat:hover {
-      background-color: rgba(249, 201, 169, 0.8);
+      background-color: rgba(224, 225, 255, 0.8);
       background-image: none;
       border-color: rgba(24, 23, 38, 0.4);
       color: #1E1D2F;
@@ -4352,7 +4352,7 @@ frame.app-notification {
       frame.app-notification button:hover:active:disabled, frame.app-notification button:hover:checked:disabled, frame.app-notification button.flat:hover:active:disabled, frame.app-notification button.flat:hover:checked:disabled {
         border-color: rgba(24, 23, 38, 0.4); }
     frame.app-notification button:focus, frame.app-notification button.flat:focus {
-      background-color: rgba(249, 201, 169, 0.8);
+      background-color: rgba(224, 225, 255, 0.8);
       background-image: none;
       border-color: rgba(30, 29, 47, 0.32);
       outline-color: rgba(171, 233, 179, 0.5);
@@ -4362,7 +4362,7 @@ frame.app-notification {
       color: #1E1D2F;
       box-shadow: 0 1px 2px -1px rgba(37, 39, 50, 0.32); }
       frame.app-notification button:focus:hover, frame.app-notification button.flat:focus:hover {
-        background-color: rgba(250, 212, 187, 0.8);
+        background-color: rgba(247, 247, 255, 0.8);
         background-image: none;
         border-color: rgba(24, 23, 38, 0.4);
         box-shadow: 0 1px 2px -1px rgba(37, 39, 50, 0.38); }
@@ -4397,14 +4397,14 @@ frame.app-notification {
     frame.app-notification button:focus, frame.app-notification button:hover, frame.app-notification button.flat:focus, frame.app-notification button.flat:hover {
       color: #1E1D2F; }
     frame.app-notification button:disabled:disabled, frame.app-notification button.flat:disabled:disabled {
-      background-color: alpha(mix(rgba(248, 189, 150, 0.8),#1E1D2F,0.2),0.4);
+      background-color: alpha(mix(rgba(201, 203, 255, 0.8),#1E1D2F,0.2),0.4);
       background-image: none;
       /*border: 1px solid alpha($bg, .2);*/
       opacity: .6;
-      color: mix(rgba(248, 189, 150, 0.8),#1E1D2F,0.6);
+      color: mix(rgba(201, 203, 255, 0.8),#1E1D2F,0.6);
       box-shadow: none; }
       frame.app-notification button:disabled:disabled :disabled, frame.app-notification button.flat:disabled:disabled :disabled {
-        color: mix(rgba(248, 189, 150, 0.8),#1E1D2F,0.6); }
+        color: mix(rgba(201, 203, 255, 0.8),#1E1D2F,0.6); }
     frame.app-notification button:active:disabled, frame.app-notification button:checked:disabled, frame.app-notification button.flat:active:disabled, frame.app-notification button.flat:checked:disabled {
       background-color: rgba(171, 233, 179, 0.6);
       background-image: none;
@@ -4416,11 +4416,11 @@ frame.app-notification {
       color: mix(#d2d4de,mix(#d2d4de,#1E1D2F,0.5),0.8); }
     frame.app-notification button.separator, frame.app-notification button .separator {
       border: 1px solid currentColor;
-      color: rgba(248, 189, 150, 0.7); }
+      color: rgba(201, 203, 255, 0.7); }
       frame.app-notification button.separator:disabled, frame.app-notification button .separator:disabled {
-        color: rgba(248, 189, 150, 0.65); }
+        color: rgba(201, 203, 255, 0.65); }
     frame.app-notification button separator, frame.app-notification button.nautilus-circular-button.image-button separator {
-      background-image: image(mix(#1E1D2F,rgba(248, 189, 150, 0.8),0.9)); }
+      background-image: image(mix(#1E1D2F,rgba(201, 203, 255, 0.8),0.9)); }
   frame.app-notification border {
     border: 0; }
 
@@ -4485,7 +4485,7 @@ GtkBubbleWindow {
   border-radius: 2px;
   background-clip: border-box; }
   GtkBubbleWindow.osd.background {
-    background-color: rgba(248, 189, 150, 0.8); }
+    background-color: rgba(201, 203, 255, 0.8); }
   GtkBubbleWindow .toolbar {
     background-color: transparent; }
 
@@ -4825,7 +4825,7 @@ button.color .osd colorswatch:only-child {
 
 button.osd, button.osd.nautilus-circular-button.image-button,
 #XfceNotifyWindow button {
-  background-color: rgba(248, 189, 150, 0.8);
+  background-color: rgba(201, 203, 255, 0.8);
   background-image: none;
   border-color: rgba(24, 23, 38, 0.32);
   color: #1E1D2F;
@@ -4878,14 +4878,14 @@ button.osd, button.osd.nautilus-circular-button.image-button,
   button.osd.flat,
   #XfceNotifyWindow button.flat {
     color: #1E1D2F;
-    border-color: rgba(248, 189, 150, 0);
-    background-color: rgba(248, 189, 150, 0);
+    border-color: rgba(201, 203, 255, 0);
+    background-color: rgba(201, 203, 255, 0);
     background-image: none;
     box-shadow: none; }
   button.osd:hover, button.osd.flat:hover,
   #XfceNotifyWindow button:hover,
   #XfceNotifyWindow button.flat:hover {
-    background-color: rgba(249, 201, 169, 0.8);
+    background-color: rgba(224, 225, 255, 0.8);
     background-image: none;
     border-color: rgba(24, 23, 38, 0.4);
     color: #1E1D2F;
@@ -4921,7 +4921,7 @@ button.osd, button.osd.nautilus-circular-button.image-button,
   button.osd:focus, button.osd.flat:focus,
   #XfceNotifyWindow button:focus,
   #XfceNotifyWindow button.flat:focus {
-    background-color: rgba(249, 201, 169, 0.8);
+    background-color: rgba(224, 225, 255, 0.8);
     background-image: none;
     border-color: rgba(30, 29, 47, 0.32);
     outline-color: rgba(171, 233, 179, 0.5);
@@ -4933,7 +4933,7 @@ button.osd, button.osd.nautilus-circular-button.image-button,
     button.osd:focus:hover, button.osd.flat:focus:hover,
     #XfceNotifyWindow button:focus:hover,
     #XfceNotifyWindow button.flat:focus:hover {
-      background-color: rgba(250, 212, 187, 0.8);
+      background-color: rgba(247, 247, 255, 0.8);
       background-image: none;
       border-color: rgba(24, 23, 38, 0.4);
       box-shadow: 0 1px 2px -1px rgba(37, 39, 50, 0.38); }
@@ -5080,16 +5080,16 @@ button.osd, button.osd.nautilus-circular-button.image-button,
   button.osd:disabled:disabled, button.osd.flat:disabled:disabled,
   #XfceNotifyWindow button:disabled:disabled,
   #XfceNotifyWindow button.flat:disabled:disabled {
-    background-color: alpha(mix(rgba(248, 189, 150, 0.8),#1E1D2F,0.2),0.4);
+    background-color: alpha(mix(rgba(201, 203, 255, 0.8),#1E1D2F,0.2),0.4);
     background-image: none;
     /*border: 1px solid alpha($bg, .2);*/
     opacity: .6;
-    color: mix(rgba(248, 189, 150, 0.8),#1E1D2F,0.6);
+    color: mix(rgba(201, 203, 255, 0.8),#1E1D2F,0.6);
     box-shadow: none; }
     button.osd:disabled:disabled :disabled, button.osd.flat:disabled:disabled :disabled,
     #XfceNotifyWindow button:disabled:disabled :disabled,
     #XfceNotifyWindow button.flat:disabled:disabled :disabled {
-      color: mix(rgba(248, 189, 150, 0.8),#1E1D2F,0.6); }
+      color: mix(rgba(201, 203, 255, 0.8),#1E1D2F,0.6); }
   button.osd:active:disabled, button.osd:checked:disabled, button.osd.flat:active:disabled, button.osd.flat:checked:disabled,
   #XfceNotifyWindow button:active:disabled,
   #XfceNotifyWindow button:checked:disabled,
@@ -5113,14 +5113,14 @@ button.osd, button.osd.nautilus-circular-button.image-button,
   #XfceNotifyWindow button.separator,
   #XfceNotifyWindow button .separator {
     border: 1px solid currentColor;
-    color: rgba(248, 189, 150, 0.7); }
+    color: rgba(201, 203, 255, 0.7); }
     button.osd.separator:disabled, button.osd .separator:disabled,
     #XfceNotifyWindow button.separator:disabled,
     #XfceNotifyWindow button .separator:disabled {
-      color: rgba(248, 189, 150, 0.65); }
+      color: rgba(201, 203, 255, 0.65); }
   button.osd separator, button.osd.nautilus-circular-button.image-button separator,
   #XfceNotifyWindow button separator {
-    background-image: image(mix(#1E1D2F,rgba(248, 189, 150, 0.8),0.9)); }
+    background-image: image(mix(#1E1D2F,rgba(201, 203, 255, 0.8),0.9)); }
   button.osd.image-button,
   #XfceNotifyWindow button.image-button {
     padding: 0;
@@ -5130,13 +5130,13 @@ button.osd, button.osd.nautilus-circular-button.image-button,
 toolbar.osd {
   -GtkToolbar-button-relief: normal;
   padding: 3px;
-  border: 1px solid rgba(243, 142, 75, 0.8);
+  border: 1px solid rgba(110, 115, 255, 0.8);
   border-radius: 2px;
-  background-color: rgba(248, 189, 150, 0.8);
+  background-color: rgba(201, 203, 255, 0.8);
   background-image: none;
   color: #1E1D2F; }
   toolbar.osd separator {
-    color: rgba(246, 166, 113, 0.8); }
+    color: rgba(155, 159, 255, 0.8); }
   toolbar.osd.left, toolbar.osd.right, toolbar.osd.top, toolbar.osd.bottom {
     border-radius: 0; }
 
@@ -5157,13 +5157,13 @@ progressbar.osd {
 
 .osd,
 #XfceNotifyWindow {
-  background-color: rgba(248, 189, 150, 0.8);
+  background-color: rgba(201, 203, 255, 0.8);
   color: #1E1D2F;
   /* used by gnome-settings-daemon's media-keys OSD */
   /* used by Documents */ }
   .osd.background,
   #XfceNotifyWindow.background {
-    background-color: rgba(248, 189, 150, 0.6);
+    background-color: rgba(201, 203, 255, 0.6);
     color: #1E1D2F; }
   .osd .frame,
   #XfceNotifyWindow .frame {
@@ -5171,7 +5171,7 @@ progressbar.osd {
     background-origin: border-box; }
   .osd button, .osd button.nautilus-circular-button.image-button,
   #XfceNotifyWindow button {
-    background-color: rgba(248, 189, 150, 0.8);
+    background-color: rgba(201, 203, 255, 0.8);
     background-image: none;
     border-color: rgba(24, 23, 38, 0.32);
     color: #1E1D2F;
@@ -5224,14 +5224,14 @@ progressbar.osd {
     .osd button.flat,
     #XfceNotifyWindow button.flat {
       color: #1E1D2F;
-      border-color: rgba(248, 189, 150, 0);
-      background-color: rgba(248, 189, 150, 0);
+      border-color: rgba(201, 203, 255, 0);
+      background-color: rgba(201, 203, 255, 0);
       background-image: none;
       box-shadow: none; }
     .osd button:hover, .osd button.flat:hover,
     #XfceNotifyWindow button:hover,
     #XfceNotifyWindow button.flat:hover {
-      background-color: rgba(249, 201, 169, 0.8);
+      background-color: rgba(224, 225, 255, 0.8);
       background-image: none;
       border-color: rgba(24, 23, 38, 0.4);
       color: #1E1D2F;
@@ -5267,7 +5267,7 @@ progressbar.osd {
     .osd button:focus, .osd button.flat:focus,
     #XfceNotifyWindow button:focus,
     #XfceNotifyWindow button.flat:focus {
-      background-color: rgba(249, 201, 169, 0.8);
+      background-color: rgba(224, 225, 255, 0.8);
       background-image: none;
       border-color: rgba(30, 29, 47, 0.32);
       outline-color: rgba(171, 233, 179, 0.5);
@@ -5279,7 +5279,7 @@ progressbar.osd {
       .osd button:focus:hover, .osd button.flat:focus:hover,
       #XfceNotifyWindow button:focus:hover,
       #XfceNotifyWindow button.flat:focus:hover {
-        background-color: rgba(250, 212, 187, 0.8);
+        background-color: rgba(247, 247, 255, 0.8);
         background-image: none;
         border-color: rgba(24, 23, 38, 0.4);
         box-shadow: 0 1px 2px -1px rgba(37, 39, 50, 0.38); }
@@ -5426,16 +5426,16 @@ progressbar.osd {
     .osd button:disabled:disabled, .osd button.flat:disabled:disabled,
     #XfceNotifyWindow button:disabled:disabled,
     #XfceNotifyWindow button.flat:disabled:disabled {
-      background-color: alpha(mix(rgba(248, 189, 150, 0.8),#1E1D2F,0.2),0.4);
+      background-color: alpha(mix(rgba(201, 203, 255, 0.8),#1E1D2F,0.2),0.4);
       background-image: none;
       /*border: 1px solid alpha($bg, .2);*/
       opacity: .6;
-      color: mix(rgba(248, 189, 150, 0.8),#1E1D2F,0.6);
+      color: mix(rgba(201, 203, 255, 0.8),#1E1D2F,0.6);
       box-shadow: none; }
       .osd button:disabled:disabled :disabled, .osd button.flat:disabled:disabled :disabled,
       #XfceNotifyWindow button:disabled:disabled :disabled,
       #XfceNotifyWindow button.flat:disabled:disabled :disabled {
-        color: mix(rgba(248, 189, 150, 0.8),#1E1D2F,0.6); }
+        color: mix(rgba(201, 203, 255, 0.8),#1E1D2F,0.6); }
     .osd button:active:disabled, .osd button:checked:disabled, .osd button.flat:active:disabled, .osd button.flat:checked:disabled,
     #XfceNotifyWindow button:active:disabled,
     #XfceNotifyWindow button:checked:disabled,
@@ -5459,19 +5459,19 @@ progressbar.osd {
     #XfceNotifyWindow button.separator,
     #XfceNotifyWindow button .separator {
       border: 1px solid currentColor;
-      color: rgba(248, 189, 150, 0.7); }
+      color: rgba(201, 203, 255, 0.7); }
       .osd button.separator:disabled, .osd button .separator:disabled,
       #XfceNotifyWindow button.separator:disabled,
       #XfceNotifyWindow button .separator:disabled {
-        color: rgba(248, 189, 150, 0.65); }
+        color: rgba(201, 203, 255, 0.65); }
     .osd button separator, .osd button.nautilus-circular-button.image-button separator,
     #XfceNotifyWindow button separator {
-      background-image: image(mix(#1E1D2F,rgba(248, 189, 150, 0.8),0.9)); }
+      background-image: image(mix(#1E1D2F,rgba(201, 203, 255, 0.8),0.9)); }
   .osd entry,
   #XfceNotifyWindow entry {
-    background-color: #F8BD96;
+    background-color: #C9CBFF;
     background-image: none;
-    border-color: mix(#1E1D2F,#F8BD96,0.56);
+    border-color: mix(#1E1D2F,#C9CBFF,0.56);
     padding: 5px 3.4285714286px;
     color: #1E1D2F;
     caret-color: #d2d4de;
@@ -5479,7 +5479,7 @@ progressbar.osd {
     .osd entry:focus, .osd entry:hover,
     #XfceNotifyWindow entry:focus,
     #XfceNotifyWindow entry:hover {
-      border-color: mix(#ABE9B3,mix(#1E1D2F,#F8BD96,0.7),0.3); }
+      border-color: mix(#ABE9B3,mix(#1E1D2F,#C9CBFF,0.7),0.3); }
     .osd entry:active, .osd entry:active:hover, .osd entry:active:focus, .osd entry:active:hover:focus, .osd entry:checked, .osd entry:checked:hover, .osd entry:checked:focus, .osd entry:checked:hover:focus,
     #XfceNotifyWindow entry:active,
     #XfceNotifyWindow entry:active:hover,
@@ -5489,24 +5489,24 @@ progressbar.osd {
     #XfceNotifyWindow entry:checked:hover,
     #XfceNotifyWindow entry:checked:focus,
     #XfceNotifyWindow entry:checked:hover:focus {
-      border-color: mix(#1E1D2F,#F8BD96,0.48); }
+      border-color: mix(#1E1D2F,#C9CBFF,0.48); }
     .osd entry:disabled,
     #XfceNotifyWindow entry:disabled {
-      border-color: mix(#1E1D2F,#F8BD96,0.64); }
+      border-color: mix(#1E1D2F,#C9CBFF,0.64); }
     .osd entry:active:disabled, .osd entry:checked:disabled,
     #XfceNotifyWindow entry:active:disabled,
     #XfceNotifyWindow entry:checked:disabled {
-      border-color: mix(#1E1D2F,#F8BD96,0.56); }
+      border-color: mix(#1E1D2F,#C9CBFF,0.56); }
     .osd entry:focus, .osd entry:active,
     #XfceNotifyWindow entry:focus,
     #XfceNotifyWindow entry:active {
-      border-color: mix(#ABE9B3,rgba(244, 154, 94, 0.8),0.3); }
+      border-color: mix(#ABE9B3,rgba(133, 137, 255, 0.8),0.3); }
     .osd entry:disabled,
     #XfceNotifyWindow entry:disabled {
-      background-color: mix(#F8BD96,#1E1D2F,0.07);
+      background-color: mix(#C9CBFF,#1E1D2F,0.07);
       background-image: none;
       opacity: .9;
-      color: mix(#F8BD96,#1E1D2F,0.9); }
+      color: mix(#C9CBFF,#1E1D2F,0.9); }
   .osd trough, .osd.trough,
   #XfceNotifyWindow trough,
   #XfceNotifyWindow.trough {
@@ -5517,13 +5517,13 @@ progressbar.osd {
     background-color: #1E1D2F; }
   .osd scale slider,
   #XfceNotifyWindow scale slider {
-    background-color: rgba(250, 208, 180, 0.8);
+    background-color: rgba(237, 238, 255, 0.8);
     background-image: none;
-    border-color: mix(#1E1D2F,rgba(248, 189, 150, 0.8),0.56); }
+    border-color: mix(#1E1D2F,rgba(201, 203, 255, 0.8),0.56); }
     .osd scale slider:focus, .osd scale slider:hover,
     #XfceNotifyWindow scale slider:focus,
     #XfceNotifyWindow scale slider:hover {
-      border-color: mix(#ABE9B3,mix(#1E1D2F,rgba(248, 189, 150, 0.8),0.7),0.3); }
+      border-color: mix(#ABE9B3,mix(#1E1D2F,rgba(201, 203, 255, 0.8),0.7),0.3); }
     .osd scale slider:active, .osd scale slider:active:hover, .osd scale slider:active:focus, .osd scale slider:active:hover:focus, .osd scale slider:checked, .osd scale slider:checked:hover, .osd scale slider:checked:focus, .osd scale slider:checked:hover:focus,
     #XfceNotifyWindow scale slider:active,
     #XfceNotifyWindow scale slider:active:hover,
@@ -5533,22 +5533,22 @@ progressbar.osd {
     #XfceNotifyWindow scale slider:checked:hover,
     #XfceNotifyWindow scale slider:checked:focus,
     #XfceNotifyWindow scale slider:checked:hover:focus {
-      border-color: mix(#1E1D2F,rgba(248, 189, 150, 0.8),0.48); }
+      border-color: mix(#1E1D2F,rgba(201, 203, 255, 0.8),0.48); }
     .osd scale slider:disabled,
     #XfceNotifyWindow scale slider:disabled {
-      border-color: mix(#1E1D2F,rgba(248, 189, 150, 0.8),0.64); }
+      border-color: mix(#1E1D2F,rgba(201, 203, 255, 0.8),0.64); }
     .osd scale slider:active:disabled, .osd scale slider:checked:disabled,
     #XfceNotifyWindow scale slider:active:disabled,
     #XfceNotifyWindow scale slider:checked:disabled {
-      border-color: mix(#1E1D2F,rgba(248, 189, 150, 0.8),0.56); }
+      border-color: mix(#1E1D2F,rgba(201, 203, 255, 0.8),0.56); }
     .osd scale slider:disabled,
     #XfceNotifyWindow scale slider:disabled {
-      background-color: rgba(246, 166, 113, 0.8);
+      background-color: rgba(155, 159, 255, 0.8);
       background-image: none; }
   .osd scale trough,
   #XfceNotifyWindow scale trough {
-    border-color: rgba(243, 142, 75, 0.8);
-    background-color: rgba(250, 208, 180, 0.8);
+    border-color: rgba(110, 115, 255, 0.8);
+    background-color: rgba(237, 238, 255, 0.8);
     background-image: none; }
     .osd scale trough.highlight,
     #XfceNotifyWindow scale trough.highlight {
@@ -5558,12 +5558,12 @@ progressbar.osd {
     .osd scale trough:disabled, .osd scale trough.highlight:disabled,
     #XfceNotifyWindow scale trough:disabled,
     #XfceNotifyWindow scale trough.highlight:disabled {
-      border-color: rgba(244, 154, 94, 0.8);
-      background-color: rgba(246, 166, 113, 0.8);
+      border-color: rgba(133, 137, 255, 0.8);
+      background-color: rgba(155, 159, 255, 0.8);
       background-image: none; }
   .osd scale trough,
   #XfceNotifyWindow scale trough {
-    background-color: rgba(250, 210, 183, 0.8); }
+    background-color: rgba(237, 237, 255, 0.8); }
     .osd scale trough highlight,
     #XfceNotifyWindow scale trough highlight {
       background-color: #ABE9B3; }
@@ -5586,19 +5586,19 @@ progressbar.osd {
   #XfceNotifyWindow .view,
   #XfceNotifyWindow iconview,
   #XfceNotifyWindow view {
-    background-color: rgba(248, 189, 150, 0.8); }
+    background-color: rgba(201, 203, 255, 0.8); }
   .osd scrollbar trough,
   #XfceNotifyWindow scrollbar trough {
-    background-color: rgba(248, 189, 150, 0.8); }
+    background-color: rgba(201, 203, 255, 0.8); }
   .osd scrollbar slider,
   #XfceNotifyWindow scrollbar slider {
-    border: 1px solid mix(rgba(245, 159, 101, 0.8),#1E1D2F,0.21);
+    border: 1px solid mix(rgba(142, 146, 255, 0.8),#1E1D2F,0.21);
     border-radius: 0;
-    background-color: mix(rgba(248, 189, 150, 0.8),#1E1D2F,0.21); }
+    background-color: mix(rgba(201, 203, 255, 0.8),#1E1D2F,0.21); }
     .osd scrollbar slider:hover,
     #XfceNotifyWindow scrollbar slider:hover {
-      border-color: mix(rgba(245, 159, 101, 0.8),#1E1D2F,0.31);
-      background-color: mix(rgba(248, 189, 150, 0.8),#1E1D2F,0.31); }
+      border-color: mix(rgba(142, 146, 255, 0.8),#1E1D2F,0.31);
+      background-color: mix(rgba(201, 203, 255, 0.8),#1E1D2F,0.31); }
     .osd scrollbar slider:active,
     #XfceNotifyWindow scrollbar slider:active {
       border-color: #8be196;
@@ -5607,14 +5607,14 @@ progressbar.osd {
   #XfceNotifyWindow iconview.cell:selected,
   #XfceNotifyWindow iconview.cell:selected:focus {
     background-color: transparent;
-    border: 3px solid mix(rgba(245, 159, 101, 0.8),#1E1D2F,0.21);
+    border: 3px solid mix(rgba(142, 146, 255, 0.8),#1E1D2F,0.21);
     border-radius: 2px;
     outline-color: transparent; }
   .osd .page-thumbnail,
   #XfceNotifyWindow .page-thumbnail {
-    border: 1px solid rgba(246, 166, 113, 0.8);
+    border: 1px solid rgba(155, 159, 255, 0.8);
     /* when there's no pixbuf yet */
-    background-color: rgba(248, 189, 150, 0.8); }
+    background-color: rgba(201, 203, 255, 0.8); }
   .osd popover.background,
   #XfceNotifyWindow popover.background {
     box-shadow: 0 2px 7px 3px rgba(73, 78, 100, 0.5); }
@@ -5626,16 +5626,16 @@ progressbar.osd {
       background-image: none; }
   .osd spinbutton:not(.vertical),
   #XfceNotifyWindow spinbutton:not(.vertical) {
-    background-color: #F8BD96;
+    background-color: #C9CBFF;
     background-image: none;
-    border-color: mix(#1E1D2F,#F8BD96,0.56);
+    border-color: mix(#1E1D2F,#C9CBFF,0.56);
     padding: 0;
     color: #1E1D2F;
     caret-color: #1E1D2F; }
     .osd spinbutton:not(.vertical):focus, .osd spinbutton:not(.vertical):hover,
     #XfceNotifyWindow spinbutton:not(.vertical):focus,
     #XfceNotifyWindow spinbutton:not(.vertical):hover {
-      border-color: mix(#ABE9B3,mix(#1E1D2F,#F8BD96,0.7),0.3); }
+      border-color: mix(#ABE9B3,mix(#1E1D2F,#C9CBFF,0.7),0.3); }
     .osd spinbutton:not(.vertical):active, .osd spinbutton:not(.vertical):active:hover, .osd spinbutton:not(.vertical):active:focus, .osd spinbutton:not(.vertical):active:hover:focus, .osd spinbutton:not(.vertical):checked, .osd spinbutton:not(.vertical):checked:hover, .osd spinbutton:not(.vertical):checked:focus, .osd spinbutton:not(.vertical):checked:hover:focus,
     #XfceNotifyWindow spinbutton:not(.vertical):active,
     #XfceNotifyWindow spinbutton:not(.vertical):active:hover,
@@ -5645,32 +5645,32 @@ progressbar.osd {
     #XfceNotifyWindow spinbutton:not(.vertical):checked:hover,
     #XfceNotifyWindow spinbutton:not(.vertical):checked:focus,
     #XfceNotifyWindow spinbutton:not(.vertical):checked:hover:focus {
-      border-color: mix(#1E1D2F,#F8BD96,0.48); }
+      border-color: mix(#1E1D2F,#C9CBFF,0.48); }
     .osd spinbutton:not(.vertical):disabled,
     #XfceNotifyWindow spinbutton:not(.vertical):disabled {
-      border-color: mix(#1E1D2F,#F8BD96,0.64); }
+      border-color: mix(#1E1D2F,#C9CBFF,0.64); }
     .osd spinbutton:not(.vertical):active:disabled, .osd spinbutton:not(.vertical):checked:disabled,
     #XfceNotifyWindow spinbutton:not(.vertical):active:disabled,
     #XfceNotifyWindow spinbutton:not(.vertical):checked:disabled {
-      border-color: mix(#1E1D2F,#F8BD96,0.56); }
+      border-color: mix(#1E1D2F,#C9CBFF,0.56); }
     .osd spinbutton:not(.vertical):focus, .osd spinbutton:not(.vertical):active,
     #XfceNotifyWindow spinbutton:not(.vertical):focus,
     #XfceNotifyWindow spinbutton:not(.vertical):active {
-      border-color: mix(#ABE9B3,rgba(244, 154, 94, 0.8),0.3); }
+      border-color: mix(#ABE9B3,rgba(133, 137, 255, 0.8),0.3); }
     .osd spinbutton:not(.vertical):disabled,
     #XfceNotifyWindow spinbutton:not(.vertical):disabled {
-      background-color: #f6a671;
+      background-color: #9b9fff;
       background-image: none;
-      color: mix(#F8BD96,#1E1D2F,0.5); }
+      color: mix(#C9CBFF,#1E1D2F,0.5); }
     .osd spinbutton:not(.vertical) button,
     #XfceNotifyWindow spinbutton:not(.vertical) button {
-      background-color: rgba(248, 189, 150, 0.8);
+      background-color: rgba(201, 203, 255, 0.8);
       background-image: none;
       border-color: rgba(24, 23, 38, 0.32);
       color: #1E1D2F;
       box-shadow: 0 1px 2px -1px rgba(37, 39, 50, 0.12);
       border-radius: 0;
-      border-color: rgba(244, 154, 94, 0.5);
+      border-color: rgba(133, 137, 255, 0.5);
       border-style: none none none solid;
       background-image: none;
       box-shadow: none; }
@@ -5722,14 +5722,14 @@ progressbar.osd {
       .osd spinbutton:not(.vertical) button.flat,
       #XfceNotifyWindow spinbutton:not(.vertical) button.flat {
         color: #1E1D2F;
-        border-color: rgba(248, 189, 150, 0);
-        background-color: rgba(248, 189, 150, 0);
+        border-color: rgba(201, 203, 255, 0);
+        background-color: rgba(201, 203, 255, 0);
         background-image: none;
         box-shadow: none; }
       .osd spinbutton:not(.vertical) button:hover, .osd spinbutton:not(.vertical) button.flat:hover,
       #XfceNotifyWindow spinbutton:not(.vertical) button:hover,
       #XfceNotifyWindow spinbutton:not(.vertical) button.flat:hover {
-        background-color: rgba(249, 201, 169, 0.8);
+        background-color: rgba(224, 225, 255, 0.8);
         background-image: none;
         border-color: rgba(24, 23, 38, 0.4);
         color: #1E1D2F;
@@ -5765,7 +5765,7 @@ progressbar.osd {
       .osd spinbutton:not(.vertical) button:focus, .osd spinbutton:not(.vertical) button.flat:focus,
       #XfceNotifyWindow spinbutton:not(.vertical) button:focus,
       #XfceNotifyWindow spinbutton:not(.vertical) button.flat:focus {
-        background-color: rgba(249, 201, 169, 0.8);
+        background-color: rgba(224, 225, 255, 0.8);
         background-image: none;
         border-color: rgba(30, 29, 47, 0.32);
         outline-color: rgba(171, 233, 179, 0.5);
@@ -5777,7 +5777,7 @@ progressbar.osd {
         .osd spinbutton:not(.vertical) button:focus:hover, .osd spinbutton:not(.vertical) button.flat:focus:hover,
         #XfceNotifyWindow spinbutton:not(.vertical) button:focus:hover,
         #XfceNotifyWindow spinbutton:not(.vertical) button.flat:focus:hover {
-          background-color: rgba(250, 212, 187, 0.8);
+          background-color: rgba(247, 247, 255, 0.8);
           background-image: none;
           border-color: rgba(24, 23, 38, 0.4);
           box-shadow: 0 1px 2px -1px rgba(37, 39, 50, 0.38); }
@@ -5924,16 +5924,16 @@ progressbar.osd {
       .osd spinbutton:not(.vertical) button:disabled:disabled, .osd spinbutton:not(.vertical) button.flat:disabled:disabled,
       #XfceNotifyWindow spinbutton:not(.vertical) button:disabled:disabled,
       #XfceNotifyWindow spinbutton:not(.vertical) button.flat:disabled:disabled {
-        background-color: alpha(mix(rgba(248, 189, 150, 0.8),#1E1D2F,0.2),0.4);
+        background-color: alpha(mix(rgba(201, 203, 255, 0.8),#1E1D2F,0.2),0.4);
         background-image: none;
         /*border: 1px solid alpha($bg, .2);*/
         opacity: .6;
-        color: mix(rgba(248, 189, 150, 0.8),#1E1D2F,0.6);
+        color: mix(rgba(201, 203, 255, 0.8),#1E1D2F,0.6);
         box-shadow: none; }
         .osd spinbutton:not(.vertical) button:disabled:disabled :disabled, .osd spinbutton:not(.vertical) button.flat:disabled:disabled :disabled,
         #XfceNotifyWindow spinbutton:not(.vertical) button:disabled:disabled :disabled,
         #XfceNotifyWindow spinbutton:not(.vertical) button.flat:disabled:disabled :disabled {
-          color: mix(rgba(248, 189, 150, 0.8),#1E1D2F,0.6); }
+          color: mix(rgba(201, 203, 255, 0.8),#1E1D2F,0.6); }
       .osd spinbutton:not(.vertical) button:active:disabled, .osd spinbutton:not(.vertical) button:checked:disabled, .osd spinbutton:not(.vertical) button.flat:active:disabled, .osd spinbutton:not(.vertical) button.flat:checked:disabled,
       #XfceNotifyWindow spinbutton:not(.vertical) button:active:disabled,
       #XfceNotifyWindow spinbutton:not(.vertical) button:checked:disabled,
@@ -5957,14 +5957,14 @@ progressbar.osd {
       #XfceNotifyWindow spinbutton:not(.vertical) button.separator,
       #XfceNotifyWindow spinbutton:not(.vertical) button .separator {
         border: 1px solid currentColor;
-        color: rgba(248, 189, 150, 0.7); }
+        color: rgba(201, 203, 255, 0.7); }
         .osd spinbutton:not(.vertical) button.separator:disabled, .osd spinbutton:not(.vertical) button .separator:disabled,
         #XfceNotifyWindow spinbutton:not(.vertical) button.separator:disabled,
         #XfceNotifyWindow spinbutton:not(.vertical) button .separator:disabled {
-          color: rgba(248, 189, 150, 0.65); }
+          color: rgba(201, 203, 255, 0.65); }
       .osd spinbutton:not(.vertical) button separator,
       #XfceNotifyWindow spinbutton:not(.vertical) button separator {
-        background-image: image(mix(#1E1D2F,rgba(248, 189, 150, 0.8),0.9)); }
+        background-image: image(mix(#1E1D2F,rgba(201, 203, 255, 0.8),0.9)); }
       .osd spinbutton:not(.vertical) button:dir(rtl),
       #XfceNotifyWindow spinbutton:not(.vertical) button:dir(rtl) {
         border-style: none solid none none; }
@@ -5975,7 +5975,7 @@ progressbar.osd {
         color: #1E1D2F; }
       .osd spinbutton:not(.vertical) button:disabled,
       #XfceNotifyWindow spinbutton:not(.vertical) button:disabled {
-        color: alpha(mix(#1E1D2F,#F8BD96,0.6),0.8); }
+        color: alpha(mix(#1E1D2F,#C9CBFF,0.6),0.8); }
       .osd spinbutton:not(.vertical) button:backdrop,
       #XfceNotifyWindow spinbutton:not(.vertical) button:backdrop {
         color: mix(#131020,mix(#d2d4de,#1E1D2F,0.5),0.9); }
@@ -5997,7 +5997,7 @@ progressbar.osd {
         border-radius: 0 2px 2px 0; }
   .osd spinbutton.vertical button:first-child,
   #XfceNotifyWindow spinbutton.vertical button:first-child {
-    background-color: rgba(248, 189, 150, 0.8);
+    background-color: rgba(201, 203, 255, 0.8);
     background-image: none;
     border-color: rgba(24, 23, 38, 0.32);
     color: #1E1D2F;
@@ -6050,14 +6050,14 @@ progressbar.osd {
     .osd spinbutton.vertical button:first-child.flat,
     #XfceNotifyWindow spinbutton.vertical button:first-child.flat {
       color: #1E1D2F;
-      border-color: rgba(248, 189, 150, 0);
-      background-color: rgba(248, 189, 150, 0);
+      border-color: rgba(201, 203, 255, 0);
+      background-color: rgba(201, 203, 255, 0);
       background-image: none;
       box-shadow: none; }
     .osd spinbutton.vertical button:first-child:hover, .osd spinbutton.vertical button:first-child.flat:hover,
     #XfceNotifyWindow spinbutton.vertical button:first-child:hover,
     #XfceNotifyWindow spinbutton.vertical button:first-child.flat:hover {
-      background-color: rgba(249, 201, 169, 0.8);
+      background-color: rgba(224, 225, 255, 0.8);
       background-image: none;
       border-color: rgba(24, 23, 38, 0.4);
       color: #1E1D2F;
@@ -6093,7 +6093,7 @@ progressbar.osd {
     .osd spinbutton.vertical button:first-child:focus, .osd spinbutton.vertical button:first-child.flat:focus,
     #XfceNotifyWindow spinbutton.vertical button:first-child:focus,
     #XfceNotifyWindow spinbutton.vertical button:first-child.flat:focus {
-      background-color: rgba(249, 201, 169, 0.8);
+      background-color: rgba(224, 225, 255, 0.8);
       background-image: none;
       border-color: rgba(30, 29, 47, 0.32);
       outline-color: rgba(171, 233, 179, 0.5);
@@ -6105,7 +6105,7 @@ progressbar.osd {
       .osd spinbutton.vertical button:first-child:focus:hover, .osd spinbutton.vertical button:first-child.flat:focus:hover,
       #XfceNotifyWindow spinbutton.vertical button:first-child:focus:hover,
       #XfceNotifyWindow spinbutton.vertical button:first-child.flat:focus:hover {
-        background-color: rgba(250, 212, 187, 0.8);
+        background-color: rgba(247, 247, 255, 0.8);
         background-image: none;
         border-color: rgba(24, 23, 38, 0.4);
         box-shadow: 0 1px 2px -1px rgba(37, 39, 50, 0.38); }
@@ -6252,16 +6252,16 @@ progressbar.osd {
     .osd spinbutton.vertical button:first-child:disabled:disabled, .osd spinbutton.vertical button:first-child.flat:disabled:disabled,
     #XfceNotifyWindow spinbutton.vertical button:first-child:disabled:disabled,
     #XfceNotifyWindow spinbutton.vertical button:first-child.flat:disabled:disabled {
-      background-color: alpha(mix(rgba(248, 189, 150, 0.8),#1E1D2F,0.2),0.4);
+      background-color: alpha(mix(rgba(201, 203, 255, 0.8),#1E1D2F,0.2),0.4);
       background-image: none;
       /*border: 1px solid alpha($bg, .2);*/
       opacity: .6;
-      color: mix(rgba(248, 189, 150, 0.8),#1E1D2F,0.6);
+      color: mix(rgba(201, 203, 255, 0.8),#1E1D2F,0.6);
       box-shadow: none; }
       .osd spinbutton.vertical button:first-child:disabled:disabled :disabled, .osd spinbutton.vertical button:first-child.flat:disabled:disabled :disabled,
       #XfceNotifyWindow spinbutton.vertical button:first-child:disabled:disabled :disabled,
       #XfceNotifyWindow spinbutton.vertical button:first-child.flat:disabled:disabled :disabled {
-        color: mix(rgba(248, 189, 150, 0.8),#1E1D2F,0.6); }
+        color: mix(rgba(201, 203, 255, 0.8),#1E1D2F,0.6); }
     .osd spinbutton.vertical button:first-child:active:disabled, .osd spinbutton.vertical button:first-child:checked:disabled, .osd spinbutton.vertical button:first-child.flat:active:disabled, .osd spinbutton.vertical button:first-child.flat:checked:disabled,
     #XfceNotifyWindow spinbutton.vertical button:first-child:active:disabled,
     #XfceNotifyWindow spinbutton.vertical button:first-child:checked:disabled,
@@ -6285,14 +6285,14 @@ progressbar.osd {
     #XfceNotifyWindow spinbutton.vertical button:first-child.separator,
     #XfceNotifyWindow spinbutton.vertical button:first-child .separator {
       border: 1px solid currentColor;
-      color: rgba(248, 189, 150, 0.7); }
+      color: rgba(201, 203, 255, 0.7); }
       .osd spinbutton.vertical button:first-child.separator:disabled, .osd spinbutton.vertical button:first-child .separator:disabled,
       #XfceNotifyWindow spinbutton.vertical button:first-child.separator:disabled,
       #XfceNotifyWindow spinbutton.vertical button:first-child .separator:disabled {
-        color: rgba(248, 189, 150, 0.65); }
+        color: rgba(201, 203, 255, 0.65); }
     .osd spinbutton.vertical button:first-child separator,
     #XfceNotifyWindow spinbutton.vertical button:first-child separator {
-      background-image: image(mix(#1E1D2F,rgba(248, 189, 150, 0.8),0.9)); }
+      background-image: image(mix(#1E1D2F,rgba(201, 203, 255, 0.8),0.9)); }
 
 scrolledwindow viewport.frame {
   border-style: none; }
@@ -6883,7 +6883,7 @@ paned.vertical > separator {
     background-position: bottom, top; }
 
 paned.titlebar > separator {
-  background-image: image(#f6a671); }
+  background-image: image(#9b9fff); }
 
 /*******************
  ! Spinner animation
@@ -7305,7 +7305,7 @@ viewport separator {
   background-image: image(mix(#d2d4de,#131020,0.9)); }
 
 viewport menu separator {
-  background-image: image(mix(#F8BD96,#1E1D2F,0.1)); }
+  background-image: image(mix(#C9CBFF,#1E1D2F,0.1)); }
 
 /***************
  ! Places view *
@@ -7329,11 +7329,11 @@ placesview > actionbar > revealer > box > label {
  ! Window frame
 ***************/
 decoration {
-  background-color: #F8BD96;
+  background-color: #C9CBFF;
   background-image: none;
   border-radius: 2px 2px 0 0;
   border-width: 0;
-  box-shadow: 0 3px 9px 1px rgba(73, 78, 100, 0.7), 0 0 0 1px #F8BD96;
+  box-shadow: 0 3px 9px 1px rgba(73, 78, 100, 0.7), 0 0 0 1px #C9CBFF;
   /* this is used for the resize cursor area */
   margin: 9px; }
   decoration:backdrop {
@@ -7344,7 +7344,7 @@ decoration {
   .popup decoration {
     box-shadow: none; }
   .ssd decoration {
-    box-shadow: 0 0 0 1px #F8BD96; }
+    box-shadow: 0 0 0 1px #C9CBFF; }
     .ssd decoration:backdrop {
       box-shadow: 0 0 0 1px #1E1D2F; }
   .solid-csd decoration {
@@ -7372,7 +7372,7 @@ panel-applet > menubar,
 panel-applet > menubar:backdrop,
 panel-toplevel .gnome-panel-menu-bar, panel-plug,
 panel-toplevel.background {
-  background-color: #F8BD96;
+  background-color: #C9CBFF;
   background-image: none;
   color: #1E1D2F; }
 
@@ -7394,19 +7394,19 @@ panel-toplevel .gnome-panel-menu-bar menuitem label {
   background-image: none;
   color: #1E1D2F; }
   #login_window:hover, #shutdown_dialog:hover, #restart_dialog:hover, .xfce4-panel button:hover, panel-applet button:hover, panel-applet button.nautilus-circular-button.image-button:hover, #clock-applet-button:hover {
-    background-color: mix(#F8BD96,#1E1D2F,0.11);
+    background-color: mix(#C9CBFF,#1E1D2F,0.11);
     background-image: none;
-    border-color: mix(#F8BD96,#1E1D2F,0.11);
+    border-color: mix(#C9CBFF,#1E1D2F,0.11);
     color: #201f33; }
   #login_window:active, #shutdown_dialog:active, #restart_dialog:active, .xfce4-panel button:active, panel-applet button:active, panel-applet button.nautilus-circular-button.image-button:active, #clock-applet-button:active, #login_window:checked, #shutdown_dialog:checked, #restart_dialog:checked, .xfce4-panel button:checked, panel-applet button:checked, panel-applet button.nautilus-circular-button.image-button:checked, #clock-applet-button:checked {
-    background-color: mix(#F8BD96,#1E1D2F,0.21);
+    background-color: mix(#C9CBFF,#1E1D2F,0.21);
     background-image: none;
-    border-color: mix(#F8BD96,#1E1D2F,0.21);
+    border-color: mix(#C9CBFF,#1E1D2F,0.21);
     color: #201f33; }
     #login_window:active:hover, #shutdown_dialog:active:hover, #restart_dialog:active:hover, .xfce4-panel button:active:hover, panel-applet button:active:hover, #clock-applet-button:active:hover, #login_window:checked:hover, #shutdown_dialog:checked:hover, #restart_dialog:checked:hover, .xfce4-panel button:checked:hover, panel-applet button:checked:hover, #clock-applet-button:checked:hover {
-      background-color: mix(#F8BD96,#1E1D2F,0.31);
+      background-color: mix(#C9CBFF,#1E1D2F,0.31);
       background-image: none;
-      border-color: mix(#F8BD96,#1E1D2F,0.31); }
+      border-color: mix(#C9CBFF,#1E1D2F,0.31); }
 
 panel-plug,
 panel-toplevel.background {
@@ -7473,7 +7473,7 @@ PanelSeparator, MatePanelAppletFrameDBus {
 #PanelApplet button.flat.toggle:checked,
 #PanelApplet button.flat.toggle:checked:hover {
   background-image: none;
-  background-color: darker(#F8BD96);
+  background-color: darker(#C9CBFF);
   border-color: transparent;
   border-radius: 0;
   border-width: 1px;
@@ -7533,7 +7533,7 @@ workbench.csd > stack.titlebar:not(headerbar) {
   background-color: #120f1e; }
 
 .geary-folder-popover-list-row {
-  border-color: #fdece1;
+  border-color: white;
   box-shadow: None; }
   .geary-folder-popover-list-row > label {
     color: #1E1D2F; }
@@ -7613,7 +7613,7 @@ workbench.csd > stack.titlebar:not(headerbar) {
   background-color: rgba(31, 30, 49, 0.2); }
 
 .lightdm-combo.menu {
-  background-color: #fad0b4;
+  background-color: #edeeff;
   border-radius: 0;
   padding: 0;
   color: #1f1e31; }
@@ -7942,24 +7942,24 @@ UnityDecoration {
   -UnityDecoration-title-fade: 35px;
   -UnityDecoration-title-alignment: 0; }
   UnityDecoration .top {
-    border: 1px solid #F8BD96;
+    border: 1px solid #C9CBFF;
     border-bottom: 0;
     border-radius: 2px 2px 0 0;
     padding: 1px 6px 0;
-    background-color: #F8BD96;
+    background-color: #C9CBFF;
     color: #1E1D2F;
     text-shadow: none; }
     UnityDecoration .top:hover {
       border-radius: 0;
-      border-color: mix(#F8BD96,#1E1D2F,0.21);
-      background-color: mix(#F8BD96,#1E1D2F,0.21);
+      border-color: mix(#C9CBFF,#1E1D2F,0.21);
+      background-color: mix(#C9CBFF,#1E1D2F,0.21);
       background-image: none;
       color: #201f33; }
     UnityDecoration .top:backdrop {
       border: 1px solid #1E1D2F;
       color: mix(#d2d4de,#1E1D2F,0.4); }
   UnityDecoration .left, UnityDecoration .right, UnityDecoration .bottom {
-    background-color: #F8BD96; }
+    background-color: #C9CBFF; }
     UnityDecoration .left:backdrop, UnityDecoration .right:backdrop, UnityDecoration .bottom:backdrop {
       background-color: mix(#151421,mix(#d2d4de,#1E1D2F,0.4),0.21); }
 
@@ -7970,8 +7970,8 @@ UnityPanelWidget, .unity-panel {
   border-width: 0 1px;
   color: #1E1D2F; }
   .unity-panel.menuitem:hover, .unity-panel.menuitem *:hover, .unity-panel .menuitem:hover, .unity-panel .menuitem *:hover {
-    border-color: mix(#F8BD96,#1E1D2F,0.21);
-    background-color: mix(#F8BD96,#1E1D2F,0.21);
+    border-color: mix(#C9CBFF,#1E1D2F,0.21);
+    background-color: mix(#C9CBFF,#1E1D2F,0.21);
     background-image: none;
     color: #201f33; }
 
@@ -7990,7 +7990,7 @@ SheetStyleDialog.unity-force-quit {
  ! LightDM GTK Greeter *
  ***********************/
 #panel_window {
-  background-color: #F8BD96;
+  background-color: #C9CBFF;
   background-image: none;
   color: #1E1D2F;
   font-weight: bold;
@@ -8022,10 +8022,10 @@ SheetStyleDialog.unity-force-quit {
 #login_window, #shutdown_dialog, #restart_dialog {
   border-style: none;
   border-radius: 2px;
-  background-color: #F8BD96;
+  background-color: #C9CBFF;
   color: #1E1D2F;
   /* draw border using box-shadow */
-  box-shadow: inset 1px 0 mix(#f17726,#1E1D2F,0.21), inset -1px 0 mix(#f17726,#1E1D2F,0.21), inset 0 1px mix(#f17726,#1E1D2F,0.21), inset 0 -1px mix(#f17726,#1E1D2F,0.21); }
+  box-shadow: inset 1px 0 mix(#4047ff,#1E1D2F,0.21), inset -1px 0 mix(#4047ff,#1E1D2F,0.21), inset 0 1px mix(#4047ff,#1E1D2F,0.21), inset 0 -1px mix(#4047ff,#1E1D2F,0.21); }
 
 #login_window menu {
   border-radius: 0; }
@@ -8160,28 +8160,28 @@ SheetStyleDialog.unity-force-quit {
     background-image: image(mix(#d2d4de,#302D41,0.9)); }
 
 #login_window entry {
-  background-color: #F8BD96;
+  background-color: #C9CBFF;
   background-image: none;
-  border-color: mix(#1E1D2F,#F8BD96,0.56);
+  border-color: mix(#1E1D2F,#C9CBFF,0.56);
   padding: 5px 3.4285714286px;
   color: #1E1D2F;
   caret-color: #d2d4de;
   -gtk-secondary-caret-color: #d2d4de; }
   #login_window entry:focus, #login_window entry:hover {
-    border-color: mix(#ABE9B3,mix(#1E1D2F,#F8BD96,0.7),0.3); }
+    border-color: mix(#ABE9B3,mix(#1E1D2F,#C9CBFF,0.7),0.3); }
   #login_window entry:active, #login_window entry:active:hover, #login_window entry:active:focus, #login_window entry:active:hover:focus, #login_window entry:checked, #login_window entry:checked:hover, #login_window entry:checked:focus, #login_window entry:checked:hover:focus {
-    border-color: mix(#1E1D2F,#F8BD96,0.48); }
+    border-color: mix(#1E1D2F,#C9CBFF,0.48); }
   #login_window entry:disabled {
-    border-color: mix(#1E1D2F,#F8BD96,0.64); }
+    border-color: mix(#1E1D2F,#C9CBFF,0.64); }
   #login_window entry:active:disabled, #login_window entry:checked:disabled {
-    border-color: mix(#1E1D2F,#F8BD96,0.56); }
+    border-color: mix(#1E1D2F,#C9CBFF,0.56); }
   #login_window entry:focus, #login_window entry:active {
     border-color: mix(#ABE9B3,mix(#1E1D2F,#d2d4de,0.18),0.3); }
   #login_window entry:disabled {
-    background-color: mix(#F8BD96,#1E1D2F,0.07);
+    background-color: mix(#C9CBFF,#1E1D2F,0.07);
     background-image: none;
     opacity: .9;
-    color: mix(#F8BD96,#1E1D2F,0.9); }
+    color: mix(#C9CBFF,#1E1D2F,0.9); }
 
 #user_combobox {
   color: #1E1D2F;
@@ -8189,16 +8189,16 @@ SheetStyleDialog.unity-force-quit {
   #user_combobox menu {
     font-weight: normal; }
   #user_combobox arrow {
-    color: mix(#1E1D2F,#F8BD96,0.5); }
+    color: mix(#1E1D2F,#C9CBFF,0.5); }
 
 #user_image {
   border-radius: 2px;
   /* draw border using box-shadow */
-  box-shadow: inset 1px 0 #f17726, inset -1px 0 #f17726, inset 0 1px #f17726, inset 0 -1px #f17726; }
+  box-shadow: inset 1px 0 #4047ff, inset -1px 0 #4047ff, inset 0 1px #4047ff, inset 0 -1px #4047ff; }
 
 #user_image_border {
   border-radius: 2px;
-  background-color: #f6a671;
+  background-color: #9b9fff;
   background-image: none;
   box-shadow: inset 1px 0 rgba(37, 39, 50, 0.07), inset 0 1px rgba(37, 39, 50, 0.08), inset -1px 0 rgba(37, 39, 50, 0.07), inset 0 -1px rgba(37, 39, 50, 0.05); }
 
@@ -8480,17 +8480,17 @@ SheetStyleDialog.unity-force-quit {
  ! Genome Terminal *
 ***********************/
 VteTerminal {
-  background-color: #F8BD96;
+  background-color: #C9CBFF;
   color: #1E1D2F; }
 
 terminal-window junction, terminal-window scrollbar trough {
-  background-color: #F8BD96;
-  border-color: #f38e4b; }
+  background-color: #C9CBFF;
+  border-color: #6e73ff; }
 
 terminal-window scrollbar.vertical slider {
-  background-color: mix(#F8BD96,#1E1D2F,0.2); }
+  background-color: mix(#C9CBFF,#1E1D2F,0.2); }
   terminal-window scrollbar.vertical slider:hover {
-    background-color: mix(#F8BD96,#1E1D2F,0.3); }
+    background-color: mix(#C9CBFF,#1E1D2F,0.3); }
   terminal-window scrollbar.vertical slider:hover:active {
     background-color: #ABE9B3; }
   terminal-window scrollbar.vertical slider:disabled {

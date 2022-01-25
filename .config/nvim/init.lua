@@ -1,6 +1,6 @@
 require('plugins')
 require('keybindings')
-require('settings')
+require('options')
 require('themes')
 require('treesitter-config')
 require('lualine-config')

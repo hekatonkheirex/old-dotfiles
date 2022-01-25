@@ -121,6 +121,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias ls="exa --icons"
+alias la="exa -la --icons"
+alias laa="exa -a --icons"
 alias update="paru"
 alias n="nvim"
 
@@ -129,10 +131,5 @@ autoload -U compinit && compinit
 pfetch
 .config/scripts/blks
 export TERM=xterm-256color
-#pokemon-colorscripts -r
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval "$(starship init zsh)"
-
-alias luamake=/home/mura/lua-language-server/3rd/luamake/luamake
