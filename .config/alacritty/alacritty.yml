@@ -486,7 +486,7 @@ schemes:
     # Cursor colors
     cursor:
       text:   '#575279'
-      cursor: '#faf4ed'
+      cursor: '#9893a5'
     # Normal colors
     normal:
       black:   '#f2e9de'
@@ -588,7 +588,7 @@ cursor:
     #   - ▇ Block
     #   - _ Underline
     #   - | Beam
-    shape: Beam
+    shape: Block
 
     # Cursor blinking state
     #

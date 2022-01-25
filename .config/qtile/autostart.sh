@@ -15,4 +15,5 @@ xss-lock -l $HOME/.config/scripts/lock.sh &
 blueberry-tray &
 xfce4-power-manager &
 nm-applet &
+pgrep -x redshift > /dev/null || redshift &
 gnome-keyring-daemon --start --components=pkcs11 &
