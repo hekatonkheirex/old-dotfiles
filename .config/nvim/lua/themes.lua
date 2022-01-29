@@ -37,3 +37,4 @@ vim.g.rose_pine_variant = 'dawn'  -- 'main', 'moon', 'dawn'
 --vim.cmd('colorscheme horizon')
 --vim.cmd('colorscheme catppuccin')
 vim.cmd('colorscheme rose-pine')
+--vim.cmd('colorscheme monokai')

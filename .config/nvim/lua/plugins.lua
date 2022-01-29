@@ -55,5 +55,5 @@ return require('packer').startup(function()
   use({ 'catppuccin/nvim', as = 'catppuccin' })
   use({ 'rose-pine/neovim', as = 'rose-pine' })
   use 'folke/tokyonight.nvim'
-
+  use 'tanvirtin/monokai.nvim'
 end)

@@ -1,11 +1,3 @@
-#  _____   __         ___
-# /\  __`\/\ \__  __ /\_ \
-# \ \ \/\ \ \ ,_\/\_\\//\ \      __
-#  \ \ \ \ \ \ \/\/\ \ \ \ \   /'__`\
-#   \ \ \\'\\ \ \_\ \ \ \_\ \_/\  __/
-#    \ \___\_\ \__\\ \_\/\____\ \____\
-#     \/__//_/\/__/ \/_/\/____/\/____/
-
 import os
 import socket
 import subprocess
@@ -322,6 +314,14 @@ for i, name in enumerate(group_names, 1):
 #    "border_normal": "282828"
 # }
 
+# Nord dark
+# layout_theme = {
+#   "border_width": 4,
+#   "margin": 15,
+#   "border_focus": "88c0d0",
+#   "border_normal": "2e3440"
+# }
+
 # Outrun Dark
 # layout_theme = {
 #    "border_width": 2,
@@ -364,24 +364,32 @@ for i, name in enumerate(group_names, 1):
 
 # Catppuccin
 # layout_theme = {
-#   "border_width": 4,
-#   "margin": 15,
-#   "border_focus": "c9cbff",
-#   "border_normal": "1E1D2F"
-# }
+#        "border_width": 4,
+#        "margin": 15,
+#        "border_focus": "c9cbff",
+#        "border_normal": "1E1D2F"
+#    }
+
+# Rose Pine
+# layout_theme = {
+#        "border_width": 4,
+#        "margin": 15,
+#        "border_focus": "ebbcba",
+#        "border_normal": "191724"
+#    }
 
 # Rose Pine Dawn
 layout_theme = {
-    "border_width": 4,
-    "margin": 15,
-    "border_focus": "907aa9",
-    "border_normal": "faf4ed"
-}
+        "border_width": 4,
+        "margin": 15,
+        "border_focus": "907aa9",
+        "border_normal": "faf4ed"
+    }
 
 layouts = [
     layout.MonadTall(
         border_focus='907aa9',
-        border_normal='f4f4ed',
+        border_normal='faf4ed',
         border_width=4,
         margin=15,
         ratio=0.52,
@@ -394,7 +402,7 @@ layouts = [
     ),
     layout.Floating(
         border_focus='d7827e',
-        border_normal='f4f4ed',
+        border_normal='faf4ed',
         border_width=4,
         fullscreen_border_width=0,
     ),
@@ -424,6 +432,22 @@ layouts = [
 #           ["#d65d0e", "#d65d0e"],  # 10 Orange
 #           ["#8f3f71", "#8f3f71"],  # 11 Violet
 #         ]
+
+# Nord
+# colors = [
+#        ["#2e3440", "#2e3440"],  # 0 Background 0
+#        ["#3b4252", "#3b4252"],  # 1 Background 1
+#        ["#eceff4", "#eceff4"],  # 2 Foreground 0
+#        ["#e5e9f0", "#e5e9f0"],  # 3 Foreground 1
+#        ["#bf616a", "#bf616a"],  # 4 Red
+#        ["#a3be8c", "#a3be8c"],  # 5 Green
+#        ["#ebcb8b", "#ebcb8b"],  # 6 Yellow
+#        ["#5e81ac", "#5e81ac"],  # 7 Blue
+#        ["#b48ead", "#b48ead"],  # 8 Magenta
+#        ["#88c0d0", "#88c0d0"],  # 9 Cyan
+#        ["#d08770", "#d08770"],  # 10 Orange
+#        ["#81a1c1", "#81a1c1"],  # 11 Violet
+#    ]
 
 # Outrun Dark
 # colors = [["#00002a", "#00002a"],  # 0 Background 0
@@ -516,6 +540,22 @@ layouts = [
 #        ["#c9cbff", "#c9cbff"],  # 11 Violet
 #    ]
 
+# Rose Pine
+# colors = [
+#        ["#191724", "#191724"],  # 0 Background 0
+#        ["#26233a", "#26233a"],  # 1 Background 1
+#        ["#e0def4", "#e0def4"],  # 2 Foreground 0
+#        ["#908caa", "#908caa"],  # 3 Foreground 1
+#        ["#eb6f92", "#eb6f92"],  # 4 Red
+#        ["#56949f", "#56949f"],  # 5 Green
+#        ["#f6c177", "#f6c177"],  # 6 Yellow
+#        ["#31748f", "#31748f"],  # 7 Blue
+#        ["#ebbcba", "#ebbcba"],  # 8 Magenta
+#        ["#9ccfd8", "#9ccfd8"],  # 9 Cyan
+#        ["#ea9d34", "#ea9d34"],  # 10 Orange
+#        ["#c4a7e7", "#c4a7e7"],  # 11 Violet
+#    ]
+
 # Rose Pine Dawn
 colors = [
         ["#faf4ed", "#faf4ed"],  # 0 Background 0
@@ -539,7 +579,7 @@ widget_defaults = dict(
     font='Cartograph CF',
     fontsize=14,
     padding=4,
-    background='#f4f4ed',
+    background='#faf4ed',
     foreground='#575279',
 )
 
@@ -555,28 +595,28 @@ screens = [
                 #     margin=5
                 # ),
                 widget.GroupBox(
-                    active=colors[2],
-                    block_highlight_text_color=colors[2],
+                    active=colors[6],
+                    block_highlight_text_color=colors[0],
                     borderwidth=2,
                     disable_drag=True,
                     font='Stick',
                     fontsize=16,
                     hide_unused=False,
                     # highlight_color='00000000',
-                    highlight_color=colors[0],
+                    highlight_color=colors[11],
                     # highlight_method='text',
-                    highlight_method='line',
+                    highlight_method='block',
                     inactive=colors[1],
                     padding=1,
                     rounded=True,
                     spacing=4,
-                    this_current_screen_border=colors[10],
+                    this_current_screen_border=colors[11],
                     urgent_alert_method='block',
                     urgent_border=colors[4],
                     urgent_text=colors[0],
                 ),
                 widget.WindowName(
-                    max_chars=200,
+                    max_chars=250,
                     padding=8,
                     foreground=colors[5],
                 ),
@@ -825,7 +865,7 @@ bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
     border_focus='d7827e',
-    border_normal='f4f4ed',
+    border_normal='faf4ed',
     border_width=4,
     fullscreen_border_width=0,
     float_rules=[

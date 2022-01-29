@@ -111,7 +111,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Rec Mono Duotone
+    family: Cartograph CF
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -122,7 +122,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Rec Mono Duotone
+    family: Cartograph CF
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -133,7 +133,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Rec Mono Duotone
+    family: Cartograph CF
 
     # The `style` can be specified to pick a specific face.
     style: Italic
@@ -144,7 +144,7 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Rec Mono Duotone
+    family: Cartograph CF
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
@@ -478,7 +478,7 @@ schemes:
       white:   '#d7cbb2'
 
   ## Rose Pine Dawn
-  everforest: &rosepinedawn
+  rosepinedawn: &rosepinedawn
     # Default colors
     primary:
       background: '#faf4ed'
@@ -508,6 +508,44 @@ schemes:
       cyan:    '#d7827e'
       white:   '#575279'
 
+
+  ## Catppuccin!
+  catppuccin: &catppuccin
+    # Default colors
+    primary:
+      background: '0x1E1D2F'
+      foreground: '0xD9E0EE'
+
+    # Colors the cursor will use if `custom_cursor_colors` is true
+    cursor:
+      text: '0x1E1D2F'
+      cursor: '0xF5E0DC'
+
+    # Normal colors
+    normal:
+      black:   '0x6E6C7E'
+      red:     '0xF28FAD'
+      green:   '0xABE9B3'
+      yellow:  '0xFAE3B0'
+      blue:    '0x96CDFB'
+      magenta: '0xF5C2E7'
+      cyan:    '0x89DCEB'
+      white:   '0xD9E0EE'
+
+    # Bright colors
+    bright:
+      black:   '0x988BA2'
+      red:     '0xF28FAD'
+      green:   '0xABE9B3'
+      yellow:  '0xFAE3B0'
+      blue:    '0x96CDFB'
+      magenta: '0xF5C2E7'
+      cyan:    '0x89DCEB'
+      white:   '0xD9E0EE'
+
+    indexed_colors:
+      - { index: 16, color: '0xF8BD96' }
+      - { index: 17, color: '0xF5E0DC' }
 ######################################################################
 ## SET THEME: Choose ONE color scheme from those in the above list. ##
 ## ###################################################################
@@ -522,7 +560,8 @@ schemes:
 # *onedark
 # *everforest
 # *rosepinedawn
-colors: *rosepinedawn
+# *catppuccin
+colors: *catppuccin
 
 # Bell
 #

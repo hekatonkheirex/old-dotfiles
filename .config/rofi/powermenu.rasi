@@ -3,10 +3,10 @@
     spacing:                     0;
     background:                  #faf4ed;
     foreground:                  #575279;
-    lightbg:                     #f2e9de;
+    lightbg:                     #e4dfde;
     lightfg:                     #6e6a86;
     red:                         #b4637a;
-    blue:                        #286983;
+    blue:                        #907aa9;
     text-color:                  var(foreground);
     selected-active-foreground:  var(blue);
     separatorcolor:              var(blackground);
@@ -64,7 +64,7 @@ element {
     cursor:  pointer;
     spacing: 5px ;
     border:  0;
-    border-radius: 0px;
+    border-radius: 8px;
 }                                                                                               
 element normal.normal {
     background-color: var(normal-background);

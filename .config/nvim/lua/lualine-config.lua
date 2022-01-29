@@ -6,5 +6,6 @@ require('lualine').setup({
     --theme = 'onedark',
     --theme = "catppuccin",
     --theme = 'nord',
+    section_separators = '',
     component_separators = '' }
 })

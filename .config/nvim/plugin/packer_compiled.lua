@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "/home/mura/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["monokai.nvim"] = {
+    loaded = true,
+    path = "/home/mura/.local/share/nvim/site/pack/packer/start/monokai.nvim",
+    url = "https://github.com/tanvirtin/monokai.nvim"
+  },
   ["nord.nvim"] = {
     loaded = true,
     path = "/home/mura/.local/share/nvim/site/pack/packer/start/nord.nvim",

@@ -18,7 +18,6 @@
 
 export EDITOR=nvim
 export QT_QPA_PLATFORMTHEME="qt5ct"
-export $DESKTOP_SESSION="bspwm"
 
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
@@ -27,15 +26,11 @@ export XMODIFIERS=@im=fcitx
 fcitx5 &
 
 xinput --set-prop "ELAN1300:00 04F3:3087 Touchpad" "libinput Natural Scrolling Enabled" 1 &
-#setxkbmap -option grp:alt_shift_toggle us,es &
 xsetroot -cursor_name left_ptr &
-#light -S 50 &
 $HOME/.config/polybar/olaunch.sh &
-#nitrogen --restore &
-feh --bg-fill /mnt/windows/Walls/blockwavedawn.png
-picom -f -b --config /home/mura/.config/picom/picom_not_rounded.conf &
+feh --bg-fill /mnt/windows/Walls/rosepine_oceandrone2.JPG
+picom -f -b --config /home/mura/.config/picom/picon_not_rounded.conf &
 $HOME/.config/scripts/thunar.sh &
-#$HOME/.config/scripts/2bspwm &
 xss-lock -l $HOME/.config/scripts/lock.sh &
 xfce4-power-manager &
 blueberry-tray &
