@@ -2,8 +2,8 @@
 # Author: Satyajit Sahoo <satyajit.happy@gmail.com>
 # License: GPL-3.0+
 
-active_text_color=#ebdbb2
-inactive_text_color=#baae8f
+active_text_color=#fbf1c7
+inactive_text_color=#c6be9f
 button_offset=3
 button_spacing=0
 show_app_icon=true

@@ -16,8 +16,8 @@ def autostart():
 
 # Defaults
 mod = "mod4"
-myTerm = "kitty"
-# myTerm = "alacritty"
+# myTerm = "kitty"
+myTerm = "alacritty"
 
 
 def focus_previous_group(qtile):
@@ -307,12 +307,12 @@ for i, name in enumerate(group_names, 1):
 
 # layouts
 # Gruvbox dark
-# layout_theme = {
-#    "border_width": 2,
-#    "margin": 15,
-#    "border_focus": "d65d0e",
-#    "border_normal": "282828"
-# }
+layout_theme = {
+        "border_width": 2,
+        "margin": 15,
+        "border_focus": "98971a",
+        "border_normal": "282828"
+    }
 
 # Nord dark
 # layout_theme = {
@@ -348,11 +348,11 @@ for i, name in enumerate(group_names, 1):
 
 # Tokyo Night
 # layout_theme = {
-#    "border_width": 2,
-#    "margin": 15,
-#    "border_focus": "7c7be0",
-#    "border_normal": "1a1b26"
-# }
+#        "border_width": 2,
+#        "margin": 15,
+#        "border_focus": "9ece6a",
+#        "border_normal": "1a1b26"
+#    }
 
 # Horizon
 # layout_theme = {
@@ -379,17 +379,17 @@ for i, name in enumerate(group_names, 1):
 #    }
 
 # Rose Pine Dawn
-layout_theme = {
-        "border_width": 4,
-        "margin": 15,
-        "border_focus": "907aa9",
-        "border_normal": "faf4ed"
-    }
+# layout_theme = {
+#        "border_width": 4,
+#        "margin": 15,
+#        "border_focus": "907aa9",
+#        "border_normal": "faf4ed"
+#    }
 
 layouts = [
     layout.MonadTall(
-        border_focus='907aa9',
-        border_normal='faf4ed',
+        border_focus='98971a',
+        border_normal='282828',
         border_width=4,
         margin=15,
         ratio=0.52,
@@ -401,8 +401,8 @@ layouts = [
         **layout_theme
     ),
     layout.Floating(
-        border_focus='d7827e',
-        border_normal='faf4ed',
+        border_focus='d79921',
+        border_normal='282828',
         border_width=4,
         fullscreen_border_width=0,
     ),
@@ -419,19 +419,20 @@ layouts = [
 
 # Colors definitions
 # Gruvbox
-# colors = [["#282828", "#282828"],  # 0 Background 0
-#           ["#3c3836", "#3c3836"],  # 1 Background 1
-#           ["#fbf1c7", "#fbf1c7"],  # 2 Foreground 0
-#           ["#ebdbb2", "#ebdbb2"],  # 3 Foreground 1
-#           ["#cc241d", "#cc241d"],  # 4 Red
-#           ["#98971a", "#98971a"],  # 5 Green
-#           ["#d79921", "#d79921"],  # 6 Yellow
-#           ["#458588", "#458588"],  # 7 Blue
-#           ["#b16286", "#b16286"],  # 8 Magenta
-#           ["#689d6a", "#689d6a"],  # 9 Cyan
-#           ["#d65d0e", "#d65d0e"],  # 10 Orange
-#           ["#8f3f71", "#8f3f71"],  # 11 Violet
-#         ]
+colors = [
+        ["#282828", "#282828"],  # 0 Background 0
+        ["#3c3836", "#3c3836"],  # 1 Background 1
+        ["#fbf1c7", "#fbf1c7"],  # 2 Foreground 0
+        ["#ebdbb2", "#ebdbb2"],  # 3 Foreground 1
+        ["#cc241d", "#cc241d"],  # 4 Red
+        ["#98971a", "#98971a"],  # 5 Green
+        ["#d79921", "#d79921"],  # 6 Yellow
+        ["#458588", "#458588"],  # 7 Blue
+        ["#b16286", "#b16286"],  # 8 Magenta
+        ["#689d6a", "#689d6a"],  # 9 Cyan
+        ["#d65d0e", "#d65d0e"],  # 10 Orange
+        ["#8f3f71", "#8f3f71"],  # 11 Violet
+    ]
 
 # Nord
 # colors = [
@@ -495,19 +496,20 @@ layouts = [
 #         ]
 
 # Tokyo Night
-# colors = [["#1a1b26", "#1a1b26"],  # 0 Background 0
-#           ["#30313b", "#30313b"],  # 1 Background 1
-#           ["#a9b1d6", "#a9b1d6"],  # 2 Foreground 0
-#           ["#b1b8da", "#b1b8da"],  # 3 Foreground 1
-#           ["#f7768e", "#f7768e"],  # 4 Red
-#           ["#9ece6a", "#9ece6a"],  # 5 Green
-#           ["#e0af68", "#e0af68"],  # 6 Yellow
-#           ["#7aa2f7", "#7aa2f7"],  # 7 Blue
-#           ["#9a7ecc", "#9a7ecc"],  # 8 Magenta
-#           ["#4abaaf", "#4abaaf"],  # 9 Cyan
-#           ["#fea520", "#fea520"],  # 10 Orange
-#           ["#7c7be0", "#7c7be0"],  # 11 Violet
-#         ]
+# colors = [
+#        ["#1a1b26", "#1a1b26"],  # 0 Background 0
+#        ["#30313b", "#30313b"],  # 1 Background 1
+#        ["#a9b1d6", "#a9b1d6"],  # 2 Foreground 0
+#        ["#b1b8da", "#b1b8da"],  # 3 Foreground 1
+#        ["#f7768e", "#f7768e"],  # 4 Red
+#        ["#9ece6a", "#9ece6a"],  # 5 Green
+#        ["#e0af68", "#e0af68"],  # 6 Yellow
+#        ["#7aa2f7", "#7aa2f7"],  # 7 Blue
+#        ["#9a7ecc", "#9a7ecc"],  # 8 Magenta
+#        ["#4abaaf", "#4abaaf"],  # 9 Cyan
+#        ["#fea520", "#fea520"],  # 10 Orange
+#        ["#7c7be0", "#7c7be0"],  # 11 Violet
+#    ]
 
 # Horizon
 # colors = [["#1c1e26", "#1c1e26"],  # 0 Background 0
@@ -557,20 +559,20 @@ layouts = [
 #    ]
 
 # Rose Pine Dawn
-colors = [
-        ["#faf4ed", "#faf4ed"],  # 0 Background 0
-        ["#e4dfde", "#e4dfde"],  # 1 Background 1
-        ["#575279", "#575279"],  # 2 Foreground 0
-        ["#6e6a86", "#6e6a86"],  # 3 Foreground 1
-        ["#b4637a", "#b4637a"],  # 4 Red
-        ["#56949f", "#56949f"],  # 5 Green
-        ["#f6c177", "#f6c177"],  # 6 Yellow
-        ["#286983", "#286983"],  # 7 Blue
-        ["#d7827e", "#d7827e"],  # 8 Magenta
-        ["#9ccfd8", "#9ccfd8"],  # 9 Cyan
-        ["#ea9d34", "#ea9d34"],  # 10 Orange
-        ["#907aa9", "#907aa9"],  # 11 Violet
-    ]
+# colors = [
+#        ["#faf4ed", "#faf4ed"],  # 0 Background 0
+#        ["#e4dfde", "#e4dfde"],  # 1 Background 1
+#        ["#575279", "#575279"],  # 2 Foreground 0
+#        ["#6e6a86", "#6e6a86"],  # 3 Foreground 1
+#        ["#b4637a", "#b4637a"],  # 4 Red
+#        ["#56949f", "#56949f"],  # 5 Green
+#        ["#f6c177", "#f6c177"],  # 6 Yellow
+#        ["#286983", "#286983"],  # 7 Blue
+#        ["#d7827e", "#d7827e"],  # 8 Magenta
+#        ["#9ccfd8", "#9ccfd8"],  # 9 Cyan
+#        ["#ea9d34", "#ea9d34"],  # 10 Orange
+#        ["#907aa9", "#907aa9"],  # 11 Violet
+#    ]
 
 prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
 
@@ -579,8 +581,8 @@ widget_defaults = dict(
     font='Cartograph CF',
     fontsize=14,
     padding=4,
-    background='#faf4ed',
-    foreground='#575279',
+    background='#282828',
+    foreground='#fbf1c7',
 )
 
 extension_defaults = widget_defaults.copy()
@@ -610,7 +612,7 @@ screens = [
                     padding=1,
                     rounded=True,
                     spacing=4,
-                    this_current_screen_border=colors[11],
+                    this_current_screen_border=colors[5],
                     urgent_alert_method='block',
                     urgent_border=colors[4],
                     urgent_text=colors[0],
@@ -864,8 +866,8 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
-    border_focus='d7827e',
-    border_normal='faf4ed',
+    border_focus='d79921',
+    border_normal='282828',
     border_width=4,
     fullscreen_border_width=0,
     float_rules=[
