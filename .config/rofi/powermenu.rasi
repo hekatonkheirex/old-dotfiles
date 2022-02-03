@@ -1,12 +1,12 @@
 * {
     font:                        "SF Pro Display 11";
     spacing:                     0;
-    background:                  #faf4ed;
-    foreground:                  #575279;
-    lightbg:                     #e4dfde;
-    lightfg:                     #6e6a86;
-    red:                         #b4637a;
-    blue:                        #907aa9;
+    background:                  #282828;
+    foreground:                  #fbf1c7;
+    lightbg:                     #3c3936;
+    lightfg:                     #ebdbb2;
+    red:                         #cc241d;
+    blue:                        #458588;
     text-color:                  var(foreground);
     selected-active-foreground:  var(blue);
     separatorcolor:              var(blackground);
@@ -33,10 +33,10 @@
 
 window {
     padding:          0px ;
-    width:            20% ;
+    width:            100% ;
     children:         [ horibox ];
-    location:         north east;
-    anchor:           north east;
+    location:         north;
+    anchor:           north;
     background-color: var(background);
     x-offset:         0;
     y-offset:         0;
@@ -50,9 +50,9 @@ horibox {
 
 listview {
     fixed-height: 0;
-    padding:      2px 0px 0px ;
+    padding:      2px 0px 2px ;
     scrollbar:    true;
-    lines:        50;
+    lines:        100;
     border-color: var(separatorcolor);
     layout:       horizontal;
     border:       0px dash 0px 0px ;
