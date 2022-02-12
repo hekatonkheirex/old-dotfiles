@@ -16,8 +16,8 @@ def autostart():
 
 # Defaults
 mod = "mod4"
-# myTerm = "kitty"
-myTerm = "alacritty"
+myTerm = "kitty"
+# myTerm = "alacritty"
 
 
 def focus_previous_group(qtile):
@@ -307,12 +307,12 @@ for i, name in enumerate(group_names, 1):
 
 # layouts
 # Gruvbox dark
-layout_theme = {
-        "border_width": 2,
-        "margin": 15,
-        "border_focus": "98971a",
-        "border_normal": "282828"
-    }
+# layout_theme = {
+#        "border_width": 2,
+#        "margin": 15,
+#        "border_focus": "98971a",
+#        "border_normal": "282828"
+#    }
 
 # Nord dark
 # layout_theme = {
@@ -371,12 +371,12 @@ layout_theme = {
 #    }
 
 # Rose Pine
-# layout_theme = {
-#        "border_width": 4,
-#        "margin": 15,
-#        "border_focus": "ebbcba",
-#        "border_normal": "191724"
-#    }
+layout_theme = {
+        "border_width": 4,
+        "margin": 15,
+        "border_focus": "ebbcba",
+        "border_normal": "191724"
+    }
 
 # Rose Pine Dawn
 # layout_theme = {
@@ -388,8 +388,8 @@ layout_theme = {
 
 layouts = [
     layout.MonadTall(
-        border_focus='98971a',
-        border_normal='282828',
+        border_focus='c4a7e7',
+        border_normal='191724',
         border_width=4,
         margin=15,
         ratio=0.52,
@@ -401,8 +401,8 @@ layouts = [
         **layout_theme
     ),
     layout.Floating(
-        border_focus='d79921',
-        border_normal='282828',
+        border_focus='ebbcba',
+        border_normal='191724',
         border_width=4,
         fullscreen_border_width=0,
     ),
@@ -419,20 +419,20 @@ layouts = [
 
 # Colors definitions
 # Gruvbox
-colors = [
-        ["#282828", "#282828"],  # 0 Background 0
-        ["#3c3836", "#3c3836"],  # 1 Background 1
-        ["#fbf1c7", "#fbf1c7"],  # 2 Foreground 0
-        ["#ebdbb2", "#ebdbb2"],  # 3 Foreground 1
-        ["#cc241d", "#cc241d"],  # 4 Red
-        ["#98971a", "#98971a"],  # 5 Green
-        ["#d79921", "#d79921"],  # 6 Yellow
-        ["#458588", "#458588"],  # 7 Blue
-        ["#b16286", "#b16286"],  # 8 Magenta
-        ["#689d6a", "#689d6a"],  # 9 Cyan
-        ["#d65d0e", "#d65d0e"],  # 10 Orange
-        ["#8f3f71", "#8f3f71"],  # 11 Violet
-    ]
+# colors = [
+#        ["#282828", "#282828"],  # 0 Background 0
+#        ["#3c3836", "#3c3836"],  # 1 Background 1
+#        ["#fbf1c7", "#fbf1c7"],  # 2 Foreground 0
+#        ["#ebdbb2", "#ebdbb2"],  # 3 Foreground 1
+#        ["#cc241d", "#cc241d"],  # 4 Red
+#        ["#98971a", "#98971a"],  # 5 Green
+#        ["#d79921", "#d79921"],  # 6 Yellow
+#        ["#458588", "#458588"],  # 7 Blue
+#        ["#b16286", "#b16286"],  # 8 Magenta
+#        ["#689d6a", "#689d6a"],  # 9 Cyan
+#        ["#d65d0e", "#d65d0e"],  # 10 Orange
+#        ["#8f3f71", "#8f3f71"],  # 11 Violet
+#    ]
 
 # Nord
 # colors = [
@@ -543,20 +543,20 @@ colors = [
 #    ]
 
 # Rose Pine
-# colors = [
-#        ["#191724", "#191724"],  # 0 Background 0
-#        ["#26233a", "#26233a"],  # 1 Background 1
-#        ["#e0def4", "#e0def4"],  # 2 Foreground 0
-#        ["#908caa", "#908caa"],  # 3 Foreground 1
-#        ["#eb6f92", "#eb6f92"],  # 4 Red
-#        ["#56949f", "#56949f"],  # 5 Green
-#        ["#f6c177", "#f6c177"],  # 6 Yellow
-#        ["#31748f", "#31748f"],  # 7 Blue
-#        ["#ebbcba", "#ebbcba"],  # 8 Magenta
-#        ["#9ccfd8", "#9ccfd8"],  # 9 Cyan
-#        ["#ea9d34", "#ea9d34"],  # 10 Orange
-#        ["#c4a7e7", "#c4a7e7"],  # 11 Violet
-#    ]
+colors = [
+        ["#191724", "#191724"],  # 0 Background 0
+        ["#26233a", "#26233a"],  # 1 Background 1
+        ["#e0def4", "#e0def4"],  # 2 Foreground 0
+        ["#908caa", "#908caa"],  # 3 Foreground 1
+        ["#eb6f92", "#eb6f92"],  # 4 Red
+        ["#56949f", "#56949f"],  # 5 Green
+        ["#f6c177", "#f6c177"],  # 6 Yellow
+        ["#31748f", "#31748f"],  # 7 Blue
+        ["#ebbcba", "#ebbcba"],  # 8 Magenta
+        ["#9ccfd8", "#9ccfd8"],  # 9 Cyan
+        ["#ea9d34", "#ea9d34"],  # 10 Orange
+        ["#c4a7e7", "#c4a7e7"],  # 11 Violet
+    ]
 
 # Rose Pine Dawn
 # colors = [
@@ -581,8 +581,8 @@ widget_defaults = dict(
     font='Cartograph CF',
     fontsize=14,
     padding=4,
-    background='#282828',
-    foreground='#fbf1c7',
+    background='#191724',
+    foreground='#e0def4',
 )
 
 extension_defaults = widget_defaults.copy()
@@ -866,8 +866,8 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
-    border_focus='d79921',
-    border_normal='282828',
+    border_focus='ebbcba',
+    border_normal='191724',
     border_width=4,
     fullscreen_border_width=0,
     float_rules=[

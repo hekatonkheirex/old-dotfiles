@@ -561,7 +561,7 @@ schemes:
 # *everforest
 # *rosepinedawn
 # *catppuccin
-colors: *gruvbox-dark
+colors: *rosepinedawn
 
 # Bell
 #

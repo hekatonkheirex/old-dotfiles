@@ -281,7 +281,7 @@ floating_maximum_size 800 x 600
 
 # Compositor
 #exec_always --no-startup-id picom -f -b --experimental-backends --backend glx --blur-method kawase --blur-strength 10 --detect-rounded-corners
-exec_always --no-startup-id picom -f -b
+exec_always --no-startup-id picom -f -b --config /home/mura/.config/picom/picom_not_rounded.conf
 bindsym $mod+Shift+o exec picom-trans -c -10
 bindsym $mod+o exec picom-trans -c +10
 
