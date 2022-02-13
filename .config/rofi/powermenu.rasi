@@ -1,5 +1,5 @@
 * {
-    font:                        "SF Pro Display 11";
+    font:                        "Recursive Sans Casual 12";
     spacing:                     0;
     background:                  #191724;
     foreground:                  #e0def4;
@@ -40,7 +40,7 @@ window {
     background-color: var(background);
     x-offset:         0;
     y-offset:         0;
-    border:           1;
+    border:           2;
 }
 
 horibox {

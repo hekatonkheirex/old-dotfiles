@@ -24,12 +24,13 @@ bison
 blueberry
 bluez
 bluez-utils
-brave-bin
 brightnessctl
 bspwm
 catppuccin-gtk-theme
 cava
+cnrdrvcups-lb
 cups
+desmume
 devtools
 dialog
 dina-font
@@ -55,6 +56,7 @@ gentium-plus-font
 git
 gnome-keyring
 gnu-free-fonts
+google-chrome
 groff
 grub
 gvfs
@@ -81,7 +83,7 @@ linux-headers
 lxappearance-gtk3
 m4
 make
-menumaker
+microsoft-edge-stable-bin
 mpv
 mtools
 neofetch
@@ -97,9 +99,7 @@ noto-fonts-emoji
 npm
 nss-mdns
 ntfs-3g
-obconf
 obs-studio
-openbox
 openssh
 os-prober
 otf-font-awesome
@@ -132,12 +132,13 @@ qt5ct
 qt6ct
 qtile
 raw-thumbnailer
+redshift
 reflector
 ripgrep
 rofi
 rsync
 rtmpdump
-rust
+rustup
 scrot
 sof-firmware
 spicetify-cli-git
@@ -159,7 +160,6 @@ thunar-secure-delete
 thunar-shares-plugin
 thunar-vcs-plugin
 thunar-volman
-toilet
 ttf-anonymous-pro
 ttf-bitstream-vera
 ttf-cascadia-code
@@ -180,6 +180,7 @@ ttf-linux-libertine
 ttf-meslo
 ttf-monofur
 ttf-monoid
+ttf-ms-fonts
 ttf-opensans
 ttf-recursive
 ttf-roboto
@@ -191,6 +192,7 @@ tumbler-extra-thumbnailers
 unarchiver
 unrar
 unzip
+vdhcoapp-bin
 vivaldi
 vivaldi-ffmpeg-codecs
 w3m
