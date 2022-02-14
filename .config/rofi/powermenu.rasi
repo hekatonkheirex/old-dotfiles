@@ -1,12 +1,12 @@
 * {
-    font:                        "Recursive Sans Casual 12";
+    font:                        "Recursive Sans Casual Static 12";
     spacing:                     0;
-    background:                  #191724;
-    foreground:                  #e0def4;
-    lightbg:                     #26233a;
-    lightfg:                     #908caa;
-    red:                         #eb6f92;
-    blue:                        #c4a7e7;
+    background:                  #faf4ed;
+    foreground:                  #575279;
+    lightbg:                     #e4dfde;
+    lightfg:                     #6e6a86;
+    red:                         #b4637a;
+    blue:                        #907aa9;
     text-color:                  var(foreground);
     selected-active-foreground:  var(blue);
     separatorcolor:              var(blackground);
@@ -55,7 +55,7 @@ listview {
     lines:        100;
     border-color: var(separatorcolor);
     layout:       horizontal;
-    border:       0px dash 0px 0px ;
+    border:       2px dash 2px 2px ;
     spacing:      5px ;
 }
 
