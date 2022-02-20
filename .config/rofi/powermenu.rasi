@@ -1,5 +1,8 @@
+configuration {
+    show-icons: false;
+  }
 * {
-    font:                        "Recursive Sans Casual Static 12";
+    font:                        "Recursive Sans Casual Static 14";
     spacing:                     0;
     background:                  #faf4ed;
     foreground:                  #575279;
@@ -33,14 +36,15 @@
 
 window {
     padding:          0px ;
-    width:            100% ;
+    width:            27% ;
+    height:           7% ;
     children:         [ horibox ];
-    location:         north;
-    anchor:           north;
+    location:         center;
+    anchor:           center;
     background-color: var(background);
     x-offset:         0;
     y-offset:         0;
-    border:           2;
+    border:           8;
 }
 
 horibox {
@@ -50,20 +54,20 @@ horibox {
 
 listview {
     fixed-height: 0;
-    padding:      2px 0px 2px ;
-    scrollbar:    true;
-    lines:        100;
+    padding:      8px 0px 8px ;
+    scrollbar:    false;
+    lines:        5;
     border-color: var(separatorcolor);
     layout:       horizontal;
     border:       2px dash 2px 2px ;
-    spacing:      5px ;
+    spacing:      0px ;
 }
 
 element {
     padding: 2px ;
     cursor:  pointer;
     spacing: 5px ;
-    border:  0;
+    border:  2;
     border-radius: 8px;
 }                                                                                               
 element normal.normal {

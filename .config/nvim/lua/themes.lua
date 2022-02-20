@@ -1,5 +1,6 @@
 -- Themes options
 --vim.g.gruvbox_contrast_dark = 'medium'
+--vim.g.gruvbox_contrast_light = 'hard'
 --vim.g.gruvbox_italic = true
 --vim.g.gruvbox_termcolors = '256'
 --vim.g.everforest_background = 'hard'
@@ -19,7 +20,6 @@
 --vim.g.tokyonight_italic_functions = true
 --vim.g.tokyonight_sidebars = { "qf", "vista_kind", "terminal", "packer" }
 --vim.g.tokyonight_colors = { hint = "orange", error = "#ff0000" }
-vim.g.rose_pine_variant = 'dawn'  -- 'main', 'moon', 'dawn'
 --vim.g.rose_pine_bold_vertical_split_line = false
 --vim.g.rose_pine_inactive_background = false
 --vim.g.rose_pine_disable_background = false

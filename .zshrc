@@ -128,6 +128,9 @@ alias n="nvim"
 
 autoload -U compinit && compinit
 
+export VDPAU_DRIVER=radeonsi
+export LIBVA_DRIVER_NAME=radeonsi
+
 pfetch
 .config/scripts/blks
 export TERM=xterm-256color

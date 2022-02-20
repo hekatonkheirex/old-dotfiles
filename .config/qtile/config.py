@@ -371,25 +371,25 @@ for i, name in enumerate(group_names, 1):
 #    }
 
 # Rose Pine
-layout_theme = {
-        "border_width": 4,
-        "margin": 15,
-        "border_focus": "ebbcba",
-        "border_normal": "191724"
-    }
-
-# Rose Pine Dawn
 # layout_theme = {
 #        "border_width": 4,
 #        "margin": 15,
-#        "border_focus": "907aa9",
-#        "border_normal": "faf4ed"
+#        "border_focus": "ebbcba",
+#        "border_normal": "191724"
 #    }
+
+# Rose Pine Dawn
+layout_theme = {
+        "border_width": 4,
+        "margin": 15,
+        "border_focus": "907aa9",
+        "border_normal": "faf4ed"
+    }
 
 layouts = [
     layout.MonadTall(
-        border_focus='c4a7e7',
-        border_normal='191724',
+        border_focus='907aa9',
+        border_normal='faf4ed',
         border_width=4,
         margin=15,
         ratio=0.52,
@@ -401,8 +401,8 @@ layouts = [
         **layout_theme
     ),
     layout.Floating(
-        border_focus='ebbcba',
-        border_normal='191724',
+        border_focus='d7827e',
+        border_normal='faf4ed',
         border_width=4,
         fullscreen_border_width=0,
     ),
@@ -543,36 +543,36 @@ layouts = [
 #    ]
 
 # Rose Pine
-colors = [
-        ["#191724", "#191724"],  # 0 Background 0
-        ["#26233a", "#26233a"],  # 1 Background 1
-        ["#e0def4", "#e0def4"],  # 2 Foreground 0
-        ["#908caa", "#908caa"],  # 3 Foreground 1
-        ["#eb6f92", "#eb6f92"],  # 4 Red
-        ["#56949f", "#56949f"],  # 5 Green
-        ["#f6c177", "#f6c177"],  # 6 Yellow
-        ["#31748f", "#31748f"],  # 7 Blue
-        ["#ebbcba", "#ebbcba"],  # 8 Magenta
-        ["#9ccfd8", "#9ccfd8"],  # 9 Cyan
-        ["#ea9d34", "#ea9d34"],  # 10 Orange
-        ["#c4a7e7", "#c4a7e7"],  # 11 Violet
-    ]
-
-# Rose Pine Dawn
 # colors = [
-#        ["#faf4ed", "#faf4ed"],  # 0 Background 0
-#        ["#e4dfde", "#e4dfde"],  # 1 Background 1
-#        ["#575279", "#575279"],  # 2 Foreground 0
-#        ["#6e6a86", "#6e6a86"],  # 3 Foreground 1
-#        ["#b4637a", "#b4637a"],  # 4 Red
+#        ["#191724", "#191724"],  # 0 Background 0
+#        ["#26233a", "#26233a"],  # 1 Background 1
+#        ["#e0def4", "#e0def4"],  # 2 Foreground 0
+#        ["#908caa", "#908caa"],  # 3 Foreground 1
+#        ["#eb6f92", "#eb6f92"],  # 4 Red
 #        ["#56949f", "#56949f"],  # 5 Green
 #        ["#f6c177", "#f6c177"],  # 6 Yellow
-#        ["#286983", "#286983"],  # 7 Blue
-#        ["#d7827e", "#d7827e"],  # 8 Magenta
+#        ["#31748f", "#31748f"],  # 7 Blue
+#        ["#ebbcba", "#ebbcba"],  # 8 Magenta
 #        ["#9ccfd8", "#9ccfd8"],  # 9 Cyan
 #        ["#ea9d34", "#ea9d34"],  # 10 Orange
-#        ["#907aa9", "#907aa9"],  # 11 Violet
+#        ["#c4a7e7", "#c4a7e7"],  # 11 Violet
 #    ]
+
+# Rose Pine Dawn
+colors = [
+        ["#faf4ed", "#faf4ed"],  # 0 Background 0
+        ["#e4dfde", "#e4dfde"],  # 1 Background 1
+        ["#575279", "#575279"],  # 2 Foreground 0
+        ["#6e6a86", "#6e6a86"],  # 3 Foreground 1
+        ["#b4637a", "#b4637a"],  # 4 Red
+        ["#56949f", "#56949f"],  # 5 Green
+        ["#f6c177", "#f6c177"],  # 6 Yellow
+        ["#286983", "#286983"],  # 7 Blue
+        ["#d7827e", "#d7827e"],  # 8 Magenta
+        ["#9ccfd8", "#9ccfd8"],  # 9 Cyan
+        ["#ea9d34", "#ea9d34"],  # 10 Orange
+        ["#907aa9", "#907aa9"],  # 11 Violet
+    ]
 
 prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
 
@@ -581,8 +581,8 @@ widget_defaults = dict(
     font='Cartograph CF',
     fontsize=14,
     padding=4,
-    background='#191724',
-    foreground='#e0def4',
+    background='#faf4ed',
+    foreground='#575279',
 )
 
 extension_defaults = widget_defaults.copy()
@@ -866,8 +866,8 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
-    border_focus='ebbcba',
-    border_normal='191724',
+    border_focus='d7827e',
+    border_normal='faf4ed',
     border_width=4,
     fullscreen_border_width=0,
     float_rules=[
