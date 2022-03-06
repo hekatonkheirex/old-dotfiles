@@ -2,9 +2,9 @@
 #  double borders
 # needs chwb2 from wmutils/opt
 
-outer='0xfaf4ed'   # outer
-inner1='0x907aa9'  # focused
-inner2='0xe4dfde'  # normal
+outer='0x1c1e26'   # outer
+inner1='0x09f7a0'  # focused
+inner2='0x32343b'  # normal
 
 trap 'bspc config border_width 0; kill -9 -$$' INT TERM
 
