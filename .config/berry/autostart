@@ -1,0 +1,58 @@
+#!/bin/sh
+
+export EDITOR=nvim
+export QT_QPA_PLATFORMTHEME="qt5ct"
+export $DESKTOP_SESSION="berry"
+
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+
+fcitx5 &
+xinput --set-prop "ELAN1300:00 04F3:3087 Touchpad" "libinput Natural Scrolling Enabled" 1 &
+xsetroot -cursor_name left_ptr &
+$HOME/.config/polybar/berry-launch.sh &
+#nitrogen --restore &
+feh --bg-fill /mnt/windows/Walls/ev-U-8pVp66LOQ-unsplash.jpg
+picom -f -b --config /home/mura/.config/picom/picom_berry.conf &
+$HOME/.config/scripts/thunar.sh &
+xss-lock -l $HOME/.config/scripts/lock.sh &
+xfce4-power-manager &
+blueberry-tray &
+nm-applet &
+gnome-keyring-daemon --start --components=pkcs11 &
+
+sxhkd -c ~/.config/berry/sxhkdrc &
+
+[ "${1}" = "reload" ] && exit 0
+
+# Set decoration geometry
+berryc border_width       5
+berryc inner_border_width 3
+berryc title_height       30
+berryc top_gap            64
+
+# Set decoration colors
+berryc focus_color         09f7a0
+berryc unfocus_color       1c1e26
+berryc inner_focus_color   09f7a0
+berryc inner_unfocus_color d2d4de
+berryc text_focus_color    1c1e26
+berryc text_unfocus_color  d2d4de
+
+berryc name_desktop 0 "󰈹 "
+berryc name_desktop 1 "󰞷 "
+berryc name_desktop 2 "󰉋 "
+berryc name_desktop 3 "󱎒 "
+berryc name_desktop 4 "󰒓 "
+berryc name_desktop 5 "󰅶 "
+berryc name_desktop 6 "󰕧 "
+berryc name_desktop 7 "󰔀 "
+berryc name_desktop 8 "󰒗 "
+berryc name_desktop 9 "󰓇 "
+
+# Other options
+berryc smart_place "false"
+berryc draw_text   "true"
+berryc edge_lock   "true"
+berryc set_font    "Iosevka Extended-11"
