@@ -169,7 +169,7 @@ ctrl + alt + l
 
 # launch applications
 super + {b,a}
-	{google-chrome-stable,pcmanfm-qt}
+	{firefox,thunar}
 
 # multi-screen screenshot
 Print
