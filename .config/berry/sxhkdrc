@@ -10,6 +10,10 @@ super + Return
 super + d
 	rofi -show drun -no-default-config
 
+# eww sidebar
+super + s
+  $HOME/.config/eww/arin/sidedar/toggle_sidebar
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd

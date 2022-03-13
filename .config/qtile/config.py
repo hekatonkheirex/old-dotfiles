@@ -374,7 +374,7 @@ for i, name in enumerate(group_names, 1):
 # layout_theme = {
 #        "border_width": 4,
 #        "margin": 15,
-#        "border_focus": "ebbcba",
+#        "border_focus": "c4a7e7",
 #        "border_normal": "191724"
 #    }
 
@@ -544,19 +544,19 @@ layouts = [
 
 # Rose Pine
 # colors = [
-#        ["#191724", "#191724"],  # 0 Background 0
-#        ["#26233a", "#26233a"],  # 1 Background 1
-#        ["#e0def4", "#e0def4"],  # 2 Foreground 0
-#        ["#908caa", "#908caa"],  # 3 Foreground 1
-#        ["#eb6f92", "#eb6f92"],  # 4 Red
-#        ["#56949f", "#56949f"],  # 5 Green
-#        ["#f6c177", "#f6c177"],  # 6 Yellow
-#        ["#31748f", "#31748f"],  # 7 Blue
-#        ["#ebbcba", "#ebbcba"],  # 8 Magenta
-#        ["#9ccfd8", "#9ccfd8"],  # 9 Cyan
-#        ["#ea9d34", "#ea9d34"],  # 10 Orange
-#        ["#c4a7e7", "#c4a7e7"],  # 11 Violet
-#    ]
+#         ["#191724", "#191724"],  # 0 Background 0
+#         ["#26233a", "#26233a"],  # 1 Background 1
+#         ["#e0def4", "#e0def4"],  # 2 Foreground 0
+#         ["#908caa", "#908caa"],  # 3 Foreground 1
+#         ["#eb6f92", "#eb6f92"],  # 4 Red
+#         ["#56949f", "#56949f"],  # 5 Green
+#         ["#f6c177", "#f6c177"],  # 6 Yellow
+#         ["#31748f", "#31748f"],  # 7 Blue
+#         ["#ebbcba", "#ebbcba"],  # 8 Magenta
+#         ["#9ccfd8", "#9ccfd8"],  # 9 Cyan
+#         ["#ea9d34", "#ea9d34"],  # 10 Orange
+#         ["#c4a7e7", "#c4a7e7"],  # 11 Violet
+#     ]
 
 # Rose Pine Dawn
 colors = [

@@ -17,7 +17,7 @@ set $menu rofi -show drun -no-default-config
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg /mnt/windows/Walls/wallhaven-od9vlp.jpg fill
+output * bg /mnt/windows/Walls/mitul-grover-35pNWipUr04-unsplash.jpg fill
 
 #
 # Example configuration:
@@ -237,9 +237,9 @@ xwayland enable
 exec dunst &
 exec systemctl --user import-environment WAYLAND_DISPLAY
 
-client.focused          #907aa9 #907aa9 #907aa9 #907aa9 #907aa9
-client.unfocused        #faf4ed #faf4ed #faf4ed #faf4ed #faf4ed
-client.focused_inactive #e4dfde #e4dfde #e4dfde #e4dfde #e4dfde
+client.focused          #c4a7e7 #c4a7e7 #c4a7e7 #c4a7e7 #c4a7e7
+client.unfocused        #191724 #191724 #191724 #191724 #191724
+client.focused_inactive #26233a #26233a #26233a #26233a #26233a
 
 #
 # Status Bar:

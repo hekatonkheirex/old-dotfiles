@@ -10,9 +10,6 @@ vim.g.nord_borders = false
 vim.g.nord_disable_background = false
 vim.g.nord_italic = false
 vim.g.colors_name = 'dracula'
-vim.g.onedark_style = 'darker'
-vim.g.onedark_hide_endofbuffer = true
-vim.g.onedark_terminal_italics = true
 vim.g.sonokai_style = 'andromeda'
 vim.g.sonokai_enable_italic = true
 vim.g.sonokai_disable_italic_comment = true
@@ -29,7 +26,7 @@ vim.g.tokyonight_colors = { hint = 'orange', error = '#ff0000' }
 --vim.cmd('colorscheme everforest')
 --vim.cmd('colorscheme sonokai')
 --vim.cmd('colorscheme tokyonight')
-vim.cmd('colorscheme horizon')
+--vim.cmd('colorscheme horizon')
 --vim.cmd('colorscheme catppuccin')
---vim.cmd('colorscheme rose-pine')
+vim.cmd('colorscheme rose-pine')
 --vim.cmd('colorscheme monokai_soda')

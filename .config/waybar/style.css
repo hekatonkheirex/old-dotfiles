@@ -1,193 +1,133 @@
+#backlight, #battery, #cpu, #disk, #idle_inhibitor, #keyboard-state,
+#pulseaudio, #clock, #tags, #language, #memory, #network, #sndio,
+#mode, #window, #workspaces, #temperature, #taskbar, #workspaces,
+#custom-treefetch-downloads, #custom-update-count {
+  box-shadow: 4px 4px 0 #907aa9;
+  margin-bottom: 4px;
+  margin-right: 4px;
+  margin-left: 3px;
+  margin-right: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: #faf4ed;
+  border-radius: 0px;
+}
+
 * {
-    border: none;
-    border-radius: 0;
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Recursive Sans Casual Static, MaterialDesignIcons;
-    font-size: 14px;
-    min-height: 0;
-    margin: 0 0px;
+  min-height: 0;
 }
 
 window#waybar {
-    background-color: #faf4ed;
-    border-bottom: none;
-    color: #575279;
-    transition-property: background-color;
-    transition-duration: .5s;
+  background: transparent;
+  color: #907aa9;
 }
 
-window#waybar.hidden {
-    opacity: 0.2;
+.modules-left, .modules-center, .modules-right {
+  background: transparent;
+  margin-top: 0px;
+  border-radius: 0px;
+  font-family: "JetBrains Mono Nerd Font", monospace;
+  font-size: 15px;
+  font-weight: 500;
 }
 
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
-
-#workspaces button {
-    padding: 0 5px;
-    color: #575279;
-    border-radius: 5px;
-    /* background-color: transparent; 
-    border-bottom: 3px solid transparent;
-    */
+.modules-left {
+  margin-left: 2px;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-#workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
-    box-shadow: inherit;
-    border-bottom: none;
-    border-radius: 5px;
+.modules-right {
+  margin-right: 2px;
 }
 
-#workspaces button.focused {
-    background-color: #575279;
-    color: #faf4ed;
-    border-bottom: none;
-    border-radius: 5px;
+#mpd, #custom-mpd-song-scroll {
+  font-size: 11.5px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
 }
 
-#workspaces button.urgent {
-    background-color: #b4637a;
-}
-
-#mode {
-    background-color: #e4dfde;
-    border-bottom: 3px solid #575279;
-}
-
-#clock,
-#battery,
-#cpu,
-#memory,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
-#custom-media,
-#tray,
-#mode,
-#idle_inhibitor,
 #mpd {
-    padding: 0 14px;
-    margin: 0 0px;
-    color: #575279;
+  color: #faf4ed;
+  margin-left: 5px;
 }
 
-#clock {
-    color: #faf4ed;
-    background-color: #575279;
+#custom-mpd-song-scroll {
+  background: #6c5981;
+  color: #575279;
+  margin-right: 50px;
+  margin-bottom: 1px;
+  border-radius: 3px;
+  padding: 0 5px;
+  min-height: 18px;
 }
 
-#battery {
-    background-color: #575279;
-    color: #faf4ed;
+#tags button {
+  color: #907aa9;
+  font-family: "Source Han Sans JP";
+  font-weight: 700;
+  padding: 0 6px;
+  margin: 0 2px;
+  min-width: 26px;
+  font-size: 17px;
+  border-radius: 0;
+  border: none;
+  transition: none;
 }
 
-#battery.charging {
-    color: #faf4ed;
-    background-color: #575279;
+#tags button.occupied {
+  color: inherit;
 }
 
-@keyframes blink {
-    to {
-        background-color: #575279;
-        color: #faf4ed;
-    }
+#tags button:hover {
+  color: #faf4ed;
+  background: #907aa9;
+  box-shadow: none;
+  text-shadow: none;
+  transition: 0;
 }
 
-#battery.critical:not(.charging) {
-    background-color: #faf4ed;
-    color: #faf4ed;
-    animation-name: blink;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+#tags button.focused {
+  color: #faf4ed;
+  background: #907aa9;
 }
 
-label:focus {
-    background-color: #faf4ed;
+#tags button.urgent {
+  color: #b4637a;
 }
 
-#cpu {
-    background-color: #575279;
-    color: #faf4ed;
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+tooltip {
+  background: #faf4ed;
+  border-radius: 7px;
+  font-family: "JetBrains Mono Nerd Font", monospace;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 20px;
+  animation-name: fadein;
+  animation-duration: 0.2s;
+  border: 2px solid #907aa9;
+  text-shadow: none;
+  color: #907aa9;
 }
 
-#memory {
-    background-color: #575279;
-    color: #faf4ed;
+tooltip label {
+  color: #907aa9;
 }
 
-#backlight {
-    background-color: #575279;
-    color: #faf4ed;
-}
-
-#network {
-    background-color: #575279;
-    color: #faf4ed;
-    border-radius: 5px 0px 0px 5px;
-}
-
-#network.disconnected {
-    background-color: #575279;
-}
-
-#pulseaudio {
-    background-color: #575279;
-    color: #faf4ed;
-}
-
-#pulseaudio.muted {
-    background-color: #575279;
-    color: #faf4ed;
-}
-
-#custom-media {
-    background-color: #575279;
-    color: #faf4ed;
-    min-width: 100px;
-}
-
-#custom-media.custom-spotify {
-    background-color: #e4dfde;
-}
-
-#custom-media.custom-vlc {
-    background-color: #e4dfde;
-}
-
-#temperature {
-    background-color: #575279;
-    color: #faf4ed;
-}
-
-#temperature.critical {
-    background-color: #b4637a;
-}
-
-#tray {
-    background-color: #e4dfde;
-}
-
-#idle_inhibitor {
-    background-color: rgba(0, 0, 0, 0);
-    color: #575279;
-    border-radius: 5px;
-    margin-right: 2px;
-}
-
-#idle_inhibitor.activated {
-    background-color: #575279;
-    color: #faf4ed;
-    border-radius: 5px;
-    margin-right: 2px;
+#tray menu {
+  background: #faf4ed;
+  color: #907aa9;
+  border-radius: 5px;
+  border: 2px solid #907aa9;
+  padding: 4px 0;
+  font-family: "JetBrains Mono Nerd Font", monospace;
+  font-weight: 500;
+  font-size: 15px;
 }

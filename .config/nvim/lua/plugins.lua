@@ -45,7 +45,7 @@ return require('packer').startup(function()
 }
 
   -- Themes
-  use({ 'dracula/vim', as = 'dracula' })
+  use 'Mofiqul/dracula.nvim'
   use { "ellisonleao/gruvbox.nvim" }
   use 'shaunsingh/nord.nvim'
   use 'navarasu/onedark.nvim'
