@@ -17,14 +17,14 @@ configuration {
 }
 
 * {
-    font:                        "IBM Plex Sans 14";
+    font:                        "Cartograph CF 14";
 		spacing:                     0;
-    background:                  #faf4ed;
-    foreground:                  #575279;
-		lightbg:                     #e4dfde;
-    lightfg:                     #6e6a86;
-    red:                         #b4637a;
-    blue:                        #907aa9;
+    background:                  #232136;
+    foreground:                  #e0def4;
+		lightbg:                     #393552;
+    lightfg:                     #908caa;
+    red:                         #eb6f92;
+    blue:                        #c4a7e7;
 		text-color:                  var(foreground);
     selected-active-foreground:  var(blue);
     separatorcolor:              var(blackground);

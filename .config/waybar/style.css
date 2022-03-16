@@ -2,14 +2,14 @@
 #pulseaudio, #clock, #tags, #language, #memory, #network, #sndio,
 #mode, #window, #workspaces, #temperature, #taskbar, #workspaces,
 #custom-treefetch-downloads, #custom-update-count {
-  box-shadow: 4px 4px 0 #907aa9;
+  box-shadow: 4px 4px 0 #c4a7e7;
   margin-bottom: 4px;
   margin-right: 4px;
   margin-left: 3px;
   margin-right: 7px;
   padding-left: 10px;
   padding-right: 10px;
-  background: #faf4ed;
+  background: #232136;
   border-radius: 0px;
 }
 
@@ -19,7 +19,7 @@
 
 window#waybar {
   background: transparent;
-  color: #907aa9;
+  color: #c4a7e7;
 }
 
 .modules-left, .modules-center, .modules-right {
@@ -47,13 +47,13 @@ window#waybar {
 }
 
 #mpd {
-  color: #faf4ed;
+  color: #232136;
   margin-left: 5px;
 }
 
 #custom-mpd-song-scroll {
-  background: #6c5981;
-  color: #575279;
+  background: #9062c9;
+  color: #e0def4;
   margin-right: 50px;
   margin-bottom: 1px;
   border-radius: 3px;
@@ -62,7 +62,7 @@ window#waybar {
 }
 
 #tags button {
-  color: #907aa9;
+  color: #514c7d;
   font-family: "Source Han Sans JP";
   font-weight: 700;
   padding: 0 6px;
@@ -79,20 +79,20 @@ window#waybar {
 }
 
 #tags button:hover {
-  color: #faf4ed;
-  background: #907aa9;
+  color: #232136;
+  background: #514c7d;
   box-shadow: none;
   text-shadow: none;
   transition: 0;
 }
 
 #tags button.focused {
-  color: #faf4ed;
-  background: #907aa9;
+  color: #232136;
+  background: #c4a7e7;
 }
 
 #tags button.urgent {
-  color: #b4637a;
+  color: #eb6f92;
 }
 
 @keyframes fadein {
@@ -104,7 +104,7 @@ window#waybar {
   }
 }
 tooltip {
-  background: #faf4ed;
+  background: #232136;
   border-radius: 7px;
   font-family: "JetBrains Mono Nerd Font", monospace;
   font-weight: 500;
@@ -112,20 +112,20 @@ tooltip {
   padding: 20px;
   animation-name: fadein;
   animation-duration: 0.2s;
-  border: 2px solid #907aa9;
+  border: 2px solid #514c7d;
   text-shadow: none;
-  color: #907aa9;
+  color: #c4a7e7;
 }
 
 tooltip label {
-  color: #907aa9;
+  color: #c4a7e7;
 }
 
 #tray menu {
-  background: #faf4ed;
-  color: #907aa9;
+  background: #232136;
+  color: #c4a7e7;
   border-radius: 5px;
-  border: 2px solid #907aa9;
+  border: 2px solid #514c7d;
   padding: 4px 0;
   font-family: "JetBrains Mono Nerd Font", monospace;
   font-weight: 500;
