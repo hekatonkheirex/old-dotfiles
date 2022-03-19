@@ -21,7 +21,7 @@ xfce4-power-manager &
 blueberry-tray &
 nm-applet &
 #redshift &
-$HOME/.local/bin/borders &
+pkill $HOME/.local/bin/borders ; $HOME/.local/bin/borders &
 gnome-keyring-daemon --start --components=pkcs11 &
 
 pgrep -x sxhkd > /dev/null || sxhkd &

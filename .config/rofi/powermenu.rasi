@@ -2,7 +2,7 @@ configuration {
     show-icons: false;
   }
 * {
-    font:                        "Cartograph CF 14";
+    font:                        "Input Sans 14";
     spacing:                     0;
     background:                  #232136;
     foreground:                  #e0def4;
@@ -36,7 +36,7 @@ configuration {
 
 window {
     padding:          0px ;
-    width:            28.5% ;
+    width:            29.2% ;
     height:           6.5% ;
     children:         [ horibox ];
     location:         center;

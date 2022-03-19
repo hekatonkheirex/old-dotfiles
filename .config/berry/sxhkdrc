@@ -28,11 +28,11 @@ super + {h, j, k, l}
 super + shift +  {h, j, k, l}
     berryc window_resize {-50 0, 0 50, 0 -50, 50 0}
 
-super + {1-9,0}
-    berryc switch_workspace {0-9}
+super + {1-6}
+    berryc switch_workspace {1-6}
 
-super + shift + {1-9,0}
-    berryc send_to_workspace {0-9}
+super + shift + {1-6}
+    berryc send_to_workspace {1-6}
 
 super + m
     berryc window_monocle
@@ -57,6 +57,9 @@ super + w
 
 super + c
     berryc window_center
+
+super + shift + r
+    $HOME/.config/berry/autostart
 
 super + q
     berryc quit
