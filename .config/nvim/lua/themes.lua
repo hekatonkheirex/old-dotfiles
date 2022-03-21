@@ -27,6 +27,6 @@ vim.g.tokyonight_colors = { hint = 'orange', error = '#ff0000' }
 --vim.cmd('colorscheme sonokai')
 --vim.cmd('colorscheme tokyonight')
 --vim.cmd('colorscheme horizon')
---vim.cmd('colorscheme catppuccin')
-vim.cmd('colorscheme rose-pine')
+vim.cmd('colorscheme catppuccin')
+--vim.cmd('colorscheme rose-pine')
 --vim.cmd('colorscheme monokai_soda')

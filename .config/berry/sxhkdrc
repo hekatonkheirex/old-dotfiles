@@ -28,11 +28,11 @@ super + {h, j, k, l}
 super + shift +  {h, j, k, l}
     berryc window_resize {-50 0, 0 50, 0 -50, 50 0}
 
-super + {1-6}
-    berryc switch_workspace {1-6}
+super + {1-9}
+    berryc switch_workspace {1-9}
 
-super + shift + {1-6}
-    berryc send_to_workspace {1-6}
+super + shift + {1-9}
+    berryc send_to_workspace {1-9}
 
 super + m
     berryc window_monocle

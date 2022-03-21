@@ -363,12 +363,12 @@ for i, name in enumerate(group_names, 1):
 # }
 
 # Catppuccin
-# layout_theme = {
-#        "border_width": 4,
-#        "margin": 15,
-#        "border_focus": "c9cbff",
-#        "border_normal": "1E1D2F"
-#    }
+layout_theme = {
+        "border_width": 4,
+        "margin": 15,
+        "border_focus": "c9cbff",
+        "border_normal": "1E1D2F"
+    }
 
 # Rose Pine
 # layout_theme = {
@@ -379,12 +379,12 @@ for i, name in enumerate(group_names, 1):
 #    }
 
 # Rose Pine Dawn
-layout_theme = {
-        "border_width": 4,
-        "margin": 15,
-        "border_focus": "c4a7e7",
-        "border_normal": "232136"
-    }
+# layout_theme = {
+#        "border_width": 4,
+#        "margin": 15,
+#        "border_focus": "c4a7e7",
+#        "border_normal": "232136"
+#    }
 
 # Rose Pine Dawn
 # layout_theme = {
@@ -396,8 +396,8 @@ layout_theme = {
 
 layouts = [
     layout.MonadTall(
-        border_focus='c4a7e7',
-        border_normal='232136',
+        border_focus='c9cbff',
+        border_normal='1E1D2F',
         border_width=4,
         margin=15,
         ratio=0.52,
@@ -409,8 +409,8 @@ layouts = [
         **layout_theme
     ),
     layout.Floating(
-        border_focus='ea9a97',
-        border_normal='232136',
+        border_focus='f5c2e7',
+        border_normal='1E1D2F',
         border_width=4,
         fullscreen_border_width=0,
     ),
@@ -535,20 +535,20 @@ layouts = [
 #         ]
 
 # Catppuccin
-# colors = [
-#        ["#1E1D2F", "#1E1D2F"],  # 0 Background 0
-#        ["#302D41", "#302D41"],  # 1 Background 1
-#        ["#d9e0ee", "#d9e0ee"],  # 2 Foreground 0
-#        ["#c3bac6", "#c3bac6"],  # 3 Foreground 1
-#        ["#f28fad", "#f28fad"],  # 4 Red
-#        ["#abe9b3", "#abe9b3"],  # 5 Green
-#        ["#fae3b0", "#fae3b0"],  # 6 Yellow
-#        ["#96cdfb", "#96cdfb"],  # 7 Blue
-#        ["#f5c2e7", "#f5c2e7"],  # 8 Magenta
-#        ["#b5e8e0", "#b5e8e0"],  # 9 Cyan
-#        ["#f8bd96", "#f8db96"],  # 10 Orange
-#        ["#c9cbff", "#c9cbff"],  # 11 Violet
-#    ]
+colors = [
+        ["#1E1D2F", "#1E1D2F"],  # 0 Background 0
+        ["#302D41", "#302D41"],  # 1 Background 1
+        ["#d9e0ee", "#d9e0ee"],  # 2 Foreground 0
+        ["#c3bac6", "#c3bac6"],  # 3 Foreground 1
+        ["#f28fad", "#f28fad"],  # 4 Red
+        ["#abe9b3", "#abe9b3"],  # 5 Green
+        ["#fae3b0", "#fae3b0"],  # 6 Yellow
+        ["#96cdfb", "#96cdfb"],  # 7 Blue
+        ["#f5c2e7", "#f5c2e7"],  # 8 Magenta
+        ["#b5e8e0", "#b5e8e0"],  # 9 Cyan
+        ["#f8bd96", "#f8db96"],  # 10 Orange
+        ["#c9cbff", "#c9cbff"],  # 11 Violet
+    ]
 
 # Rose Pine
 # colors = [
@@ -567,20 +567,20 @@ layouts = [
 #     ]
 
 # Rose Pine
-colors = [
-         ["#232136", "#232136"],  # 0 Background 0
-         ["#393552", "#393552"],  # 1 Background 1
-         ["#e0def4", "#e0def4"],  # 2 Foreground 0
-         ["#908caa", "#908caa"],  # 3 Foreground 1
-         ["#eb6f92", "#eb6f92"],  # 4 Red
-         ["#56949f", "#56949f"],  # 5 Green
-         ["#f6c177", "#f6c177"],  # 6 Yellow
-         ["#3e8fb0", "#3e8fb0"],  # 7 Blue
-         ["#ea9a97", "#ea9a97"],  # 8 Magenta
-         ["#9ccfd8", "#9ccfd8"],  # 9 Cyan
-         ["#ea9d34", "#ea9d34"],  # 10 Orange
-         ["#c4a7e7", "#c4a7e7"],  # 11 Violet
-     ]
+# colors = [
+#         ["#232136", "#232136"],  # 0 Background 0
+#         ["#393552", "#393552"],  # 1 Background 1
+#         ["#e0def4", "#e0def4"],  # 2 Foreground 0
+#         ["#908caa", "#908caa"],  # 3 Foreground 1
+#         ["#eb6f92", "#eb6f92"],  # 4 Red
+#         ["#56949f", "#56949f"],  # 5 Green
+#         ["#f6c177", "#f6c177"],  # 6 Yellow
+#         ["#3e8fb0", "#3e8fb0"],  # 7 Blue
+#         ["#ea9a97", "#ea9a97"],  # 8 Magenta
+#         ["#9ccfd8", "#9ccfd8"],  # 9 Cyan
+#         ["#ea9d34", "#ea9d34"],  # 10 Orange
+#         ["#c4a7e7", "#c4a7e7"],  # 11 Violet
+#     ]
 
 # Rose Pine Dawn
 # colors = [
@@ -602,11 +602,11 @@ prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
 
 # Widgets definitions
 widget_defaults = dict(
-    font='Cartograph CF',
+    font='InputMono',
     fontsize=14,
     padding=4,
-    background='#232136',
-    foreground='#e0def4',
+    background='#1E1D2F',
+    foreground='#d9e0ee',
 )
 
 extension_defaults = widget_defaults.copy()
@@ -890,8 +890,8 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
-    border_focus='d7827e',
-    border_normal='faf4ed',
+    border_focus='f5c2e7',
+    border_normal='1E1D2F',
     border_width=4,
     fullscreen_border_width=0,
     float_rules=[

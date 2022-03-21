@@ -7,4 +7,6 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch bars
-polybar -rq base -c ~/.config/polybar/i3config.ini &
+polybar -rq i3 -c ~/.config/polybar/i3config.ini &
+polybar -rq spotify -c ~/.config/polybar/i3config.ini &
+polybar -rq info -c ~/.config/polybar/i3config.ini &

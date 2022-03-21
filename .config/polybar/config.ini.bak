@@ -17,46 +17,46 @@ margin-top = 0
 #include-file = ~/.config/polybar/rosepine.ini
 include-file = ~/.config/polybar/rosepinemoon.ini
 #include-file = ~/.config/polybar/rosepinedawn.ini
-include-file = ~/.config/polybar/berry-modules.ini
-include-file = ~/.config/polybar/berry-user_modules.ini
+include-file = ~/.config/polybar/modules.ini
+include-file = ~/.config/polybar/user_modules.ini
 
 [bar/base]
 override-redirect = true
-height = 40
+height = 35
 width = 98%
-offset-x = 10
-#offset-y = 10
+offset-x = 20
+#offset-y = 5
 background = ${color.bg0}
-#wm-restack = bspwm
+wm-restack = bspwm
 enable-ipc = true
-#border-size = 2
-#border-color = ${color.bg0}
-#line-size = 2
-#line-color = ${color.green}
+border-size = 2
+border-color = ${color.bg0}
+line-size = 2
+line-color = ${color.green}
 #fixed-center = false
-#radius-top = 10
+#radius-top = 15
 radius-bottom = 15
-#tray-position = right
-#tray-detached = true
-#tray-offset-x = -14%
-#tray-padding = 1
 
 #font-0 = "Fira Sans:style=Bold:size=10;2"
 #font-0 = "SF Pro Display:style=Bold:size=10;2"
 #font-0 = "Recursive Sans Casual Static:style=Bold:size=12;1"
 #font-0 = "Cartograph CF:size=11;1"
-font-0 = "InputMono:style=Bold:size=11;2"
-font-1 = "Material Design Icons:size=14;2"
+font-0 = "InputMono:style=Bold:size=11;1"
+#font-0 = "JetBrains Mono:style=Bold:size=11;2"
+#font-0 = "IBM Plex Mono:style=Bold:size=12;2"
+#font-0 = "Iosevka Extended:style=Bold:size=12;2"
+font-1 = "Material Design Icons:size=15;2"
 font-2 = "Feather:size=14;3"
 font-3 = "Weather Icons:size=13;2"
 #font-4 = "Source Han Sans JP:style=Bold:size=10;1"
-font-4 = "Stick:style=Bold:size=12;1"
+#font-4 = "Stick:style=Bold:size=12;1"
+font-4 = "IBM Plex Sans JP:style=Bold:size=12;1"
 font-5 = "Noto Color Emoji:scale=9;2"
 font-6 = "Iosevka Nerd Font:size=16;4"
 
-modules-left = sep workspaces dot previous playpause next spotlogo spotify
+modules-left = sep bspwm dot previous playpause next spotlogo spotify
 modules-center =
-modules-right = cpu memory dot pulseaudio dot cal weather weather2 dot tray sep
+modules-right = cpu memory dot pulseaudio battery dot cal weather weather2 sep tray sep
 
 scroll-down = bspwm-wsprev
 

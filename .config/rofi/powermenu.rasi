@@ -4,12 +4,12 @@ configuration {
 * {
     font:                        "Input Sans 14";
     spacing:                     0;
-    background:                  #232136;
-    foreground:                  #e0def4;
-    lightbg:                     #393552;
-    lightfg:                     #908caa;
-    red:                         #eb6f92;
-    blue:                        #c4a7e7;
+    background:                  #1e1d2f;
+    foreground:                  #d9e0ee;
+    lightbg:                     #302d41;
+    lightfg:                     #c3bac6;
+    red:                         #f28fad;
+    blue:                        #c9cbff;
     text-color:                  var(foreground);
     selected-active-foreground:  var(blue);
     separatorcolor:              var(blackground);

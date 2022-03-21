@@ -8,6 +8,6 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch bars
 polybar -rq base -c ~/.config/polybar/berry-config.ini &
-polybar -rq left -c ~/.config/polybar/berry-config.ini &
+#polybar -rq left -c ~/.config/polybar/berry-config.ini &
 #polybar -rq middle -c ~/.config/polybar/berry-config.ini &
-polybar -rq right -c ~/.config/polybar/berry-config.ini &
+#polybar -rq right -c ~/.config/polybar/berry-config.ini &
