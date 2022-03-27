@@ -1,0 +1,12 @@
+/home/mura/eww/target/release/deps/proc_macro2-e4c7ec3e09a1f2fe.rmeta: /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.32/src/lib.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.32/src/marker.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.32/src/parse.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.32/src/detection.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.32/src/fallback.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.32/src/wrapper.rs
+
+/home/mura/eww/target/release/deps/libproc_macro2-e4c7ec3e09a1f2fe.rlib: /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.32/src/lib.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.32/src/marker.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.32/src/parse.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.32/src/detection.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.32/src/fallback.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.32/src/wrapper.rs
+
+/home/mura/eww/target/release/deps/proc_macro2-e4c7ec3e09a1f2fe.d: /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.32/src/lib.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.32/src/marker.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.32/src/parse.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.32/src/detection.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.32/src/fallback.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.32/src/wrapper.rs
+
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.32/src/lib.rs:
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.32/src/marker.rs:
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.32/src/parse.rs:
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.32/src/detection.rs:
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.32/src/fallback.rs:
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.32/src/wrapper.rs:

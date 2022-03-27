@@ -1,23 +1,11 @@
-// Angelo's Waybar config
-// https://github.com/angelofallars/dotfiles
-
 {
     "layer": "bottom",
     "height": 34,
     "spacing": 0,
     "margin-top": 4,
 
-    // If you're using sway, replace `river/tags` with `sway/workspaces` .
-
-    "modules-left": ["river/tags"],
-    "modules-right": ["tray", "custom/update-count", "pulseaudio", "battery", "clock#date", "clock"],
-
-    "group/mpd": {
-        "modules": [
-            "custom/mpd-song-scroll",
-            "mpd",
-        ]
-    },
+    "modules-left": ["river/tags", "sway/workspaces", "sway/mode"],
+    "modules-right": ["tray", "idle_inhibitor", "pulseaudio", "battery", "clock#date", "clock"],
 
     "river/tags": {
         "num-tags": 5,
@@ -26,31 +14,28 @@
            ]
     },
 
-    "mpd": {
-        "format": "{stateIcon} {elapsedTime:%M:%S}/{totalTime:%M:%S} {repeatIcon}{singleIcon}{randomIcon}{consumeIcon}                         ",
-        "format-stopped": "",
-        "interval": 1,
-        "state-icons": {
-            "paused": "▶️",
-            "playing": "⏸"
-        },
+    "sway/workspaces": {
+         "disable-scroll": true,
+         "all-outputs": true,
+         "persistent_workspaces": {
+           "1": [],
+           "2": [],
+           "3": [],
+           "4": [],
+           "5": []
+           },
+         "format": "{icon}",
+         "format-icons": {
+             "1": "󰋜",
+             "2": "󰞷",
+             "3": "󰉋",
+             "4": "󰒗",
+             "5": "󰓇"
+         }
+    },
 
-        "consume-icons": {
-            "off": "<span color='#919191'> </span>",
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color='#919191'> </span>",
-            "on": " "
-        },
-        "repeat-icons": {
-            "off": "<span color='#919191'> </span>",
-            "on": " "
-        },
-        "single-icons": {
-            "off": "<span color='#919191'> </span>",
-            "on": " "
-        },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
     },
 
     "tray": {
@@ -58,9 +43,17 @@
         "spacing": 5
     },
 
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "󰈈",
+            "deactivated": "󰈉"
+        }
+    },
+
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "󰥔 {:%I:%M %p}",
+        "format": "󰥔 {:%H:%M}",
     },
 
     "clock#date": {
@@ -104,28 +97,5 @@
         "on-click": "pavucontrol"
     },
 
-    // Need mpd installed for this to work
-    "custom/mpd-song-scroll": {
-        "format": "{}",
-        "max-length": 80,
-        "escape": true,
-        "exec":  "~/.config/waybar/scripts/mpd_song_scroll"
-    },
-
-    // List the downloads for a specific Github repo
-    "custom/treefetch-downloads": {
-        "format": "🍕 <span underline='single'>treefetch</span> {} downloads",
-        "interval": 240,
-        "escape": true,
-        "exec":  "~/.config/waybar/scripts/downloads angelofallars treefetch"
-    },
-
-    "custom/update-count": {
-        "format": "{}",
-        "interval": 60,
-        "escape": true,
-        "exec":  "~/.config/waybar/scripts/arch_updates",
-        "on-click": "~/.config/waybar/scripts/notify_arch_updates"
-    },
 }
 

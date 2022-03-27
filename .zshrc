@@ -90,6 +90,7 @@ plugins=(
 	systemd
 	themes
 	zsh-interactive-cd
+  zsh-z
 	)
 
 source $ZSH/oh-my-zsh.sh
@@ -127,6 +128,7 @@ alias update="paru"
 alias n="nvim"
 
 autoload -U compinit && compinit
+zstyle ':completion:*' menu select
 
 export VDPAU_DRIVER=radeonsi
 export LIBVA_DRIVER_NAME=radeonsi

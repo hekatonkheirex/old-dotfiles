@@ -1,0 +1,11 @@
+/home/mura/eww/target/release/deps/unicode_segmentation-baeea2b463e60aaa.rmeta: /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-segmentation-1.8.0/src/lib.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-segmentation-1.8.0/src/grapheme.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-segmentation-1.8.0/src/tables.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-segmentation-1.8.0/src/word.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-segmentation-1.8.0/src/sentence.rs
+
+/home/mura/eww/target/release/deps/libunicode_segmentation-baeea2b463e60aaa.rlib: /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-segmentation-1.8.0/src/lib.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-segmentation-1.8.0/src/grapheme.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-segmentation-1.8.0/src/tables.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-segmentation-1.8.0/src/word.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-segmentation-1.8.0/src/sentence.rs
+
+/home/mura/eww/target/release/deps/unicode_segmentation-baeea2b463e60aaa.d: /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-segmentation-1.8.0/src/lib.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-segmentation-1.8.0/src/grapheme.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-segmentation-1.8.0/src/tables.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-segmentation-1.8.0/src/word.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-segmentation-1.8.0/src/sentence.rs
+
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-segmentation-1.8.0/src/lib.rs:
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-segmentation-1.8.0/src/grapheme.rs:
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-segmentation-1.8.0/src/tables.rs:
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-segmentation-1.8.0/src/word.rs:
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-segmentation-1.8.0/src/sentence.rs:

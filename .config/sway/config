@@ -16,8 +16,8 @@ set $menu rofi -show drun -no-default-config
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-#output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg /mnt/windows/Walls/mitul-grover-35pNWipUr04-unsplash.jpg fill
+output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+#output * bg /mnt/windows/Walls/wallhaven-2e85z6.jpg fill
 
 #
 # Example configuration:
@@ -64,11 +64,11 @@ exec_always /home/mura/.config/scripts/swaylid.sh
       middle_emulation enabled
   }
 
-input "type:keyboard" {
-    xkb_layout us,es
-    xkb_variant ,nodeadkeys
-    xkb_options grp:alt_shift_toggle
-}
+#input "type:keyboard" {
+#    xkb_layout us,es
+#    xkb_variant ,nodeadkeys
+#    xkb_options grp:alt_shift_toggle
+#}
 
 seat seat0 xcursor_theme "Dracula-cursors"
 
@@ -89,17 +89,18 @@ seat seat0 xcursor_theme "Dracula-cursors"
     # Start your launcher
     bindsym $mod+d exec $menu
 
-    bindsym $mod+b exec google-chrome-stable
+    bindsym $mod+b exec firefox
 
     bindsym $mod+escape exec 'grim /tmp/screen.png; corrupter /tmp/screen.png /tmp/screen.png; swaylock -fi /tmp/screen.png --effect-vignette 0.5:0.5 --clock --indicator-radius 100 --indi    cator-thickness 7  --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --fade-in 0.2'
 
     bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym XF86MonBrightnessUp exec brightnessctl set +5%
-    bindsym XF86AudioMute exec pamixer -t
-    bindsym XF86AudioLowerVolume exec pamixer -d 5
-    bindsym XF86AudioRaiseVolume exec pamixer -i 5
+    bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
+    bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -10%
+    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +10%
 
-    bindsym Print exec /home/mura/.config/scripts/screenshot
+    bindsym Print exec /home/mura/.config/scripts/screenshot.sh
+    bindsym Print+Shift exec /home/mura/.config/scripts/screenshot_slurp.sh
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -146,22 +147,12 @@ seat seat0 xcursor_theme "Dracula-cursors"
     bindsym $mod+3 workspace number 3
     bindsym $mod+4 workspace number 4
     bindsym $mod+5 workspace number 5
-    bindsym $mod+6 workspace number 6
-    bindsym $mod+7 workspace number 7
-    bindsym $mod+8 workspace number 8
-    bindsym $mod+9 workspace number 9
-    bindsym $mod+0 workspace number 10
     # Move focused container to workspace
     bindsym $mod+Shift+1 move container to workspace number 1
     bindsym $mod+Shift+2 move container to workspace number 2
     bindsym $mod+Shift+3 move container to workspace number 3
     bindsym $mod+Shift+4 move container to workspace number 4
     bindsym $mod+Shift+5 move container to workspace number 5
-    bindsym $mod+Shift+6 move container to workspace number 6
-    bindsym $mod+Shift+7 move container to workspace number 7
-    bindsym $mod+Shift+8 move container to workspace number 8
-    bindsym $mod+Shift+9 move container to workspace number 9
-    bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 #
@@ -226,7 +217,8 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-default_border pixel 1
+default_border pixel 4
+for_window [class=".*"] border pixel 4
 default_floating_border none 
 smart_gaps on
 gaps inner 10
@@ -237,27 +229,9 @@ xwayland enable
 exec dunst &
 exec systemctl --user import-environment WAYLAND_DISPLAY
 
-client.focused          #c4a7e7 #c4a7e7 #c4a7e7 #c4a7e7 #c4a7e7
-client.unfocused        #191724 #191724 #191724 #191724 #191724
-client.focused_inactive #26233a #26233a #26233a #26233a #26233a
-
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-#bar {
-#    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-#    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
-
-#    colors {
-#        statusline #f8f8f2
-#        background #282a36
-#        inactive_workspace #32323200 #32323200 #5c5c5c
-#    }
-#}
+client.focused          #907aa9 #907aa9 #907aa9 #907aa9 #907aa9
+client.unfocused        #faf4ed #faf4ed #faf4ed #faf4ed #faf4ed
+client.focused_inactive #e4dfde #e4dfde #e4dfde #e4dfde #e4dfde
 
 bar {
     swaybar_command waybar
@@ -278,17 +252,18 @@ for_window [class="Google-chrome"] move to workspace 1
 for_window [app_id="Alacritty"] move to workspace 2
 for_window [app_id="kitty"] move to workspace 2
 for_window [app_id="Pcmanfm"] move to workspace 3
-for_window [app_id="libreoffice-writer"] move to workspace 4
-for_window [app_id="libreoffice-calc"] move to workspace 4
-for_window [app_id="libreoffice-impress"] move to workspace 4
-for_window [app_id="qBittorrent"] move to workspace 6
-for_window [app_id="discord"] move to workspace 7
-for_window [app_id="TeamViewer"] move to workspace 8
-for_window [app_id="AnyDesk"] move to workspace 8
-for_window [app_id="mpv"] move to workspace 9
-for_window [class="Spotify"] move to workspace 10
+for_window [app_id="libreoffice-writer"] move to workspace 3
+for_window [app_id="libreoffice-calc"] move to workspace 3
+for_window [app_id="libreoffice-impress"] move to workspace 3
+for_window [app_id="qBittorrent"] move to workspace 4
+for_window [app_id="discord"] move to workspace 4
+for_window [app_id="TeamViewer"] move to workspace 4
+for_window [app_id="AnyDesk"] move to workspace 4
+for_window [class="Spotify"] move to workspace 5
 
 exec_always blueberry-tray &
 exec_always gnome-keyring-daemon --start --components=pkcs11 &
+exec_always --no-startup-id autotiling
+exec --no-startup-id fcitx5 -d
 
 include /etc/sway/config.d/*

@@ -1,0 +1,13 @@
+/home/mura/eww/target/release/deps/cfg_expr-d6a3e102d4212a26.rmeta: /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-expr-0.8.1/src/lib.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-expr-0.8.1/src/error.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-expr-0.8.1/src/expr.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-expr-0.8.1/src/expr/lexer.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-expr-0.8.1/src/expr/parser.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-expr-0.8.1/src/targets.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-expr-0.8.1/src/targets/builtins.rs
+
+/home/mura/eww/target/release/deps/libcfg_expr-d6a3e102d4212a26.rlib: /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-expr-0.8.1/src/lib.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-expr-0.8.1/src/error.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-expr-0.8.1/src/expr.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-expr-0.8.1/src/expr/lexer.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-expr-0.8.1/src/expr/parser.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-expr-0.8.1/src/targets.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-expr-0.8.1/src/targets/builtins.rs
+
+/home/mura/eww/target/release/deps/cfg_expr-d6a3e102d4212a26.d: /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-expr-0.8.1/src/lib.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-expr-0.8.1/src/error.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-expr-0.8.1/src/expr.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-expr-0.8.1/src/expr/lexer.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-expr-0.8.1/src/expr/parser.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-expr-0.8.1/src/targets.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-expr-0.8.1/src/targets/builtins.rs
+
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-expr-0.8.1/src/lib.rs:
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-expr-0.8.1/src/error.rs:
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-expr-0.8.1/src/expr.rs:
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-expr-0.8.1/src/expr/lexer.rs:
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-expr-0.8.1/src/expr/parser.rs:
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-expr-0.8.1/src/targets.rs:
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-expr-0.8.1/src/targets/builtins.rs:

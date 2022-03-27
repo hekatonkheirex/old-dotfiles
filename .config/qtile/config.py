@@ -238,7 +238,7 @@ keys = [
 groups = []
 
 group_names = 'www term file doc bit chat share vid mus'.split()
-group_labels = ["一", "二", "三", "四", "五", "六", "七", "八", "九"]
+group_labels = ["", "", "", "", "", "", "", "", ""]
 group_layouts = [
         "monadtall", "tile", "max", "max", "max", "max", "floating",
         "floating", "max"
@@ -625,13 +625,13 @@ screens = [
                     block_highlight_text_color=colors[0],
                     borderwidth=2,
                     disable_drag=True,
-                    font='Stick',
+                    font='Font Awesome 6 Pro',
                     fontsize=16,
                     hide_unused=False,
-                    # highlight_color='00000000',
-                    highlight_color=colors[11],
-                    # highlight_method='text',
-                    highlight_method='block',
+                    highlight_color='00000000',
+                    # highlight_color=colors[11],
+                    highlight_method='text',
+                    # highlight_method='block',
                     inactive=colors[1],
                     padding=1,
                     rounded=True,
@@ -673,7 +673,8 @@ screens = [
                     foreground=colors[0],
                 ),
                 widget.TextBox(
-                    text='󰃭',
+                    text='',
+                    font='Font Awesome 6 Pro',
                     fontsize=14,
                     padding=1,
                     foreground=colors[8],
@@ -725,7 +726,8 @@ screens = [
         bottom=bar.Bar(
             [
                 widget.TextBox(
-                    text='󰀂',
+                    text='',
+                    font='Font Awesome 6 Pro',
                     fontsize=14,
                     padding=1,
                     foreground=colors[8]
@@ -744,7 +746,8 @@ screens = [
                     foreground=colors[0],
                 ),
                 widget.TextBox(
-                    text='󰻠',
+                    text='',
+                    font='Font Awesome 6 Pro',
                     fontsize=14,
                     padding=4,
                     foreground=colors[8],
@@ -758,7 +761,8 @@ screens = [
                     foreground=colors[0],
                 ),
                 widget.TextBox(
-                    text='󰍛',
+                    text='',
+                    font = 'Font Awesome 6 Pro',
                     fontsize=14,
                     padding=1,
                     foreground=colors[8],
@@ -774,7 +778,8 @@ screens = [
                     foreground=colors[0],
                 ),
                 widget.TextBox(
-                    text='󰔏',
+                    text='',
+                    font='Font Awesome 6 Pro',
                     fontsize=14,
                     padding=1,
                     foreground=colors[8],
@@ -785,8 +790,9 @@ screens = [
                 widget.Spacer(
                 ),
                 widget.TextBox(
-                    text='󰓇',
-                    fontsize=14,
+                    text='',
+                    font='Font Awesome 6 Brands',
+                    fontsize=16,
                     padding=1,
                     foreground=colors[5],
                 ),
@@ -802,7 +808,8 @@ screens = [
                 widget.Spacer(
                 ),
                 widget.TextBox(
-                    text='󰏗',
+                    text='',
+                    font='Font Awesome 6 Pro',
                     fontsize=14,
                     padding=1,
                     foreground=colors[8]
@@ -823,7 +830,8 @@ screens = [
                     foreground=colors[0],
                 ),
                 widget.TextBox(
-                    text='󰛩',
+                    text='',
+                    font='Font Awesome 6 Pro',
                     fontsize=14,
                     padding=1,
                     foreground=colors[8],
@@ -838,7 +846,8 @@ screens = [
                     foreground=colors[0],
                 ),
                 widget.TextBox(
-                    text='󰕾',
+                    text='',
+                    font='Font Awesome 6 Pro',
                     fontsize=14,
                     padding=1,
                     foreground=colors[8],

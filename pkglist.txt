@@ -25,9 +25,9 @@ bison
 blueberry
 bluez
 bluez-utils
-brave-bin
 brightnessctl
 bspwm
+calcurse
 catppuccin-gtk-theme
 cava
 cnrdrvcups-lb
@@ -98,10 +98,10 @@ linux-firmware
 linux-headers
 lxappearance-gtk3
 m4
+maim
 make
 mesa-utils
 mesa-vdpau
-microsoft-edge-stable-bin
 mpv
 mtools
 neofetch
@@ -138,6 +138,7 @@ playerctl
 polkit-gnome
 polybar-git
 popsicle
+powertop
 python-dbus-next
 python-iwlib
 python-keyring
@@ -175,7 +176,6 @@ swayidle
 swaylock
 sxhkd
 tamsyn-font
-teamviewer
 terminus-font
 tex-gyre-fonts
 texinfo
@@ -187,6 +187,7 @@ thunar-secure-delete
 thunar-shares-plugin
 thunar-vcs-plugin
 thunar-volman
+todotxt
 ttf-anonymous-pro
 ttf-bitstream-vera
 ttf-cascadia-code
@@ -222,8 +223,6 @@ unrar
 unzip
 vdhcoapp-bin
 vdpauinfo
-vivaldi
-vivaldi-ffmpeg-codecs
 w3m
 waybar
 which
@@ -232,6 +231,7 @@ wmctrl
 wmutils-git
 wpa_supplicant
 xarchiver
+xclip
 xdg-user-dirs
 xdg-utils
 xdotool

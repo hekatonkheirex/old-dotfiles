@@ -9,7 +9,7 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
 fcitx5 &
-
+#eww -c $HOME/.config/eww/bar open bar &
 xinput --set-prop "ELAN1300:00 04F3:3087 Touchpad" "libinput Natural Scrolling Enabled" 1 &
 xsetroot -cursor_name left_ptr &
 $HOME/.config/polybar/launch.sh &
@@ -23,6 +23,8 @@ nm-applet &
 #redshift &
 pkill $HOME/.local/bin/borders ; $HOME/.local/bin/borders &
 gnome-keyring-daemon --start --components=pkcs11 &
+#spotify &
+wmctrl -r Spotify -t 4
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
@@ -134,3 +136,5 @@ bspc rule -a Thunar desktop='^3' follow=on
 bspc rule -a Pcmanfm desktop='^3' follow=on
 bspc rule -a mpv state=floating follow=on focus=on
 bspc rule -a Galculator state=floating
+
+bspc config external_rules_command "$HOME/.config/bspwm/scripts/spotify.sh"

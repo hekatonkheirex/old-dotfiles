@@ -1,0 +1,12 @@
+/home/mura/eww/target/release/deps/proc_macro_error-c442daf11246db28.rmeta: /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.4/src/lib.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.4/src/dummy.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.4/src/diagnostic.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.4/src/macros.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.4/src/sealed.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.4/src/imp/delegate.rs
+
+/home/mura/eww/target/release/deps/libproc_macro_error-c442daf11246db28.rlib: /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.4/src/lib.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.4/src/dummy.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.4/src/diagnostic.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.4/src/macros.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.4/src/sealed.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.4/src/imp/delegate.rs
+
+/home/mura/eww/target/release/deps/proc_macro_error-c442daf11246db28.d: /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.4/src/lib.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.4/src/dummy.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.4/src/diagnostic.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.4/src/macros.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.4/src/sealed.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.4/src/imp/delegate.rs
+
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.4/src/lib.rs:
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.4/src/dummy.rs:
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.4/src/diagnostic.rs:
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.4/src/macros.rs:
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.4/src/sealed.rs:
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro-error-1.0.4/src/imp/delegate.rs:

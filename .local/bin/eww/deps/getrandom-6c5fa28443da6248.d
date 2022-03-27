@@ -1,0 +1,13 @@
+/home/mura/eww/target/release/deps/getrandom-6c5fa28443da6248.rmeta: /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.3/src/lib.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.3/src/error.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.3/src/util.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.3/src/error_impls.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.3/src/util_libc.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.3/src/use_file.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.3/src/linux_android.rs
+
+/home/mura/eww/target/release/deps/libgetrandom-6c5fa28443da6248.rlib: /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.3/src/lib.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.3/src/error.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.3/src/util.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.3/src/error_impls.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.3/src/util_libc.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.3/src/use_file.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.3/src/linux_android.rs
+
+/home/mura/eww/target/release/deps/getrandom-6c5fa28443da6248.d: /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.3/src/lib.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.3/src/error.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.3/src/util.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.3/src/error_impls.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.3/src/util_libc.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.3/src/use_file.rs /home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.3/src/linux_android.rs
+
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.3/src/lib.rs:
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.3/src/error.rs:
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.3/src/util.rs:
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.3/src/error_impls.rs:
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.3/src/util_libc.rs:
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.3/src/use_file.rs:
+/home/mura/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.3/src/linux_android.rs:
