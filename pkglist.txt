@@ -18,7 +18,6 @@ base
 bash-completion
 bat
 bdf-unifont
-berry-git
 betterlockscreen-git
 bind
 bison
@@ -43,6 +42,7 @@ dunst
 dupeguru
 efibootmgr
 emptty
+eww-git
 exa
 fakeroot
 fcitx5
@@ -157,7 +157,6 @@ raw-thumbnailer
 redshift
 reflector
 ripgrep
-river
 rofi
 rsync
 rtmpdump

@@ -43,9 +43,21 @@ return require('packer').startup(function()
 		  }
 		end
 	}
-use 'elkowar/yuck.vim'
-
-
+  use {
+    'lewis6991/gitsigns.nvim',
+    requires = {'nvim-lua/plenary.nvim'},
+    config = function()
+      require('gitsigns').setup {current_line_blame = true,
+      yadm = {
+        enable = true
+      }
+    }
+    end
+  }
+  use 'glepnir/dashboard-nvim'
+  use 'lukas-reineke/indent-blankline.nvim'
+  use 'terrortylor/nvim-comment'
+  use 'elkowar/yuck.vim'
 
   -- Themes
   use 'Mofiqul/dracula.nvim'

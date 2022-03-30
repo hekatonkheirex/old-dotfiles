@@ -362,13 +362,21 @@ for i, name in enumerate(group_names, 1):
 #    "border_normal": "1c1e26"
 # }
 
-# Catppuccin
+# Onedark
 layout_theme = {
         "border_width": 4,
         "margin": 15,
-        "border_focus": "c9cbff",
-        "border_normal": "1E1D2F"
+        "border_focus": "98c379",
+        "border_normal": "282c34"
     }
+
+# Catppuccin
+# layout_theme = {
+#         "border_width": 4,
+#         "margin": 15,
+#         "border_focus": "c9cbff",
+#         "border_normal": "1E1D2F"
+#     }
 
 # Rose Pine
 # layout_theme = {
@@ -396,8 +404,8 @@ layout_theme = {
 
 layouts = [
     layout.MonadTall(
-        border_focus='c9cbff',
-        border_normal='1E1D2F',
+        border_focus='98c379',
+        border_normal='282c34',
         border_width=4,
         margin=15,
         ratio=0.52,
@@ -409,8 +417,8 @@ layouts = [
         **layout_theme
     ),
     layout.Floating(
-        border_focus='f5c2e7',
-        border_normal='1E1D2F',
+        border_focus='e5c97b',
+        border_normal='282c34',
         border_width=4,
         fullscreen_border_width=0,
     ),
@@ -534,21 +542,37 @@ layouts = [
 #           ["#b877db", "#b877db"],  # 11 Violet
 #         ]
 
-# Catppuccin
+# Onedark
 colors = [
-        ["#1E1D2F", "#1E1D2F"],  # 0 Background 0
+        ["#282c34", "#282c34"],  # 0 Background 0
         ["#302D41", "#302D41"],  # 1 Background 1
-        ["#d9e0ee", "#d9e0ee"],  # 2 Foreground 0
-        ["#c3bac6", "#c3bac6"],  # 3 Foreground 1
-        ["#f28fad", "#f28fad"],  # 4 Red
-        ["#abe9b3", "#abe9b3"],  # 5 Green
-        ["#fae3b0", "#fae3b0"],  # 6 Yellow
-        ["#96cdfb", "#96cdfb"],  # 7 Blue
-        ["#f5c2e7", "#f5c2e7"],  # 8 Magenta
-        ["#b5e8e0", "#b5e8e0"],  # 9 Cyan
-        ["#f8bd96", "#f8db96"],  # 10 Orange
-        ["#c9cbff", "#c9cbff"],  # 11 Violet
+        ["#abb2bf", "#abb2bf"],  # 2 Foreground 0
+        ["#99a0ab", "#99a0ab"],  # 3 Foreground 1
+        ["#e06c75", "#e06c75"],  # 4 Red
+        ["#98c379", "#98c379"],  # 5 Green
+        ["#e5c97b", "#e5c97b"],  # 6 Yellow
+        ["#61afef", "#61afef"],  # 7 Blue
+        ["#c678dd", "#c678dd"],  # 8 Magenta
+        ["#56b6c2", "#56b6c2"],  # 9 Cyan
+        ["#eea243", "#eea243"],  # 10 Orange
+        ["#ab87ff", "#ab87ff"],  # 11 Violet
     ]
+
+# Catppuccin
+# colors = [
+#         ["#1E1D2F", "#1E1D2F"],  # 0 Background 0
+#         ["#302D41", "#302D41"],  # 1 Background 1
+#         ["#d9e0ee", "#d9e0ee"],  # 2 Foreground 0
+#         ["#c3bac6", "#c3bac6"],  # 3 Foreground 1
+#         ["#f28fad", "#f28fad"],  # 4 Red
+#         ["#abe9b3", "#abe9b3"],  # 5 Green
+#         ["#fae3b0", "#fae3b0"],  # 6 Yellow
+#         ["#96cdfb", "#96cdfb"],  # 7 Blue
+#         ["#f5c2e7", "#f5c2e7"],  # 8 Magenta
+#         ["#b5e8e0", "#b5e8e0"],  # 9 Cyan
+#         ["#f8bd96", "#f8db96"],  # 10 Orange
+#         ["#c9cbff", "#c9cbff"],  # 11 Violet
+#     ]
 
 # Rose Pine
 # colors = [
@@ -762,7 +786,7 @@ screens = [
                 ),
                 widget.TextBox(
                     text='',
-                    font = 'Font Awesome 6 Pro',
+                    font='Font Awesome 6 Pro',
                     fontsize=14,
                     padding=1,
                     foreground=colors[8],
@@ -899,8 +923,8 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
-    border_focus='f5c2e7',
-    border_normal='1E1D2F',
+    border_focus='e5c97b',
+    border_normal='282c34',
     border_width=4,
     fullscreen_border_width=0,
     float_rules=[
