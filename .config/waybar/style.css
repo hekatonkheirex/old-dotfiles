@@ -1,13 +1,13 @@
 #backlight, #battery, #cpu, #disk, #idle_inhibitor, #keyboard-state,
 #pulseaudio, #clock, #tags, #language, #memory, #network, #mode, #window, #workspaces, #temperature, #taskbar, #custom-update-count {
-  box-shadow: 4px 4px 0 #c4a7e7;
+  box-shadow: 4px 4px 0 #09f7a0;
   margin-bottom: 4px;
   margin-right: 4px;
   margin-left: 3px;
   margin-right: 7px;
   padding-left: 10px;
   padding-right: 10px;
-  background: #191724;
+  background: #1c1e26;
   border-radius: 0px;
 }
 
@@ -17,7 +17,7 @@
 
 window#waybar {
   background: transparent;
-  color: #e0def4;
+  color: #d2d4de;
 }
 
 .modules-left, .modules-center, .modules-right {
@@ -38,7 +38,7 @@ window#waybar {
 }
 
 #workspaces button {
-  color: #4d466e;
+  color: #4f546b;
   font-family: "Material Design Icons";
   font-weight: 700;
   padding: 0 6px;
@@ -54,29 +54,29 @@ window#waybar {
   background: transparent;
   box-shadow: inherit;
   text-shadow: inherit;
-  color: #c4a7e7;
+  color: #b877db;
 }
 
 #workspaces button.focused {
-  color: #56949f;
+  color: #09f7a0;
 }
 
 #workspaces button.urgent {
-  background-color: #eb6f92;
+  background-color: #e95678;
 }
 
 #workspaces button.occupied {
-  color: #f6c177;
+  color: #fab795;
 }
 
 #mode {
-  background-color: #191724;
-  color: #e0def4;
+  background-color: #1c1e26;
+  color: #d2d4de;
   padding: 5px;
 }
 
 #tags button {
-  color: #4d466e;
+  color: #4f546b;
   font-family: "Source Han Sans JP";
   font-weight: 700;
   padding: 0 6px;
@@ -93,20 +93,20 @@ window#waybar {
 }
 
 #tags button:hover {
-  color: #191724;
-  background: #4d466e;
+  color: #1c1e26;
+  background: #4f546b;
   box-shadow: none;
   text-shadow: none;
   transition: 0;
 }
 
 #tags button.focused {
-  color: #191724;
-  background: #e0def4;
+  color: #1c1e26;
+  background: #d2d4de;
 }
 
 #tags button.urgent {
-  color: #eb6f92;
+  color: #e95678;
 }
 
 @keyframes fadein {
@@ -118,7 +118,7 @@ window#waybar {
   }
 }
 tooltip {
-  background: #191724;
+  background: #1c1e26;
   border-radius: 7px;
   font-family: "InputMono", monospace;
   font-weight: 500;
@@ -126,13 +126,13 @@ tooltip {
   padding: 20px;
   animation-name: fadein;
   animation-duration: 0.2s;
-  border: 2px solid #4d466e;
+  border: 2px solid #4f546b;
   text-shadow: none;
-  color: #e0def4;
+  color: #d2d4de;
 }
 
 tooltip label {
-  color: #e0def4;
+  color: #d2d4de;
 }
 
 #tray {
@@ -141,10 +141,10 @@ tooltip label {
 }
 
 #tray menu {
-  background: #191724;
-  color: #e0def4;
+  background: #1c1e26;
+  color: #d2d4de;
   border-radius: 5px;
-  border: 2px solid #4d466e;
+  border: 2px solid #4f546b;
   padding: 4px 0;
   font-family: "InputMono", monospace;
   font-weight: 500;

@@ -238,7 +238,7 @@ keys = [
 groups = []
 
 group_names = 'www term file doc bit chat share vid mus'.split()
-group_labels = ["", "", "", "", "", "", "", "", ""]
+group_labels = ["", "", "", "", "", "", "", "", ""]
 group_layouts = [
         "monadtall", "tile", "max", "max", "max", "max", "floating",
         "floating", "max"
@@ -355,20 +355,20 @@ for i, name in enumerate(group_names, 1):
 #    }
 
 # Horizon
-# layout_theme = {
-#    "border_width": 4,
-#    "margin": 15,
-#    "border_focus": "f09483",
-#    "border_normal": "1c1e26"
-# }
+layout_theme = {
+    "border_width": 4,
+    "margin": 15,
+    "border_focus": "09f7a0",
+    "border_normal": "1c1e26"
+ }
 
 # Onedark
-layout_theme = {
-        "border_width": 4,
-        "margin": 15,
-        "border_focus": "98c379",
-        "border_normal": "282c34"
-    }
+# layout_theme = {
+#        "border_width": 4,
+#        "margin": 15,
+#        "border_focus": "98c379",
+#        "border_normal": "282c34"
+#    }
 
 # Catppuccin
 # layout_theme = {
@@ -380,11 +380,11 @@ layout_theme = {
 
 # Rose Pine
 # layout_theme = {
-#        "border_width": 4,
-#        "margin": 15,
-#        "border_focus": "c4a7e7",
-#        "border_normal": "191724"
-#    }
+#         "border_width": 4,
+#         "margin": 15,
+#         "border_focus": "c4a7e7",
+#         "border_normal": "191724"
+#     }
 
 # Rose Pine Dawn
 # layout_theme = {
@@ -404,8 +404,8 @@ layout_theme = {
 
 layouts = [
     layout.MonadTall(
-        border_focus='98c379',
-        border_normal='282c34',
+        border_focus='09f7a0',
+        border_normal='1c1e26',
         border_width=4,
         margin=15,
         ratio=0.52,
@@ -417,8 +417,8 @@ layouts = [
         **layout_theme
     ),
     layout.Floating(
-        border_focus='e5c97b',
-        border_normal='282c34',
+        border_focus='fab795',
+        border_normal='1c1e26',
         border_width=4,
         fullscreen_border_width=0,
     ),
@@ -528,35 +528,35 @@ layouts = [
 #    ]
 
 # Horizon
-# colors = [["#1c1e26", "#1c1e26"],  # 0 Background 0
-#           ["#32343b", "#32343b"],  # 1 Background 1
-#           ["#d2d4de", "#d2d4de"],  # 2 Foreground 0
-#           ["#d6d8e1", "#d6d8e1"],  # 3 Foreground 1
-#           ["#e95678", "#e95678"],  # 4 Red
-#           ["#09f7a0", "#09f7a0"],  # 5 Green
-#           ["#fab795", "#fab795"],  # 6 Yellow
-#           ["#25b0bc", "#25b0bc"],  # 7 Blue
-#           ["#ee64ac", "#ee64ac"],  # 8 Magenta
-#           ["#6bdfe6", "#6bdfe6"],  # 9 Cyan
-#           ["#f09483", "#f09483"],  # 10 Orange
-#           ["#b877db", "#b877db"],  # 11 Violet
-#         ]
+colors = [["#1c1e26", "#1c1e26"],  # 0 Background 0
+           ["#32343b", "#32343b"],  # 1 Background 1
+           ["#d2d4de", "#d2d4de"],  # 2 Foreground 0
+           ["#d6d8e1", "#d6d8e1"],  # 3 Foreground 1
+           ["#e95678", "#e95678"],  # 4 Red
+           ["#09f7a0", "#09f7a0"],  # 5 Green
+           ["#fab795", "#fab795"],  # 6 Yellow
+           ["#25b0bc", "#25b0bc"],  # 7 Blue
+           ["#ee64ac", "#ee64ac"],  # 8 Magenta
+           ["#6bdfe6", "#6bdfe6"],  # 9 Cyan
+           ["#f09483", "#f09483"],  # 10 Orange
+           ["#b877db", "#b877db"],  # 11 Violet
+         ]
 
 # Onedark
-colors = [
-        ["#282c34", "#282c34"],  # 0 Background 0
-        ["#302D41", "#302D41"],  # 1 Background 1
-        ["#abb2bf", "#abb2bf"],  # 2 Foreground 0
-        ["#99a0ab", "#99a0ab"],  # 3 Foreground 1
-        ["#e06c75", "#e06c75"],  # 4 Red
-        ["#98c379", "#98c379"],  # 5 Green
-        ["#e5c97b", "#e5c97b"],  # 6 Yellow
-        ["#61afef", "#61afef"],  # 7 Blue
-        ["#c678dd", "#c678dd"],  # 8 Magenta
-        ["#56b6c2", "#56b6c2"],  # 9 Cyan
-        ["#eea243", "#eea243"],  # 10 Orange
-        ["#ab87ff", "#ab87ff"],  # 11 Violet
-    ]
+# colors = [
+#         ["#282c34", "#282c34"],  # 0 Background 0
+#         ["#302D41", "#302D41"],  # 1 Background 1
+#         ["#abb2bf", "#abb2bf"],  # 2 Foreground 0
+#         ["#99a0ab", "#99a0ab"],  # 3 Foreground 1
+#         ["#e06c75", "#e06c75"],  # 4 Red
+#         ["#98c379", "#98c379"],  # 5 Green
+#         ["#e5c97b", "#e5c97b"],  # 6 Yellow
+#         ["#61afef", "#61afef"],  # 7 Blue
+#         ["#c678dd", "#c678dd"],  # 8 Magenta
+#         ["#56b6c2", "#56b6c2"],  # 9 Cyan
+#         ["#eea243", "#eea243"],  # 10 Orange
+#         ["#ab87ff", "#ab87ff"],  # 11 Violet
+#     ]
 
 # Catppuccin
 # colors = [
@@ -576,21 +576,21 @@ colors = [
 
 # Rose Pine
 # colors = [
-#         ["#191724", "#191724"],  # 0 Background 0
-#         ["#26233a", "#26233a"],  # 1 Background 1
-#         ["#e0def4", "#e0def4"],  # 2 Foreground 0
-#         ["#908caa", "#908caa"],  # 3 Foreground 1
-#         ["#eb6f92", "#eb6f92"],  # 4 Red
-#         ["#56949f", "#56949f"],  # 5 Green
-#         ["#f6c177", "#f6c177"],  # 6 Yellow
-#         ["#31748f", "#31748f"],  # 7 Blue
-#         ["#ebbcba", "#ebbcba"],  # 8 Magenta
-#         ["#9ccfd8", "#9ccfd8"],  # 9 Cyan
-#         ["#ea9d34", "#ea9d34"],  # 10 Orange
-#         ["#c4a7e7", "#c4a7e7"],  # 11 Violet
-#     ]
+#          ["#191724", "#191724"],  # 0 Background 0
+#          ["#26233a", "#26233a"],  # 1 Background 1
+#          ["#e0def4", "#e0def4"],  # 2 Foreground 0
+#          ["#908caa", "#908caa"],  # 3 Foreground 1
+#          ["#eb6f92", "#eb6f92"],  # 4 Red
+#          ["#56949f", "#56949f"],  # 5 Green
+#          ["#f6c177", "#f6c177"],  # 6 Yellow
+#          ["#31748f", "#31748f"],  # 7 Blue
+#          ["#ebbcba", "#ebbcba"],  # 8 Magenta
+#          ["#9ccfd8", "#9ccfd8"],  # 9 Cyan
+#          ["#ea9d34", "#ea9d34"],  # 10 Orange
+#          ["#c4a7e7", "#c4a7e7"],  # 11 Violet
+#      ]
 
-# Rose Pine
+# Rose Pine Moon
 # colors = [
 #         ["#232136", "#232136"],  # 0 Background 0
 #         ["#393552", "#393552"],  # 1 Background 1
@@ -629,8 +629,8 @@ widget_defaults = dict(
     font='InputMono',
     fontsize=14,
     padding=4,
-    background='#1E1D2F',
-    foreground='#d9e0ee',
+    background='#1c1e26',
+    foreground='#d2d4de',
 )
 
 extension_defaults = widget_defaults.copy()
@@ -650,14 +650,14 @@ screens = [
                     borderwidth=2,
                     disable_drag=True,
                     font='Font Awesome 6 Pro',
-                    fontsize=16,
+                    fontsize=14,
                     hide_unused=False,
                     highlight_color='00000000',
                     # highlight_color=colors[11],
                     highlight_method='text',
                     # highlight_method='block',
                     inactive=colors[1],
-                    padding=1,
+                    padding=2,
                     rounded=True,
                     spacing=4,
                     this_current_screen_border=colors[5],
@@ -923,8 +923,8 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
-    border_focus='e5c97b',
-    border_normal='282c34',
+    border_focus='fab795',
+    border_normal='1c1e26',
     border_width=4,
     fullscreen_border_width=0,
     float_rules=[

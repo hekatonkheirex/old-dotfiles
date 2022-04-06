@@ -232,9 +232,9 @@ xwayland enable
 exec dunst &
 exec systemctl --user import-environment WAYLAND_DISPLAY
 
-client.focused          #c4a7e7 #c4a7e7 #c4a7e7 #c4a7e7 #c4a7e7
-client.unfocused        #191724 #191724 #191724 #191724 #191724
-client.focused_inactive #26233a #26233a #26233a #26233a #26233a
+client.focused          #09f7a0 #09f7a0 #09f7a0 #09f7a0 #09f7a0
+client.unfocused        #1c1e26 #1c1e26 #1c1e26 #1c1e26 #1c1e26
+client.focused_inactive #32343b #32343b #32343b #32343b #32343b
 
 bar {
     swaybar_command waybar

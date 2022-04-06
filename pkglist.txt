@@ -14,6 +14,8 @@ atomicparsley
 autoconf
 automake
 autotiling
+awesome
+awesome-freedesktop-git
 base
 bash-completion
 bat
@@ -32,7 +34,6 @@ cava
 cnrdrvcups-lb
 cups
 dart-sass
-desmume
 devtools
 dialog
 dina-font
@@ -60,7 +61,6 @@ gcc
 gentium-plus-font
 git
 gnome-keyring
-gnome-mahjongg
 gnu-free-fonts
 google-chrome
 grim
@@ -78,6 +78,7 @@ inter-font
 khal
 kitty
 kitty-terminfo
+lain-git
 laptop-mode-tools
 leafpad
 libcanberra
@@ -92,10 +93,10 @@ light
 lightdm
 lightdm-webkit-theme-aether-git
 lightdm-webkit2-greeter
-lightdm-webkit2-theme-reactive
 linux
 linux-firmware
 linux-headers
+luarocks
 lxappearance-gtk3
 m4
 maim
@@ -136,9 +137,8 @@ pipewire-pulse
 pkgconf
 playerctl
 polkit-gnome
-polybar-git
+polybar
 popsicle
-powertop
 python-dbus-next
 python-iwlib
 python-keyring
@@ -148,13 +148,10 @@ python-psutil
 python-pycryptodome
 python-pyxdg
 qbittorrent
-qt5-styleplugins
 qt5ct
 qt6ct
 qtile
-radeontop
 raw-thumbnailer
-redshift
 reflector
 ripgrep
 rofi
