@@ -1,48 +1,25 @@
 {
-    "layer": "bottom",
-    "height": 34,
-    "spacing": 0,
-    "margin-top": 4,
-
-    "modules-left": ["river/tags", "sway/workspaces", "sway/mode"],
-    "modules-right": ["tray", "idle_inhibitor", "pulseaudio", "battery", "clock#date", "clock"],
-
-    "river/tags": {
-        "num-tags": 5,
-        "tag-labels": [
-            "一", "二", "三", "四", "五", "六",
-           ]
-    },
-
+    "layer": "top",
+    "height": 26,
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["tray", "idle_inhibitor", "network", "pulseaudio", "backlight", "battery", "clock"],
+    // Modules configuration
     "sway/workspaces": {
-         "disable-scroll": true,
-         "all-outputs": true,
-         "persistent_workspaces": {
-           "1": [],
-           "2": [],
-           "3": [],
-           "4": [],
-           "5": []
-           },
-         "format": "{icon}",
-         "format-icons": {
-             "1": "󰋜",
-             "2": "󰞷",
-             "3": "󰉋",
-             "4": "󰒗",
-             "5": "󰓇"
-         }
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "󰈹",
+            "2": "󰞷",
+            "3": "󰪶",
+            "4": "󰦗",
+            "5": "󰓇"
+        }
     },
-
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
-
-    "tray": {
-        "icon-size": 21,
-        "spacing": 5
-    },
-
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
@@ -50,25 +27,37 @@
             "deactivated": "󰈉"
         }
     },
-
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 0
+    },
     "clock": {
+        // "timezone": "America/Asuncion",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "󰥔 {:%H:%M}",
+        "format-alt": "{:%Y-%m-%d}"
     },
-
-    "clock#date": {
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:󰃭 %B %d, %A}",
+    "cpu": {
+        "format": "{usage}% 󰻠",
+        "tooltip": false
     },
-
+    "memory": {
+        "format": "{}% 󰍛"
+    },
+    "temperature": {
+        "thermal-zone": 2,
+	"interval": 3,
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["󰔏"]
+    },
     "backlight": {
-        "device": "intel-backlight",
+        // "device": "amdgpu_bl0",
         "format": "{icon} {percent}%",
-        "format-icons": [ "🍕" ],
-        "on-scroll-up": "xbacklight -inc 5",
-        "on-scroll-down": "xbacklight -dec 5",
+ 	//"format-icons": ["🌑","🌒","🌓","🌔","🌕"]
+        "format-icons": ["󰃞", "󰃠"]
     },
-
     "battery": {
         "states": {
             // "good": 95,
@@ -86,16 +75,32 @@
     "battery#bat2": {
         "bat": "BAT0"
     },
-
+    "network": {
+    	"format": "{ifname}",
+	"format-ethernet": "{ifname}",
+        "format-wifi": "󰖩 {essid}",
+        "format-linked": "󰛳 {ifname} (No IP)",
+       	"format-disconnected": "󰀦 Disconnected",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
     "pulseaudio": {
-        "scroll-step": 2, // %, can be a float
-        "format": "{icon} {volume}% ",
-        "format-muted": "󰖁 ... ",
+        // "scroll-step": 1, // %, can be a float
+        "disable-scroll": true,
+        "format": "{icon}   {volume}%    {format_source}",
+        "format-bluetooth": "{volume}% {icon}󰂯 {format_source}",
+        "format-bluetooth-muted": "󰖁 {icon}󰂯 {format_source}",
+        "format-muted": "  󰖁 {format_source}  ",
+        "format-source": "󰍬 {volume}%",
+        "format-source-muted": "󰍭",
         "format-icons": {
-            "default": ["󰕾"]
+            "headphone": "󰋋",
+            "hands-free": "󰋎",
+            "headset": "󰋎",
+            "phone": "󰏲",
+            "portable": "󰏲",
+            "car": "󰄋",
+            "default": ["󰕿", "󰖀", "󰕾"]
         },
         "on-click": "pavucontrol"
-    },
-
+    }
 }
-
