@@ -14,8 +14,6 @@ atomicparsley
 autoconf
 automake
 autotiling
-awesome
-awesome-freedesktop-git
 base
 bash-completion
 bat
@@ -28,7 +26,6 @@ bluez
 bluez-utils
 brightnessctl
 bspwm
-calcurse
 catppuccin-gtk-theme
 cava
 cnrdrvcups-lb
@@ -54,7 +51,6 @@ feh
 ffmpegthumbnailer
 firefox
 flex
-font-victor-mono
 fzf
 galculator
 gcc
@@ -74,11 +70,11 @@ hplip
 htop
 i3-gaps
 inetutils
+inotify-tools
 inter-font
 khal
 kitty
 kitty-terminfo
-lain-git
 laptop-mode-tools
 leafpad
 libcanberra
@@ -96,12 +92,9 @@ lightdm-webkit2-greeter
 linux
 linux-firmware
 linux-headers
-luarocks
 lxappearance-gtk3
 m4
-maim
 make
-mesa-utils
 mesa-vdpau
 mpv
 mtools
@@ -127,7 +120,6 @@ pacman-contrib
 paru
 patch
 pavucontrol
-pcmanfm
 pfetch-git
 picom-ibhagwan-git
 pipewire
@@ -138,7 +130,6 @@ pkgconf
 playerctl
 polkit-gnome
 polybar
-popsicle
 python-dbus-next
 python-iwlib
 python-keyring
@@ -153,14 +144,11 @@ qt6ct
 qtile
 raw-thumbnailer
 reflector
-ripgrep
 rofi
 rsync
 rtmpdump
 rustup
-scrot
 slurp
-smartmontools
 sof-firmware
 spicetify-cli-git
 spotify
@@ -180,10 +168,9 @@ thunar
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-secure-delete
-thunar-shares-plugin
+thunar-shares-plugin-git
 thunar-vcs-plugin
 thunar-volman
-todotxt
 ttf-anonymous-pro
 ttf-bitstream-vera
 ttf-cascadia-code
@@ -210,6 +197,7 @@ ttf-recursive
 ttf-roboto
 ttf-roboto-mono
 ttf-ubuntu-font-family
+ttf-victor-mono
 tty-clock-git
 tumbler
 tumbler-extra-thumbnailers
@@ -232,7 +220,6 @@ xdg-user-dirs
 xdg-utils
 xdotool
 xf86-video-amdgpu
-xf86-video-vesa
 xfce4-power-manager
 xfconf
 xorg-bdftopcf

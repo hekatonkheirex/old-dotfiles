@@ -21,6 +21,7 @@ vim.o.expandtab = true -- expand tab to spaces
 
 vim.o.termguicolors = true
 vim.o.background = 'dark'
+-- vim.o.background = 'light'
 vim.o.mouse = 'a'
 vim.o.cursorline = false
 vim.o.cursorcolumn = false
