@@ -19,9 +19,9 @@ vim.g.tokyonight_sidebars = { 'qf', 'vista_kind', 'terminal', 'packer' }
 vim.g.tokyonight_colors = { hint = 'orange', error = '#ff0000' }
 
 -- Themes color loading
--- vim.cmd('colorscheme nord')
+vim.cmd('colorscheme nord')
 -- vim.cmd('colorscheme dracula')
-vim.cmd('colorscheme gruvbox')
+-- vim.cmd('colorscheme gruvbox')
 --vim.cmd('colorscheme onedark')
 -- vim.cmd('colorscheme everforest')
 -- vim.cmd('colorscheme sonokai')

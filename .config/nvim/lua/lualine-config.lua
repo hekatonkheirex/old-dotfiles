@@ -1,11 +1,11 @@
 require('lualine').setup({
   options = { 
     -- theme = 'rose-pine',
-    theme = 'gruvbox',
+    -- theme = 'gruvbox',
     -- theme = 'tokyonight',
     --theme = 'onedark',
     -- theme = 'catppuccin',
-    -- theme = 'nord',
+    theme = 'nord',
     -- theme = 'horizon',
     -- theme = 'dracula-nvim',
     -- theme = 'monokai_pro',

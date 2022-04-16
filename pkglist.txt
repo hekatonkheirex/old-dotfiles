@@ -14,6 +14,7 @@ atomicparsley
 autoconf
 automake
 autotiling
+avahi
 base
 bash-completion
 bat
@@ -75,7 +76,6 @@ inter-font
 khal
 kitty
 kitty-terminfo
-laptop-mode-tools
 leafpad
 libcanberra
 libgepub
@@ -87,7 +87,6 @@ libva-mesa-driver
 libva-utils
 light
 lightdm
-lightdm-webkit-theme-aether-git
 lightdm-webkit2-greeter
 linux
 linux-firmware
@@ -171,6 +170,7 @@ thunar-secure-delete
 thunar-shares-plugin-git
 thunar-vcs-plugin
 thunar-volman
+tlp
 ttf-anonymous-pro
 ttf-bitstream-vera
 ttf-cascadia-code

@@ -17,14 +17,14 @@ configuration {
 }
 
 * {
-    font:                        "Input Sans 14";
+    font:                        "JetBrains Mono 14";
 		spacing:                     0;
-    background:                  #1c1e26;
-    foreground:                  #d2d4de;
-		lightbg:                     #32343b;
-    lightfg:                     #d6d8e1;
-    red:                         #e95678;
-    blue:                        #09f7a0;
+    background:                  #2e3440;
+    foreground:                  #eceff4;
+		lightbg:                     #3b4252;
+    lightfg:                     #e5e9f0;
+    red:                         #bf616a;
+    blue:                        #5e81ac;
 		text-color:                  var(foreground);
     selected-active-foreground:  var(blue);
     separatorcolor:              var(blackground);
