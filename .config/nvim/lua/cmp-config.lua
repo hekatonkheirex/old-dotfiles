@@ -86,18 +86,18 @@ cmp.setup.cmdline(':', {
 })
 
 -- Setup lspconfig.
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-require('lspconfig').html.setup {
-  capabilities = capabilities
-}
-
-require'lspconfig'.cssls.setup {
-  capabilities = capabilities,
-}
-
-require'lspconfig'.pylsp.setup{}
-
-require'lspconfig'.rust_analyzer.setup{}
+-- local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+-- require('lspconfig').html.setup {
+--   capabilities = capabilities
+-- }
+--
+-- require'lspconfig'.cssls.setup {
+--   capabilities = capabilities,
+-- }
+--
+-- require'lspconfig'.pylsp.setup{}
+--
+-- require'lspconfig'.rust_analyzer.setup{}
 
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do

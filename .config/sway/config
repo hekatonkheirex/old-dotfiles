@@ -19,8 +19,8 @@ bindsym $mod+p exec $HOME/.config/rofi/scripts/powermenu.sh
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-# output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg /mnt/windows/Walls/wallhaven-zmr6qv.png fill
+output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+#output * bg /mnt/windows/Walls/wallhaven-zmr6qv.png fill
 
 #
 # Example configuration:
@@ -72,6 +72,14 @@ exec_always /home/mura/.config/scripts/swaylid.sh
 #    xkb_variant ,nodeadkeys
 #    xkb_options grp:alt_shift_toggle
 #}
+
+set $gnome-schema org.gnome.desktop.interface
+exec_always {
+    gsettings set $gnome-schema gtk-theme 'oomox-nord'
+    gsettings set $gnome-schema icon-theme 'oomox-nord'
+    gsettings set $gnome-schema cursor-theme 'Dracula-cursors'
+    gsettings set $gnome-schema font-name 'JetBrains Mono 12'
+}
 
 seat seat0 xcursor_theme "Dracula-cursors"
 
@@ -232,9 +240,9 @@ xwayland enable
 exec dunst &
 exec systemctl --user import-environment WAYLAND_DISPLAY
 
-client.focused          #c4a7e7 #c4a7e7 #c4a7e7 #c4a7e7 #c4a7e7
-client.unfocused        #191724 #191724 #191724 #191724 #191724
-client.focused_inactive #26233a #26233a #26233a #26233a #26233a
+client.focused          #5e81ac #5e81ac #5e81ac #5e81ac #5e81ac
+client.unfocused        #2e3440 #2e3440 #2e3440 #2e3440 #2e3440
+client.focused_inactive #3b4252 #3b4252 #3b4252 #3b4252 #3b4252
 
 bar {
     swaybar_command waybar
@@ -266,6 +274,7 @@ for_window [class="Spotify"] move to workspace 5
 
 exec_always blueberry-tray &
 exec_always gnome-keyring-daemon --start --components=pkcs11 &
+exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec_always --no-startup-id autotiling
 exec --no-startup-id fcitx5 -d
 

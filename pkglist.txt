@@ -8,6 +8,7 @@ alacritty
 alsa-utils
 amd-ucode
 anydesk-bin
+apparmor
 arandr
 asp
 atomicparsley
@@ -27,7 +28,6 @@ bluez
 bluez-utils
 brightnessctl
 bspwm
-catppuccin-gtk-theme
 cava
 cnrdrvcups-lb
 cups
@@ -41,7 +41,6 @@ dunst
 dupeguru
 efibootmgr
 emptty
-eww-git
 exa
 fakeroot
 fcitx5
@@ -51,11 +50,12 @@ fcitx5-mozc
 feh
 ffmpegthumbnailer
 firefox
+firewalld
 flex
+foot
 fzf
 galculator
 gcc
-gentium-plus-font
 git
 gnome-keyring
 gnu-free-fonts
@@ -86,8 +86,6 @@ libtool
 libva-mesa-driver
 libva-utils
 light
-lightdm
-lightdm-webkit2-greeter
 linux
 linux-firmware
 linux-headers
@@ -158,9 +156,7 @@ sway
 swayidle
 swaylock
 sxhkd
-tamsyn-font
 terminus-font
-tex-gyre-fonts
 texinfo
 themix-full-git
 thunar
@@ -171,6 +167,7 @@ thunar-shares-plugin-git
 thunar-vcs-plugin
 thunar-volman
 tlp
+tlpui-git
 ttf-anonymous-pro
 ttf-bitstream-vera
 ttf-cascadia-code
