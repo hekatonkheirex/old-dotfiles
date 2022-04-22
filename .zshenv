@@ -1,14 +1,19 @@
+if [ -n "$DESKTOP_SESSION" ];then
+    eval $(gnome-keyring-daemon --start)
+    export SSH_AUTH_SOCK
+fi
+
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/scripts:$PATH"
 export EDITOR=nvim
 export _JAVA_AWT_WM_NONREPARENTING=1
-export GTK_THEME=oomox-nord
+# export GTK_THEME=oomox-nord
 export BROWSER="/usr/bin/firefox"
 export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
-export QT_QPA_PLATFORM=wayland-egl
+#export QT_QPA_PLATFORM=wayland-egl
 export SDL_VIDEODRIVER=wayland
 export XDG_SESSION_TYPE=wayland
 export MOZ_ENABLE_WAYLAND=1
