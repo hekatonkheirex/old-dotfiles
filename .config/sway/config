@@ -19,8 +19,8 @@ bindsym $mod+p exec $HOME/.config/rofi/scripts/powermenu.sh
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-#output * bg /mnt/windows/Walls/wallhaven-zmr6qv.png fill
+#output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg /mnt/windows/Walls/pawel-czerwinski-niivu-unsplash.png fill
 
 #
 # Example configuration:
@@ -75,8 +75,8 @@ exec_always /home/mura/.config/scripts/swaylid.sh
 
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
-    gsettings set $gnome-schema gtk-theme 'oomox-nord'
-    gsettings set $gnome-schema icon-theme 'oomox-nord'
+    gsettings set $gnome-schema gtk-theme 'oomox-catppuccin'
+    gsettings set $gnome-schema icon-theme 'oomox-catppuccin'
     gsettings set $gnome-schema cursor-theme 'Dracula-cursors'
     gsettings set $gnome-schema font-name 'JetBrains Mono 12'
 }
@@ -240,9 +240,9 @@ xwayland enable
 exec dunst &
 exec systemctl --user import-environment WAYLAND_DISPLAY
 
-client.focused          #5e81ac #5e81ac #5e81ac #5e81ac #5e81ac
-client.unfocused        #2e3440 #2e3440 #2e3440 #2e3440 #2e3440
-client.focused_inactive #3b4252 #3b4252 #3b4252 #3b4252 #3b4252
+client.focused          #c9cbff #c9cbff #c9cbff #c9cbff #c9cbff
+client.unfocused        #1e1d2f #1e1d2f #1e1d2f #1e1d2f #1e1d2f
+client.focused_inactive #302d41 #302d41 #302d41 #302d41 #302d41
 
 bar {
     swaybar_command waybar
@@ -253,29 +253,32 @@ set $opacity 0.95
 for_window [class=".*"] opacity $opacity
 for_window [app_id=".*"] opacity $opacity
 
-for_window [class="firefox"] opacity 1.0
+for_window [app_id="firefox"] opacity 1.0
 for_window [class="Google-chrome"] opacity 1.0
 for_window [class="mpv"] opacity 1.0
 
 # Assign workspaces
-for_window [class="firefox"] move to workspace 1
-for_window [class="Google-chrome"] move to workspace 1
-for_window [app_id="Alacritty"] move to workspace 2
-for_window [app_id="kitty"] move to workspace 2
-for_window [app_id="Pcmanfm"] move to workspace 3
-for_window [app_id="libreoffice-writer"] move to workspace 3
-for_window [app_id="libreoffice-calc"] move to workspace 3
-for_window [app_id="libreoffice-impress"] move to workspace 3
-for_window [app_id="qBittorrent"] move to workspace 4
-for_window [app_id="discord"] move to workspace 4
-for_window [app_id="TeamViewer"] move to workspace 4
-for_window [app_id="AnyDesk"] move to workspace 4
-for_window [class="Spotify"] move to workspace 5
+for_window [app_id="firefox"] move to workspace 1, workspace next
+for_window [class="Google-chrome"] move to workspace 1, workspace next
+for_window [app_id="Alacritty"] move to workspace 2, workspace next
+for_window [app_id="kitty"] move to workspace 2, workspace next
+for_window [app_id="thunar"] move to workspace 3, workspace next
+for_window [app_id="libreoffice-writer"] move to workspace 3, workspace next
+for_window [app_id="libreoffice-calc"] move to workspace 3, workspace next
+for_window [app_id="libreoffice-impress"] move to workspace 3, workspace next
+for_window [app_id="qBittorrent"] move to workspace 4, workspace next
+for_window [app_id="discord"] move to workspace 4, workspace next
+for_window [app_id="TeamViewer"] move to workspace 4, workspace next
+for_window [app_id="AnyDesk"] move to workspace 4, workspace next
+for_window [class="Spotify"] move to workspace 5, workspace next
 
 exec_always blueberry-tray &
-exec_always gnome-keyring-daemon --start --components=pkcs11 &
+#exec_always gnome-keyring-daemon --start --components=pkcs11 &
+exec eval $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+exec export SSH_AUTH_SOCK
 exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec_always --no-startup-id autotiling
 exec --no-startup-id fcitx5 -d
+exec_always thunar --daemon &
 
 include /etc/sway/config.d/*

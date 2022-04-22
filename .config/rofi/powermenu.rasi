@@ -4,12 +4,12 @@ configuration {
 * {
     font:                        "JetBrains Mono 14";
     spacing:                     0;
-    background:                  #2e3440;
-    foreground:                  #eceff4;
-    lightbg:                     #3b4252;
-    lightfg:                     #e5e9f0;
-    red:                         #bf616a;
-    blue:                        #5e81ac;
+    background:                  #1e1d2f;
+    foreground:                  #d9e0ee;
+    lightbg:                     #302d41;
+    lightfg:                     #c3bac6;
+    red:                         #f28fad;
+    blue:                        #c9cbff;
     text-color:                  var(foreground);
     selected-active-foreground:  var(blue);
     separatorcolor:              var(blackground);

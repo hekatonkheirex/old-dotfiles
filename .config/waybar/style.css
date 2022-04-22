@@ -9,9 +9,9 @@
 }
 
 window#waybar {
-    background-color: #2e3440;
+    background-color: #1e1d2f;
     border-bottom: none;
-    color: #eceff4;
+    color: #d9e0ee;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -31,7 +31,7 @@ window#waybar.solo {
 
 #workspaces button {
     padding: 0 5px;
-    color: #eceff4;
+    color: #d9e0ee;
     border-radius: 5px;
     /* background-color: transparent; 
     border-bottom: 3px solid transparent;
@@ -47,19 +47,19 @@ window#waybar.solo {
 }
 
 #workspaces button.focused {
-    background-color: #eceff4;
-    color: #2e3440;
+    background-color: #d9e0ee;
+    color: #1e1d2f;
     border-bottom: none;
     border-radius: 5px;
 }
 
 #workspaces button.urgent {
-    background-color: #bf616a;
+    background-color: #f28fad;
 }
 
 #mode {
-    background-color: #3b4252;
-    border-bottom: 3px solid #eceff4;
+    background-color: #302d41;
+    border-bottom: 3px solid #d9e0ee;
 }
 
 #window
@@ -77,37 +77,37 @@ window#waybar.solo {
 #idle_inhibitor,
 
 #window {
-  background-color: #2e3440;
-  color: #b48ead;
+  background-color: #1e1d2f;
+  color: #f5c2e7;
   margin-left: 8px;
 }
 
 #clock {
-    color: #2e3440;
-    background-color: #eceff4;
+    color: #1e1d2f;
+    background-color: #d9e0ee;
 }
 
 #battery {
-    background-color: #eceff4;
-    color: #2e3440;
+    background-color: #d9e0ee;
+    color: #1e1d2f;
     margin-left: 0px;
 }
 
 #battery.charging {
-    color: #2e3440;
-    background-color: #eceff4;
+    color: #1e1d2f;
+    background-color: #d9e0ee;
 }
 
 @keyframes blink {
     to {
-        background-color: #eceff4;
-        color: #2e3440;
+        background-color: #d9e0ee;
+        color: #1e1d2f;
     }
 }
 
 #battery.critical:not(.charging) {
-    background-color: #2e3440;
-    color: #2e3440;
+    background-color: #1e1d2f;
+    color: #1e1d2f;
     animation-name: blink;
     animation-duration: 1s;
     animation-timing-function: linear;
@@ -116,76 +116,76 @@ window#waybar.solo {
 }
 
 label:focus {
-    background-color: #2e3440;
+    background-color: #1e1d2f;
 }
 
 #cpu {
-    background-color: #eceff4;
-    color: #2e3440;
+    background-color: #d9e0ee;
+    color: #1e1d2f;
 }
 
 #memory {
-    background-color: #eceff4;
-    color: #2e3440;
+    background-color: #d9e0ee;
+    color: #1e1d2f;
 }
 
 #backlight {
-    background-color: #eceff4;
-    color: #2e3440;
+    background-color: #d9e0ee;
+    color: #1e1d2f;
     margin-left: 0px;
 }
 
 #network {
-    background-color: #eceff4;
-    color: #2e3440;
+    background-color: #d9e0ee;
+    color: #1e1d2f;
     border-radius: 5px 0px 0px 5px;
     margin-left: 0px;
 }
 
 #network.disconnected {
-    background-color: #eceff4;
+    background-color: #d9e0ee;
 }
 
 #pulseaudio {
-    background-color: #eceff4;
-    color: #2e3440;
+    background-color: #d9e0ee;
+    color: #1e1d2f;
     margin-left: 0px;
 }
 
 #pulseaudio.muted {
-    background-color: #eceff4;
-    color: #2e3440;
+    background-color: #d9e0ee;
+    color: #1e1d2f;
 }
 
 #custom-spotify {
-    background-color: #2e3440;
-    color: #a3be8c;
+    background-color: #1e1d2f;
+    color: #abe9b3;
 }
 
 #temperature {
-    background-color: #eceff4;
-    color: #2e3440;
+    background-color: #d9e0ee;
+    color: #1e1d2f;
 }
 
 #temperature.critical {
-    background-color: #bf616a;
+    background-color: #f28fad;
 }
 
 #tray {
-    background-color: #2e3440;
+    background-color: #1e1d2f;
     margin-right: 4px;
 }
 
 #idle_inhibitor {
     background-color: rgba(0, 0, 0, 0);
-    color: #eceff4;
+    color: #d9e0ee;
     border-radius: 5px;
     margin-right: 2px;
 }
 
 #idle_inhibitor.activated {
-    background-color: #eceff4;
-    color: #2e3440;
+    background-color: #d9e0ee;
+    color: #1e1d2f;
     border-radius: 5px;
     margin-right: 2px;
 }
