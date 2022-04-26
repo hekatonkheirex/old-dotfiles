@@ -268,7 +268,7 @@ def assign_app_group(client):
         "kitty",
         ]
     d[group_names[2]] = [
-        "Thunar",
+        "thunar",
         ]
     d[group_names[3]] = [
         "Soffice",
@@ -315,12 +315,12 @@ for i, name in enumerate(group_names, 1):
 #    }
 
 # Nord dark
-layout_theme = {
-  "border_width": 4,
-  "margin": 15,
-  "border_focus": "88c0d0",
-  "border_normal": "2e3440"
-}
+# layout_theme = {
+#   "border_width": 4,
+#   "margin": 15,
+#   "border_focus": "88c0d0",
+#   "border_normal": "2e3440"
+# }
 
 # Outrun Dark
 # layout_theme = {
@@ -402,10 +402,18 @@ layout_theme = {
 #        "border_normal": "faf4ed"
 #    }
 
+# Hackthebox
+layout_theme = {
+       "border_width": 4,
+       "margin": 15,
+       "border_focus": "9fef00",
+       "border_normal": "161f2d"
+   }
+
 layouts = [
     layout.MonadTall(
-        border_focus='5e81ac',
-        border_normal='2e3440',
+        border_focus='9fef00',
+        border_normal='161f2d',
         border_width=4,
         margin=15,
         ratio=0.52,
@@ -417,8 +425,8 @@ layouts = [
         **layout_theme
     ),
     layout.Floating(
-        border_focus='ebcb8b',
-        border_normal='2e3440',
+        border_focus='2ee7b6',
+        border_normal='161f2d',
         border_width=4,
         fullscreen_border_width=0,
     ),
@@ -451,20 +459,20 @@ layouts = [
 #    ]
 
 # Nord
-colors = [
-       ["#2e3440", "#2e3440"],  # 0 Background 0
-       ["#3b4252", "#3b4252"],  # 1 Background 1
-       ["#eceff4", "#eceff4"],  # 2 Foreground 0
-       ["#e5e9f0", "#e5e9f0"],  # 3 Foreground 1
-       ["#bf616a", "#bf616a"],  # 4 Red
-       ["#a3be8c", "#a3be8c"],  # 5 Green
-       ["#ebcb8b", "#ebcb8b"],  # 6 Yellow
-       ["#5e81ac", "#5e81ac"],  # 7 Blue
-       ["#b48ead", "#b48ead"],  # 8 Magenta
-       ["#88c0d0", "#88c0d0"],  # 9 Cyan
-       ["#d08770", "#d08770"],  # 10 Orange
-       ["#81a1c1", "#81a1c1"],  # 11 Violet
-   ]
+# colors = [
+#        ["#2e3440", "#2e3440"],  # 0 Background 0
+#        ["#3b4252", "#3b4252"],  # 1 Background 1
+#        ["#eceff4", "#eceff4"],  # 2 Foreground 0
+#        ["#e5e9f0", "#e5e9f0"],  # 3 Foreground 1
+#        ["#bf616a", "#bf616a"],  # 4 Red
+#        ["#a3be8c", "#a3be8c"],  # 5 Green
+#        ["#ebcb8b", "#ebcb8b"],  # 6 Yellow
+#        ["#5e81ac", "#5e81ac"],  # 7 Blue
+#        ["#b48ead", "#b48ead"],  # 8 Magenta
+#        ["#88c0d0", "#88c0d0"],  # 9 Cyan
+#        ["#d08770", "#d08770"],  # 10 Orange
+#        ["#81a1c1", "#81a1c1"],  # 11 Violet
+#    ]
 
 # Outrun Dark
 # colors = [["#00002a", "#00002a"],  # 0 Background 0
@@ -622,6 +630,22 @@ colors = [
 #        ["#907aa9", "#907aa9"],  # 11 Violet
 #    ]
 
+# Rose Pine Dawn
+colors = [
+       ["#161f2d", "#161f2d"],  # 0 Background 0
+       ["#2d3542", "#2d3542"],  # 1 Background 1
+       ["#a4b1cd", "#a4b1cd"],  # 2 Foreground 0
+       ["#c5d1eb", "#c5d1eb"],  # 3 Foreground 1
+       ["#ff3e3e", "#ff3e3e"],  # 4 Red
+       ["#9fef00", "#9fef00"],  # 5 Green
+       ["#ffaf00", "#ffaf00"],  # 6 Yellow
+       ["#2e6cff", "#2e6cff"],  # 7 Blue
+       ["#9f00ff", "#9f00ff"],  # 8 Magenta
+       ["#2ee7b6", "#2ee7b6"],  # 9 Cyan
+       ["#d5a021", "#d5a021"],  # 10 Orange
+       ["#a09be7", "#a09be7"],  # 11 Violet
+    ]
+
 prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
 
 # Widgets definitions
@@ -629,8 +653,8 @@ widget_defaults = dict(
     font='JetBrains Mono',
     fontsize=14,
     padding=4,
-    background='#2e3440',
-    foreground='#eceff4',
+    background='#161f2d',
+    foreground='#a4b1cd',
 )
 
 extension_defaults = widget_defaults.copy()
@@ -923,8 +947,8 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
-    border_focus='ebcb8b',
-    border_normal='2e3440',
+    border_focus='2ee7b6',
+    border_normal='161f2d',
     border_width=4,
     fullscreen_border_width=0,
     float_rules=[

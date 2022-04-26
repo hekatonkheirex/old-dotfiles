@@ -2,14 +2,14 @@ configuration {
     show-icons: false;
   }
 * {
-    font:                        "JetBrains Mono 14";
+    font:                        "Hack 14";
     spacing:                     0;
-    background:                  #1e1d2f;
-    foreground:                  #d9e0ee;
-    lightbg:                     #302d41;
-    lightfg:                     #c3bac6;
-    red:                         #f28fad;
-    blue:                        #c9cbff;
+    background:                  #161f2d;
+    foreground:                  #a4b1cd;
+    lightbg:                     #2d3542;
+    lightfg:                     #c5d1eb;
+    red:                         #ff3e3e;
+    blue:                        #9fef00;
     text-color:                  var(foreground);
     selected-active-foreground:  var(blue);
     separatorcolor:              var(blackground);

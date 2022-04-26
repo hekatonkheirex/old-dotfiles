@@ -10,6 +10,7 @@ amd-ucode
 anydesk-bin
 apparmor
 arandr
+archlinux-themes-sddm
 asp
 atomicparsley
 autoconf
@@ -40,7 +41,6 @@ dosfstools
 dunst
 dupeguru
 efibootmgr
-emptty
 exa
 fakeroot
 fcitx5
@@ -145,11 +145,14 @@ rofi
 rsync
 rtmpdump
 rustup
+sddm
+seahorse
 slurp
 sof-firmware
 spicetify-cli-git
 spotify
 spotify-adblock-git
+sshfs
 stalonetray
 sudo
 sway

@@ -68,4 +68,5 @@ return require('packer').startup(function()
   use({ 'rose-pine/neovim', as = 'rose-pine' })
   use 'folke/tokyonight.nvim'
   use 'rebelot/kanagawa.nvim'
+  use 'audibleblink/hackthebox.vim'
 end)
