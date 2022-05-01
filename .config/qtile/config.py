@@ -630,27 +630,27 @@ layouts = [
 #        ["#907aa9", "#907aa9"],  # 11 Violet
 #    ]
 
-# Rose Pine Dawn
+# Hackthebox
 colors = [
-       ["#161f2d", "#161f2d"],  # 0 Background 0
-       ["#2d3542", "#2d3542"],  # 1 Background 1
-       ["#a4b1cd", "#a4b1cd"],  # 2 Foreground 0
-       ["#c5d1eb", "#c5d1eb"],  # 3 Foreground 1
-       ["#ff3e3e", "#ff3e3e"],  # 4 Red
-       ["#9fef00", "#9fef00"],  # 5 Green
-       ["#ffaf00", "#ffaf00"],  # 6 Yellow
-       ["#2e6cff", "#2e6cff"],  # 7 Blue
-       ["#9f00ff", "#9f00ff"],  # 8 Magenta
-       ["#2ee7b6", "#2ee7b6"],  # 9 Cyan
-       ["#d5a021", "#d5a021"],  # 10 Orange
-       ["#a09be7", "#a09be7"],  # 11 Violet
+        ["#161f2d", "#161f2d"],  # 0 Background 0
+        ["#2d3542", "#2d3542"],  # 1 Background 1
+        ["#a4b1cd", "#a4b1cd"],  # 2 Foreground 0
+        ["#c5d1eb", "#c5d1eb"],  # 3 Foreground 1
+        ["#ff3e3e", "#ff3e3e"],  # 4 Red
+        ["#9fef00", "#9fef00"],  # 5 Green
+        ["#ffaf00", "#ffaf00"],  # 6 Yellow
+        ["#2e6cff", "#2e6cff"],  # 7 Blue
+        ["#9f00ff", "#9f00ff"],  # 8 Magenta
+        ["#2ee7b6", "#2ee7b6"],  # 9 Cyan
+        ["#d5a021", "#d5a021"],  # 10 Orange
+        ["#a09be7", "#a09be7"],  # 11 Violet
     ]
 
 prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
 
 # Widgets definitions
 widget_defaults = dict(
-    font='JetBrains Mono',
+    font='Hack',
     fontsize=14,
     padding=4,
     background='#161f2d',

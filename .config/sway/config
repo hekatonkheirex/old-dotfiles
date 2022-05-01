@@ -8,7 +8,7 @@ set $up k
 set $right l
 
 # Your preferred terminal emulator
-set $term foot
+set $term kitty
 
 # Application launcher
 set $menu rofi -show drun -no-default-config
@@ -20,7 +20,7 @@ bindsym $mod+p exec $HOME/.config/rofi/scripts/powermenu.sh
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg /mnt/windows/Walls/wallhaven-01rlgv.jpg fill
+output * bg /mnt/windows/Walls/wallhaven-2evkmy.jpg fill
 
 #
 # Example configuration:
@@ -244,9 +244,9 @@ client.focused          #9fef00 #9fef00 #9fef00 #9fef00 #9fef00
 client.unfocused        #161f2d #161f2d #161f2d #161f2d #161f2d
 client.focused_inactive #2d3542 #2d3542 #2d3542 #2d3542 #2d3542
 
-bar {
-    swaybar_command waybar
-}
+# bar {
+#     swaybar_command waybar
+# }
 
 # Windows opacity
 set $opacity 0.95
@@ -258,20 +258,20 @@ for_window [class="Google-chrome"] opacity 1.0
 for_window [class="mpv"] opacity 1.0
 
 # Assign workspaces
-for_window [app_id="firefox"] move to workspace 1
-for_window [class="Google-chrome"] move to workspace 1
-for_window [app_id="Alacritty"] move to workspace 2
-for_window [app_id="kitty"] move to workspace 2
-for_window [app_id="foot"] move to workspace 2
-for_window [app_id="thunar"] move to workspace 3
-for_window [app_id="libreoffice-writer"] move to workspace 3
-for_window [app_id="libreoffice-calc"] move to workspace 3
-for_window [app_id="libreoffice-impress"] move to workspace 3
-for_window [app_id="qBittorrent"] move to workspace 4
-for_window [app_id="discord"] move to workspace 4
-for_window [app_id="TeamViewer"] move to workspace 4
-for_window [app_id="AnyDesk"] move to workspace 4
-for_window [class="Spotify"] move to workspace 5
+for_window [app_id="firefox"] move to workspace 1, workspace 1
+for_window [class="Google-chrome"] move to workspace 1, workspace 1
+for_window [app_id="Alacritty"] move to workspace 2, workspace 2
+for_window [app_id="kitty"] move to workspace 2, workspace 2
+for_window [app_id="foot"] move to workspace 2, workspace 2
+for_window [app_id="thunar"] move to workspace 3, workspace 3
+for_window [app_id="libreoffice-writer"] move to workspace 3, workspace 3
+for_window [app_id="libreoffice-calc"] move to workspace 3, workspace 3
+for_window [app_id="libreoffice-impress"] move to workspace 3, workspace 3
+for_window [app_id="qBittorrent"] move to workspace 4, workspace 4
+for_window [app_id="discord"] move to workspace 4, workspace 4
+for_window [app_id="TeamViewer"] move to workspace 4, workspace 4
+for_window [app_id="AnyDesk"] move to workspace 4, workspace 4
+for_window [class="Spotify"] move to workspace 5, workspace 5
 
 # Floating rules
 for_window [app_id="mpv"] floating enable
@@ -289,6 +289,7 @@ for_window [window_role = "dialog"] floating enable
 for_window [window_type = "dialog"] floating enable
 
 # Autostart applications
+exec_always --no-startup-id $HOME/.config/waybar/waybar.sh
 exec_always blueberry-tray &
 #exec_always gnome-keyring-daemon --start --components=pkcs11 &
 exec eval $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
