@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+pkill swaybg
+swaybg -o 'eDP-1' -i "/mnt/windows/Walls/wallhaven-zx1lqj.jpg" -m fill &

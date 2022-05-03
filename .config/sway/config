@@ -20,7 +20,8 @@ bindsym $mod+p exec $HOME/.config/rofi/scripts/powermenu.sh
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg /mnt/windows/Walls/wallhaven-2evkmy.jpg fill
+# output * bg /mnt/windows/Walls/wallhaven-2evkmy.jpg fill
+exec ~/.azotebg
 
 #
 # Example configuration:

@@ -1,12 +1,13 @@
 * {
   border: none;
-  font-family: Hack, Ubuntu Nerd Font,MaterialDesignIcons,sans-serif;
+  font-family: Hack,"Font Awesome 6 Pro Regular", "Font Awesome 6 Brands";
   font-size: 14px;
   font-weight: bold;
 }
 
 window#waybar {
   background-color: #161f2d;
+  /* background-color: rgba(34,35,53,0.01); */
   transition-property: background-color;
   transition-duration: .5s;
 }
@@ -87,7 +88,7 @@ window#waybar.hidden {
 }
 
 #window {
-  color: #2ee7b6;
+  color: #9fef00;
 }
 
 #idle_inhibitor {
@@ -97,7 +98,7 @@ window#waybar.hidden {
 
 #idle_inhibitor.activated {
   background-color: #161f2d;
-  color: #161f2d;
+  color: #ff3e3e;
 }
 
 #pulseaudio {
@@ -120,20 +121,19 @@ window#waybar.hidden {
 }
 
 #battery.charging, #battery.plugged {
-  color: #a4b1cd;
-  background-color: #161f2d;
+  color: #9fef00;
 }
 
 @keyframes blink {
   to {
-    background-color: #161f2d;
-    color: #a4b1cd;
+    background-color: #ff3e3e;
+    color: #161f2d;
   }
 }
 
 #battery.critical:not(.charging) {
-  background-color: #a4b1cd;
-  color: #a4b1cd;
+  background-color: #ff3e3e;
+  color: #ff3e3e;
   animation-name: blink;
   animation-duration: 1s;
   animation-timing-function: linear;

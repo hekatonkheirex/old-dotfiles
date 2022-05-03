@@ -1,13 +1,13 @@
 {
   "layer": "top",
-  "height": 30,
+  "height": 36,
   "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
   "modules-center": ["custom/spotify"],
   "modules-right": ["tray", "idle_inhibitor", "network", "pulseaudio", "backlight", "battery", "clock"],
   
   // Modules configuration
   "sway/workspaces": {
-    "disable-scroll": true,
+    "disable-scroll": false,
     "all-outputs": true,
     /* "persistent_workspaces": { */
     /*   "1": [], */
@@ -18,11 +18,11 @@
     /* }, */
     "format": "{icon}",
     "format-icons": {
-      "1": "󰈹",
+      "1": "",
       "2": "󰞷",
-      "3": "󰪶",
-      "4": "󰦗",
-      "5": "󰓇"
+      "3": "",
+      "4": "",
+      "5": ""
     },
   },
 
@@ -35,10 +35,10 @@
   },
 
   "idle_inhibitor": {
-    "format": " {icon} ",
+    "format": "{icon}",
     "format-icons": {
-      "activated": " 󰈈 ",
-      "deactivated": " 󰈉 "
+      "activated": "",
+      "deactivated": ""
     }
   },
 
@@ -48,9 +48,9 @@
   },
 
   "clock": {
-    "format": " 󰅐 {:%H:%M} ",
+    "format": " {:%H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": " 󰃭 {:%Y-%m-%d} "
+    "format-alt": " {:%Y-%m-%d}"
   },
 
   "cpu": {
@@ -74,8 +74,8 @@
 
   "backlight": {
     "device": "amdgpu_bl0",
-    "format": " {icon} {percent}% ",
-    "format-icons": ["󰃞", "󰃠"]
+    "format": "{icon} {percent}%",
+    "format-icons": [""]
   },
 
   "battery": {
@@ -84,13 +84,13 @@
       "warning": 30,
       "critical": 15
     },
-    "format": " {icon}{capacity}% ",
-    "format-charging": " 󰂅 {capacity}% ",
-    "format-plugged": " 󰚥{capacity}% ",
-    "format-alt": " {time} {icon} ",
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon}",
     // "format-good": "", // An empty format will hide the module
-    "format-full": " 󰁹 100% ",
-    "format-icons": ["󰂎", "󰁼", "󰁾", "󰂀", "󰁹"]
+    "format-full": "100%",
+    "format-icons": ["", "", "", "", ""]
   },
 
   "battery#bat2": {
@@ -99,36 +99,36 @@
 
   "network": {
     "format": " {ifname} ",
-    "format-ethernet": " {ifname} ",
-    "format-wifi": " 󰖩 {essid} ",
-    "format-linked": " 󰛳 {ifname} (No IP) ",
-    "format-disconnected": " 󰀦 Disconnected ",
-    "format-alt": " {ifname}: {ipaddr}/{cidr} "
+    "format-ethernet": "{ifname}",
+    "format-wifi": " {essid}",
+    "format-linked": " {ifname} (No IP)",
+    "format-disconnected": " Disconnected",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}"
   },
 
   "pulseaudio": {
     "disable-scroll": true,
-    "format": " {icon} {volume}% {format_source} ",
-    "format-bluetooth": " {volume}% {icon}󰂯 {format_source} ",
-    "format-bluetooth-muted": " 󰖁 {icon}󰂯 {format_source} ",
-    "format-muted": "  󰖁 {format_source}  ",
-    "format-source": " 󰍬 {volume}% ",
-    "format-source-muted": " 󰍭 ",
+    "format": "{icon} {volume}% {format_source}",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": " {volume}% ",
+    "format-source-muted": "",
     "format-icons": {
-      "headphone": "󰋋",
-      "hands-free": "󰋎",
-      "headset": "󰋎",
-      "phone": "󰏲",
-      "portable": "󰏲",
-      "car": "󰄋",
-      "default": ["󰕿", "󰖀", "󰕾"]
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", "", ""]
     },
     "on-click": "pavucontrol"
   },
 
   "custom/spotify": {
     "exec": "/usr/bin/python3 /home/mura/.config/scripts/spotsway.py --player spotify",
-    "format": " 󰓇 {} ",
+    "format": " {}",
     "return-type": "json",
     "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl next",
