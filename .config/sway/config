@@ -68,11 +68,11 @@ exec_always /home/mura/.config/scripts/swaylid.sh
       middle_emulation enabled
   }
 
-#input "type:keyboard" {
-#    xkb_layout us,es
-#    xkb_variant ,nodeadkeys
-#    xkb_options grp:alt_shift_toggle
-#}
+input "type:keyboard" {
+    xkb_layout us,es
+    #xkb_variant ,nodeadkeys
+    xkb_options grp:alt_shift_toggle
+}
 
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
@@ -126,6 +126,7 @@ seat seat0 xcursor_theme "Dracula-cursors"
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+q exec swaymsg exit
 #
 # Moving around:
 #
@@ -237,7 +238,7 @@ gaps inner 10
 gaps outer 0
 gaps bottom 1
 gaps top 1
-xwayland enable
+#xwayland enable
 exec dunst &
 exec systemctl --user import-environment WAYLAND_DISPLAY
 
@@ -254,7 +255,7 @@ set $opacity 0.95
 for_window [class=".*"] opacity $opacity
 for_window [app_id=".*"] opacity $opacity
 
-for_window [app_id="firefox"] opacity 1.0
+for_window [class="firefox"] opacity 1.0
 for_window [class="Google-chrome"] opacity 1.0
 for_window [class="mpv"] opacity 1.0
 
@@ -288,16 +289,17 @@ for_window [window_role = "pop-up"] floating enable
 for_window [window_role = "bubble"] floating enable
 for_window [window_role = "dialog"] floating enable
 for_window [window_type = "dialog"] floating enable
+for_window [app_id="galculator"] floating enable
 
 # Autostart applications
 exec_always --no-startup-id $HOME/.config/waybar/waybar.sh
 exec_always blueberry-tray &
 #exec_always gnome-keyring-daemon --start --components=pkcs11 &
-exec eval $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+exec 'eval $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)'
 exec export SSH_AUTH_SOCK
 exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec_always --no-startup-id autotiling
-exec --no-startup-id fcitx5 -d
+#exec --no-startup-id fcitx5 -d
 exec_always thunar --daemon &
 
 include /etc/sway/config.d/*
