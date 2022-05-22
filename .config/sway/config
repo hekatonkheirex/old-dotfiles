@@ -76,10 +76,10 @@ input "type:keyboard" {
 
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
-    gsettings set $gnome-schema gtk-theme 'oomox-hackthebox'
-    gsettings set $gnome-schema icon-theme 'oomox-hackthebox'
+    gsettings set $gnome-schema gtk-theme 'oomox-rosepine'
+    gsettings set $gnome-schema icon-theme 'oomox-rosepine'
     gsettings set $gnome-schema cursor-theme 'Dracula-cursors'
-    gsettings set $gnome-schema font-name 'JetBrains Mono 12'
+    gsettings set $gnome-schema font-name 'Hack 12'
 }
 
 seat seat0 xcursor_theme "Dracula-cursors"
@@ -242,9 +242,9 @@ xwayland enable
 exec dunst &
 exec systemctl --user import-environment WAYLAND_DISPLAY
 
-client.focused          #9fef00 #9fef00 #9fef00 #9fef00 #9fef00
-client.unfocused        #161f2d #161f2d #161f2d #161f2d #161f2d
-client.focused_inactive #2d3542 #2d3542 #2d3542 #2d3542 #2d3542
+client.focused          #c4a7e7 #c4a7e7 #c4a7e7 #c4a7e7 #c4a7e7
+client.unfocused        #191724 #191724 #191724 #191724 #191724
+client.focused_inactive #26233a #26233a #26233a #26233a #26233a
 
 # bar {
 #     swaybar_command waybar

@@ -28,6 +28,16 @@ local mappings = {
     n = {'<cmd>Lspsaga diagnostic_jump_next<cr>', "Go To Next Diagnostic"},
     N = {'<cmd>Lspsaga diagnostic_jump_prev<cr>', "Go To Previous Diagnostic"}
   },
+  p = {
+    name = "Packer",
+    r = { ":PackerClean<cr>", "Remove Unused Plugins" },
+    c = { ":PackerCompile profile=true<cr>", "Recompile Plugins" },
+    i = { ":PackerInstall<cr>", "Install Plugins" },
+    p = { ":PackerProfile<cr>", "Packer Profile" },
+    s = { ":PackerSync<cr>", "Sync Plugins" },
+    S = { ":PackerStatus<cr>", "Packer Status" },
+    u = { ":PackerUpdate<cr>", "Update Plugins" }
+  },
 }
 
 local opts = {prefix = '<leader>'}

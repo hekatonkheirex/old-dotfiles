@@ -1,7 +1,7 @@
-if [ -n "$DESKTOP_SESSION" ];then
-    eval $(gnome-keyring-daemon --start --components=okcs11,secrets,ssh)
-    export SSH_AUTH_SOCK
-fi
+# if [ -n "$DESKTOP_SESSION" ];then
+#     eval $(gnome-keyring-daemon --start --components=okcs11,secrets,ssh)
+#     export SSH_AUTH_SOCK
+# fi
 
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"

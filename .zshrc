@@ -135,8 +135,10 @@ zstyle ':completion:*' menu select
 export VDPAU_DRIVER=radeonsi
 export LIBVA_DRIVER_NAME=radeonsi
 
-pfetch
-.config/scripts/blks
+# pfetch
+# .config/scripts/blks
+rxfetch
+
 export TERM=xterm-256color
 
 eval "$(starship init zsh)"

@@ -302,8 +302,8 @@ bindsym --release Shift+Print exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'm
 
 # Assign workspaces
 for_window [class="firefox"] move to workspace $ws1
-for_window [class="Alacritty"] move to workspace $ws2
-for_window [class="kitty"] move to workspace $ws2
+for_window [class="Alacritty"] move to workspace $ws2, workspace $ws2
+for_window [class="kitty"] move to workspace $ws2, workspace $ws2
 for_window [class="Thunar"] move to workspace $ws3
 for_window [class="libreoffice-writer"] move to workspace $ws4
 for_window [class="libreoffice-calc"] move to workspace $ws4

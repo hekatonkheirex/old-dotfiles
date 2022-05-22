@@ -379,12 +379,12 @@ for i, name in enumerate(group_names, 1):
 #     }
 
 # Rose Pine
-# layout_theme = {
-#         "border_width": 4,
-#         "margin": 15,
-#         "border_focus": "c4a7e7",
-#         "border_normal": "191724"
-#     }
+layout_theme = {
+        "border_width": 4,
+        "margin": 15,
+        "border_focus": "c4a7e7",
+        "border_normal": "191724"
+    }
 
 # Rose Pine Dawn
 # layout_theme = {
@@ -403,17 +403,17 @@ for i, name in enumerate(group_names, 1):
 #    }
 
 # Hackthebox
-layout_theme = {
-       "border_width": 4,
-       "margin": 15,
-       "border_focus": "9fef00",
-       "border_normal": "161f2d"
-   }
+# layout_theme = {
+#        "border_width": 4,
+#        "margin": 15,
+#        "border_focus": "9fef00",
+#        "border_normal": "161f2d"
+#    }
 
 layouts = [
     layout.MonadTall(
-        border_focus='9fef00',
-        border_normal='161f2d',
+        border_focus='c4a7e7',
+        border_normal='191724',
         border_width=4,
         margin=15,
         ratio=0.52,
@@ -425,8 +425,8 @@ layouts = [
         **layout_theme
     ),
     layout.Floating(
-        border_focus='2ee7b6',
-        border_normal='161f2d',
+        border_focus='ebbcba',
+        border_normal='191724',
         border_width=4,
         fullscreen_border_width=0,
     ),
@@ -583,20 +583,20 @@ layouts = [
 #     ]
 
 # Rose Pine
-# colors = [
-#          ["#191724", "#191724"],  # 0 Background 0
-#          ["#26233a", "#26233a"],  # 1 Background 1
-#          ["#e0def4", "#e0def4"],  # 2 Foreground 0
-#          ["#908caa", "#908caa"],  # 3 Foreground 1
-#          ["#eb6f92", "#eb6f92"],  # 4 Red
-#          ["#56949f", "#56949f"],  # 5 Green
-#          ["#f6c177", "#f6c177"],  # 6 Yellow
-#          ["#31748f", "#31748f"],  # 7 Blue
-#          ["#ebbcba", "#ebbcba"],  # 8 Magenta
-#          ["#9ccfd8", "#9ccfd8"],  # 9 Cyan
-#          ["#ea9d34", "#ea9d34"],  # 10 Orange
-#          ["#c4a7e7", "#c4a7e7"],  # 11 Violet
-#      ]
+colors = [
+         ["#191724", "#191724"],  # 0 Background 0
+         ["#26233a", "#26233a"],  # 1 Background 1
+         ["#e0def4", "#e0def4"],  # 2 Foreground 0
+         ["#908caa", "#908caa"],  # 3 Foreground 1
+         ["#eb6f92", "#eb6f92"],  # 4 Red
+         ["#56949f", "#56949f"],  # 5 Green
+         ["#f6c177", "#f6c177"],  # 6 Yellow
+         ["#31748f", "#31748f"],  # 7 Blue
+         ["#ebbcba", "#ebbcba"],  # 8 Magenta
+         ["#9ccfd8", "#9ccfd8"],  # 9 Cyan
+         ["#ea9d34", "#ea9d34"],  # 10 Orange
+         ["#c4a7e7", "#c4a7e7"],  # 11 Violet
+     ]
 
 # Rose Pine Moon
 # colors = [
@@ -631,20 +631,20 @@ layouts = [
 #    ]
 
 # Hackthebox
-colors = [
-        ["#161f2d", "#161f2d"],  # 0 Background 0
-        ["#2d3542", "#2d3542"],  # 1 Background 1
-        ["#a4b1cd", "#a4b1cd"],  # 2 Foreground 0
-        ["#c5d1eb", "#c5d1eb"],  # 3 Foreground 1
-        ["#ff3e3e", "#ff3e3e"],  # 4 Red
-        ["#9fef00", "#9fef00"],  # 5 Green
-        ["#ffaf00", "#ffaf00"],  # 6 Yellow
-        ["#2e6cff", "#2e6cff"],  # 7 Blue
-        ["#9f00ff", "#9f00ff"],  # 8 Magenta
-        ["#2ee7b6", "#2ee7b6"],  # 9 Cyan
-        ["#d5a021", "#d5a021"],  # 10 Orange
-        ["#a09be7", "#a09be7"],  # 11 Violet
-    ]
+# colors = [
+#         ["#161f2d", "#161f2d"],  # 0 Background 0
+#         ["#2d3542", "#2d3542"],  # 1 Background 1
+#         ["#a4b1cd", "#a4b1cd"],  # 2 Foreground 0
+#         ["#c5d1eb", "#c5d1eb"],  # 3 Foreground 1
+#         ["#ff3e3e", "#ff3e3e"],  # 4 Red
+#         ["#9fef00", "#9fef00"],  # 5 Green
+#         ["#ffaf00", "#ffaf00"],  # 6 Yellow
+#         ["#2e6cff", "#2e6cff"],  # 7 Blue
+#         ["#9f00ff", "#9f00ff"],  # 8 Magenta
+#         ["#2ee7b6", "#2ee7b6"],  # 9 Cyan
+#         ["#d5a021", "#d5a021"],  # 10 Orange
+#         ["#a09be7", "#a09be7"],  # 11 Violet
+#     ]
 
 prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
 
@@ -653,8 +653,8 @@ widget_defaults = dict(
     font='Hack',
     fontsize=14,
     padding=4,
-    background='#161f2d',
-    foreground='#a4b1cd',
+    background='#191724',
+    foreground='#e0def4',
 )
 
 extension_defaults = widget_defaults.copy()
@@ -947,8 +947,8 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
-    border_focus='2ee7b6',
-    border_normal='161f2d',
+    border_focus='ebbcba',
+    border_normal='191724',
     border_width=4,
     fullscreen_border_width=0,
     float_rules=[

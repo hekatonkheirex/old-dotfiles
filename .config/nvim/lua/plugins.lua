@@ -1,4 +1,14 @@
-return require('packer').startup(function()
+local fn = vim.fn
+local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+if fn.empty(fn.glob(install_path)) > 0 then
+  fn.system({
+    'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path
+  })
+  vim.api.nvim_command('packadd packer.nvim')
+end
+
+return require('packer').startup({
+  function(use)
   use 'wbthomason/packer.nvim' -- Packer self-manager
 
   -- Common
@@ -69,4 +79,12 @@ return require('packer').startup(function()
   use 'folke/tokyonight.nvim'
   use 'rebelot/kanagawa.nvim'
   use 'audibleblink/hackthebox.vim'
-end)
+end,
+config = {
+  display = {
+    open_fn = function()
+      return require('packer.util').float({ border = 'single' })
+    end
+  }
+}}
+)

@@ -27,4 +27,4 @@ vim.g.dashboard_custom_section = {
   b = {description = {'  Recent Files       '}, command = 'Telescope oldfiles'},
   e = {description = {'  Config             '}, command = 'edit ~/.config/nvim/init.lua'}
 }
-vim.g.dashboard_custom_footer = {'Do one thing, do it well - Unix Philosophy'}
+vim.g.dashboard_custom_footer = {'Not all those who wander are lost'}
