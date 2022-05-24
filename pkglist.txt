@@ -41,6 +41,7 @@ dosfstools
 dunst
 dupeguru
 efibootmgr
+ethtool
 exa
 fakeroot
 fcitx5
@@ -56,6 +57,7 @@ fzf
 galculator
 gcc
 gdm
+gdm-settings
 git
 gnome-keyring
 gnome-mahjongg
@@ -77,6 +79,7 @@ inter-font
 khal
 kitty
 kitty-terminfo
+laptop-mode-tools
 leafpad
 libcanberra
 libgepub
@@ -146,6 +149,7 @@ rofi
 rsync
 rtmpdump
 rustup
+rxfetch
 seahorse
 slurp
 sof-firmware
@@ -163,7 +167,6 @@ sxhkd
 terminus-font
 texinfo
 themix-full-git
-thokr-git
 thunar
 thunar-archive-plugin
 thunar-media-tags-plugin
@@ -171,8 +174,6 @@ thunar-secure-delete
 thunar-shares-plugin-git
 thunar-vcs-plugin
 thunar-volman
-tlp
-tlpui-git
 ttf-anonymous-pro
 ttf-bitstream-vera
 ttf-cascadia-code
@@ -209,6 +210,8 @@ unrar
 unzip
 vdhcoapp-bin
 vdpauinfo
+vivaldi
+vivaldi-ffmpeg-codecs
 w3m
 waybar
 wget
