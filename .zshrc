@@ -127,6 +127,7 @@ alias ls="exa --icons"
 alias la="exa -la --icons"
 alias laa="exa -a --icons"
 alias update="paru"
+alias clean="sudo pacman -Rns $(pacman -Qdtq)"
 alias n="nvim"
 
 autoload -U compinit && compinit

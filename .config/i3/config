@@ -48,10 +48,10 @@ bindsym $mod+d exec --no-startup-id rofi -show drun
 #bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/launcher.sh
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -60,10 +60,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -72,10 +72,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+# bindsym $mod+h split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+# bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -105,10 +105,6 @@ set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -116,11 +112,6 @@ bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
 bindsym $mod+4 workspace $ws4
 bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6
-bindsym $mod+7 workspace $ws7
-bindsym $mod+8 workspace $ws8
-bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -128,11 +119,6 @@ bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
 bindsym $mod+Shift+4 move container to workspace $ws4
 bindsym $mod+Shift+5 move container to workspace $ws5
-bindsym $mod+Shift+6 move container to workspace $ws6
-bindsym $mod+Shift+7 move container to workspace $ws7
-bindsym $mod+Shift+8 move container to workspace $ws8
-bindsym $mod+Shift+9 move container to workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -149,10 +135,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -207,22 +193,23 @@ bindsym XF86MonBrightnessDown exec light -dec 10
 ##### i3-gaps ######
 for_window [class=".*"] border pixel 2
 
-# class                   border  backgr. text    
-  client.focused          #7c7be0 #7c7be0 #7c7be0
-  client.focused_inactive #30313b #30313b #30313b
-  client.unfocused        #1a1b26 #1a1b26 #1a1b26
-  client.urgent           #f7768e #f7768e #f7768e
-  client.placeholder      #a9b1d6 #a9b1d6 #a9b1d6
+# class                   border  backgr. text
+client.focused          #7c7be0 #7c7be0 #7c7be0
+client.focused_inactive #30313b #30313b #30313b
+client.unfocused        #1a1b26 #1a1b26 #1a1b26
+client.urgent           #f7768e #f7768e #f7768e
+client.placeholder      #a9b1d6 #a9b1d6 #a9b1d6
 
 gaps inner 10
 gaps outer 0
 #gaps horizontal 4
-gaps top 30
+gaps top 1
 
 ##### i3-radius ######
 smart_borders on
 smart_borders no_gaps
-#border_radius 2
+smart_gaps on
+hide_edge_borders smart
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner
@@ -263,8 +250,7 @@ mode "$mode_gaps_outer" {
 }
 
 # Wallpaper
-exec_always --no-startup-id feh --bg-fill /mnt/windows/Walls/Yellow/wallhaven-wyp7zr.png
-#exec --no-startup-id nitrogen --restore
+exec_always --no-startup-id feh --bg-fill /mnt/windows/Walls/Yellow/wallhaven-2e2wq9.png
 
 # Lock screen
 bindsym Control+mod1+l exec --no-startup-id "betterlockscreen -l dimblur"
@@ -301,18 +287,9 @@ bindsym --release Print exec scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~
 bindsym --release Shift+Print exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/Screenshots && mv $f ~/Pictures/Screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/Screenshots/`ls -1 -t ~/Pictures/Screenshots | head -1`' # Area selection
 
 # Assign workspaces
-for_window [class="firefox"] move to workspace $ws1
+for_window [class="firefox"] move to workspace $ws1, workspace $ws1
 for_window [class="Alacritty"] move to workspace $ws2, workspace $ws2
 for_window [class="kitty"] move to workspace $ws2, workspace $ws2
-for_window [class="Thunar"] move to workspace $ws3
-for_window [class="libreoffice-writer"] move to workspace $ws4
-for_window [class="libreoffice-calc"] move to workspace $ws4
-for_window [class="libreoffice-impress"] move to workspace $ws4
-for_window [class="qBittorrent"] move to workspace $ws6
-for_window [class="Microsoft Teams - Preview"] move to workspace $ws7
-for_window [class="zoom"] move to workspace $ws7
-for_window [class="discord"] move to workspace $ws7
-for_window [class="TeamViewer"] move to workspace $ws8
-for_window [class="AnyDesk"] move to workspace $ws8
-for_window [class="mpv"] move to workspace $ws9
-for_window [class="Spotify"] move to workspace $ws10
+for_window [class="Thunar"] move to workspace $ws3, workspace $ws3
+for_window [class="qBittorrent"] move to workspace $ws4, workspace $ws4
+for_window [class="Spotify"] move to workspace $ws5, workspace $ws5
