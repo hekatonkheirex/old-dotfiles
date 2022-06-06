@@ -5,11 +5,13 @@ acpid
 adobe-source-han-sans-jp-fonts
 adobe-source-han-sans-otc-fonts
 adobe-source-han-serif-otc-fonts
+alacritty
 alsa-utils
 amd-ucode
 anydesk-bin
 apparmor
 arandr
+artem-bin
 asp
 atomicparsley
 autoconf
@@ -85,6 +87,7 @@ libcanberra
 libgepub
 libgnome-keyring
 libgsf
+libpipewire02
 libreoffice-fresh
 libtool
 libva-mesa-driver
@@ -97,6 +100,7 @@ lxappearance-gtk3
 m4
 make
 mesa-vdpau
+microsoft-edge-stable-bin
 mpv
 mtools
 neofetch
@@ -114,6 +118,8 @@ nss-mdns
 ntfs-3g
 obs-studio
 openssh
+opera
+opera-ffmpeg-codecs
 os-prober
 otf-font-awesome
 p7zip

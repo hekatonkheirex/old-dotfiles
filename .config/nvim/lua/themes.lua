@@ -17,6 +17,7 @@ vim.g.tokyonight_style = 'night'
 vim.g.tokyonight_italic_functions = true
 vim.g.tokyonight_sidebars = { 'qf', 'vista_kind', 'terminal', 'packer' }
 vim.g.tokyonight_colors = { hint = 'orange', error = '#ff0000' }
+vim.g.catppuccin_flavour = 'mocha' -- latte, frappe, macchiato, mocha
 
 -- Themes color loading
 -- vim.cmd('colorscheme nord')
@@ -27,8 +28,8 @@ vim.g.tokyonight_colors = { hint = 'orange', error = '#ff0000' }
 -- vim.cmd('colorscheme sonokai')
 -- vim.cmd('colorscheme tokyonight')
 -- vim.cmd('colorscheme horizon')
--- vim.cmd('colorscheme catppuccin')
-vim.cmd('colorscheme rose-pine')
+vim.cmd('colorscheme catppuccin')
+-- vim.cmd('colorscheme rose-pine')
 -- vim.cmd('colorscheme monokai')
 -- vim.cmd('colorscheme kanagawa')
 -- vim.cmd('colorscheme hackthebox')

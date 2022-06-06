@@ -24,20 +24,20 @@ UNITS="metric"
 
 # Color Settings ______________________________________________________________
 
-COLOR_CLOUD="#908caa"
-COLOR_THUNDER="#c4a7e7"
-COLOR_LIGHT_RAIN="#9ccfd8"
-COLOR_HEAVY_RAIN="#31748f"
-COLOR_SNOW="#e0def4"
-COLOR_FOG="#908caa"
-COLOR_TORNADO="#c4a7e7"
-COLOR_SUN="#ea9d34"
+COLOR_CLOUD="#a6adc8"
+COLOR_THUNDER="#cba6f7"
+COLOR_LIGHT_RAIN="#89dceb"
+COLOR_HEAVY_RAIN="#89b4fa"
+COLOR_SNOW="#cdd6f4"
+COLOR_FOG="#a6adc8"
+COLOR_TORNADO="#cba6f7"
+COLOR_SUN="#fab387"
 COLOR_MOON="#e0def4"
-COLOR_ERR="#eb6f92"
-COLOR_WIND="#9ccfd8"
-COLOR_COLD="#31748f"
-COLOR_HOT="#eb6f92"
-COLOR_NORMAL_TEMP="#e0def4"
+COLOR_ERR="#f38ba8"
+COLOR_WIND="#89dceb"
+COLOR_COLD="#89b4fa"
+COLOR_HOT="#f38ba8"
+COLOR_NORMAL_TEMP="#cdd6f4"
 
 # Polybar settings ____________________________________________________________
 

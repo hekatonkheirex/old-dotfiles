@@ -76,13 +76,13 @@ input "type:keyboard" {
 
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
-    gsettings set $gnome-schema gtk-theme 'oomox-rosepine'
-    gsettings set $gnome-schema icon-theme 'oomox-rosepine'
+    gsettings set $gnome-schema gtk-theme 'oomox-catppuccin-mocha'
+    gsettings set $gnome-schema icon-theme 'oomox-catppuccin-mocha'
     gsettings set $gnome-schema cursor-theme 'Dracula-cursors'
-    gsettings set $gnome-schema font-name 'Hack 12'
+    gsettings set $gnome-schema font-name 'JetBrains Mono 12'
 }
 
-seat seat0 xcursor_theme "Dracula-cursors"
+#seat seat0 xcursor_theme "Dracula-cursors"
 
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
@@ -243,9 +243,9 @@ xwayland enable
 exec dunst &
 exec systemctl --user import-environment WAYLAND_DISPLAY
 
-client.focused          #c4a7e7 #c4a7e7 #c4a7e7 #c4a7e7 #c4a7e7
-client.unfocused        #191724 #191724 #191724 #191724 #191724
-client.focused_inactive #26233a #26233a #26233a #26233a #26233a
+client.focused          #cba6f7 #cba6f7 #cba6f7 #cba6f7 #cba6f7
+client.unfocused        #1e1e2e #1e1e2e #1e1e2e #1e1e2e #1e1e2e
+client.focused_inactive #313244 #313244 #313244 #313244 #313244 
 
 # bar {
 #     swaybar_command waybar

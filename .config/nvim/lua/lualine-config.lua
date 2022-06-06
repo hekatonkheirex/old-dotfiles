@@ -4,7 +4,7 @@ require('lualine').setup({
     -- theme = 'gruvbox',
     -- theme = 'tokyonight',
     -- theme = 'onedark',
-    -- theme = 'catppuccin',
+    theme = 'catppuccin',
     -- theme = 'nord',
     -- theme = 'horizon',
     -- theme = 'dracula-nvim',
