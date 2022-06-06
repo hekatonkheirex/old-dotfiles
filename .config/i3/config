@@ -46,6 +46,7 @@ bindsym $mod+w kill
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+d exec --no-startup-id rofi -show drun
 #bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/launcher.sh
+bindsym $mod+p exec --no-startup-id ~/.config/rofi/scripts/powermenu.sh
 
 # change focus
 bindsym $mod+h focus left
@@ -194,11 +195,11 @@ bindsym XF86MonBrightnessDown exec light -dec 10
 for_window [class=".*"] border pixel 2
 
 # class                   border  backgr. text
-client.focused          #7c7be0 #7c7be0 #7c7be0
-client.focused_inactive #30313b #30313b #30313b
-client.unfocused        #1a1b26 #1a1b26 #1a1b26
-client.urgent           #f7768e #f7768e #f7768e
-client.placeholder      #a9b1d6 #a9b1d6 #a9b1d6
+client.focused          #cba6f7 #cba6f7 #cba6f7
+client.focused_inactive #313244 #313244 #313244
+client.unfocused        #1e1e2e #1e1e2e #1e1e2e
+client.urgent           #f38ba8 #f38ba8 #f38ba8
+client.placeholder      #cdd6f4 #cdd6f4 #cdd6f4
 
 gaps inner 10
 gaps outer 0
