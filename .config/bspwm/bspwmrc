@@ -37,7 +37,6 @@ picom -f -b &
 # Scripts
 $HOME/.config/scripts/thunar.sh &
 xss-lock -l $HOME/.config/scripts/lock.sh &
-#pkill $HOME/.local/bin/borders ; $HOME/.local/bin/borders &
 
 # bspwm configuration
 bspc monitor -d I II III IV V
@@ -140,9 +139,9 @@ bspc config left_padding 		      0
 bspc config right_padding 		    0
 bspc config honor_size_hints		  true
 bspc config split_ratio           0.52
-bspc config single_monocle        true
+# bspc config single_monocle        true
 bspc config borderless_monocle    true
-bspc config gapless_monocle       true
+# bspc config gapless_monocle       true
 bspc config ignore_ewmh_focus 		false
 bspc config focus_follows_pointer true
 

@@ -33,6 +33,7 @@ brightnessctl
 bspwm
 cava
 cnrdrvcups-lb
+conky-lua
 cups
 dart-sass
 devtools
@@ -60,6 +61,7 @@ galculator
 gcc
 gdm
 gdm-settings
+gimp
 git
 gnome-keyring
 gnome-mahjongg
@@ -101,6 +103,7 @@ m4
 make
 mesa-vdpau
 microsoft-edge-stable-bin
+moc
 mpv
 mtools
 neofetch
@@ -170,6 +173,7 @@ swaybg
 swayidle
 swaylock
 sxhkd
+teamviewer
 terminus-font
 texinfo
 themix-full-git

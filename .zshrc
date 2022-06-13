@@ -129,6 +129,7 @@ alias laa="exa -a --icons"
 alias update="paru"
 alias clean="sudo pacman -Rns $(pacman -Qdtq)"
 alias n="nvim"
+alias mirrors="sudo reflector --latest 20 --age 12 --country US --sort rate --save /etc/pacman.d/mirrorlist"
 
 autoload -U compinit && compinit
 zstyle ':completion:*' menu select
