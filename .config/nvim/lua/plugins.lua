@@ -16,8 +16,24 @@ return require('packer').startup({
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use { 'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons' }
   use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' }, config = function()
-    require'nvim-tree'.setup {}
-  end
+    require'nvim-tree'.setup{
+      renderer = {
+        indent_markers = {
+          enable = true,
+          icons = {
+            corner = "└ ",
+            edge = "│ ",
+            none = "  ",
+          },
+        },
+      },
+      update_focused_file = {
+        enable = true,
+        update_cwd = true,
+        ignore_list = {},
+      },
+    }
+    end
   }
   use { 'windwp/nvim-ts-autotag' }
   use { 'p00f/nvim-ts-rainbow' }
@@ -64,7 +80,6 @@ return require('packer').startup({
   use 'glepnir/dashboard-nvim'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'terrortylor/nvim-comment'
-  use 'elkowar/yuck.vim'
 
   -- Themes
   use 'Mofiqul/dracula.nvim'
