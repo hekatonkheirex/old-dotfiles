@@ -1,9 +1,9 @@
 {
   "layer": "top",
-  "height": 36,
+  "height": 34,
   "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
   "modules-center": ["custom/spotify"],
-  "modules-right": ["tray", "idle_inhibitor", "network", "pulseaudio", "backlight", "battery", "custom/weather", "clock"],
+  "modules-right": ["tray", "sway/language", "idle_inhibitor", "network", "pulseaudio", "backlight", "battery", "custom/weather", "clock"],
   
   // Modules configuration
   "sway/workspaces": {
@@ -32,6 +32,13 @@
 
   "sway/window": {
     "max-length": 50,
+    },
+
+  "sway/language": {
+      "format": "{}",
+      "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
+      "tooltip": "true",
+      "tooltip-format": "{long}"
     },
 
   "idle_inhibitor": {

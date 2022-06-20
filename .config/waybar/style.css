@@ -1,12 +1,13 @@
+/* General configuration */
 * {
   border: none;
-  font-family: JetBrains Mono,"Font Awesome 6 Pro Regular", "Font Awesome 6 Brands";
+  font-family: "Rec Mono Duotone","Font Awesome 6 Pro Regular", "Font Awesome 6 Brands";
   font-size: 14px;
   font-weight: bold;
 }
 
 window#waybar {
-  background-color: #1e1e2e;
+  background-color: #161f2d;
   /* background-color: rgba(25,23,26,0.01); */
   transition-property: background-color;
   transition-duration: .5s;
@@ -35,107 +36,109 @@ window#waybar.hidden {
 #disk,
 #tray {
   /* background: linear-gradient(90deg, rgba(34,35,53,1) 15%, rgba(37,39,52,1) 90%); */
-  background-color: rgba(30,30,46,0.5);
+  background-color: rgba(22,31,45,0.5);
   padding: 0 12px;
   margin: 4px 4px 4px 4px;
   border-radius: 90px;
   background-clip: padding-box;
 }
 
+/* Workspaces */
 #workspaces button {
   padding: 0 5px;
   min-width: 25px;
-  color: #cdd6f4;
+  color: #a4b1cd;
 }
-
 #workspaces button:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
-
 #workspaces button.focused {
-  background: linear-gradient(90deg, rgba(249,226,175,1) 15%, rgba(166,227,161,1) 90%);
+  background: linear-gradient(90deg, rgba(255,175,0,1) 15%, rgba(159,239,0,1) 90%);
   border-radius: 90px;
-  color: #191724;
+  color: #161f2d;
 }
-
 #workspaces button.urgent {
-  color: #f38ba8;
+  color: #ff3e3e;
 }
 
+/* CPU */
 #cpu {
-  color: #1e1e2e;
+  color: #161f2d;
 }
 
+/* Memory */
 #memory {
-  color: #1e1e2e;
+  color: #161f2d;
 }
 
+/* Temperature */
 #temperature {
   background: linear-gradient(90deg, rgba(174,89,180,1) 45%, rgba(195,79,152,1) 90%);
-  color: #1e1e2e;
+  color: #161f2d;
 }
-
 #temperature.critical {
-  background-color: #f38ba8;
-  color: #1e1e2e;
+  background-color: #ff3e3e;
+  color: #161f2d;
 }
 
+/* Spotify */
 #custom-spotify {
-  color: #a6e3a1;
+  color: #9fef00;
 }
 
+/* Clock */
 #clock {
-  color: #1e1e2e;
-  background: linear-gradient(90deg, rgba(250,179,135,1) 0%, rgba(249,226,175,1) 100%);
+  color: #161f2d;
+  background: linear-gradient(90deg, rgba(213,160,33,1) 0%, rgba(255,175,0,1) 100%);
 }
 
+/* Window title */
 #window {
-  color: #a6e3a1;
+  color: #9fef00;
 }
 
+/* Idle inhibitor */
 #idle_inhibitor {
-  color: #1e1e2e;
-  background: linear-gradient(90deg, rgba(166,227,161,1) 15%, rgba(137,180,250,1) 90%);
+  color: #161f2d;
+  background: linear-gradient(90deg, rgba(159,239,0,1) 15%, rgba(46,108,255,1) 90%);
 }
-
 #idle_inhibitor.activated {
-  background-color: #1e1e2e;
-  color: #f38ba8;
+  background-color: #161f2d;
+  color: #ff3e3e;
 }
 
+/* Volume */
 #pulseaudio {
-  background: linear-gradient(90deg, rgba(137,220,235,1) 0%, rgba(203,166,247,1) 100%);
-  color: #1e1e2e;
+  background: linear-gradient(90deg, rgba(46,231,182,1) 0%, rgba(160,155,231,1) 100%);
+  color: #161f2d;
 }
-
 #pulseaudio.muted {
-  color: #1e1e2e;
+  color: #161f2d;
 }
 
+/* Backlight */
 #backlight {
-  background: linear-gradient(90deg, rgba(203,166,247,1) 0%, rgba(245,194,231,1) 100%);
-  color: #1e1e2e;
+  background: linear-gradient(90deg, rgba(160,155,231,1) 0%, rgba(159,0,255,1) 100%);
+  color: #161f2d;
 }
 
+/* Battery */
 #battery {
-  background: linear-gradient(90deg, rgba(245,194,231,1) 0%, rgba(243,139,168,1) 100%);
-  color: #1e1e2e;
+  background: linear-gradient(90deg, rgba(159,0,255,1) 0%, rgba(255,62,62,1) 100%);
+  color: #161f2d;
 }
-
 #battery.charging, #battery.plugged {
-  color: #89dceb;
+  color: #9fef00;
 }
-
 @keyframes blink {
   to {
-    background-color: #f38ba8;
-    color: #1e1e2e;
+    background-color: #ff3e3e;
+    color: #161f2d;
   }
 }
-
 #battery.critical:not(.charging) {
-  background-color: #f38ba8;
-  color: #f38ba8;
+  background-color: #ff3e3e;
+  color: #ff3e3e;
   animation-name: blink;
   animation-duration: 1s;
   animation-timing-function: linear;
@@ -143,42 +146,37 @@ window#waybar.hidden {
   animation-direction: alternate;
 }
 
+/* Network */
 #network {
-  background: linear-gradient(90deg, rgba(137,180,250,1) 0%, rgba(137,220,235,1) 100%);
-  color: #1e1e2e;
+  background: linear-gradient(90deg, rgba(46,108,255,1) 0%, rgba(46,231,182,1) 100%);
+  color: #161f2d;
 }
-
 #network.disconnected {
-  color: #1e1e2e;
+  color: #161f2d;
 }
 
+/* Weather */
 #custom-weather {
-  background: linear-gradient(90deg, rgba(243,139,168,1) 0%, rgba(250,179,135,1) 100%);
+  background: linear-gradient(90deg, rgba(255,62,62,1) 0%, rgba(213,160,33,1) 100%);
 }
 #custom-weather.severe {
-    color: #f38ba8;
+    color: #ff3e3e;
 }
-
 #custom-weather.sunnyDay {
-    color: #f9e2af;
+    color: #ffaf00;
 }
-
 #custom-weather.clearNight {
-    color: #bac2de;
+    color: #a4b1cd;
 }
-
 #custom-weather.cloudyFoggyDay, #custom-weather.cloudyFoggyNight {
-    color: #89dceb;
+    color: #2ee8b6;
 }
-
 #custom-weather.rainyDay, #custom-weather.rainyNight {
-    color: #cba6f7;
+    color: #a09be7;
 }
-
 #custom-weather.showyIcyDay, #custom-weather.snowyIcyNight {
-    color: #89b4fa;
+    color: #2e6cff;
 }
-
 #custom-weather.default {
-    color: #cdd6f4;
+    color: #a4b1cd;
 }

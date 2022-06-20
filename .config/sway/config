@@ -20,7 +20,6 @@ bindsym $mod+p exec $HOME/.config/rofi/scripts/powermenu.sh
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-# output * bg /mnt/windows/Walls/wallhaven-2evkmy.jpg fill
 exec ~/.azotebg
 
 #
@@ -38,7 +37,7 @@ exec swayidle -w \
          timeout 300 'swaylock -f -c 000000' \
          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
          before-sleep 'swaylock -f -c 000000'
-#
+
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
@@ -74,24 +73,56 @@ input "type:keyboard" {
     xkb_options grp:alt_shift_toggle
 }
 
+ # Catppuccin
+# set $gnome-schema org.gnome.desktop.interface
+# exec_always {
+#     gsettings set $gnome-schema gtk-theme 'oomox-catppuccin-mocha'
+#     gsettings set $gnome-schema icon-theme 'oomox-catppuccin-mocha'
+#     gsettings set $gnome-schema cursor-theme 'Dracula-cursors'
+#     gsettings set $gnome-schema font-name 'JetBrains Mono 12'
+# }
+
+# Everforest
+# set $gnome-schema org.gnome.desktop.interface
+# exec_always {
+#     gsettings set $gnome-schema gtk-theme 'oomox-everforest'
+#     gsettings set $gnome-schema icon-theme 'oomox-everforest'
+#     gsettings set $gnome-schema cursor-theme 'Dracula-cursors'
+#     gsettings set $gnome-schema font-name 'JetBrains Mono 12'
+# }
+
+# Rose Pine Dawn
+# set $gnome-schema org.gnome.desktop.interface
+# exec_always {
+#     gsettings set $gnome-schema gtk-theme 'oomox-rosepinedawn'
+#     gsettings set $gnome-schema icon-theme 'oomox-rosepinedawn'
+#     gsettings set $gnome-schema cursor-theme 'Dracula-cursors'
+#     gsettings set $gnome-schema font-name 'JetBrains Mono 12'
+# }
+
+# Rose Pine
+# set $gnome-schema org.gnome.desktop.interface
+# exec_always {
+#     gsettings set $gnome-schema gtk-theme 'oomox-rosepine'
+#     gsettings set $gnome-schema icon-theme 'oomox-rosepine'
+#     gsettings set $gnome-schema cursor-theme 'Dracula-cursors'
+#     gsettings set $gnome-schema font-name 'JetBrains Mono 12'
+# }
+
+# Hack The Box
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
-    gsettings set $gnome-schema gtk-theme 'oomox-catppuccin-mocha'
-    gsettings set $gnome-schema icon-theme 'oomox-catppuccin-mocha'
+    gsettings set $gnome-schema gtk-theme 'oomox-hackthebox'
+    gsettings set $gnome-schema icon-theme 'oomox-hackthebox'
     gsettings set $gnome-schema cursor-theme 'Dracula-cursors'
-    gsettings set $gnome-schema font-name 'JetBrains Mono 12'
+    gsettings set $gnome-schema font-name 'Rec Mono Duotone 14'
 }
 
-#seat seat0 xcursor_theme "Dracula-cursors"
-
-#
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
 ### Key bindings
-#
 # Basics:
-#
     # Start a terminal
     bindsym $mod+Return exec $term
 
@@ -243,13 +274,30 @@ xwayland enable
 exec dunst &
 exec systemctl --user import-environment WAYLAND_DISPLAY
 
-client.focused          #cba6f7 #cba6f7 #cba6f7 #cba6f7 #cba6f7
-client.unfocused        #1e1e2e #1e1e2e #1e1e2e #1e1e2e #1e1e2e
-client.focused_inactive #313244 #313244 #313244 #313244 #313244 
+# Catppuccin
+# client.focused          #cba6f7 #cba6f7 #cba6f7 #cba6f7 #cba6f7
+# client.unfocused        #1e1e2e #1e1e2e #1e1e2e #1e1e2e #1e1e2e
+# client.focused_inactive #313244 #313244 #313244 #313244 #313244 
 
-# bar {
-#     swaybar_command waybar
-# }
+# Everforest
+# client.focused          #a7c080 #a7c080 #a7c080 #a7c080 #a7c080
+# client.unfocused        #2b3339 #2b3339 #2b3339 #2b3339 #2b3339
+# client.focused_inactive #40474c #40474c #40474c #40474c #40474c 
+
+# Rose Pine Dawn
+# client.focused          #907aa9 #907aa9 #907aa9 #907aa9 #907aa9
+# client.unfocused        #faf4ed #faf4ed #faf4ed #faf4ed #faf4ed
+# client.focused_inactive #e4dfde #e4dfde #e4dfde #e4dfde #e4dfde 
+
+# Rose Pine Dawn
+# client.focused          #c4a7e7 #c4a7e7 #c4a7e7 #c4a7e7 #c4a7e7
+# client.unfocused        #191724 #191724 #191724 #191724 #191724
+# client.focused_inactive #26233a #26233a #26233a #26233a #26233a 
+
+# Hack The Box
+client.focused          #9fef00 #9fef00 #9fef00 #9fef00 #9fef00
+client.unfocused        #161f2d #161f2d #161f2d #161f2d #161f2d
+client.focused_inactive #2d3542 #2d3542 #2d3542 #2d3542 #2d3542 
 
 # Windows opacity
 set $opacity 0.95

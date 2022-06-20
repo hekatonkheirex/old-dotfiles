@@ -17,14 +17,14 @@ configuration {
 }
 
 * {
-    font:                        "JetBrains Mono 14";
+    font:                        "Rec Mono Duotone 14";
 		spacing:                     0;
-    background:                  #1e1e2e;
-    foreground:                  #cdd6f4;
-		lightbg:                     #313244;
-    lightfg:                     #bac2de;
-    red:                         #f38ba8;
-    blue:                        #cba6f7;
+    background:                  #161f2d;
+    foreground:                  #a4b1cd;
+		lightbg:                     #2d3542;
+    lightfg:                     #c5d1eb;
+    red:                         #ff3e3e;
+    blue:                        #9fef00;
 		text-color:                  var(foreground);
     selected-active-foreground:  var(blue);
     separatorcolor:              var(blackground);

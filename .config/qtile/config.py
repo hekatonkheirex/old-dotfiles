@@ -371,12 +371,12 @@ for i, name in enumerate(group_names, 1):
 #    }
 
 # Catppuccin
-layout_theme = {
-        "border_width": 2,
-        "margin": 15,
-        "border_focus": "cba6f7",
-        "border_normal": "1e1e2e"
-    }
+# layout_theme = {
+#         "border_width": 2,
+#         "margin": 15,
+#         "border_focus": "cba6f7",
+#         "border_normal": "1e1e2e"
+#     }
 
 # Rose Pine
 # layout_theme = {
@@ -403,17 +403,17 @@ layout_theme = {
 #    }
 
 # Hackthebox
-# layout_theme = {
-#        "border_width": 4,
-#        "margin": 15,
-#        "border_focus": "9fef00",
-#        "border_normal": "161f2d"
-#    }
+layout_theme = {
+       "border_width": 2,
+       "margin": 15,
+       "border_focus": "9fef00",
+       "border_normal": "161f2d"
+   }
 
 layouts = [
     layout.MonadTall(
-        border_focus='cba6f7',
-        border_normal='1e1e2e',
+        border_focus='9fef00',
+        border_normal='161f2d',
         border_width=2,
         margin=15,
         ratio=0.52,
@@ -425,8 +425,8 @@ layouts = [
         **layout_theme
     ),
     layout.Floating(
-        border_focus='f5c2e7',
-        border_normal='1e1e2e',
+        border_focus='2ee7b6',
+        border_normal='161f2d',
         border_width=2,
         fullscreen_border_width=0,
     ),
@@ -567,20 +567,20 @@ layouts = [
 #     ]
 
 # Catppuccin
-colors = [
-        ["#1e1e2e", "#1e1e2e"],  # 0 Background 0
-        ["#313244", "#313244"],  # 1 Background 1
-        ["#cdd6f4", "#cdd6f4"],  # 2 Foreground 0
-        ["#bac2de", "#bac2de"],  # 3 Foreground 1
-        ["#f38ba8", "#f38ba8"],  # 4 Red
-        ["#a6e3a1", "#a6e3a1"],  # 5 Green
-        ["#f9e2af", "#f9e2af"],  # 6 Yellow
-        ["#89b4fa", "#89b4fa"],  # 7 Blue
-        ["#f5c2e7", "#f5c2e7"],  # 8 Magenta
-        ["#89dceb", "#89dceb"],  # 9 Cyan
-        ["#fab387", "#fab387"],  # 10 Orange
-        ["#cba6f7", "#cba6f7"],  # 11 Violet
-    ]
+# colors = [
+#         ["#1e1e2e", "#1e1e2e"],  # 0 Background 0
+#         ["#313244", "#313244"],  # 1 Background 1
+#         ["#cdd6f4", "#cdd6f4"],  # 2 Foreground 0
+#         ["#bac2de", "#bac2de"],  # 3 Foreground 1
+#         ["#f38ba8", "#f38ba8"],  # 4 Red
+#         ["#a6e3a1", "#a6e3a1"],  # 5 Green
+#         ["#f9e2af", "#f9e2af"],  # 6 Yellow
+#         ["#89b4fa", "#89b4fa"],  # 7 Blue
+#         ["#f5c2e7", "#f5c2e7"],  # 8 Magenta
+#         ["#89dceb", "#89dceb"],  # 9 Cyan
+#         ["#fab387", "#fab387"],  # 10 Orange
+#         ["#cba6f7", "#cba6f7"],  # 11 Violet
+#     ]
 
 # Rose Pine
 # colors = [
@@ -631,30 +631,30 @@ colors = [
 #    ]
 
 # Hackthebox
-# colors = [
-#         ["#161f2d", "#161f2d"],  # 0 Background 0
-#         ["#2d3542", "#2d3542"],  # 1 Background 1
-#         ["#a4b1cd", "#a4b1cd"],  # 2 Foreground 0
-#         ["#c5d1eb", "#c5d1eb"],  # 3 Foreground 1
-#         ["#ff3e3e", "#ff3e3e"],  # 4 Red
-#         ["#9fef00", "#9fef00"],  # 5 Green
-#         ["#ffaf00", "#ffaf00"],  # 6 Yellow
-#         ["#2e6cff", "#2e6cff"],  # 7 Blue
-#         ["#9f00ff", "#9f00ff"],  # 8 Magenta
-#         ["#2ee7b6", "#2ee7b6"],  # 9 Cyan
-#         ["#d5a021", "#d5a021"],  # 10 Orange
-#         ["#a09be7", "#a09be7"],  # 11 Violet
-#     ]
+colors = [
+        ["#161f2d", "#161f2d"],  # 0 Background 0
+        ["#2d3542", "#2d3542"],  # 1 Background 1
+        ["#a4b1cd", "#a4b1cd"],  # 2 Foreground 0
+        ["#c5d1eb", "#c5d1eb"],  # 3 Foreground 1
+        ["#ff3e3e", "#ff3e3e"],  # 4 Red
+        ["#9fef00", "#9fef00"],  # 5 Green
+        ["#ffaf00", "#ffaf00"],  # 6 Yellow
+        ["#2e6cff", "#2e6cff"],  # 7 Blue
+        ["#9f00ff", "#9f00ff"],  # 8 Magenta
+        ["#2ee7b6", "#2ee7b6"],  # 9 Cyan
+        ["#d5a021", "#d5a021"],  # 10 Orange
+        ["#a09be7", "#a09be7"],  # 11 Violet
+    ]
 
 prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
 
 # Widgets definitions
 widget_defaults = dict(
-    font='JetBrains Mono',
+    font='Hack',
     fontsize=14,
     padding=4,
-    background='#1e1e2e',
-    foreground='#cdd6f4',
+    background='#161f2d',
+    foreground='#a4b1cd',
 )
 
 extension_defaults = widget_defaults.copy()
@@ -699,6 +699,7 @@ screens = [
                 widget.Wttr(
                     location={'Asuncion': 'Asuncion'},
                     padding=4,
+                    format=1,
                 ),
                 # widget.TextBox(
                 #     text='󰖐',
@@ -947,8 +948,8 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
-    border_focus='f5c2e7',
-    border_normal='1e1e2e',
+    border_focus='2ee7b6',
+    border_normal='161f2d',
     border_width=2,
     fullscreen_border_width=0,
     float_rules=[
