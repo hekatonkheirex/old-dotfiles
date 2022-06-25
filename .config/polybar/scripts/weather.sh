@@ -24,25 +24,25 @@ UNITS="metric"
 
 # Color Settings ______________________________________________________________
 
-COLOR_CLOUD="#c5d1eb"
-COLOR_THUNDER="#a09be7"
-COLOR_LIGHT_RAIN="#2ee7b6"
-COLOR_HEAVY_RAIN="#2e6cff"
-COLOR_SNOW="#a4b1cd"
-COLOR_FOG="#c5d1eb"
-COLOR_TORNADO="#a09be7"
-COLOR_SUN="#ffaf00"
-COLOR_MOON="#a4b1cd"
-COLOR_ERR="#ff3e3e"
-COLOR_WIND="#2ee7b6"
-COLOR_COLD="#2e6cff"
-COLOR_HOT="#ff3e3e"
-COLOR_NORMAL_TEMP="#a4b1cd"
+COLOR_CLOUD="#cdd6f4"
+COLOR_THUNDER="#cba6f7"
+COLOR_LIGHT_RAIN="#89dceb"
+COLOR_HEAVY_RAIN="#89b4fa"
+COLOR_SNOW="#cdd6f4"
+COLOR_FOG="#bac2de"
+COLOR_TORNADO="#cba6f7"
+COLOR_SUN="#fab387"
+COLOR_MOON="#cba6f7"
+COLOR_ERR="#f38ba8"
+COLOR_WIND="#89dceb"
+COLOR_COLD="#89b4fa"
+COLOR_HOT="#f38ba8"
+COLOR_NORMAL_TEMP="#bac2de"
 
 # Polybar settings ____________________________________________________________
 
 # Font for the weather icons
-WEATHER_FONT_CODE=1
+WEATHER_FONT_CODE=5
 
 # Font for the thermometer icon
 TEMP_FONT_CODE=1
@@ -131,15 +131,15 @@ function setIcons {
         #Thunderstorm
         ICON_COLOR=$COLOR_THUNDER
         if [ $DATE -ge $SUNRISE -a $DATE -le $SUNSET ]; then
-            ICON=" "
+            ICON="  "
         else
-            ICON=" "
+            ICON="  "
         fi
     elif [ $WID -le 311 ]; then
         #Light drizzle
         ICON_COLOR=$COLOR_LIGHT_RAIN
         if [ $DATE -ge $SUNRISE -a $DATE -le $SUNSET ]; then
-            ICON=" "
+            ICON="  "
         else
             ICON=" "
         fi
@@ -147,55 +147,55 @@ function setIcons {
         #Heavy drizzle
         ICON_COLOR=$COLOR_HEAVY_RAIN
         if [ $DATE -ge $SUNRISE -a $DATE -le $SUNSET ]; then
-            ICON=" "
+            ICON="  "
         else
-            ICON=" "
+            ICON="  "
         fi
     elif [ $WID -le 531 ]; then
         #Rain
         ICON_COLOR=$COLOR_HEAVY_RAIN
         if [ $DATE -ge $SUNRISE -a $DATE -le $SUNSET ]; then
-            ICON=" "
+            ICON="  "
         else
-            ICON=" "
+            ICON="  "
         fi
     elif [ $WID -le 622 ]; then
         #Snow
         ICON_COLOR=$COLOR_SNOW
-        ICON=" "
+        ICON="  "
     elif [ $WID -le 771 ]; then
         #Fog
         ICON_COLOR=$COLOR_FOG
-        ICON=" "
+        ICON="  "
     elif [ $WID -eq 781 ]; then
         #Tornado
         ICON_COLOR=$COLOR_TORNADO
-        ICON=" "
+        ICON="  "
     elif [ $WID -eq 800 ]; then
         #Clear sky
         if [ $DATE -ge $SUNRISE -a $DATE -le $SUNSET ]; then
             ICON_COLOR=$COLOR_SUN
-            ICON=" "
+            ICON="  "
         else
             ICON_COLOR=$COLOR_MOON
-            ICON=" "
+            ICON="  "
         fi
     elif [ $WID -eq 801 ]; then
         # Few clouds
         if [ $DATE -ge $SUNRISE -a $DATE -le $SUNSET ]; then
             ICON_COLOR=$COLOR_SUN
-            ICON=" "
+            ICON="  "
         else
             ICON_COLOR=$COLOR_MOON
-            ICON=" "
+            ICON="  "
         fi
     elif [ $WID -le 804 ]; then
         # Overcast
         ICON_COLOR=$COLOR_CLOUD
-        ICON=" "
+        ICON="  "
     else
         ICON_COLOR=$COLOR_ERR
-        ICON=" "
+        ICON="  "
     fi
     WIND=""
     WINDFORCE=`echo "$RESPONSE" | jq .wind.speed`

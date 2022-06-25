@@ -147,11 +147,11 @@ client.placeholder      #cdd6f4 #cdd6f4 #cdd6f4
 
 # Hack The Box
 # class                   border  backgr. text
-client.focused          #9fef00 #9fef00 #9fef00
-client.focused_inactive #2d3542 #2d3542 #2d3542
-client.unfocused        #161f2d #161f2d #161f2d
-client.urgent           #ff3e3e #ff3e3e #ff3e3e
-client.placeholder      #a4b1cd #a4b1cd #a4b1cd
+# client.focused          #9fef00 #9fef00 #9fef00
+# client.focused_inactive #2d3542 #2d3542 #2d3542
+# client.unfocused        #161f2d #161f2d #161f2d
+# client.urgent           #ff3e3e #ff3e3e #ff3e3e
+# client.placeholder      #a4b1cd #a4b1cd #a4b1cd
 
 gaps inner 10
 gaps outer 0

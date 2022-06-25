@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 pkill swaybg
-swaybg -o 'eDP-1' -i "/mnt/windows/Walls/1s1c6c3c4f291.png" -m fill &
+swaybg -o 'eDP-1' -i "/mnt/windows/Walls/wallhaven-dp7gkm.png" -m fill &

@@ -33,7 +33,6 @@ brightnessctl
 bspwm
 cava
 cnrdrvcups-lb
-conky-lua
 cups
 dart-sass
 devtools
@@ -43,6 +42,7 @@ discord
 dosfstools
 dunst
 dupeguru
+easy-rsa
 efibootmgr
 ethtool
 exa
@@ -89,6 +89,7 @@ libcanberra
 libgepub
 libgnome-keyring
 libgsf
+libjpeg6-turbo
 libpipewire02
 libreoffice-fresh
 libtool
@@ -98,11 +99,11 @@ light
 linux
 linux-firmware
 linux-headers
+lolcat
 lxappearance-gtk3
 m4
 make
 mesa-vdpau
-microsoft-edge-stable-bin
 moc
 mpv
 mtools
@@ -111,8 +112,10 @@ neovim
 nerd-fonts-complete
 network-manager-applet
 networkmanager
+networkmanager-openvpn
 nfs-utils
 nitrogen
+nmap
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
@@ -121,8 +124,7 @@ nss-mdns
 ntfs-3g
 obs-studio
 openssh
-opera
-opera-ffmpeg-codecs
+openvpn
 os-prober
 otf-font-awesome
 p7zip
@@ -149,9 +151,11 @@ python-psutil
 python-pycryptodome
 python-pyxdg
 qbittorrent
+qopenvpn
 qt5ct
 qt6ct
 qtile
+qtile-extras-git
 raw-thumbnailer
 reflector
 rofi

@@ -843,7 +843,7 @@ schemes:
 # *onedark
 # *rosepine
 
-colors: *hackthebox
+colors: *mocha
 
 # Bell
 #

@@ -73,14 +73,14 @@ input "type:keyboard" {
     xkb_options grp:alt_shift_toggle
 }
 
- # Catppuccin
-# set $gnome-schema org.gnome.desktop.interface
-# exec_always {
-#     gsettings set $gnome-schema gtk-theme 'oomox-catppuccin-mocha'
-#     gsettings set $gnome-schema icon-theme 'oomox-catppuccin-mocha'
-#     gsettings set $gnome-schema cursor-theme 'Dracula-cursors'
-#     gsettings set $gnome-schema font-name 'JetBrains Mono 12'
-# }
+# Catppuccin
+set $gnome-schema org.gnome.desktop.interface
+exec_always {
+    gsettings set $gnome-schema gtk-theme 'oomox-catppuccin-mocha'
+    gsettings set $gnome-schema icon-theme 'oomox-catppuccin-mocha'
+    gsettings set $gnome-schema cursor-theme 'Dracula-cursors'
+    gsettings set $gnome-schema font-name 'JetBrains Mono 12'
+}
 
 # Everforest
 # set $gnome-schema org.gnome.desktop.interface
@@ -106,17 +106,26 @@ input "type:keyboard" {
 #     gsettings set $gnome-schema gtk-theme 'oomox-rosepine'
 #     gsettings set $gnome-schema icon-theme 'oomox-rosepine'
 #     gsettings set $gnome-schema cursor-theme 'Dracula-cursors'
-#     gsettings set $gnome-schema font-name 'JetBrains Mono 12'
+#     gsettings set $gnome-schema font-name 'Rec Mono Duotone 14'
 # }
 
 # Hack The Box
-set $gnome-schema org.gnome.desktop.interface
-exec_always {
-    gsettings set $gnome-schema gtk-theme 'oomox-hackthebox'
-    gsettings set $gnome-schema icon-theme 'oomox-hackthebox'
-    gsettings set $gnome-schema cursor-theme 'Dracula-cursors'
-    gsettings set $gnome-schema font-name 'Rec Mono Duotone 14'
-}
+# set $gnome-schema org.gnome.desktop.interface
+# exec_always {
+#     gsettings set $gnome-schema gtk-theme 'oomox-hackthebox'
+#     gsettings set $gnome-schema icon-theme 'oomox-hackthebox'
+#     gsettings set $gnome-schema cursor-theme 'Dracula-cursors'
+#     gsettings set $gnome-schema font-name 'Rec Mono Duotone 14'
+# }
+
+# Gruvbox
+# set $gnome-schema org.gnome.desktop.interface
+# exec_always {
+#     gsettings set $gnome-schema gtk-theme 'oomox-gruvbox-dark-medium'
+#     gsettings set $gnome-schema icon-theme 'oomox-gruvbox-dark-medium'
+#     gsettings set $gnome-schema cursor-theme 'Dracula-cursors'
+#     gsettings set $gnome-schema font-name 'Rec Mono Duotone 14'
+# }
 
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
@@ -275,9 +284,9 @@ exec dunst &
 exec systemctl --user import-environment WAYLAND_DISPLAY
 
 # Catppuccin
-# client.focused          #cba6f7 #cba6f7 #cba6f7 #cba6f7 #cba6f7
-# client.unfocused        #1e1e2e #1e1e2e #1e1e2e #1e1e2e #1e1e2e
-# client.focused_inactive #313244 #313244 #313244 #313244 #313244 
+client.focused          #cba6f7 #cba6f7 #cba6f7 #cba6f7 #cba6f7
+client.unfocused        #1e1e2e #1e1e2e #1e1e2e #1e1e2e #1e1e2e
+client.focused_inactive #313244 #313244 #313244 #313244 #313244 
 
 # Everforest
 # client.focused          #a7c080 #a7c080 #a7c080 #a7c080 #a7c080
@@ -289,15 +298,20 @@ exec systemctl --user import-environment WAYLAND_DISPLAY
 # client.unfocused        #faf4ed #faf4ed #faf4ed #faf4ed #faf4ed
 # client.focused_inactive #e4dfde #e4dfde #e4dfde #e4dfde #e4dfde 
 
-# Rose Pine Dawn
+# # Rose Pine
 # client.focused          #c4a7e7 #c4a7e7 #c4a7e7 #c4a7e7 #c4a7e7
 # client.unfocused        #191724 #191724 #191724 #191724 #191724
 # client.focused_inactive #26233a #26233a #26233a #26233a #26233a 
 
 # Hack The Box
-client.focused          #9fef00 #9fef00 #9fef00 #9fef00 #9fef00
-client.unfocused        #161f2d #161f2d #161f2d #161f2d #161f2d
-client.focused_inactive #2d3542 #2d3542 #2d3542 #2d3542 #2d3542 
+# client.focused          #9fef00 #9fef00 #9fef00 #9fef00 #9fef00
+# client.unfocused        #161f2d #161f2d #161f2d #161f2d #161f2d
+# client.focused_inactive #2d3542 #2d3542 #2d3542 #2d3542 #2d3542 
+
+# Gruvbox
+# client.focused          #98971a #98971a #98971a #98971a #98971a
+# client.unfocused        #282828 #282828 #282828 #282828 #282828
+# client.focused_inactive #3c3836 #3c3836 #3c3836 #3c3836 #3c3836 
 
 # Windows opacity
 set $opacity 0.95

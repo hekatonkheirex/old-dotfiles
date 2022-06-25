@@ -21,9 +21,9 @@ return require('packer').startup({
         indent_markers = {
           enable = true,
           icons = {
-            corner = "└ ",
-            edge = "│ ",
-            none = "  ",
+          corner = "└ ",
+          edge = "│ ",
+          none = "  ",
           },
         },
       },
@@ -92,7 +92,6 @@ return require('packer').startup({
   use({ 'catppuccin/nvim', as = 'catppuccin' })
   use({ 'rose-pine/neovim', as = 'rose-pine' })
   use 'folke/tokyonight.nvim'
-  use 'rebelot/kanagawa.nvim'
   use 'audibleblink/hackthebox.vim'
 end,
 config = {
