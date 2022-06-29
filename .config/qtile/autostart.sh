@@ -10,7 +10,7 @@ export SSH_AUTH_SOCK
 fcitx5 &
 xinput --set-prop "ELAN1300:00 04F3:3087 Touchpad" "libinput Natural Scrolling Enabled" 1 &
 xsetroot -cursor_name left_ptr &
-feh --bg-fill /mnt/windows/Walls/wallhaven-725rry.jpg
+feh --bg-fill /mnt/windows/Walls/wallhaven-z8ewmo.jpg
 picom -f -b --config /home/mura/.config/picom/picom_not_rounded.conf
 $HOME/.config/scripts/thunar.sh &
 thunar --daemon &

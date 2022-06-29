@@ -7,17 +7,18 @@ from libqtile import layout, bar, widget, hook
 from typing import List  # noqa: F401
 
 
+# Defaults
+mod = "mod4"
+myTerm = "kitty"
+
+
+
 # Autostart programs
 @hook.subscribe.startup_once
 def autostart():
     home = os.path.expanduser('~/.config/qtile/autostart.sh')
     subprocess.call([home])
 
-
-# Defaults
-mod = "mod4"
-myTerm = "kitty"
-# myTerm = "alacritty"
 
 
 def focus_previous_group(qtile):
@@ -650,7 +651,7 @@ prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
 
 # Widgets definitions
 widget_defaults = dict(
-    font='Rec Mono Duotone',
+    font='JetBrains Mono',
     fontsize=14,
     padding=4,
     background='#1e1e2e',
@@ -673,7 +674,7 @@ screens = [
                     block_highlight_text_color=colors[0],
                     borderwidth=2,
                     disable_drag=True,
-                    font='Font Awesome 6 Pro',
+                    font='Font Awesome 6 Pro, Font Awesome 6 Brands',
                     fontsize=14,
                     hide_unused=False,
                     highlight_color='00000000',
@@ -865,7 +866,7 @@ screens = [
                 ),
                 widget.CheckUpdates(
                     colour_have_updates=colors[2],
-                    colour_no_updates=colors[1],
+                    colour_no_updates=colors[3],
                     display_format='{updates:>2}',
                     distro='Arch',
                     execute=None,
