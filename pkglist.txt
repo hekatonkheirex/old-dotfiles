@@ -31,6 +31,7 @@ bluez
 bluez-utils
 brightnessctl
 bspwm
+calcurse
 cava
 cnrdrvcups-lb
 cups
@@ -76,6 +77,7 @@ gvfs-mtp
 gvfs-smb
 hplip
 htop
+hyprland-git
 i3-gaps
 inetutils
 inotify-tools
@@ -102,6 +104,7 @@ linux-headers
 lolcat
 lxappearance-gtk3
 m4
+maim
 make
 mesa-vdpau
 moc
@@ -113,6 +116,7 @@ nerd-fonts-complete
 network-manager-applet
 networkmanager
 networkmanager-openvpn
+newm-git
 nfs-utils
 nitrogen
 nmap
@@ -126,7 +130,6 @@ obs-studio
 openssh
 openvpn
 os-prober
-otf-font-awesome
 p7zip
 pacman-contrib
 paru
@@ -134,6 +137,7 @@ patch
 pavucontrol
 pfetch-git
 picom-ibhagwan-git
+pinta
 pipewire
 pipewire-alsa
 pipewire-jack
@@ -142,13 +146,20 @@ pkgconf
 playerctl
 polkit-gnome
 polybar
+python-dasbus
 python-dbus-next
+python-evdev
+python-fuzzywuzzy
+python-imageio
 python-iwlib
 python-keyring
 python-libinput
 python-mpd2
+python-numpy
+python-pam
 python-psutil
 python-pycryptodome
+python-pyfiglet
 python-pyxdg
 qbittorrent
 qopenvpn
@@ -164,6 +175,7 @@ rtmpdump
 rustup
 rxfetch
 seahorse
+simplescreenrecorder
 slurp
 sof-firmware
 spicetify-cli-git
@@ -188,6 +200,7 @@ thunar-secure-delete
 thunar-shares-plugin-git
 thunar-vcs-plugin
 thunar-volman
+todotxt
 ttf-anonymous-pro
 ttf-bitstream-vera
 ttf-cascadia-code
@@ -230,9 +243,9 @@ w3m
 waybar
 wget
 which
-wlroots
 wmctrl
 wmutils-git
+wofi
 wpa_supplicant
 xarchiver
 xclip

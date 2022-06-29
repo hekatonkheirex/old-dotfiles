@@ -27,7 +27,7 @@ configuration {
     blue:                        #cba6f7;
 		text-color:                  var(foreground);
     selected-active-foreground:  var(blue);
-    separatorcolor:              var(blackground);
+    /* separatorcolor:              var(blackground); */
     urgent-foreground:           var(red);
     alternate-urgent-background: var(lightbg);
     background-color:            var(background);

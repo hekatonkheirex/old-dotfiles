@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	kitty
+	alacritty
 
 # program launcher
 super + d
@@ -13,6 +13,10 @@ super + d
 # powermenu
 super + p
   $HOME/.config/rofi/scripts/powermenu.sh
+
+# dashboard
+super + t
+  sh $HOME/.local/bin/dashboard
 
 # make sxhkd reload its configuration files:
 super + Escape
