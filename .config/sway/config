@@ -79,7 +79,7 @@ exec_always {
     gsettings set $gnome-schema gtk-theme 'oomox-catppuccin-mocha'
     gsettings set $gnome-schema icon-theme 'oomox-catppuccin-mocha'
     gsettings set $gnome-schema cursor-theme 'Dracula-cursors'
-    gsettings set $gnome-schema font-name 'JetBrains Mono 12'
+    gsettings set $gnome-schema font-name 'SF Pro Display 12'
 }
 
 # Everforest
@@ -358,6 +358,9 @@ for_window [window_role = "dialog"] floating enable
 for_window [window_type = "dialog"] floating enable
 for_window [app_id="galculator"] floating enable
 # for_window [app_id="thunar"] floating enable
+for_window [title="(?:Open|Save) (?:File|Folder|As)"] floating enable, resize set width 1030 height 710
+for_window [app_id="thunar" title="^Copying.*"] floating enable
+for_window [app_id="thunar" title="^File.*"] floating enable
 
 # Autostart applications
 exec_always --no-startup-id $HOME/.config/waybar/waybar.sh

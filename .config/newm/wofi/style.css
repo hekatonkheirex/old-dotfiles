@@ -1,0 +1,62 @@
+/* 
+ * Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
+*/
+
+/** ********** Fonts ********** **/
+* {
+    font-family: "JetBrains Mono", "Iosevka Nerd Font", archcraft, sans-serif;
+    font-size: 12px;
+}
+
+#window {
+    background-color: rgba(46, 52, 64, 1.0);
+	color: #f8f8f2;
+	border: 0px solid rgba(56, 62, 74, 1.0);
+	border-radius: 0px;
+}
+
+#outer-box {
+	padding: 15px;
+}
+
+#input {
+    background-color: rgba(255, 255, 255, 0.025);
+	border: 0px solid rgba(61, 67, 79, 1.0);
+	border-radius: 0px;
+	padding: 10px;
+}
+
+#scroll {
+	margin-top: 15px;
+}
+
+#inner-box {
+}
+
+#img {
+	padding-right: 8px;
+}
+
+#text {
+	color: #f8f8f2;
+}
+
+#text:selected {
+	color: #f8f8f2;
+}
+
+#entry {
+	padding: 6px;
+}
+
+#entry:selected {
+    background-color: rgba(255, 255, 255, 0.08);
+	color: #f8f8f2;
+	border-radius: 0px;
+}
+
+#unselected {
+}
+
+#selected {
+}

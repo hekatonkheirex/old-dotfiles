@@ -1,0 +1,229 @@
+/* 
+ * Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
+*/
+
+/** ********** Fonts ********** **/
+* {
+    font-family: "JetBrains Mono", "Iosevka Nerd Font", archcraft, sans-serif;
+    font-size: 14px;
+}
+
+/** ********** Waybar Window ********** **/
+window#waybar {
+    background-color: rgba(46, 52, 64, 1.0);
+	color: #f8f8f2;
+    border-bottom: 0px solid rgba(56, 62, 74, 0.35);
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.5;
+}
+
+/** ********** Custom ********** **/
+
+#custom-menu {
+	background-color: #343A40;
+	color: #B4A1DB;
+	font-size: 18px;
+	border-radius: 0px 14px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	padding: 2px 8px 2px 8px;
+}
+
+#custom-power {
+	background-color: #D04E9D;
+	color: #20262C;
+	font-size: 16px;
+	border-radius: 10px;
+	margin: 6px 6px 6px 0px;
+	padding: 2px 8px 2px 8px;
+}
+
+/** ********** Idle Inhibitor ********** **/
+#idle_inhibitor {
+    background-color: rgba(255, 255, 255, 0.10);
+	color: #89DCEB;
+	border-radius: 20px;
+	margin: 6px 6px 6px 0px ;
+	padding: 4px 10px;
+}
+#idle_inhibitor.deactivated {
+	color: #F28FAD;
+}
+
+/** ********** Tray ********** **/
+#tray {
+    background-color: rgba(255, 255, 255, 0.10);
+	border-radius: 20px;
+	margin: 6px 0px 6px 6px ;
+	padding: 4px 10px;
+}
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+#tray > .active {
+}
+
+/** ********** MPD ********** **/
+#mpd {
+	color: #f8f8f2;
+	font-size: 12px;
+	font-weight: bold;
+}
+#mpd.disconnected {
+	color: #F28FAD;
+}
+#mpd.stopped {
+	color: #F28FAD;
+}
+#mpd.playing {
+	color: #96CDFB;
+}
+#mpd.paused {
+}
+
+#mpd.2 {
+	border-radius: 20px 0px 0px 20px;
+	margin: 6px 0px 6px 6px ;
+	padding: 4px 6px 4px 10px;
+}
+#mpd.3 {
+	margin: 6px 0px 6px 0px ;
+	padding: 4px;
+}
+#mpd.4 {
+	border-radius: 0px 20px 20px 0px;
+	margin: 6px 6px 6px 0px ;
+	padding: 4px 10px 4px 6px;
+}
+#mpd.2,#mpd.3,#mpd.4 {
+    background-color: rgba(255, 255, 255, 0.10);
+	font-size: 14px;
+}
+
+/** ********** Temperature ********** **/
+#temperature {
+	color: #F5C2E7;
+}
+#temperature.critical {
+	color: #F28FAD;
+}
+
+/** ********** CPU ********** **/
+#cpu {
+	color: #ABE9B3;
+}
+
+/** ********** Memory ********** **/
+#memory {
+	color: #FAE3B0;
+}
+
+/** ********** Disk ********** **/
+#disk {
+	color: #96CDFB;
+}
+
+/** ********** Pulseaudio ********** **/
+#pulseaudio {
+	color: #F5C2E7;
+}
+#pulseaudio.bluetooth {
+	color: #89DCEB;
+}
+#pulseaudio.muted {
+	color: #F28FAD;
+}
+
+#pulseaudio.2 {
+}
+#pulseaudio.2.bluetooth {
+}
+#pulseaudio.2.muted {
+}
+
+/** ********** Backlight ********** **/
+#backlight {
+	color: #96CDFB;
+}
+
+/** ********** Battery ********** **/
+#battery {
+	color: #FAE3B0;
+}
+#battery.charging {
+}
+#battery.plugged {
+}
+@keyframes blink {
+    to {
+        color: #f8f8f2;
+    }
+}
+#battery.critical:not(.charging), #battery.2.critical:not(.charging) {
+    background-color: rgba(255, 255, 255, 0.10);
+    color: #F28FAD;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/** ********** Network ********** **/
+#network {
+	color: #ABE9B3;
+}
+#network.disconnected,#network.disabled {
+	color: #F28FAD;
+}
+#network.linked {
+}
+#network.ethernet {
+}
+#network.wifi {
+}
+
+/** ********** Clock ********** **/
+#clock {
+	color: #96CDFB;
+}
+
+/** ********** Common style ********** **/
+#backlight, 
+#battery,
+#clock,
+#cpu,
+#disk,
+#memory,
+#pulseaudio,
+#network,
+#temperature {
+    background-color: rgba(255, 255, 255, 0.10);
+	border-radius: 20px 0px 0px 20px;
+	margin: 6px 0px 6px 0px ;
+	padding: 4px 0px 4px 10px;
+}
+
+#backlight.2, 
+#battery.2,
+#clock.2,
+#cpu.2,
+#disk.2,
+#memory.2,
+#pulseaudio.2,
+#network.2,
+#temperature.2 {
+    background-color: rgba(255, 255, 255, 0.10);
+	color: #f1fcf9;
+	font-size: 12px;
+	font-weight: bold;
+	border-radius: 0px 20px 20px 0px;
+	margin: 6px 6px 6px 0px ;
+	padding: 5px 10px 4px 8px;
+}

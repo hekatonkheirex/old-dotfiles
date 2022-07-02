@@ -33,68 +33,68 @@ get_weather_data() {
 
 		#Big long if statement of doom
 		if [ "$weather_icon_code" == "50d"  ]; then
-			weather_icon=""
-			weather_hex="#7AA2F7"
+			weather_icon=""
+			weather_hex="#89b4fa"
 		elif [ "$weather_icon_code" == "50n"  ]; then
-			weather_icon=""
-			weather_hex="#7AA2F7"
+			weather_icon=""
+			weather_hex="#89b4fa"
 		elif [ "$weather_icon_code" == "01d"  ]; then
-			weather_icon=""
-			weather_hex="#E0AF68"
+			weather_icon=""
+			weather_hex="#f9e2af"
 		elif [ "$weather_icon_code" == "01n"  ]; then
-			weather_icon=""
-			weather_hex="#BB9AF7"
+			weather_icon=""
+			weather_hex="#cba6f7"
 		elif [ "$weather_icon_code" == "02d"  ]; then
-			weather_icon=""
-			weather_hex="#A9B1D6"
+			weather_icon=""
+			weather_hex="#cdd6f4"
 		elif [ "$weather_icon_code" == "02n"  ]; then
-			weather_icon=""
-			weather_hex="#A9B1D6"
+			weather_icon=""
+			weather_hex="#cdd6f4"
 		elif [ "$weather_icon_code" == "03d"  ]; then
-			weather_icon=""
-			weather_hex="#A9B1D6"
+			weather_icon=""
+			weather_hex="#cdd6f4"
 		elif [ "$weather_icon_code" == "03n"  ]; then
-			weather_icon=""
-			weather_hex="#A9B1D6"
+			weather_icon=""
+			weather_hex="#cdd6f4"
 		elif [ "$weather_icon_code" == "04d"  ]; then
-			weather_icon=""
-			weather_hex="#A9B1D6"
+			weather_icon=""
+			weather_hex="#cdd6f4"
 		elif [ "$weather_icon_code" == "04n"  ]; then
-			weather_icon=""
-			weather_hex="#A9B1D6"
+			weather_icon=""
+			weather_hex="#cdd6f4"
 		elif [ "$weather_icon_code" == "09d"  ]; then
-			weather_icon=""
-			weather_hex="#7AA2F7"
+			weather_icon=""
+			weather_hex="#89b4fa"
 		elif [ "$weather_icon_code" == "09n"  ]; then
-			weather_icon=""
-			weather_hex="#7AA2F7"
+			weather_icon=""
+			weather_hex="#89b4fa"
 		elif [ "$weather_icon_code" == "10d"  ]; then
-			weather_icon=""
-			weather_hex="#7AA2F7"
+			weather_icon=""
+			weather_hex="#89b4fa"
 		elif [ "$weather_icon_code" == "10n"  ]; then
-			weather_icon=""
-			weather_hex="#7AA2F7"
+			weather_icon=""
+			weather_hex="#89b4fa"
 		elif [ "$weather_icon_code" == "11d"  ]; then
-			weather_icon=""
-			weather_hex="#E0AF68"
+			weather_icon=""
+			weather_hex="#f9e2af"
 		elif [ "$weather_icon_code" == "11n"  ]; then
-			weather_icon=""
-			weather_hex="#E0AF68"
+			weather_icon=""
+			weather_hex="#f9e2af"
 		elif [ "$weather_icon_code" == "13d"  ]; then
 			weather_icon=""
-			weather_hex="#C0CAF5"
+			weather_hex="#bac2de"
 		elif [ "$weather_icon_code" == "13n"  ]; then
 			weather_icon=""
-			weather_hex="#C0CAF5"
+			weather_hex="#bac2de"
 		elif [ "$weather_icon_code" == "40d"  ]; then
 			weather_icon=""
-			weather_hex="#7DCFFF"
+			weather_hex="#89dceb"
 		elif [ "$weather_icon_code" == "40n"  ]; then
 			weather_icon=""
-			weather_hex="#7DCFFF"
+			weather_hex="#89dceb"
 		else 
 			weather_icon=""
-			weather_hex="#A9B1D6"
+			weather_hex="#cdd6f4"
 		fi
 		echo "$weather_icon" >  ${cache_weather_icon}
 		echo "$weather_city" >  ${cache_weather_city}
@@ -106,7 +106,7 @@ get_weather_data() {
 		echo "Weather Unavailable" > ${cache_weather_stat}
 		echo "" > ${cache_weather_icon}
 		echo "-" > ${cache_weather_degree}
-		echo "#A9B1D6" > ${tcache_weather_hex}
+		echo "#cdd6f4" > ${tcache_weather_hex}
 	fi
 }
 

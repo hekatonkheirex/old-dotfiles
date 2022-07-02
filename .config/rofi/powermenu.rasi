@@ -2,7 +2,7 @@ configuration {
     show-icons: false;
   }
 * {
-    font:                        "JetBrains Mono 14";
+    font:                        "SF Pro Display 14";
     spacing:                     0;
     background:                  #1e1e2e;
     foreground:                  #cdd6f4;
@@ -36,7 +36,7 @@ configuration {
 
 window {
     padding:          0px ;
-    width:            29.2% ;
+    width:            24.6% ;
     height:           6.5% ;
     children:         [ horibox ];
     location:         center;
