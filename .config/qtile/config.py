@@ -9,8 +9,7 @@ from typing import List  # noqa: F401
 
 # Defaults
 mod = "mod4"
-myTerm = "kitty"
-
+myTerm = "wezterm"
 
 
 # Autostart programs

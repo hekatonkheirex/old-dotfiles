@@ -172,6 +172,7 @@ bspc rule -a Google-chrome desktop='^1' follow=on
 bspc rule -a Microsoft-edge desktop='^1' follow=on
 bspc rule -a firefox desktop='^1' follow=on
 bspc rule -a kitty desktop='^2' follow=on
+bspc rule -a org.wezfurlong.wezterm desktop='^2' follow=on
 bspc rule -a Alacritty desktop='^2' follow=on
 bspc rule -a Thunar desktop='^3' follow=on
 bspc rule -a Pcmanfm desktop='^3' follow=on

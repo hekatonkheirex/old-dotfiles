@@ -80,7 +80,7 @@ return require('packer').startup({
   use 'glepnir/dashboard-nvim'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'terrortylor/nvim-comment'
-  use 'elkowar/yuck.nvim'
+  use 'elkowar/yuck.vim'
 
   -- Themes
   use 'Mofiqul/dracula.nvim'

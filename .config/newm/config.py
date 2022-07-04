@@ -38,9 +38,8 @@ def on_startup():
         dbus-update-activation-environment --systemd \
         DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP",
         "thunar --daemon",
-        "/usr/lib/xfce-polkit/xfce-polkit",
+        "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
         "~/.config/newm/scripts/notifications",
-        "mpd",
     )
 
     for service in init_service:
@@ -53,10 +52,10 @@ def on_reconfigure():
     gnome_schema = 'org.gnome.desktop.interface'
     gnome_peripheral = 'org.gnome.desktop.peripherals'
     wm_service_extra_config = (
-        f"gsettings set {gnome_schema} gtk-theme 'oomox-catppuccin-mocha'",
-        f"gsettings set {gnome_schema} icon-theme 'oomox-catppuccin-mocha'",
-        f"gsettings set {gnome_schema} cursor-theme 'Dracula-cursors'",
-        f"gsettings set {gnome_schema} font-name 'JetBrains Mono 13'",
+        f"gsettings set {gnome_schema} gtk-theme 'Catppuccin-Mocha-BL'",
+        f"gsettings set {gnome_schema} icon-theme 'Catppuccin-Mocha'",
+        f"gsettings set {gnome_schema} cursor-theme 'Colloid-dark-cursors'",
+        f"gsettings set {gnome_schema} font-name 'SF Pro Display 13'",
         f"gsettings set {gnome_peripheral}.keyboard repeat-interval 30",
         f"gsettings set {gnome_peripheral}.keyboard delay 500",
         f"gsettings set {gnome_peripheral}.mouse natural-scroll false",
