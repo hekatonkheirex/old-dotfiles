@@ -1,9 +1,9 @@
 /* General configuration */
 * {
   border: none;
-  font-family: "SF Pro Display","Font Awesome 6 Free Regular","Font Awesome 6 Free Solid","Font Awesome 6 Pro Regular","Font Awesome 6 Pro Thin","Font Awesome 6 Pro Solid","Font Awesome 6 Pro Light","Font Awesome 6 Brands Regular";
+  font-family: "Product Sans","Font Awesome 6 Free Regular","Font Awesome 6 Free Solid","Font Awesome 6 Pro Regular","Font Awesome 6 Pro Thin","Font Awesome 6 Pro Solid","Font Awesome 6 Pro Light","Font Awesome 6 Brands Regular";
   font-size: 14px;
-  font-weight: 700;
+  font-weight: normal;
 }
 
 window#waybar {

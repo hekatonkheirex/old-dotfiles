@@ -238,7 +238,7 @@ keys = [
 groups = []
 
 group_names = 'www term file doc bit chat share vid mus'.split()
-group_labels = ["", "", "", "", "", "", "", "", ""]
+group_labels = ["一", "二", "三", "四", "五", "六", "七", "八", "九"]
 group_layouts = [
         "monadtall", "tile", "max", "max", "max", "max", "floating",
         "floating", "max"
@@ -266,6 +266,7 @@ def assign_app_group(client):
     d[group_names[1]] = [
         "Alacritty",
         "kitty",
+        "org.wezfurlong.wezterm",
         ]
     d[group_names[2]] = [
         "thunar",
@@ -650,8 +651,8 @@ prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
 
 # Widgets definitions
 widget_defaults = dict(
-    font='JetBrains Mono',
-    fontsize=14,
+    font='Product Sans',
+    fontsize=18,
     padding=4,
     background='#1e1e2e',
     foreground='#cdd6f4',
@@ -663,23 +664,42 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                # widget.Image(
-                #     background=colors[0],
-                #     filename="~/.config/qtile/icons/python.png",
-                #     margin=5
-                # ),
+                widget.Sep(
+                    padding=8,
+                    foreground=colors[5],
+                    background=colors[5],
+                ),
+                widget.TextBox(
+                    font='Material Design Icons',
+                    fontsize=26,
+                    foreground=colors[0],
+                    background=colors[5],
+                    mouse_callbacks={
+                        "Button1": lazy.spawn("rofi -show drun"),
+                        },
+                    text=' 󰣇',
+                    padding=-1,
+                ),
+                widget.TextBox(
+                    text=' \ue0b6',
+                    font='Iosevka Nerd Font',
+                    fontsize=34,
+                    padding=-1,
+                    foreground=colors[0],
+                    background=colors[5],
+                ),
                 widget.GroupBox(
-                    active=colors[6],
+                    active=colors[2],
                     block_highlight_text_color=colors[0],
                     borderwidth=2,
                     disable_drag=True,
-                    font='Font Awesome 6 Pro, Font Awesome 6 Brands',
-                    fontsize=14,
-                    hide_unused=False,
+                    font='Stick',
+                    fontsize=18,
+                    hide_unused=True,
                     highlight_color='00000000',
                     # highlight_color=colors[11],
-                    highlight_method='text',
-                    # highlight_method='block',
+                    # highlight_method='text',
+                    highlight_method='block',
                     inactive=colors[1],
                     padding=2,
                     rounded=True,
@@ -689,235 +709,163 @@ screens = [
                     urgent_border=colors[4],
                     urgent_text=colors[0],
                 ),
-                widget.WindowName(
-                    max_chars=250,
-                    padding=8,
-                    foreground=colors[5],
-                ),
-                widget.Spacer(
-                ),
-                widget.Wttr(
-                    location={'Asuncion': 'Asuncion'},
-                    padding=4,
-                    format=1,
-                ),
-                # widget.TextBox(
-                #     text='󰖐',
-                #     fontsize=14,
-                #     padding=1,
-                #     foreground=colors[8],
-                # ),
-                # widget.OpenWeather(
-                #     app_key='29c7c3f06ff45f58f6a2e409c2fb2d22',
-                #     cityid='3439389',
-                #     format='{weather} {main_temp}°{units_temperature}',
-                #     metric=True,
-                #     padding=4,
-                #     update_interval=600,
-                #     url='https://openweathermap.org/city/3439389',
-                #     foreground=colors[2],
-                # ),
-                widget.Sep(
-                    padding=4,
-                    foreground=colors[0],
-                ),
                 widget.TextBox(
-                    text='',
-                    font='Font Awesome 6 Pro',
-                    fontsize=14,
-                    padding=1,
-                    foreground=colors[8],
-                ),
-                widget.Clock(
-                    format='%a %d %b %H:%M',
-                    padding=4,
-                    foreground=colors[2],
-                ),
-                # widget.TextBox(
-                #     text='',
-                #     fontsize=26,
-                #     foreground=colors[1],
-                # ),
-                # widget.TextBox(
-                #     text='',
-                #     fontsize=26,
-                #     foreground=colors[1],
-                # ),
-                widget.Sep(
-                    padding=4,
-                    foreground=colors[0],
-                ),
-                # widget.WidgetBox(
-                #     text_closed='󰅁',
-                #     text_open='󰅂',
-                #     fontsize=14,
-                #     foreground=colors[8],
-                #     widgets=[
-                #         widget.Systray(
-                #             padding = 1,
-                #         ),
-                #     ],
-                # ),
-                widget.Systray(
-                    padding=4,
-                ),
-                # widget.QuickExit(
-                #     countdown_format='[{}]',
-                #     foreground=colors[4],
-                #     default_text='󰐥',
-                #     fontsize=14,
-                #     padding=4,
-                # ),
-            ],
-            28,
-            # margin=[15, 15, 0, 15],
-        ),
-        bottom=bar.Bar(
-            [
-                widget.TextBox(
-                    text='',
-                    font='Font Awesome 6 Pro',
-                    fontsize=14,
-                    padding=1,
-                    foreground=colors[8]
-                ),
-                widget.Wlan(
-                    format='{essid}',
-                    interface='wlp1s0',
-                    padding=4,
-                ),
-                widget.Net(
-                    format='󰁅 {down} 󰁝 {up}',
-                    padding=4,
-                ),
-                widget.Sep(
-                    padding=4,
-                    foreground=colors[0],
-                ),
-                widget.TextBox(
-                    text='',
-                    font='Font Awesome 6 Pro',
-                    fontsize=14,
-                    padding=4,
-                    foreground=colors[8],
-                ),
-                widget.CPU(
-                    format='{load_percent}%',
-                    foreground=colors[2],
-                ),
-                widget.Sep(
-                    padding=4,
-                    foreground=colors[0],
-                ),
-                widget.TextBox(
-                    text='',
-                    font='Font Awesome 6 Pro',
-                    fontsize=14,
-                    padding=1,
-                    foreground=colors[8],
-                ),
-                widget.Memory(
-                    format='{MemUsed: .0f}M',
-                    measure_mem='M',
-                    update_interval=1.0,
-                    foreground=colors[2],
-                ),
-                widget.Sep(
-                    padding=4,
-                    foreground=colors[0],
-                ),
-                widget.TextBox(
-                    text='',
-                    font='Font Awesome 6 Pro',
-                    fontsize=14,
-                    padding=1,
-                    foreground=colors[8],
-                ),
-                widget.ThermalSensor(
-                    foreground=colors[2],
-                ),
-                widget.Spacer(
-                ),
-                widget.TextBox(
-                    text='',
-                    font='Font Awesome 6 Brands',
-                    fontsize=16,
-                    padding=1,
-                    foreground=colors[5],
-                ),
-                widget.Mpris2(
-                    name='spotify',
-                    objname="org.mpris.MediaPlayer2.spotify",
-                    display_metadata=['xesam:title', 'xesam:artist'],
-                    scroll_chars=None,
-                    stop_pause_text='',
-                    padding=4,
-                    foreground=colors[2],
-                ),
-                widget.Spacer(
-                ),
-                widget.TextBox(
-                    text='',
-                    font='Font Awesome 6 Pro',
-                    fontsize=14,
-                    padding=1,
-                    foreground=colors[8]
-                ),
-                widget.CheckUpdates(
-                    colour_have_updates=colors[2],
-                    colour_no_updates=colors[3],
-                    display_format='{updates:>2}',
-                    distro='Arch',
-                    execute=None,
-                    foreground=colors[2],
-                    no_update_string='Up to date!',
-                    padding=4,
-                    update_interval=60,
-                ),
-                widget.Sep(
-                    padding=4,
-                    foreground=colors[0],
-                ),
-                widget.TextBox(
-                    text='',
-                    font='Font Awesome 6 Pro',
-                    fontsize=14,
-                    padding=1,
-                    foreground=colors[8],
-                ),
-                widget.Backlight(
-                    backlight_name='amdgpu_bl0',
-                    padding=1,
-                    foreground=colors[2],
-                ),
-                widget.Sep(
-                    padding=4,
-                    foreground=colors[0],
-                ),
-                widget.TextBox(
-                    text='',
-                    font='Font Awesome 6 Pro',
-                    fontsize=14,
-                    padding=1,
-                    foreground=colors[8],
-                ),
-                widget.PulseVolume(
-                    padding=4,
-                    foreground=colors[2],
+                    text=' \ue0b6',
+                    font='Iosevka Nerd Font',
+                    fontsize=34,
+                    padding=-1,
+                    foreground=colors[7],
+                    background=colors[0],
                 ),
                 widget.CurrentLayoutIcon(
                     custom_icon_paths=[
                         os.path.expanduser("~/.config/qtile/icons")
                     ],
                     padding=1,
-                    scale=0.4,
+                    scale=0.5,
+                    background=colors[7],
                 ),
-                widget.CurrentLayout(
-                    padding=1,
+                # widget.CurrentLayout(
+                #     padding=1,
+                #     foreground=colors[0],
+                #     background=colors[7],
+                # ),
+                widget.TextBox(
+                    text=' \ue0b6',
+                    font='Iosevka Nerd Font',
+                    fontsize=34,
+                    padding=-1,
+                    foreground=colors[1],
+                    background=colors[7],
+                ),
+                # widget.TextBox(
+                #     text='',
+                #     font='Font Awesome 6 Brands',
+                #     fontsize=16,
+                #     padding=1,
+                #     foreground=colors[5],
+                # ),
+                # widget.Mpris2(
+                #     name='spotify',
+                #     objname="org.mpris.MediaPlayer2.spotify",
+                #     display_metadata=['xesam:title', 'xesam:artist'],
+                #     scroll_chars=None,
+                #     stop_pause_text='',
+                #     padding=4,
+                #     foreground=colors[2],
+                # ),
+                widget.WindowName(
+                    max_chars=400,
+                    padding=8,
                     foreground=colors[2],
+                    background=colors[1],
+                ),
+                widget.Spacer(
+                        background=colors[1],
+                        length=5,
+                ),
+                widget.TextBox(
+                    text=' \ue0b6',
+                    font='Iosevka Nerd Font',
+                    fontsize=34,
+                    padding=-1,
+                    foreground=colors[11],
+                    background=colors[1],
+                ),
+                widget.Systray(
+                    padding=4,
+                    background=colors[11],
+                ),
+                widget.TextBox(
+                    text=' \ue0b6',
+                    font='Iosevka Nerd Font',
+                    fontsize=34,
+                    padding=-1,
+                    foreground=colors[8],
+                    background=colors[11],
+                ),
+                widget.TextBox(
+                    text='',
+                    font='Font Awesome 6 Pro',
+                    fontsize=18,
+                    padding=3,
+                    foreground=colors[0],
+                    background=colors[8],
+                ),
+                widget.Backlight(
+                    backlight_name='amdgpu_bl0',
+                    padding=1,
+                    foreground=colors[0],
+                    background=colors[8],
+                ),
+                widget.TextBox(
+                    text=' \ue0b6',
+                    font='Iosevka Nerd Font',
+                    fontsize=34,
+                    padding=-1,
+                    foreground=colors[4],
+                    background=colors[8],
+                ),
+                widget.TextBox(
+                    text='',
+                    font='Font Awesome 6 Pro',
+                    fontsize=18,
+                    padding=1,
+                    foreground=colors[0],
+                    background=colors[4],
+                ),
+                widget.PulseVolume(
+                    padding=4,
+                    foreground=colors[0],
+                    background=colors[4],
+                ),
+                widget.TextBox(
+                    text=' \ue0b6',
+                    font='Iosevka Nerd Font',
+                    fontsize=34,
+                    padding=-1,
+                    foreground=colors[10],
+                    background=colors[4],
+                ),
+                widget.Wttr(
+                    location={'Asuncion': 'Asuncion'},
+                    padding=4,
+                    format=1,
+                    foreground=colors[0],
+                    background=colors[10],
+                ),
+                widget.TextBox(
+                    text=' \ue0b6',
+                    font='Iosevka Nerd Font',
+                    fontsize=34,
+                    padding=-1,
+                    foreground=colors[6],
+                    background=colors[10],
+                ),
+                widget.TextBox(
+                    text='',
+                    font='Font Awesome 6 Pro',
+                    fontsize=18,
+                    padding=1,
+                    foreground=colors[0],
+                    background=colors[6],
+                ),
+                widget.Clock(
+                    format='%a %d %b %H:%M',
+                    padding=4,
+                    foreground=colors[0],
+                    background=colors[6],
+                ),
+                widget.Sep(
+                    padding=4,
+                    foreground=colors[6],
+                    background=colors[6],
                 ),
             ],
-            28,
+            34,
+            margin=[5, 5, 0, 5],
+            # border_width=[2, 2, 2, 2],
+            # border_color=["1e1e2e", "1e1e2e", "1e1e2e", "1e1e2e"],
         ),
     ),
 ]

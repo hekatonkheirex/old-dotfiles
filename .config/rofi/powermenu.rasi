@@ -2,7 +2,7 @@ configuration {
     show-icons: false;
   }
 * {
-    font:                        "SF Pro Display 14";
+    font:                        "Product Sans 14";
     spacing:                     0;
     background:                  #1e1e2e;
     foreground:                  #cdd6f4;

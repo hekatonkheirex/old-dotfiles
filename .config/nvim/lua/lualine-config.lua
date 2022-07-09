@@ -9,6 +9,7 @@ require('lualine').setup({
     -- theme = 'horizon',
     -- theme = 'dracula-nvim',
     -- theme = 'everforest',
+    -- theme = 'decay',
     -- section_separators = '',
     -- component_separators = '',
     -- component_separators = { left = '', right = ''},

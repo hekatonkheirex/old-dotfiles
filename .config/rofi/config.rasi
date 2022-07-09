@@ -17,7 +17,7 @@ configuration {
 }
 
 * {
-    font:                        "SF Pro Display 14";
+    font:                        "Product Sans 14";
 		spacing:                     0;
     background:                  #1e1e2e;
     foreground:                  #cdd6f4;
@@ -27,7 +27,7 @@ configuration {
     blue:                        #cba6f7;
 		text-color:                  var(foreground);
     selected-active-foreground:  var(blue);
-    /* separatorcolor:              var(blackground); */
+    separatorcolor:              var(blackground);
     urgent-foreground:           var(red);
     alternate-urgent-background: var(lightbg);
     background-color:            var(background);

@@ -94,6 +94,13 @@ return require('packer').startup({
   use({ 'rose-pine/neovim', as = 'rose-pine' })
   use 'folke/tokyonight.nvim'
   use 'audibleblink/hackthebox.vim'
+  use { 'decaycs/decay.nvim', as = 'decay', require('decay').setup({
+    dark = false,
+    nvim_tree = {
+      contrast = true, -- or false to disable tree contrast
+    },
+  })
+}
 end,
 config = {
   display = {

@@ -66,7 +66,7 @@ theme.xcolor15 = "#BAC2DE"
 --- ░▀░░░▀▀▀░▀░▀░░▀░░▀▀▀
 
 --- Ui Fonts
-theme.font_name = "Roboto "
+theme.font_name = "Product Sans"
 theme.font = theme.font_name .. "Medium 10"
 
 --- Icon Fonts

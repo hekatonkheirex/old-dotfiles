@@ -82,10 +82,10 @@ input "type:keyboard" {
 # Catppuccin
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
-    gsettings set $gnome-schema gtk-theme 'Catppuccin-Mocha-BL'
-    gsettings set $gnome-schema icon-theme 'Catppuccin-Mocha'
+    gsettings set $gnome-schema gtk-theme 'Catppuccin-Mocha-edit'
+    gsettings set $gnome-schema icon-theme 'oomox-catppuccin-mocha'
     gsettings set $gnome-schema cursor-theme 'Colloid-dark-cursors'
-    gsettings set $gnome-schema font-name 'SF Pro Display 13'
+    gsettings set $gnome-schema font-name 'Product Sans 13'
 }
 
 # Everforest
@@ -366,6 +366,9 @@ for_window [app_id="thunar" title="^Copying.*"] floating enable
 for_window [app_id="thunar" title="^File.*"] floating enable
 
 # Autostart applications
+set $clipboard "~/.local/share/clipman.json"
+exec wl-paste -t text --watch clipman store --max-items 1024
+bindsym $mod+y exec clipman pick --tool="wofi" --max-items=30
 xwayland enable
 exec systemctl --user import-environment WAYLAND_DISPLAY
 exec_always --no-startup-id $HOME/.config/waybar/waybar.sh

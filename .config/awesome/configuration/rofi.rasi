@@ -1,5 +1,5 @@
 configuration {
-    font:           				"Roboto Medium 10";
+    font:           				"Product Sans Medium 10";
     show-icons:                     true;
 	icon-theme: 					"WhiteSur-dark";
     display-drun: 					"";

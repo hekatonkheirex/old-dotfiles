@@ -7,10 +7,11 @@ on-button-left=dismiss
 on-button-middle=none
 on-button-right=dismiss-all
 on-touch=dismiss
-on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga
+# on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga
+on-notify=exec paplay /home/mura/.local/share/sounds/wow.ogg
 
 # STYLING
-font=SF Pro Display 14
+font=Product Sans 14
 width=500
 height=200
 margin=20
