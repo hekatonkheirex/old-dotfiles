@@ -27,7 +27,7 @@ wmctrl -r Spotify -t 4
 # Tray
 fcitx5 &
 # xfce4-power-manager &
-# blueberry-tray &
+# blueman-applet &
 # nm-applet &
 
 # Bar
@@ -35,7 +35,8 @@ fcitx5 &
 $HOME/.local/bin/eww -c $HOME/.config/eww/bar --restart open bar &
 
 # Wallpaper 
-nitrogen --restore &
+# nitrogen --restore &
+feh --bg-fill /mnt/windows/Walls/wallhaven-z8ewmo.jpg
 
 # Compositor
 picom -f -b &

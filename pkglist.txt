@@ -28,7 +28,6 @@ betterlockscreen-git
 bind
 bison
 bleachbit
-blueberry
 blueman
 bluez
 bluez-utils
@@ -38,6 +37,10 @@ calcurse
 cava
 clipman
 cnrdrvcups-lb
+colord
+colord-gtk
+colord-gtk-common
+colord-gtk4
 cups
 dart-sass
 devtools
@@ -62,7 +65,6 @@ ffmpegthumbnailer
 firefox
 firewalld
 flex
-foot
 fzf
 galculator
 gcc
@@ -92,8 +94,6 @@ inetutils
 inotify-tools
 inter-font
 khal
-kitty
-kitty-terminfo
 laptop-mode-tools
 leafpad
 libcanberra
@@ -117,7 +117,9 @@ m4
 maim
 make
 mako
+materia-gtk-theme
 mesa-vdpau
+microsoft-edge-stable-bin
 moc
 mpv
 mtools
@@ -132,7 +134,6 @@ networkmanager-l2tp
 networkmanager-openconnect
 networkmanager-pptp
 networkmanager-vpnc
-newm-git
 nfs-utils
 nitrogen
 nmap
@@ -213,7 +214,6 @@ thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-secure-delete
 thunar-shares-plugin-git
-thunar-vcs-plugin
 thunar-volman
 todotxt
 ttf-anonymous-pro

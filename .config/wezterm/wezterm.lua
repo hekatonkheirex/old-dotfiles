@@ -7,6 +7,18 @@
 
 local wezterm = require("wezterm")
 
+local xcursor_size = nil
+local xcursor_theme = nil
+
+local success, stdout, stderr = wezterm.run_child_process({"gsettings", "get", "org.gnome.desktop.interface", "cursor-theme"})
+if success then
+  xcursor_theme = stdout:gsub("'(.+)'\n", "%1")
+end
+
+local success, stdout, stderr = wezterm.run_child_process({"gsettings", "get", "org.gnome.desktop.interface", "cursor-size"})
+if success then
+  xcursor_size = tonumber(stdout)
+end
 local function font_with_fallback(name, params)
 	local names = { name, "Apple Color Emoji", "azuki_font" }
 	return wezterm.font_with_fallback(names, params)
@@ -255,6 +267,11 @@ return {
 	tab_bar_at_bottom = true,
 
 	-- General
+  animation_fps = 1,
+  cursor_blink_rate = 1000,
+  cursor_blink_ease_in = "Constant",
+  cursor_blink_ease_out = "Constant",
+  enable_kitty_graphics = true,
 	automatically_reload_config = true,
 	inactive_pane_hsb = { saturation = 1.0, brightness = 1.0 },
 	window_frame = { active_titlebar_bg = colors.darker_background },
@@ -262,4 +279,6 @@ return {
 	window_decorations = "RESIZE",
 	selection_word_boundary = " \t\n{}[]()\"'`,;:",
   warn_about_missing_glyphs = false,
+  xcursor_theme = xcursor_theme,
+  xcursor_size = xcursor_size,
 }

@@ -8,7 +8,7 @@ on-button-middle=none
 on-button-right=dismiss-all
 on-touch=dismiss
 # on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga
-on-notify=exec paplay /home/mura/.local/share/sounds/wow.ogg
+on-notify=exec paplay /home/mura/.local/share/sounds/ok.ogg
 
 # STYLING
 font=Product Sans 14

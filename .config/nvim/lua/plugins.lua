@@ -95,7 +95,7 @@ return require('packer').startup({
   use 'folke/tokyonight.nvim'
   use 'audibleblink/hackthebox.vim'
   use { 'decaycs/decay.nvim', as = 'decay', require('decay').setup({
-    dark = false,
+    dark = true,
     nvim_tree = {
       contrast = true, -- or false to disable tree contrast
     },

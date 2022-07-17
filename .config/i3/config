@@ -117,7 +117,7 @@ exec_always --no-startup-id /home/mura/.config/polybar/i3launch.sh
 exec --no-startup-id nm-applet
 
 # Bluetooth
-exec --no-startup-id blueberry-tray
+exec --no-startup-id blueman-applet
 
 # fcitx 
 exec --no-startup-id fcitx5
