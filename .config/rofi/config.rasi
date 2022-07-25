@@ -19,12 +19,12 @@ configuration {
 * {
     font:                        "Product Sans 14";
 		spacing:                     0;
-    background:                  #1e1e2e;
-    foreground:                  #cdd6f4;
-		lightbg:                     #313244;
-    lightfg:                     #bac2de;
-    red:                         #f38ba8;
-    blue:                        #cba6f7;
+    background:                  #191724;
+    foreground:                  #e0def4;
+		lightbg:                     #26233a;
+    lightfg:                     #908caa;
+    red:                         #eb6f92;
+    blue:                        #c4a7e7;
 		text-color:                  var(foreground);
     selected-active-foreground:  var(blue);
     separatorcolor:              var(blackground);

@@ -91,16 +91,23 @@ return require('packer').startup({
   use 'sainnhe/sonokai'
   use 'ntk148v/vim-horizon'
   use({ 'catppuccin/nvim', as = 'catppuccin' })
-  use({ 'rose-pine/neovim', as = 'rose-pine' })
+  use({
+    'rose-pine/neovim',
+    as = 'rose-pine',
+    tag = 'v1.*',
+  })
   use 'folke/tokyonight.nvim'
   use 'audibleblink/hackthebox.vim'
   use { 'decaycs/decay.nvim', as = 'decay', require('decay').setup({
     dark = true,
     nvim_tree = {
       contrast = true, -- or false to disable tree contrast
-    },
-  })
-}
+      },
+    })
+  }
+  use { 'Everblush/everblush.nvim', as = 'everblush' }
+  use 'akai54/2077.nvim'
+  use 'Iron-E/nvim-soluarized'
 end,
 config = {
   display = {

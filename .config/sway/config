@@ -62,8 +62,6 @@ exec swayidle -w \
 
 #exec swayidle before-sleep $lock
 
-exec_always /home/mura/.config/scripts/swaylid.sh
-
 ### Input configuration
 #
 # Example configuration:
@@ -76,21 +74,21 @@ input "1267:12423:ELAN1300:00_04F3:3087_Touchpad" {
 }
 
 input "type:keyboard" {
-  repeat_delay 200
-  repeat_rate 10
+  repeat_delay 300
+  repeat_rate 50
   xkb_layout us,es
   #xkb_variant ,nodeadkeys
   xkb_options grp:alt_shift_toggle
 }
 
 # Catppuccin
-set $gnome-schema 'org.gnome.desktop.interface'
-exec_always {
-    gsettings set $gnome-schema gtk-theme 'Catppuccin-Mocha-edit'
-    gsettings set $gnome-schema icon-theme 'oomox-catppuccin-mocha'
-    gsettings set $gnome-schema cursor-theme 'Colloid-dark-cursors'
-    gsettings set $gnome-schema font-name 'Product Sans 14'
-}
+# set $gnome-schema 'org.gnome.desktop.interface'
+# exec_always {
+#     gsettings set $gnome-schema gtk-theme 'Catppuccin-Mocha-edit'
+#     gsettings set $gnome-schema icon-theme 'oomox-catppuccin-mocha'
+#     gsettings set $gnome-schema cursor-theme 'Colloid-dark-cursors'
+#     gsettings set $gnome-schema font-name 'Product Sans 14'
+# }
 
 # Everforest
 # set $gnome-schema org.gnome.desktop.interface
@@ -106,18 +104,18 @@ exec_always {
 # exec_always {
 #     gsettings set $gnome-schema gtk-theme 'oomox-rosepinedawn'
 #     gsettings set $gnome-schema icon-theme 'oomox-rosepinedawn'
-#     gsettings set $gnome-schema cursor-theme 'Dracula-cursors'
-#     gsettings set $gnome-schema font-name 'JetBrains Mono 12'
+#     gsettings set $gnome-schema cursor-theme 'Colloid-dark-cursors'
+#     gsettings set $gnome-schema font-name 'Product Sans 14'
 # }
 
 # Rose Pine
-# set $gnome-schema org.gnome.desktop.interface
-# exec_always {
-#     gsettings set $gnome-schema gtk-theme 'oomox-rosepine'
-#     gsettings set $gnome-schema icon-theme 'oomox-rosepine'
-#     gsettings set $gnome-schema cursor-theme 'Dracula-cursors'
-#     gsettings set $gnome-schema font-name 'Rec Mono Duotone 14'
-# }
+set $gnome-schema org.gnome.desktop.interface
+exec_always {
+    gsettings set $gnome-schema gtk-theme 'Rosepine-B'
+    gsettings set $gnome-schema icon-theme 'Rose-Pine'
+    gsettings set $gnome-schema cursor-theme 'Colloid-dark-cursors'
+    gsettings set $gnome-schema font-name 'Product Sans 14'
+}
 
 # Hack The Box
 # set $gnome-schema org.gnome.desktop.interface
@@ -137,6 +135,15 @@ exec_always {
 #     gsettings set $gnome-schema font-name 'Rec Mono Duotone 14'
 # }
 
+# Decay
+# set $gnome-schema 'org.gnome.desktop.interface'
+# exec_always {
+#     gsettings set $gnome-schema gtk-theme 'oomox-decay'
+#     gsettings set $gnome-schema icon-theme 'oomox-decay'
+#     gsettings set $gnome-schema cursor-theme 'Colloid-dark-cursors'
+#     gsettings set $gnome-schema font-name 'Product Sans 14'
+# }
+
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
@@ -152,8 +159,6 @@ exec_always {
     bindsym $mod+d exec $menu
 
     bindsym $mod+b exec firefox
-
-    bindsym $mod+escape exec 'grim /tmp/screen.png; corrupter /tmp/screen.png /tmp/screen.png; swaylock -fi /tmp/screen.png --effect-vignette 0.5:0.5 --clock --indicator-radius 100 --indi    cator-thickness 7  --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --fade-in 0.2'
 
     bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym XF86MonBrightnessUp exec brightnessctl set +5%
@@ -291,9 +296,9 @@ gaps bottom 1
 gaps top 1
 
 # Catppuccin
-client.focused          #cba6f7 #cba6f7 #cba6f7 #cba6f7 #cba6f7
-client.unfocused        #1e1e2e #1e1e2e #1e1e2e #1e1e2e #1e1e2e
-client.focused_inactive #313244 #313244 #313244 #313244 #313244 
+# client.focused          #cba6f7 #cba6f7 #cba6f7 #cba6f7 #cba6f7
+# client.unfocused        #1e1e2e #1e1e2e #1e1e2e #1e1e2e #1e1e2e
+# client.focused_inactive #313244 #313244 #313244 #313244 #313244 
 
 # Everforest
 # client.focused          #a7c080 #a7c080 #a7c080 #a7c080 #a7c080
@@ -305,10 +310,10 @@ client.focused_inactive #313244 #313244 #313244 #313244 #313244
 # client.unfocused        #faf4ed #faf4ed #faf4ed #faf4ed #faf4ed
 # client.focused_inactive #e4dfde #e4dfde #e4dfde #e4dfde #e4dfde 
 
-# # Rose Pine
-# client.focused          #c4a7e7 #c4a7e7 #c4a7e7 #c4a7e7 #c4a7e7
-# client.unfocused        #191724 #191724 #191724 #191724 #191724
-# client.focused_inactive #26233a #26233a #26233a #26233a #26233a 
+# Rose Pine
+client.focused          #c4a7e7 #c4a7e7 #c4a7e7 #c4a7e7 #c4a7e7
+client.unfocused        #191724 #191724 #191724 #191724 #191724
+client.focused_inactive #26233a #26233a #26233a #26233a #26233a 
 
 # Hack The Box
 # client.focused          #9fef00 #9fef00 #9fef00 #9fef00 #9fef00
@@ -319,6 +324,11 @@ client.focused_inactive #313244 #313244 #313244 #313244 #313244
 # client.focused          #98971a #98971a #98971a #98971a #98971a
 # client.unfocused        #282828 #282828 #282828 #282828 #282828
 # client.focused_inactive #3c3836 #3c3836 #3c3836 #3c3836 #3c3836 
+
+# Decay
+# client.focused          #94f7c5 #94f7c5 #94f7c5 #94f7c5 #94f7c5
+# client.unfocused        #171a1f #171a1f #171a1f #171a1f #171a1f
+# client.focused_inactive #2e3035 #2e3035 #2e3035 #2e3035 #2e3035
 
 # Windows opacity
 set $opacity 0.95
@@ -332,12 +342,14 @@ for_window [class="Vivaldi-stable"] opacity 1.0
 for_window [class="Google-chrome"] opacity 1.0
 for_window [class="Microsoft-edge"] opacity 1.0
 for_window [class="mpv"] opacity 1.0
+for_window [class="Min"] opacity 1.0
 
 # Assign workspaces
 for_window [app_id="firefox"] move to workspace 1, workspace 1
 for_window [class="firefox"] move to workspace 1, workspace 1
 for_window [class="Google-chrome"] move to workspace 1, workspace 1
 for_window [class="Microsoft-edge"] move to workspace 1, workspace 1
+for_window [class="Min"] move to workspace 1, workspace 1
 for_window [app_id="Alacritty"] move to workspace 2, workspace 2
 for_window [class="org.wezfurlong.wezterm"] move to workspace 2, workspace 2
 for_window [app_id="thunar"] move to workspace 3, workspace 3
@@ -383,5 +395,6 @@ exec_always --no-startup-id autotiling
 exec_always thunar --daemon &
 exec mako &
 exec wl-paste -t text --watch clipman store --no-persist
+# exec wlsunset -l 25.27 -L -57.64 &
 
 include /etc/sway/config.d/*

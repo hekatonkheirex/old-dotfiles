@@ -1,13 +1,17 @@
+
 require('rose-pine').setup({
-	---@usage 'main'|'moon'
+	--- @usage 'main' | 'moon'
 	dark_variant = 'main',
 	bold_vert_split = false,
 	dim_nc_background = false,
 	disable_background = false,
 	disable_float_background = false,
 	disable_italics = false,
-	---@usage string hex value or named color from rosepinetheme.com/palette
+
+	--- @usage string hex value or named color from rosepinetheme.com/palette
 	groups = {
+		background = 'base',
+		panel = 'surface',
 		border = 'highlight_med',
 		comment = 'muted',
 		link = 'iris',
@@ -28,5 +32,10 @@ require('rose-pine').setup({
 		}
 		-- or set all headings at once
 		-- headings = 'subtle'
+	},
+
+	-- Change specific vim highlight groups
+	highlight_groups = {
+		ColorColumn = { bg = 'rose' }
 	}
 })

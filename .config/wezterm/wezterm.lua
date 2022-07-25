@@ -28,43 +28,43 @@ local font_name = "JetBrains Mono"
 
 local colors = {
 	-- special
-	foreground = "#cdd6f4",
-	darker_background = "#11111b",
-	background = "#1e1e2e",
-	lighter_background = "#313244",
-	one_background = "#181825",
+	foreground = "#e0def4",
+	darker_background = "#14121c",
+	background = "#191724",
+	lighter_background = "#1f1d2e",
+	one_background = "#26233a",
 
 	-- black
-	color0 = "#313244",
-	color8 = "#45475a",
+	color0 = "#191724",
+	color8 = "#26233a",
 
 	-- red
-	color1 = "#f38ba8",
-	color9 = "#f38ba8",
+	color1 = "#eb6f92",
+	color9 = "#eb6f92",
 
 	-- green
-	color2 = "#a6e3a1",
-	color10 = "#a6e3a1",
+	color2 = "#56949f",
+	color10 = "#56949f",
 
 	-- yellow
-	color3 = "#f9e2af",
-	color11 = "#f9e2af",
+	color3 = "#f6c177",
+	color11 = "#f6c177",
 
 	-- blue
-	color4 = "#89b4fa",
-	color12 = "#89b4fa",
+	color4 = "#31748f",
+	color12 = "#31748f",
 
 	-- magenta
-	color5 = "#f5c2e7",
-	color13 = "#f5c2e7",
+	color5 = "#ebbcba",
+	color13 = "#ebbcba",
 
 	-- cyan
-	color6 = "#89dceb",
-	color14 = "#89dceb",
+	color6 = "#9ccfd8",
+	color14 = "#9ccfd8",
 
 	-- white
-	color7 = "#cdd6f4",
-	color15 = "#bac2de",
+	color7 = "#e0def4",
+	color15 = "#908caa",
 }
 
 return {
@@ -254,10 +254,10 @@ return {
 
 	-- Padding
 	window_padding = {
-		left = 25,
-		right = 25,
-		top = 25,
-		bottom = 25,
+		left = 15,
+		right = 15,
+		top = 15,
+		bottom = 15,
 	},
 
 	-- Tab Bar

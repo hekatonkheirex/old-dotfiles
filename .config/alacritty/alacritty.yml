@@ -836,6 +836,68 @@ schemes:
       cyan:    '#5cecc6'
       white:   '#ffffff'
 
+  # Everblush
+  everblush: &everblush
+    # Default colors
+    primary:
+      background: "0x141b1e"
+      foreground: "0xdadada"
+    cursor:
+      text: "0xd6d6d6"
+      cursor: "0x3b4244"
+
+    # Normal colors
+    normal:
+      black: "0x232a2d"
+      red: "0xe57474"
+      green: "0x8ccf7e"
+      yellow: "0xe5c76b"
+      blue: "0x67b0e8"
+      magenta: "0xc47fd5"
+      cyan: "0x6cbfbf"
+      white: "0xb3b9b8"
+
+    # Bright colors
+    bright:
+      black: "0x2d3437"
+      red: "0xef7e7e"
+      green: "0x96d988"
+      yellow: "0xf4d67a"
+      blue: "0x71baf2"
+      magenta: "0xce89df"
+      cyan: "0x67cbe7"
+      white: "0xbdc3c2"
+
+  # Decay
+  decay: &decay
+    primary:
+      background: '#171a1f'
+      foreground: '#b6beca'
+
+    cursor:
+      text:   CellForeground
+      cursor: '#f5f5f5'
+
+    bright:
+      black:   '#384148'
+      red:     '#fc7b81'
+      green:   '#94f7c5'
+      yellow:  '#ffeba6'
+      blue:    '#8cc1ff'
+      magenta: '#e2a6ff'
+      cyan:    '#90daff'
+      white:   '#fafdff'
+
+    normal:
+      black:   '#1c252c'
+      red:     '#e05f65'
+      green:   '#78dba9'
+      yellow:  '#f1cf8a'
+      blue:    '#70a5eb'
+      magenta: '#c68aee'
+      cyan:    '#74bee9'
+      white:   '#dee1e6'
+
 ######################################################################
 ## SET THEME: Choose ONE color scheme from those in the above list. ##
 ## ###################################################################
@@ -849,8 +911,11 @@ schemes:
 # *solarized-dark
 # *onedark
 # *rosepine
+# *mocha
+# *everblush
+# *decay
 
-colors: *mocha
+colors: *decay
 
   # Indexed Colors
   #

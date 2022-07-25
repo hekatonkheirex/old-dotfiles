@@ -372,20 +372,20 @@ for i, name in enumerate(group_names, 1):
 #    }
 
 # Catppuccin
-layout_theme = {
-        "border_width": 2,
-        "margin": 15,
-        "border_focus": "cba6f7",
-        "border_normal": "1e1e2e"
-    }
+# layout_theme = {
+#         "border_width": 2,
+#         "margin": 15,
+#         "border_focus": "cba6f7",
+#         "border_normal": "1e1e2e"
+#     }
 
 # Rose Pine
-# layout_theme = {
-#         "border_width": 4,
-#         "margin": 15,
-#         "border_focus": "c4a7e7",
-#         "border_normal": "191724"
-#     }
+layout_theme = {
+        "border_width": 4,
+        "margin": 15,
+        "border_focus": "c4a7e7",
+        "border_normal": "191724"
+    }
 
 # Rose Pine Dawn
 # layout_theme = {
@@ -413,9 +413,9 @@ layout_theme = {
 
 layouts = [
     layout.MonadTall(
-        border_focus='cba6f7',
-        border_normal='1e1e2e',
-        border_width=2,
+        border_focus='c4a7e7',
+        border_normal='191724',
+        border_width=4,
         margin=15,
         ratio=0.52,
     ),
@@ -426,9 +426,9 @@ layouts = [
         **layout_theme
     ),
     layout.Floating(
-        border_focus='f5c2e7',
-        border_normal='1e1e2e',
-        border_width=2,
+        border_focus='ebbcba',
+        border_normal='191724',
+        border_width=4,
         fullscreen_border_width=0,
     ),
     # layout.Columns(**layout_theme),
@@ -568,36 +568,36 @@ layouts = [
 #     ]
 
 # Catppuccin
-colors = [
-        ["#1e1e2e", "#1e1e2e"],  # 0 Background 0
-        ["#313244", "#313244"],  # 1 Background 1
-        ["#cdd6f4", "#cdd6f4"],  # 2 Foreground 0
-        ["#bac2de", "#bac2de"],  # 3 Foreground 1
-        ["#f38ba8", "#f38ba8"],  # 4 Red
-        ["#a6e3a1", "#a6e3a1"],  # 5 Green
-        ["#f9e2af", "#f9e2af"],  # 6 Yellow
-        ["#89b4fa", "#89b4fa"],  # 7 Blue
-        ["#f5c2e7", "#f5c2e7"],  # 8 Magenta
-        ["#89dceb", "#89dceb"],  # 9 Cyan
-        ["#fab387", "#fab387"],  # 10 Orange
-        ["#cba6f7", "#cba6f7"],  # 11 Violet
-    ]
+# colors = [
+#         ["#1e1e2e", "#1e1e2e"],  # 0 Background 0
+#         ["#313244", "#313244"],  # 1 Background 1
+#         ["#cdd6f4", "#cdd6f4"],  # 2 Foreground 0
+#         ["#bac2de", "#bac2de"],  # 3 Foreground 1
+#         ["#f38ba8", "#f38ba8"],  # 4 Red
+#         ["#a6e3a1", "#a6e3a1"],  # 5 Green
+#         ["#f9e2af", "#f9e2af"],  # 6 Yellow
+#         ["#89b4fa", "#89b4fa"],  # 7 Blue
+#         ["#f5c2e7", "#f5c2e7"],  # 8 Magenta
+#         ["#89dceb", "#89dceb"],  # 9 Cyan
+#         ["#fab387", "#fab387"],  # 10 Orange
+#         ["#cba6f7", "#cba6f7"],  # 11 Violet
+#     ]
 
 # Rose Pine
-# colors = [
-#          ["#191724", "#191724"],  # 0 Background 0
-#          ["#26233a", "#26233a"],  # 1 Background 1
-#          ["#e0def4", "#e0def4"],  # 2 Foreground 0
-#          ["#908caa", "#908caa"],  # 3 Foreground 1
-#          ["#eb6f92", "#eb6f92"],  # 4 Red
-#          ["#56949f", "#56949f"],  # 5 Green
-#          ["#f6c177", "#f6c177"],  # 6 Yellow
-#          ["#31748f", "#31748f"],  # 7 Blue
-#          ["#ebbcba", "#ebbcba"],  # 8 Magenta
-#          ["#9ccfd8", "#9ccfd8"],  # 9 Cyan
-#          ["#ea9d34", "#ea9d34"],  # 10 Orange
-#          ["#c4a7e7", "#c4a7e7"],  # 11 Violet
-#      ]
+colors = [
+         ["#191724", "#191724"],  # 0 Background 0
+         ["#26233a", "#26233a"],  # 1 Background 1
+         ["#e0def4", "#e0def4"],  # 2 Foreground 0
+         ["#908caa", "#908caa"],  # 3 Foreground 1
+         ["#eb6f92", "#eb6f92"],  # 4 Red
+         ["#569f86", "#569f86"],  # 5 Green
+         ["#f6c177", "#f6c177"],  # 6 Yellow
+         ["#5a8fa5", "#5a8fa5"],  # 7 Blue
+         ["#ebbcba", "#ebbcba"],  # 8 Magenta
+         ["#9ccfd8", "#9ccfd8"],  # 9 Cyan
+         ["#ea9d34", "#ea9d34"],  # 10 Orange
+         ["#c4a7e7", "#c4a7e7"],  # 11 Violet
+     ]
 
 # Rose Pine Moon
 # colors = [
@@ -654,8 +654,8 @@ widget_defaults = dict(
     font='Product Sans',
     fontsize=18,
     padding=4,
-    background='#1e1e2e',
-    foreground='#cdd6f4',
+    background='#191724',
+    foreground='#e0def4',
 )
 
 extension_defaults = widget_defaults.copy()
@@ -896,9 +896,9 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
-    border_focus='f5c2e7',
-    border_normal='1e1e2e',
-    border_width=2,
+    border_focus='ebbcba',
+    border_normal='191724',
+    border_width=4,
     fullscreen_border_width=0,
     float_rules=[
         # Run the utility `xprop` to see the wm class and name of an X client

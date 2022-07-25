@@ -20,6 +20,7 @@ autotiling
 avahi
 awesome-git
 azote
+baobab
 base
 bash-completion
 bat
@@ -120,7 +121,6 @@ mako
 materia-gtk-theme
 mesa-vdpau
 microsoft-edge-stable-bin
-moc
 mpv
 mtools
 neofetch
@@ -185,6 +185,7 @@ qtile
 qtile-extras-git
 raw-thumbnailer
 reflector
+river-git
 rofi
 rsync
 rtmpdump
@@ -264,6 +265,7 @@ wf-recorder
 wget
 which
 wlogout
+wlsunset
 wmctrl
 wmutils-git
 wofi
