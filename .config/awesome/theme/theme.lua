@@ -16,50 +16,50 @@ local helpers = require("helpers")
 --- ░▀░▀░▀▀▀░▀▀▀░░▀░░▀░▀░▀▀▀░░▀░░▀▀▀░▀▀▀░░░▀░▀░▀▀▀░▀▀▀░▀░▀░░▀░
 
 --- Special
-theme.xforeground = "#cdd6f4"
-theme.darker_xbackground = "#181825"
-theme.xbackground = "#1e1e2e"
-theme.lighter_xbackground = "#313244"
-theme.one_bg = "#45475a"
-theme.one_bg2 = "#585b70"
-theme.one_bg3 = "#6c7086"
-theme.grey = "#7f849c"
-theme.grey_fg = "#9399b2"
-theme.grey_fg2 = "#a6adc8"
-theme.light_grey = "#bac2de"
+theme.xforeground = "#e0def4"
+theme.darker_xbackground = "#14121c"
+theme.xbackground = "#191724"
+theme.lighter_xbackground = "##1f1d2e"
+theme.one_bg = "#26233a"
+theme.one_bg2 = "#3b384d"
+theme.one_bg3 = "#514e61"
+theme.grey = "#908caa"
+theme.grey_fg = "#9b97b2"
+theme.grey_fg2 = "#a6a3bb"
+theme.light_grey = "#b1aec3"
 theme.transparent = "#00000000"
 
 --- Black
-theme.xcolor0 = "#45475A"
-theme.xcolor8 = "#45475A"
+theme.xcolor0 = "#191724"
+theme.xcolor8 = "#26233a"
 
 --- Red
-theme.xcolor1 = "#F38BA8"
-theme.xcolor9 = "#F38BA8"
+theme.xcolor1 = "#eb6f92"
+theme.xcolor9 = "#eb6f92"
 
 --- Green
-theme.xcolor2 = "#A6E3A1"
-theme.xcolor10 = "#A6E3A1"
+theme.xcolor2 = "#569f86"
+theme.xcolor10 = "#569f86"
 
 --- Yellow
-theme.xcolor3 = "#F9E2AF"
-theme.xcolor11 = "#F9E2AF"
+theme.xcolor3 = "#f6c177"
+theme.xcolor11 = "#f6c177"
 
 --- Blue
-theme.xcolor4 = "#89B4FA"
-theme.xcolor12 = "#89B4FA"
+theme.xcolor4 = "#5a8fa5"
+theme.xcolor12 = "#5a8fa5"
 
 --- Magenta
-theme.xcolor5 = "#F5C2E7"
-theme.xcolor13 = "#F5C2E7"
+theme.xcolor5 = "#ebbcba"
+theme.xcolor13 = "#ebbcba"
 
 --- Cyan
-theme.xcolor6 = "#94E2D5"
-theme.xcolor14 = "#94E2D5"
+theme.xcolor6 = "#9ccfd8"
+theme.xcolor14 = "#9ccfd8"
 
 --- White
-theme.xcolor7 = "#BAC2DE"
-theme.xcolor15 = "#BAC2DE"
+theme.xcolor7 = "#e0def4"
+theme.xcolor15 = "#908caa"
 
 --- ░█▀▀░█▀█░█▀█░▀█▀░█▀▀
 --- ░█▀▀░█░█░█░█░░█░░▀▀█
@@ -107,12 +107,12 @@ theme.accent = theme.xcolor4
 
 --- UI events
 theme.leave_event = transparent
-theme.enter_event = "#cdd6f4" .. "10"
-theme.press_event = "#cdd6f4" .. "15"
-theme.release_event = "#cdd6f4" .. "10"
+theme.enter_event = "#e0def4" .. "10"
+theme.press_event = "#e0def4" .. "15"
+theme.release_event = "#e0def4" .. "10"
 
 --- Widgets
-theme.widget_bg = "#1e1e2e"
+theme.widget_bg = "#191724"
 
 --- Titlebars
 theme.titlebar_enabled = true
@@ -120,7 +120,7 @@ theme.titlebar_bg = theme.xbackground
 theme.titlebar_fg = theme.xforeground
 
 --- Wibar
-theme.wibar_bg = "#1e1e2e"
+theme.wibar_bg = "#191724"
 theme.wibar_height = dpi(40)
 
 --- Music
@@ -133,7 +133,7 @@ theme.music_accent = theme.lighter_xbackground
 --- ░▀▀▀░▀▀▀░░░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀░▀░░▀░░▀▀▀
 
 --- Image Assets
-theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/cat-waves.png")
+theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/rosepine_blockwavemoon.png")
 theme.pfp = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/pfp.png")
 theme.music = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/music.png")
 

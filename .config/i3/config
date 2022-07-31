@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font pango:JetBrains Mono 12
+font pango:Product Sans 14
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -139,11 +139,11 @@ for_window [class=".*"] border pixel 2
 
 # Catppuccin
 # class                   border  backgr. text
-client.focused          #cba6f7 #cba6f7 #cba6f7
-client.focused_inactive #313244 #313244 #313244
-client.unfocused        #1e1e2e #1e1e2e #1e1e2e
-client.urgent           #f38ba8 #f38ba8 #f38ba8
-client.placeholder      #cdd6f4 #cdd6f4 #cdd6f4
+# client.focused          #cba6f7 #cba6f7 #cba6f7
+# client.focused_inactive #313244 #313244 #313244
+# client.unfocused        #1e1e2e #1e1e2e #1e1e2e
+# client.urgent           #f38ba8 #f38ba8 #f38ba8
+# client.placeholder      #cdd6f4 #cdd6f4 #cdd6f4
 
 # Hack The Box
 # class                   border  backgr. text
@@ -153,6 +153,14 @@ client.placeholder      #cdd6f4 #cdd6f4 #cdd6f4
 # client.urgent           #ff3e3e #ff3e3e #ff3e3e
 # client.placeholder      #a4b1cd #a4b1cd #a4b1cd
 
+# Rose Pine
+# class                   border  backgr. text
+client.focused          #c4a7e7 #c4a7e7 #c4a7e7
+client.focused_inactive #26233a #26233a #26233a
+client.unfocused        #191724 #191724 #191724
+client.urgent           #eb6f92 #eb6f92 #eb6f92
+client.placeholder      #e0def4 #e0def4 #e0def4
+
 gaps inner 10
 gaps outer 0
 #gaps horizontal 4
@@ -161,8 +169,8 @@ gaps top 1
 ##### i3-radius ######
 smart_borders on
 smart_borders no_gaps
-smart_gaps on
-hide_edge_borders smart
+# smart_gaps on
+# hide_edge_borders smart
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner
@@ -203,7 +211,7 @@ mode "$mode_gaps_outer" {
 }
 
 # Wallpaper
-exec_always --no-startup-id feh --bg-fill /mnt/windows/Walls/Yellow/wallhaven-2e2wq9.png
+exec_always --no-startup-id feh --bg-fill /mnt/windows/Walls/Yellow/wallhaven-2eq71m.jpg
 
 # Lock screen
 bindsym Control+mod1+l exec --no-startup-id "betterlockscreen -l dimblur"

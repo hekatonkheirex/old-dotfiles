@@ -21,4 +21,4 @@ xfce4-power-manager &
 nm-applet &
 gnome-keyring-daemon --start --components=pkcs11,secrets,ssh &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-$HOME/.config/scripts/welcome.sh
+# $HOME/.config/scripts/welcome.sh

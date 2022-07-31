@@ -66,10 +66,11 @@ ffmpegthumbnailer
 firefox
 firewalld
 flex
+freerdp
 fzf
 galculator
 gcc
-gdm-plymouth
+gdm
 gdm-settings
 gimp
 git
@@ -89,7 +90,6 @@ gvfs-smb
 hplip
 htop
 humanity-icon-theme
-hyprland-bin
 i3-gaps
 inetutils
 inotify-tools
@@ -157,10 +157,10 @@ pinta
 pipewire
 pipewire-alsa
 pipewire-jack
+pipewire-media-session
 pipewire-pulse
 pkgconf
 playerctl
-plymouth-git
 polkit-gnome
 polybar
 python-dasbus
@@ -179,12 +179,14 @@ python-pycryptodome
 python-pyfiglet
 python-pyxdg
 qbittorrent
+qt5-wayland
 qt5ct
 qt6ct
 qtile
 qtile-extras-git
 raw-thumbnailer
 reflector
+remmina
 river-git
 rofi
 rsync
@@ -216,7 +218,6 @@ thunar-media-tags-plugin
 thunar-secure-delete
 thunar-shares-plugin-git
 thunar-volman
-todotxt
 ttf-anonymous-pro
 ttf-bitstream-vera
 ttf-cascadia-code
@@ -265,6 +266,7 @@ wf-recorder
 wget
 which
 wlogout
+wlrobs
 wlsunset
 wmctrl
 wmutils-git

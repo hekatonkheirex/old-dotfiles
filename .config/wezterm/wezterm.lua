@@ -35,8 +35,8 @@ local colors = {
 	one_background = "#26233a",
 
 	-- black
-	color0 = "#191724",
-	color8 = "#26233a",
+	color0 = "#26233a",
+	color8 = "#6e6a86",
 
 	-- red
 	color1 = "#eb6f92",
@@ -200,7 +200,6 @@ return {
 		},
 	},
 
-	-- Aesthetic Night Colorscheme
 	bold_brightens_ansi_colors = false,
 	colors = {
 		background = colors.background,

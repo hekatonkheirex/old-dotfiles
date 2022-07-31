@@ -24,10 +24,10 @@ border_width_out_normal=10
 border_width_in_focused=$border_width_in_normal
 border_width_out_focused=$border_width_out_normal
 
-background_color=1e1e2e
-border_color_in_normal=cba6f7
+background_color=191724
+border_color_in_normal=c4a7e7
 border_color_out_normal=$background_color
-border_color_in_focused=cba6f7
+border_color_in_focused=c4a7e7
 border_color_out_focused=$background_color
 
 type theme >/dev/null 2>&1 && eval "$(theme get)"

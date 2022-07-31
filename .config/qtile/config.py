@@ -704,7 +704,7 @@ screens = [
                     padding=2,
                     rounded=True,
                     spacing=4,
-                    this_current_screen_border=colors[5],
+                    this_current_screen_border=colors[11],
                     urgent_alert_method='block',
                     urgent_border=colors[4],
                     urgent_text=colors[0],
@@ -757,7 +757,7 @@ screens = [
                 widget.WindowName(
                     max_chars=400,
                     padding=8,
-                    foreground=colors[2],
+                    foreground=colors[11],
                     background=colors[1],
                 ),
                 widget.Spacer(
