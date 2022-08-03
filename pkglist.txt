@@ -18,7 +18,6 @@ autoconf
 automake
 autotiling
 avahi
-awesome-git
 azote
 baobab
 base
@@ -34,7 +33,6 @@ bluez
 bluez-utils
 brightnessctl
 bspwm
-calcurse
 cava
 clipman
 cnrdrvcups-lb
@@ -66,6 +64,7 @@ ffmpegthumbnailer
 firefox
 firewalld
 flex
+foot
 freerdp
 fzf
 galculator
@@ -79,7 +78,6 @@ gnome-mahjongg
 gnome-tweaks
 gnu-free-fonts
 google-chrome
-gpick
 grim
 groff
 grub
@@ -108,11 +106,10 @@ libreoffice-fresh
 libtool
 libva-mesa-driver
 libva-utils
-light
 linux
 linux-firmware
 linux-headers
-lolcat
+lua-posix
 lxappearance-gtk3
 m4
 maim
@@ -183,7 +180,6 @@ qt5-wayland
 qt5ct
 qt6ct
 qtile
-qtile-extras-git
 raw-thumbnailer
 reflector
 remmina
@@ -249,16 +245,12 @@ tty-clock-git
 tumbler
 tumbler-extra-thumbnailers
 unarchiver
-unclutter
 unimatrix-git
 unrar
 unzip
 vdhcoapp-bin
 vdpauinfo
-vicious
 viewnior
-vivaldi
-vivaldi-ffmpeg-codecs
 w3m
 waybar
 wezterm
@@ -266,6 +258,7 @@ wf-recorder
 wget
 which
 wlogout
+wlr-randr
 wlrobs
 wlsunset
 wmctrl
