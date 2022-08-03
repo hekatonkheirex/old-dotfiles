@@ -5,7 +5,7 @@
   "passthrough": false, 			// Pass any pointer events to the window under the bar
   "position": "left", 			// Waybar position (top|bottom|left|right)
   "height": "", 					// Waybar height (to be removed for auto height)
-  "width": "50", 					// Waybar width (empty for auto width)
+  "width": "", 					// Waybar width (empty for auto width)
   "spacing": 0, 					// Gaps between modules
   "margin": 0, 					// Space around the bar
   "margin-top": 0, 				// Space above the bar
@@ -95,13 +95,13 @@
   "custom/menu": {
     "format": "",
     "tooltip": false,
-    "on-click": "$HOME/.config/river/scripts/menu",
+    "on-click": "$HOME/.config/sway/scripts/menu",
   },
 
   "custom/power": {
     "format": "",
     "tooltip": false,
-    "on-click": "$HOME/.config/river/scripts/powermenu",
+    "on-click": "$HOME/.config/sway/scripts/powermenu",
   },
 
   "idle_inhibitor": {
@@ -118,8 +118,8 @@
     "format-wifi": "",
     "format-ethernet": "",
     "format-linked": "",
-    "format-disconnected": "睊",
-    "format-disabled": "睊",
+    "format-disconnected": "",
+    "format-disabled": "",
     "tooltip-format": "{essid} :  {bandwidthUpBits} |  {bandwidthDownBits}",
     "on-click": "[[ ! `pidof nm-connection-editor` ]] && nm-connection-editor || pkill nm-connection-e",
   },

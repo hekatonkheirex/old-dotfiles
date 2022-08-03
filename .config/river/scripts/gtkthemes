@@ -5,10 +5,10 @@
 
 ## Set GTK Themes, Icons, Cursor and Fonts
 
-THEME='Arc-Dark'
-ICONS='Arc-Circle'
-FONT='Noto Sans 9'
-CURSOR='Qogirr'
+THEME='Rosé Pine'
+ICONS='Rose-Pine'
+FONT='Product Sans 14'
+CURSOR='Colloid-dark-cursors'
 BTN_LAYOUT=':close'
 
 SCHEMA='gsettings set org.gnome.desktop.interface'

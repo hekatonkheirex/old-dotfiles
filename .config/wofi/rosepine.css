@@ -47,13 +47,13 @@ window {
 } 
 
 #entry:selected {
-	background-color: #c4a7e7;
+	background: linear-gradient(90deg, rgba(235,111,146,1) 0%, rgba(196,167,231,1) 90%);
 	font-weight: normal;
 	border-radius: 25px;
 }
 
 #text:selected {
-	background-color: #c4a7e7;
+  background: linear-gradient(90deg, rgba(235,111,146,0.01) 0%, rgba(196,167,231,0.01) 90%);
 	color: #191724;
 	font-weight: normal;
 }

@@ -112,7 +112,7 @@ input "type:keyboard" {
 # Rose Pine
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
-    gsettings set $gnome-schema gtk-theme 'Rosepine-B'
+    gsettings set $gnome-schema gtk-theme 'Rosé Pine'
     gsettings set $gnome-schema icon-theme 'Rose-Pine'
     gsettings set $gnome-schema cursor-theme 'Colloid-dark-cursors'
     gsettings set $gnome-schema font-name 'Product Sans 14'
@@ -383,6 +383,7 @@ for_window [app_id="galculator"] floating enable
 for_window [title="(?:Open|Save) (?:File|Folder|As)"] floating enable, resize set width 1030 height 710
 for_window [app_id="thunar" title="^Copying.*"] floating enable
 for_window [app_id="thunar" title="^File.*"] floating enable
+for_window [app_id= "nm-connection-editor"] floating enable
 
 # Autostart applications
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP

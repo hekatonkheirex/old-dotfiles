@@ -2,7 +2,7 @@
 * {
   border: none;
   font-family: "Product Sans", "Font Awesome 6 Free Regular", "Font Awesome 6 Free Solid", "Font Awesome 6 Pro Regular", "Font Awesome 6 Pro Thin", "Font Awesome 6 Pro Solid", "Font Awesome 6 Pro Light", "Font Awesome 6 Brands Regular";
-  font-size: 14px;
+  font-size: 16px;
 }
 
 window#waybar {
@@ -13,11 +13,6 @@ window#waybar {
 
 window#waybar.hidden {
   opacity: 0.2;
-}
-
-window#waybar.empty {
-}
-window#waybar.solo {
 }
 
 /* Workspaces */
@@ -31,6 +26,7 @@ window#waybar.solo {
 
 #workspaces button {
   border-radius: 12px;
+  padding: 15px;
 }
 
 #workspaces button:hover {
@@ -105,7 +101,7 @@ window#waybar.empty #window {
 #clock {
   background-color: #26233a;
   color: #569f86;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   border-radius: 12px 12px 0px 0px;
   padding: 10px 0px 0px 0px;
@@ -128,7 +124,7 @@ window#waybar.empty #window {
 
 /** ********** Tray ********** **/
 #tray {
-  padding: 5px 0px 5px 0px;
+  padding: 5px 5px 5px 5px;
 }
 #tray > .passive {
   -gtk-icon-effect: dim;
@@ -165,12 +161,10 @@ window#waybar.empty #window {
 }
 
 #network.disconnected {
-  background-color: #26233a;
-  color: #e0def4;
+  color: #ea9d34;
 }
 #network.disabled {
-  background-color: #eb6f92;
-  color: #26233a;
+  color: #eb6f92;
 }
 #network.linked {
 }
@@ -189,6 +183,10 @@ window#waybar.empty #window {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+#idle_inhibitor.activated {
+  color: #eb6f92
+}
+
 /** ********** Custom ********** **/
 
 #custom-menu {
